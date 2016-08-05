@@ -1,0 +1,19 @@
+<?php
+//construct
+$obj = new monster(array('people','animal'));
+//getFoods
+var_dump($obj->getFoods());
+//eat
+var_dump($obj->eat('stone'));
+//eat
+var_dump($obj->eat('animal'));
+//addFood
+$obj->addFood('meat');
+$obj->addFood('animal');
+$obj->addFood('animal');
+//getFoods
+var_dump($obj->getFoods());
+//delFood
+$obj->delFood('animal');
+//getFoods
+var_dump($obj->getFoods());

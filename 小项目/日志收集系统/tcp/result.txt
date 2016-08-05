@@ -1,0 +1,124 @@
+
+
+data number:10000
+data length:510002
+take:0.0017020702362061s
+success record:
+
+data number:1000
+data length:51002
+take:0.00056600570678711s
+success record:
+
+data number:1000
+data length:51002
+take:0.00042986869812012s
+success record:
+
+data number:1000
+data length:51002
+take:0.0002741813659668s
+success record:
+
+data number:1000
+data length:51002
+write length:51002
+take:0.00040102005004883s
+success record:
+
+data number:1000
+data length:51002
+write length:51002
+take:0.00027704238891602s
+success record:
+
+data number:1000
+data length:51002
+write length:51002
+take:0.00032591819763184s
+success record:
+
+data number:1000
+data length:51002
+write length:51002
+take:0.00027298927307129s
+success record:
+
+data number:20
+data length:1022
+write length:1022
+take:0.00015997886657715s
+success record:
+
+data number:20
+data length:1022
+write length:1022
+take:0.00015711784362793s
+success record:
+
+data number:200
+data length:10202
+write length:10202
+take:0.00017189979553223s
+success record:
+
+data number:200
+data length:10202
+write length:10202
+take:0.00016689300537109s
+success record:
+
+data number:2000
+data length:102002
+write length:102002
+take:0.00045394897460938s
+success record:
+
+data number:200
+data length:10402
+write length:10402
+take:0.00021815299987793s
+success record:
+
+data number:200
+data length:10402
+write length:10402
+take:0.00023698806762695s
+success record:
+
+data number:500
+data length:26002
+write length:26002
+take:0.00021910667419434s
+success record:
+
+data number:200
+data length:10402
+write length:10402
+take:0.00042486190795898s
+success record:
+
+data number:300
+data length:15602
+write length:15602
+take:0.00022697448730469s
+success record:
+
+data number:500
+data length:26002
+write length:26002
+take:0.00023102760314941s
+success record:
+
+data number:1000
+data length:52002
+write length:52002
+take:0.00084400177001953s
+success record:
+
+data number:10000
+data length:520002
+write length:520002
+take:0.0052480697631836s
+success record:
+

@@ -1,0 +1,137 @@
+send:
+number:100
+error:0
+success:100
+takes:300.88424682617/1000000s
+rqs:332353.72424723 n/s
+receive:
+success:100
+last:0%
+
+
+send:
+number:200
+error:0
+success:200
+takes:746.01173400879/1000000s
+rqs:268092.29785874 n/s
+receive:
+success:200
+last:0%
+
+
+send:
+number:300
+error:0
+success:300
+takes:874.75776672363/1000000s
+rqs:342952.08503679 n/s
+receive:
+success:300
+last:0%
+
+
+send:
+number:400
+error:0
+success:400
+takes:1277.2083282471/1000000s
+rqs:313183.05021467 n/s
+receive:
+success:400
+last:0%
+
+
+send:
+number:500
+error:0
+success:500
+takes:1680.6125640869/1000000s
+rqs:297510.56887502 n/s
+receive:
+success:500
+last:0%
+
+
+send:
+number:600
+error:0
+success:600
+takes:2166.5096282959/1000000s
+rqs:276943.14955431 n/s
+receive:
+success:0
+last:100%
+
+
+send:
+number:600
+error:0
+success:600
+takes:1731.1573028564/1000000s
+rqs:346588.95468944 n/s
+receive:
+success:600
+last:0%
+
+
+send:
+number:1000
+error:0
+success:1000
+takes:3463.7451171875/1000000s
+rqs:288704.84581498 n/s
+receive:
+success:1000
+last:0%
+
+
+send:
+number:5000
+error:0
+success:5000
+takes:11026.859283447/1000000s
+rqs:453438.27027027 n/s
+receive:
+success:1112
+last:77.76%
+
+
+send:
+number:2000
+error:0
+success:2000
+takes:6123.0659484863/1000000s
+rqs:326633.75126548 n/s
+receive:
+success:1112
+last:44.4%
+
+
+send:
+number:1200
+error:0
+success:1200
+takes:3607.5115203857/1000000s
+rqs:332639.27037208 n/s
+receive:
+success:1112
+last:7.3333333333333%
+
+
+//以上消息都是“this is a log message”
+//下面改成“a message”
+
+send:
+number:1200
+error:0
+success:1200
+takes:3324.5086669922/1000000s
+rqs:360955.59380379 n/s
+receive:
+success:1112
+last:7.3333333333333%
+
+//目前为什么都是1112，消息长度肯定不是了
+
+

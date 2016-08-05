@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>multi server top stat</title>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="md5.min.js"></script>
+    <script src="highcharts.min.js"></script>
+    <script src="watcher.js"></script>
+    <style>body{margin: 0;padding: 0}</style>
+</head>
+<body>
+<script>
+    Watcher.init({
+        url: 'ws://192.168.1.243:9501',
+        chartStatTypes:{
+            1 : {
+                name : 'user cpu',
+                y    : 'CPU(%)',
+                title: 'User CPU'
+            },
+            2 : {
+                name : 'system cpu',
+                y    : 'CPU(%)',
+                title: 'System CPU'
+            },
+            3 : {
+                name : 'memory used',
+                y    : 'Memory(MB)',
+                title: 'Memory Used'
+            },
+            4 : {
+                name : 'load average',
+                y    : 'Value',
+                title: 'Load Average'
+            },
+            5 : {
+                name : 'swap used',
+                y    : 'Memory(MB)',
+                title: 'Swap Used'
+            },
+            6 : {
+                name : 'buffer used',
+                y    : 'Memory(MB)',
+                title: 'Buffer Used'
+            },
+            7 : {
+                name : 'cache used',
+                y    : 'Memory(MB)',
+                title: 'Cache Used'
+            }
+        }
+    }).start();
+</script>
+</body>
+</html>
