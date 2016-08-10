@@ -1,0 +1,240 @@
+[1938] 09 Jul 01:33:13.992 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 2.8.19 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in stand alone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 22101
+ |    `-._   `._    /     _.-'    |     PID: 1938
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[1938] 09 Jul 01:33:13.992 # Server started, Redis version 2.8.19
+[1938] 09 Jul 01:33:13.992 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[1938] 09 Jul 01:33:13.992 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+[1938] 09 Jul 01:33:13.992 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[1938] 09 Jul 01:33:13.992 * The server is now ready to accept connections on port 22101
+[1938] 09 Jul 01:33:13.993 * Connecting to MASTER 127.0.0.1:22100
+[1938] 09 Jul 01:33:13.994 * MASTER <-> SLAVE sync started
+[1938] 09 Jul 01:33:13.994 * Non blocking connect for SYNC fired the event.
+[1938] 09 Jul 01:33:13.994 * Master replied to PING, replication can continue...
+[1938] 09 Jul 01:33:13.994 * Partial resynchronization not possible (no cached master)
+[1938] 09 Jul 01:33:13.995 * Full resync from master: ac8ac4f15da362371fca781235c3402dc9cebf2b:1
+[1938] 09 Jul 01:33:14.070 * MASTER <-> SLAVE sync: receiving 50 bytes from master
+[1938] 09 Jul 01:33:14.070 * MASTER <-> SLAVE sync: Flushing old data
+[1938] 09 Jul 01:33:14.070 * MASTER <-> SLAVE sync: Loading DB in memory
+[1938] 09 Jul 01:33:14.070 * MASTER <-> SLAVE sync: Finished with success
+[1938] 09 Jul 01:48:14.040 * 1 changes in 900 seconds. Saving...
+[1938] 09 Jul 01:48:14.044 * Background saving started by pid 2036
+[2036] 09 Jul 01:48:14.045 * DB saved on disk
+[2036] 09 Jul 01:48:14.046 * RDB: 4 MB of memory used by copy-on-write
+[1938] 09 Jul 01:48:14.145 * Background saving terminated with success
+[1938] 09 Jul 02:47:27.240 * 1 changes in 900 seconds. Saving...
+[2456] 09 Jul 02:47:27.392 * DB saved on disk
+[2456] 09 Jul 02:47:27.392 * RDB: 4 MB of memory used by copy-on-write
+[1938] 09 Jul 02:47:27.454 * Background saving started by pid 2456
+[1938] 09 Jul 02:47:27.556 * Background saving terminated with success
+[1430] 09 Jul 03:03:20.953 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 2.8.19 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in stand alone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 22101
+ |    `-._   `._    /     _.-'    |     PID: 1430
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[1430] 09 Jul 03:03:20.961 # Server started, Redis version 2.8.19
+[1430] 09 Jul 03:03:20.961 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[1430] 09 Jul 03:03:20.961 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+[1430] 09 Jul 03:03:20.961 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[1430] 09 Jul 03:03:20.970 * DB loaded from disk: 0.010 seconds
+[1430] 09 Jul 03:03:20.970 * The server is now ready to accept connections on port 22101
+[1430] 09 Jul 03:03:21.962 * Connecting to MASTER 127.0.0.1:22100
+[1430] 09 Jul 03:03:21.962 * MASTER <-> SLAVE sync started
+[1430] 09 Jul 03:03:21.962 * Non blocking connect for SYNC fired the event.
+[1430] 09 Jul 03:03:21.962 * Master replied to PING, replication can continue...
+[1430] 09 Jul 03:03:21.962 * Partial resynchronization not possible (no cached master)
+[1430] 09 Jul 03:03:21.966 * Full resync from master: 712bd971d35012bb2302ba66a0bc209516cb367f:1
+[1430] 09 Jul 03:03:22.055 * MASTER <-> SLAVE sync: receiving 76 bytes from master
+[1430] 09 Jul 03:03:22.056 * MASTER <-> SLAVE sync: Flushing old data
+[1430] 09 Jul 03:03:22.056 * MASTER <-> SLAVE sync: Loading DB in memory
+[1430] 09 Jul 03:03:22.056 * MASTER <-> SLAVE sync: Finished with success
+[1430] 09 Jul 03:42:37.382 * 1 changes in 900 seconds. Saving...
+[1430] 09 Jul 03:42:37.482 * Background saving started by pid 2267
+[2267] 09 Jul 03:42:37.501 * DB saved on disk
+[2267] 09 Jul 03:42:37.502 * RDB: 4 MB of memory used by copy-on-write
+[1430] 09 Jul 03:42:37.583 * Background saving terminated with success
+[1430] 09 Jul 03:46:12.637 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:46:12.646 * Background saving started by pid 2306
+[2306] 09 Jul 03:46:12.696 * DB saved on disk
+[2306] 09 Jul 03:46:12.696 * RDB: 6 MB of memory used by copy-on-write
+[1430] 09 Jul 03:46:12.746 * Background saving terminated with success
+[1430] 09 Jul 03:47:13.071 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:47:13.121 * Background saving started by pid 2314
+[2314] 09 Jul 03:47:13.995 * DB saved on disk
+[2314] 09 Jul 03:47:13.995 * RDB: 24 MB of memory used by copy-on-write
+[1430] 09 Jul 03:47:14.046 * Background saving terminated with success
+[1430] 09 Jul 03:48:15.075 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:48:15.078 * Background saving started by pid 2332
+[2332] 09 Jul 03:48:15.474 * DB saved on disk
+[2332] 09 Jul 03:48:15.474 * RDB: 4 MB of memory used by copy-on-write
+[1430] 09 Jul 03:48:15.481 * Background saving terminated with success
+[1430] 09 Jul 03:49:16.085 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:49:16.087 * Background saving started by pid 2351
+[2351] 09 Jul 03:49:17.127 * DB saved on disk
+[2351] 09 Jul 03:49:17.127 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 03:49:17.201 * Background saving terminated with success
+[1430] 09 Jul 03:50:18.016 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:50:18.017 * Background saving started by pid 2357
+[2357] 09 Jul 03:50:18.927 * DB saved on disk
+[2357] 09 Jul 03:50:18.927 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 03:50:18.939 * Background saving terminated with success
+[1430] 09 Jul 03:51:23.365 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:51:23.366 * Background saving started by pid 2366
+[2366] 09 Jul 03:51:23.377 * DB saved on disk
+[2366] 09 Jul 03:51:23.378 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 03:51:23.467 * Background saving terminated with success
+[1430] 09 Jul 03:52:24.030 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:52:24.030 * Background saving started by pid 2371
+[2371] 09 Jul 03:52:24.284 * DB saved on disk
+[2371] 09 Jul 03:52:24.284 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 03:52:24.353 * Background saving terminated with success
+[1430] 09 Jul 03:56:55.028 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:56:55.029 * Background saving started by pid 2422
+[2422] 09 Jul 03:56:55.047 * DB saved on disk
+[2422] 09 Jul 03:56:55.048 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 03:56:55.129 * Background saving terminated with success
+[1430] 09 Jul 03:57:56.024 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:57:56.025 * Background saving started by pid 2749
+[2749] 09 Jul 03:57:56.374 * DB saved on disk
+[2749] 09 Jul 03:57:56.375 * RDB: 6 MB of memory used by copy-on-write
+[1430] 09 Jul 03:57:56.455 * Background saving terminated with success
+[1430] 09 Jul 03:58:57.063 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 03:58:57.064 * Background saving started by pid 2795
+[2795] 09 Jul 03:58:57.068 * DB saved on disk
+[2795] 09 Jul 03:58:57.068 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 03:58:57.164 * Background saving terminated with success
+[1430] 09 Jul 04:03:58.099 * 10 changes in 300 seconds. Saving...
+[1430] 09 Jul 04:03:58.101 * Background saving started by pid 3128
+[3128] 09 Jul 04:03:58.103 * DB saved on disk
+[3128] 09 Jul 04:03:58.103 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:03:58.201 * Background saving terminated with success
+[1430] 09 Jul 04:08:59.046 * 10 changes in 300 seconds. Saving...
+[1430] 09 Jul 04:08:59.047 * Background saving started by pid 3140
+[3140] 09 Jul 04:08:59.049 * DB saved on disk
+[3140] 09 Jul 04:08:59.049 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:08:59.148 * Background saving terminated with success
+[1430] 09 Jul 04:14:00.036 * 10 changes in 300 seconds. Saving...
+[1430] 09 Jul 04:14:00.037 * Background saving started by pid 3493
+[3493] 09 Jul 04:14:00.041 * DB saved on disk
+[3493] 09 Jul 04:14:00.041 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:14:00.138 * Background saving terminated with success
+[1430] 09 Jul 04:19:01.055 * 10 changes in 300 seconds. Saving...
+[1430] 09 Jul 04:19:01.056 * Background saving started by pid 3511
+[3511] 09 Jul 04:19:01.060 * DB saved on disk
+[3511] 09 Jul 04:19:01.060 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:19:01.157 * Background saving terminated with success
+[1430] 09 Jul 04:20:36.361 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:20:36.362 * Background saving started by pid 3517
+[3517] 09 Jul 04:20:36.394 * DB saved on disk
+[3517] 09 Jul 04:20:36.394 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:20:36.463 * Background saving terminated with success
+[1430] 09 Jul 04:21:37.024 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:21:37.025 * Background saving started by pid 3522
+[3522] 09 Jul 04:21:37.234 * DB saved on disk
+[3522] 09 Jul 04:21:37.234 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:21:37.327 * Background saving terminated with success
+[1430] 09 Jul 04:22:38.010 * 10000 changes in 60 seconds. Saving...
+[3525] 09 Jul 04:22:38.098 * DB saved on disk
+[3525] 09 Jul 04:22:38.099 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:22:38.114 * Background saving started by pid 3525
+[1430] 09 Jul 04:22:38.215 * Background saving terminated with success
+[1430] 09 Jul 04:24:11.211 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:24:11.213 * Background saving started by pid 3530
+[3530] 09 Jul 04:24:11.287 * DB saved on disk
+[3530] 09 Jul 04:24:11.287 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:24:11.313 * Background saving terminated with success
+[1430] 09 Jul 04:25:12.048 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:25:12.293 * Background saving started by pid 3551
+[3551] 09 Jul 04:25:12.839 * DB saved on disk
+[3551] 09 Jul 04:25:12.840 * RDB: 6 MB of memory used by copy-on-write
+[1430] 09 Jul 04:25:12.935 * Background saving terminated with success
+[1430] 09 Jul 04:26:13.066 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:26:13.146 * Background saving started by pid 3578
+[3578] 09 Jul 04:26:13.953 * DB saved on disk
+[3578] 09 Jul 04:26:13.953 * RDB: 10 MB of memory used by copy-on-write
+[1430] 09 Jul 04:26:14.053 * Background saving terminated with success
+[1430] 09 Jul 04:27:15.068 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:27:15.223 * Background saving started by pid 3621
+[3621] 09 Jul 04:27:22.766 * DB saved on disk
+[3621] 09 Jul 04:27:22.767 * RDB: 38 MB of memory used by copy-on-write
+[1430] 09 Jul 04:27:22.864 * Background saving terminated with success
+[1430] 09 Jul 04:28:23.086 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:28:23.087 * Background saving started by pid 3625
+[3625] 09 Jul 04:28:29.596 * DB saved on disk
+[3625] 09 Jul 04:28:29.596 * RDB: 12 MB of memory used by copy-on-write
+[1430] 09 Jul 04:28:29.693 * Background saving terminated with success
+[1430] 09 Jul 04:29:30.027 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:29:30.030 * Background saving started by pid 3630
+[3630] 09 Jul 04:29:31.908 * DB saved on disk
+[3630] 09 Jul 04:29:31.921 * RDB: 4 MB of memory used by copy-on-write
+[1430] 09 Jul 04:29:32.001 * Background saving terminated with success
+[1430] 09 Jul 04:30:32.091 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:30:32.103 * Background saving started by pid 3633
+[3633] 09 Jul 04:30:37.224 * DB saved on disk
+[3633] 09 Jul 04:30:37.233 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:30:37.321 * Background saving terminated with success
+[1430] 09 Jul 04:31:38.099 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:31:38.101 * Background saving started by pid 3637
+[3637] 09 Jul 04:31:38.106 * DB saved on disk
+[3637] 09 Jul 04:31:38.107 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:31:38.201 * Background saving terminated with success
+[1430] 09 Jul 04:32:39.079 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:32:39.371 * Background saving started by pid 3645
+[3645] 09 Jul 04:32:44.065 * DB saved on disk
+[3645] 09 Jul 04:32:44.069 * RDB: 8 MB of memory used by copy-on-write
+[1430] 09 Jul 04:32:44.163 * Background saving terminated with success
+[1430] 09 Jul 04:33:45.114 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:33:45.131 * Background saving started by pid 3930
+[3930] 09 Jul 04:33:48.750 * DB saved on disk
+[3930] 09 Jul 04:33:48.754 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:33:49.370 * Background saving terminated with success
+[1430] 09 Jul 04:43:10.245 * 10 changes in 300 seconds. Saving...
+[1430] 09 Jul 04:43:10.247 * Background saving started by pid 4013
+[4013] 09 Jul 04:43:10.250 * DB saved on disk
+[4013] 09 Jul 04:43:10.251 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:43:10.347 * Background saving terminated with success
+[1430] 09 Jul 04:45:21.840 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:45:21.842 * Background saving started by pid 4031
+[4031] 09 Jul 04:45:21.998 * DB saved on disk
+[4031] 09 Jul 04:45:22.001 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:45:22.043 * Background saving terminated with success
+[1430] 09 Jul 04:46:23.016 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:46:23.036 * Background saving started by pid 4037
+[4037] 09 Jul 04:46:28.625 * DB saved on disk
+[4037] 09 Jul 04:46:28.646 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:46:28.725 * Background saving terminated with success
+[1430] 09 Jul 04:47:29.039 * 10000 changes in 60 seconds. Saving...
+[1430] 09 Jul 04:47:29.060 * Background saving started by pid 4043
+[4043] 09 Jul 04:47:34.627 * DB saved on disk
+[4043] 09 Jul 04:47:34.645 * RDB: 2 MB of memory used by copy-on-write
+[1430] 09 Jul 04:47:34.725 * Background saving terminated with success
+[1430 | signal handler] (1436442895) Received SIGTERM scheduling shutdown...

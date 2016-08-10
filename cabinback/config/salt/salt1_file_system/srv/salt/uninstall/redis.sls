@@ -1,0 +1,2 @@
+include:
+  - uninstall.source.redis

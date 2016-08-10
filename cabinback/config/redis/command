@@ -1,0 +1,6 @@
+sudo redis-server /home/yaoguai/redis/server1-master/redis.conf
+sudo redis-server /home/yaoguai/redis/server1-slave/redis.conf
+sudo redis-server /home/yaoguai/redis/server2-master/redis.conf
+sudo redis-server /home/yaoguai/redis/server2-slave/redis.conf
+sudo redis-server /home/yaoguai/redis/server3-master/redis.conf
+sudo redis-server /home/yaoguai/redis/server3-slave/redis.conf

@@ -1,0 +1,509 @@
+2015-07-10T01:53:56.560-0700 I JOURNAL  [initandlisten] journal dir=/home/yaoguai/mongodb/c1/data/journal
+2015-07-10T01:53:56.560-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-07-10T01:53:56.705-0700 I JOURNAL  [durability] Durability thread started
+2015-07-10T01:53:56.705-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] MongoDB starting : pid=5112 port=27020 dbpath=/home/yaoguai/mongodb/c1/data master=1 64-bit host=ubuntu
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] db version v3.0.4
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-07-10T01:53:56.707-0700 I CONTROL  [initandlisten] options: { net: { port: 27020 }, processManagement: { fork: true }, sharding: { clusterRole: "configsvr" }, storage: { dbPath: "/home/yaoguai/mongodb/c1/data" }, systemLog: { destination: "file", path: "/home/yaoguai/mongodb/c1/log/mongo.log" } }
+2015-07-10T01:53:56.708-0700 I INDEX    [initandlisten] allocating new ns file /home/yaoguai/mongodb/c1/data/local.ns, filling with zeroes...
+2015-07-10T01:53:56.970-0700 I STORAGE  [FileAllocator] allocating new datafile /home/yaoguai/mongodb/c1/data/local.0, filling with zeroes...
+2015-07-10T01:53:56.970-0700 I STORAGE  [FileAllocator] creating directory /home/yaoguai/mongodb/c1/data/_tmp
+2015-07-10T01:53:56.972-0700 I STORAGE  [FileAllocator] done allocating datafile /home/yaoguai/mongodb/c1/data/local.0, size: 16MB,  took 0 secs
+2015-07-10T01:53:56.975-0700 I REPL     [initandlisten] ******
+2015-07-10T01:53:56.975-0700 I REPL     [initandlisten] creating replication oplog of size: 5MB...
+2015-07-10T01:53:56.977-0700 I REPL     [initandlisten] ******
+2015-07-10T01:53:56.979-0700 I NETWORK  [initandlisten] waiting for connections on port 27020
+2015-07-10T02:02:28.854-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:45300 #1 (1 connection now open)
+2015-07-10T02:02:28.860-0700 I STORAGE  [conn1] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:28.860-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:45301 #2 (2 connections now open)
+2015-07-10T02:02:28.866-0700 I INDEX    [conn1] allocating new ns file /home/yaoguai/mongodb/c1/data/config.ns, filling with zeroes...
+2015-07-10T02:02:28.874-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:45302 #3 (3 connections now open)
+2015-07-10T02:02:29.119-0700 I STORAGE  [FileAllocator] allocating new datafile /home/yaoguai/mongodb/c1/data/config.0, filling with zeroes...
+2015-07-10T02:02:29.121-0700 I STORAGE  [FileAllocator] done allocating datafile /home/yaoguai/mongodb/c1/data/config.0, size: 16MB,  took 0.001 secs
+2015-07-10T02:02:29.244-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:45303 #4 (4 connections now open)
+2015-07-10T02:02:29.244-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.254-0700 I SHARDING [conn4] first cluster operation detected, adding sharding hook to enable versioning and authentication to remote servers
+2015-07-10T02:02:29.303-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.324-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.333-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.337-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.345-0700 I INDEX    [conn4] build index on: config.chunks properties: { v: 1, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.chunks" }
+2015-07-10T02:02:29.345-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.345-0700 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2015-07-10T02:02:29.345-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.354-0700 I INDEX    [conn4] build index on: config.chunks properties: { v: 1, unique: true, key: { ns: 1, shard: 1, min: 1 }, name: "ns_1_shard_1_min_1", ns: "config.chunks" }
+2015-07-10T02:02:29.354-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.354-0700 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2015-07-10T02:02:29.354-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.364-0700 I INDEX    [conn4] build index on: config.chunks properties: { v: 1, unique: true, key: { ns: 1, lastmod: 1 }, name: "ns_1_lastmod_1", ns: "config.chunks" }
+2015-07-10T02:02:29.364-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.364-0700 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2015-07-10T02:02:29.364-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.374-0700 I INDEX    [conn4] build index on: config.shards properties: { v: 1, unique: true, key: { host: 1 }, name: "host_1", ns: "config.shards" }
+2015-07-10T02:02:29.374-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.374-0700 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2015-07-10T02:02:29.374-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.384-0700 I INDEX    [conn4] build index on: config.locks properties: { v: 1, key: { ts: 1 }, name: "ts_1", ns: "config.locks" }
+2015-07-10T02:02:29.480-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.480-0700 I INDEX    [conn4] build index done.  scanned 1 total records. 0 secs
+2015-07-10T02:02:29.481-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.489-0700 I INDEX    [conn4] build index on: config.locks properties: { v: 1, key: { state: 1, process: 1 }, name: "state_1_process_1", ns: "config.locks" }
+2015-07-10T02:02:29.489-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.489-0700 I INDEX    [conn4] build index done.  scanned 1 total records. 0 secs
+2015-07-10T02:02:29.489-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.497-0700 I INDEX    [conn4] build index on: config.lockpings properties: { v: 1, key: { ping: 1 }, name: "ping_1", ns: "config.lockpings" }
+2015-07-10T02:02:29.497-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.497-0700 I INDEX    [conn4] build index done.  scanned 1 total records. 0 secs
+2015-07-10T02:02:29.497-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:29.508-0700 I INDEX    [conn4] build index on: config.tags properties: { v: 1, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.tags" }
+2015-07-10T02:02:29.508-0700 I INDEX    [conn4] 	 building index using bulk method
+2015-07-10T02:02:29.508-0700 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2015-07-10T02:02:29.516-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:39.564-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:49.573-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:02:59.580-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:03:09.587-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:03:19.592-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:03:29.599-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:03:39.607-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:03:49.613-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:03:59.620-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:04:09.626-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:04:19.634-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:04:29.642-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:04:39.649-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:04:39.831-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 182ms
+2015-07-10T02:04:49.834-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:04:59.840-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:05:09.848-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:05:19.854-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:05:24.360-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:05:29.861-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:05:39.872-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:05:49.879-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:05:59.886-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:06:09.892-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:06:19.899-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:06:29.907-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:06:39.914-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:06:49.922-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:06:59.928-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:09.937-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:19.942-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:19.988-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:19.993-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:29.949-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:30.850-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:30.855-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:39.956-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:49.965-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:07:59.971-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:08:09.981-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:08:19.988-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:08:29.996-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:08:30.397-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 401ms
+2015-07-10T02:08:40.399-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:08:50.407-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:00.415-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:10.422-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:20.433-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:30.441-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:40.458-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:50.466-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:58.004-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:58.004-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:09:58.112-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 107ms
+2015-07-10T02:10:00.472-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:08.886-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:08.890-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:08.896-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:08.903-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:08.905-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:45493 #5 (5 connections now open)
+2015-07-10T02:10:08.906-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:10.494-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:20.503-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:30.512-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:40.520-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:10:50.530-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:11:00.542-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:11:10.551-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:11:10.793-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 241ms
+2015-07-10T02:11:20.796-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:11:30.806-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:11:40.843-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:11:50.852-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:12:00.860-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:12:10.901-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:12:20.911-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:12:30.918-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:12:40.928-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:12:50.937-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:13:00.945-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:13:10.955-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:13:21.025-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:13:31.122-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:13:41.129-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:13:51.137-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:14:01.146-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:14:11.154-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:14:21.162-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:14:31.171-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:14:41.180-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:14:51.190-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:15:01.197-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:15:11.205-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:15:21.214-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:15:31.224-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:15:41.231-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:15:51.240-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:16:01.249-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:16:11.257-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:16:21.266-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:16:31.274-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:16:41.284-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:16:51.291-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:17:01.299-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:17:11.308-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:17:21.316-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:17:31.323-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:17:41.332-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:17:51.341-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:18:01.349-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:18:11.358-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:18:21.366-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:18:31.375-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:18:41.382-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:18:51.390-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:19:01.398-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:19:11.405-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:19:21.413-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:19:31.422-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:19:41.430-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:19:51.455-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:20:01.462-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:20:11.471-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:20:21.479-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:20:31.489-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:20:41.513-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:20:51.522-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:21:01.530-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:21:11.537-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:21:21.545-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:21:31.554-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:21:41.562-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:21:51.571-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:22:01.579-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:22:11.587-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:22:21.596-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:22:31.604-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:22:41.614-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:22:51.656-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:23:01.663-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:23:11.671-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:23:21.680-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:23:31.690-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:23:41.698-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:23:51.708-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:24:01.715-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:24:11.725-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:24:21.735-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:24:31.744-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:24:41.753-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:24:51.762-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:25:01.771-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:25:11.782-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:25:21.790-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:25:31.799-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:25:41.809-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:25:51.817-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:26:01.825-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:26:11.832-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:26:21.844-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:26:31.853-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:26:41.862-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:26:51.871-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:27:01.881-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:27:11.892-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:27:21.901-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:27:31.912-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:27:41.920-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:27:51.931-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:28:01.941-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:28:11.949-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:28:21.961-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:28:31.969-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:28:41.978-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:28:51.986-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:29:01.996-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:29:12.006-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:29:22.013-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:29:32.024-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:29:42.033-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:29:52.043-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:30:02.050-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:30:12.058-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:30:22.068-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:30:32.078-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:30:42.086-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:30:52.094-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:31:02.103-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:31:12.111-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:31:22.121-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:31:32.132-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:31:42.141-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:31:52.149-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:32:02.159-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:32:12.169-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:32:22.178-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:32:32.187-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:32:42.196-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:32:52.204-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:33:02.214-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:33:12.223-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:33:22.231-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:33:32.241-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:33:42.250-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:33:52.259-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:34:02.267-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:34:12.276-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:34:22.285-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:34:32.293-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:34:42.302-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:34:52.311-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:35:02.320-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:35:12.327-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:35:22.337-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:35:32.346-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:35:42.355-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:35:52.362-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:36:02.371-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:36:12.378-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:36:22.388-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:36:32.396-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:36:42.405-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:36:52.414-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:37:02.424-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:37:12.432-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:37:22.439-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:37:32.447-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:37:42.457-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:37:52.465-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:38:02.473-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:38:12.481-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:38:22.489-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:38:32.498-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:38:42.505-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:38:52.540-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:39:02.549-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:39:12.557-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:39:22.565-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:39:32.573-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:39:42.584-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:39:52.592-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:40:02.599-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:40:12.607-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:40:22.616-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:40:32.627-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:40:42.636-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:40:52.645-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:41:02.655-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:41:12.663-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:41:22.672-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:41:32.680-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:41:42.690-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:41:52.697-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:42:02.706-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:42:12.715-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:42:22.731-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:42:32.738-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:42:42.747-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:42:52.756-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:43:02.765-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:43:12.772-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:43:22.780-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:43:32.789-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:43:42.799-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:43:52.807-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:44:02.817-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:44:12.825-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:44:22.834-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:44:32.845-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:44:42.852-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:44:52.863-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:45:02.869-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:45:12.876-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:45:22.885-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:45:32.893-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:45:42.901-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:45:52.910-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:46:02.918-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:46:12.926-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:46:22.936-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:46:32.943-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:46:42.952-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:46:52.961-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:47:02.969-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:47:12.978-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:47:22.986-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:47:32.993-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:47:43.002-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:47:53.010-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:48:03.017-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:48:13.024-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:48:23.033-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:48:33.041-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:48:43.054-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:48:53.065-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:49:03.074-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:49:13.084-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:49:23.091-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:49:33.101-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:49:43.111-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:49:53.120-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:50:03.128-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:50:13.136-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:50:23.144-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:50:33.151-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:50:43.160-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:50:53.170-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:03.177-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:13.185-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:23.193-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:25.126-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:46492 #6 (6 connections now open)
+2015-07-10T02:51:25.143-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:46493 #7 (7 connections now open)
+2015-07-10T02:51:25.143-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:25.152-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:25.157-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:25.169-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:25.194-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:46497 #8 (8 connections now open)
+2015-07-10T02:51:28.384-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:46504 #9 (9 connections now open)
+2015-07-10T02:51:28.385-0700 I STORAGE  [conn9] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:28.388-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:46505 #10 (10 connections now open)
+2015-07-10T02:51:28.389-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:28.394-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:33.204-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:43.220-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:51:53.229-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:52:03.237-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:52:13.248-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:52:23.256-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:52:33.265-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:52:43.277-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:52:53.285-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:53:03.296-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:53:13.303-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:53:23.310-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:53:33.319-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:53:43.329-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:53:53.346-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:54:03.383-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:54:13.393-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:54:23.404-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:54:33.416-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:54:43.422-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:54:53.431-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:55:03.441-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:55:13.449-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:55:23.457-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:55:33.467-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:55:43.475-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:55:53.484-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:56:03.498-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:56:13.507-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:56:23.517-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:56:33.524-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:56:43.533-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:56:43.831-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 297ms
+2015-07-10T02:56:53.834-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:57:03.845-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:57:13.854-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:57:23.862-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:57:33.871-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:57:43.880-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:57:53.888-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:58:03.900-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:58:13.908-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T02:58:22.595-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:58:22.606-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:58:22.611-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T02:58:23.917-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:12.477-0700 I STORAGE  [conn9] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:12.514-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:12.521-0700 I STORAGE  [conn7] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:12.526-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:12.661-0700 I WRITE    [conn4] insert config.actionlog query: { _id: ObjectId('559f98247b054cbcf6c550f9'), server: "ubuntu", time: new Date(1436522532526), what: "balancer.round", details: { executionTimeMillis: 228613, errorOccured: false, candidateChunks: 1, chunksMoved: 1 } } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 25 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { W: 2 } } } 130ms
+2015-07-10T03:02:12.661-0700 I COMMAND  [conn4] command config.$cmd command: insert { insert: "actionlog", documents: [ { _id: ObjectId('559f98247b054cbcf6c550f9'), server: "ubuntu", time: new Date(1436522532526), what: "balancer.round", details: { executionTimeMillis: 228613, errorOccured: false, candidateChunks: 1, chunksMoved: 1 } } ] } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:56 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 25 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { W: 2 } } } 130ms
+2015-07-10T03:02:13.742-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:23.755-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:33.764-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:43.775-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:02:53.784-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:03:03.793-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:03:06.478-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 2685ms
+2015-07-10T03:03:16.486-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:03:26.499-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:03:36.508-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:03:37.689-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 1180ms
+2015-07-10T03:03:47.695-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:03:57.704-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:04:07.714-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:04:17.723-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:04:27.731-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:04:37.742-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:04:47.753-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:04:57.776-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:05:07.809-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:05:17.820-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:05:27.835-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:05:37.844-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:05:47.858-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:05:57.869-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:06:07.876-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:06:17.885-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:06:27.922-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:06:37.936-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:06:47.954-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:06:57.963-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:06:58.126-0700 I COMMAND  [conn4] command admin.$cmd command: fsync { fsync: true } ntoreturn:1 keyUpdates:0 writeConflicts:0 numYields:0 reslen:51 locks:{ Global: { acquireCount: { r: 3, W: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } } } 162ms
+2015-07-10T03:07:08.130-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:07:18.141-0700 I STORAGE  [conn4] CMD fsync: sync:1 lock:0
+2015-07-10T03:07:18.388-0700 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2015-07-10T03:07:18.388-0700 I CONTROL  [signalProcessingThread] now exiting
+2015-07-10T03:07:18.388-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27020.sock
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-07-10T03:07:18.443-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-07-10T03:07:18.443-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-07-10T03:07:18.513-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-07-10T03:07:18.513-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-07-10T03:07:18.519-0700 I NETWORK  [conn6] end connection 192.168.154.130:46492 (9 connections now open)
+2015-07-10T03:07:18.519-0700 I NETWORK  [conn10] end connection 192.168.154.130:46505 (8 connections now open)
+2015-07-10T03:07:18.519-0700 I NETWORK  [conn1] end connection 192.168.154.130:45300 (7 connections now open)
+2015-07-10T03:07:18.519-0700 I NETWORK  [conn3] end connection 192.168.154.130:45302 (6 connections now open)
+2015-07-10T03:07:18.520-0700 I NETWORK  [conn8] end connection 192.168.154.130:46497 (5 connections now open)
+2015-07-10T03:07:18.520-0700 I NETWORK  [conn2] end connection 192.168.154.130:45301 (4 connections now open)
+2015-07-10T03:07:18.520-0700 I NETWORK  [conn7] end connection 192.168.154.130:46493 (3 connections now open)
+2015-07-10T03:07:18.520-0700 I NETWORK  [conn9] end connection 192.168.154.130:46504 (2 connections now open)
+2015-07-10T03:07:18.520-0700 I NETWORK  [conn4] end connection 192.168.154.130:45303 (1 connection now open)
+2015-07-10T03:07:18.520-0700 I NETWORK  [conn5] end connection 192.168.154.130:45493 (0 connections now open)
+2015-07-10T03:07:18.621-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-07-10T03:07:18.650-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-07-10T03:07:18.650-0700 I JOURNAL  [durability] Durability thread stopped
+2015-07-10T03:07:18.650-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-07-10T03:07:18.650-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-07-10T03:07:18.661-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-07-10T03:07:18.661-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0

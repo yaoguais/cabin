@@ -1,0 +1,936 @@
+2015-07-10T02:02:28.853-0700 I SHARDING [mongosMain] MongoS version 3.0.4 starting: pid=5587 port=27030 64-bit host=ubuntu (--help for usage)
+2015-07-10T02:02:28.853-0700 I CONTROL  [mongosMain] db version v3.0.4
+2015-07-10T02:02:28.853-0700 I CONTROL  [mongosMain] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T02:02:28.853-0700 I CONTROL  [mongosMain] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T02:02:28.853-0700 I CONTROL  [mongosMain] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T02:02:28.853-0700 I CONTROL  [mongosMain] allocator: tcmalloc
+2015-07-10T02:02:28.853-0700 I CONTROL  [mongosMain] options: { net: { port: 27030 }, processManagement: { fork: true }, sharding: { configDB: "192.168.154.130:27020" }, systemLog: { destination: "file", path: "/home/yaoguai/mongodb/mongos/log/mongo.log" } }
+2015-07-10T02:02:28.873-0700 I SHARDING [LockPinger] creating distributed lock ping thread for 192.168.154.130:27020 and process ubuntu:27030:1436518948:1804289383 (sleeping for 30000ms)
+2015-07-10T02:02:29.237-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:02:28 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:02:29.237-0700 I SHARDING [mongosMain] distributed lock 'configUpgrade/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a247b054cbcf6c54e50
+2015-07-10T02:02:29.237-0700 I SHARDING [mongosMain] starting upgrade of config server from v0 to v6
+2015-07-10T02:02:29.237-0700 I SHARDING [mongosMain] starting next upgrade step from v0 to v6
+2015-07-10T02:02:29.237-0700 I SHARDING [mongosMain] about to log new metadata event: { _id: "ubuntu-2015-07-10T09:02:29-559f8a257b054cbcf6c54e51", server: "ubuntu", clientAddr: "N/A", time: new Date(1436518949237), what: "starting upgrade of config database", ns: "config.version", details: { from: 0, to: 6 } }
+2015-07-10T02:02:29.302-0700 I SHARDING [mongosMain] writing initial config version at v6
+2015-07-10T02:02:29.324-0700 I SHARDING [mongosMain] about to log new metadata event: { _id: "ubuntu-2015-07-10T09:02:29-559f8a257b054cbcf6c54e53", server: "ubuntu", clientAddr: "N/A", time: new Date(1436518949324), what: "finished upgrade of config database", ns: "config.version", details: { from: 0, to: 6 } }
+2015-07-10T02:02:29.332-0700 I SHARDING [mongosMain] upgrade of config server to v6 successful
+2015-07-10T02:02:29.333-0700 I SHARDING [mongosMain] distributed lock 'configUpgrade/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:02:29.514-0700 I SHARDING [Balancer] about to contact config servers and shards
+2015-07-10T02:02:29.514-0700 I SHARDING [Balancer] config servers and shards contacted successfully
+2015-07-10T02:02:29.514-0700 I SHARDING [Balancer] balancer id: ubuntu:27030 started at Jul 10 02:02:29
+2015-07-10T02:02:29.515-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a257b054cbcf6c54e55
+2015-07-10T02:02:29.535-0700 I NETWORK  [mongosMain] waiting for connections on port 27030
+2015-07-10T02:02:29.562-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:02:39.564-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a2f7b054cbcf6c54e57
+2015-07-10T02:02:39.570-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:02:49.573-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a397b054cbcf6c54e59
+2015-07-10T02:02:49.578-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:02:59.238-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:02:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:02:59.580-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a437b054cbcf6c54e5b
+2015-07-10T02:02:59.584-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:03:09.586-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a4d7b054cbcf6c54e5d
+2015-07-10T02:03:09.590-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:03:19.592-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a577b054cbcf6c54e5f
+2015-07-10T02:03:19.597-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:03:29.239-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:03:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:03:29.599-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a617b054cbcf6c54e61
+2015-07-10T02:03:29.605-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:03:39.607-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a6b7b054cbcf6c54e63
+2015-07-10T02:03:39.611-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:03:49.613-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a757b054cbcf6c54e65
+2015-07-10T02:03:49.618-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:03:59.241-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:03:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:03:59.620-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a7f7b054cbcf6c54e67
+2015-07-10T02:03:59.624-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:04:09.626-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a897b054cbcf6c54e69
+2015-07-10T02:04:09.631-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:04:19.634-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a937b054cbcf6c54e6b
+2015-07-10T02:04:19.640-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:04:29.243-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:04:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:04:29.641-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8a9d7b054cbcf6c54e6d
+2015-07-10T02:04:29.647-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:04:39.649-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8aa77b054cbcf6c54e6f
+2015-07-10T02:04:39.832-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:04:49.834-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ab17b054cbcf6c54e71
+2015-07-10T02:04:49.838-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:04:59.246-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:04:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:04:59.840-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8abb7b054cbcf6c54e73
+2015-07-10T02:04:59.847-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:05:09.848-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ac57b054cbcf6c54e75
+2015-07-10T02:05:09.853-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:05:19.854-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8acf7b054cbcf6c54e77
+2015-07-10T02:05:19.860-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:05:24.359-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.130:46479 #1 (1 connection now open)
+2015-07-10T02:05:24.360-0700 I SHARDING [conn1] couldn't find database [admin] in config db
+2015-07-10T02:05:24.364-0700 I SHARDING [conn1] 	 put [admin] on: config:192.168.154.130:27020
+2015-07-10T02:05:29.247-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:05:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:05:29.861-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ad97b054cbcf6c54e79
+2015-07-10T02:05:29.870-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:05:39.872-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ae37b054cbcf6c54e7b
+2015-07-10T02:05:39.877-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:05:49.878-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8aed7b054cbcf6c54e7d
+2015-07-10T02:05:49.884-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:05:59.249-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:05:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:05:59.886-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8af77b054cbcf6c54e7f
+2015-07-10T02:05:59.890-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:06:09.892-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b017b054cbcf6c54e81
+2015-07-10T02:06:09.897-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:06:19.899-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b0b7b054cbcf6c54e83
+2015-07-10T02:06:19.905-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:06:29.251-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:06:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:06:29.907-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b157b054cbcf6c54e85
+2015-07-10T02:06:29.912-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:06:39.913-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b1f7b054cbcf6c54e87
+2015-07-10T02:06:39.920-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:06:49.922-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b297b054cbcf6c54e89
+2015-07-10T02:06:49.927-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:06:59.252-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:06:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:06:59.928-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b337b054cbcf6c54e8b
+2015-07-10T02:06:59.935-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:07:09.937-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b3d7b054cbcf6c54e8d
+2015-07-10T02:07:09.940-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:07:19.941-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b477b054cbcf6c54e8f
+2015-07-10T02:07:19.946-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:07:19.985-0700 I NETWORK  [conn1] starting new replica set monitor for replica set ps1 with seeds 192.168.154.130:27000
+2015-07-10T02:07:19.986-0700 I NETWORK  [ReplicaSetMonitorWatcher] starting
+2015-07-10T02:07:19.986-0700 I NETWORK  [conn1] changing hosts to ps1/192.168.154.130:27000,192.168.154.130:27001 from ps1/192.168.154.130:27000
+2015-07-10T02:07:19.988-0700 I SHARDING [conn1] going to add shard: { _id: "ps1", host: "ps1/192.168.154.130:27000,192.168.154.130:27001" }
+2015-07-10T02:07:19.993-0700 I SHARDING [conn1] about to log metadata event: { _id: "ubuntu-2015-07-10T09:07:19-559f8b477b054cbcf6c54e91", server: "ubuntu", clientAddr: "N/A", time: new Date(1436519239993), what: "addShard", ns: "", details: { name: "ps1", host: "ps1/192.168.154.130:27000" } }
+2015-07-10T02:07:29.254-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:07:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:07:29.949-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b517b054cbcf6c54e92
+2015-07-10T02:07:29.954-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:07:30.849-0700 I NETWORK  [conn1] starting new replica set monitor for replica set ps2 with seeds 192.168.154.130:27010
+2015-07-10T02:07:30.850-0700 I NETWORK  [conn1] changing hosts to ps2/192.168.154.130:27010,192.168.154.130:27011 from ps2/192.168.154.130:27010
+2015-07-10T02:07:30.850-0700 I SHARDING [conn1] going to add shard: { _id: "ps2", host: "ps2/192.168.154.130:27010,192.168.154.130:27011" }
+2015-07-10T02:07:30.855-0700 I SHARDING [conn1] about to log metadata event: { _id: "ubuntu-2015-07-10T09:07:30-559f8b527b054cbcf6c54e94", server: "ubuntu", clientAddr: "N/A", time: new Date(1436519250855), what: "addShard", ns: "", details: { name: "ps2", host: "ps2/192.168.154.130:27010" } }
+2015-07-10T02:07:39.956-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b5b7b054cbcf6c54e95
+2015-07-10T02:07:39.964-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:07:49.965-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b657b054cbcf6c54e97
+2015-07-10T02:07:49.969-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:07:59.255-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:07:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:07:59.971-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b6f7b054cbcf6c54e99
+2015-07-10T02:07:59.977-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:08:09.980-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b797b054cbcf6c54e9b
+2015-07-10T02:08:09.987-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:08:19.988-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b837b054cbcf6c54e9d
+2015-07-10T02:08:19.993-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:08:29.256-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:08:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:08:29.996-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b8d7b054cbcf6c54e9f
+2015-07-10T02:08:30.397-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:08:40.399-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8b987b054cbcf6c54ea1
+2015-07-10T02:08:40.405-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:08:50.407-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ba27b054cbcf6c54ea3
+2015-07-10T02:08:50.413-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:08:59.258-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:08:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:09:00.415-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bac7b054cbcf6c54ea5
+2015-07-10T02:09:00.420-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:09:10.422-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bb67b054cbcf6c54ea7
+2015-07-10T02:09:10.431-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:09:20.433-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bc07b054cbcf6c54ea9
+2015-07-10T02:09:20.438-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:09:29.259-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:09:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:09:30.440-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bca7b054cbcf6c54eab
+2015-07-10T02:09:30.456-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:09:40.458-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bd47b054cbcf6c54ead
+2015-07-10T02:09:40.464-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:09:50.466-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bde7b054cbcf6c54eaf
+2015-07-10T02:09:50.470-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:09:58.001-0700 I SHARDING [conn1] couldn't find database [tjut] in config db
+2015-07-10T02:09:58.004-0700 I SHARDING [conn1] 	 put [tjut] on: ps1:ps1/192.168.154.130:27000,192.168.154.130:27001
+2015-07-10T02:09:58.004-0700 I COMMAND  [conn1] enabling sharding on: tjut
+2015-07-10T02:09:59.260-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:09:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:10:00.472-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8be87b054cbcf6c54eb1
+2015-07-10T02:10:00.489-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:10:08.885-0700 I COMMAND  [conn1] CMD: shardcollection: { shardCollection: "tjut.user_list", key: { __avpSessionId: 1.0 } }
+2015-07-10T02:10:08.885-0700 I SHARDING [conn1] enable sharding on: tjut.user_list with shard key: { __avpSessionId: 1.0 }
+2015-07-10T02:10:08.885-0700 I SHARDING [conn1] about to log metadata event: { _id: "ubuntu-2015-07-10T09:10:08-559f8bf07b054cbcf6c54eb3", server: "ubuntu", clientAddr: "N/A", time: new Date(1436519408885), what: "shardCollection.start", ns: "tjut.user_list", details: { shardKey: { __avpSessionId: 1.0 }, collection: "tjut.user_list", primary: "ps1:ps1/192.168.154.130:27000,192.168.154.130:27001", initShards: [], numChunks: 1 } }
+2015-07-10T02:10:08.890-0700 I SHARDING [conn1] going to create 1 chunk(s) for: tjut.user_list using new epoch 559f8bf07b054cbcf6c54eb4
+2015-07-10T02:10:08.895-0700 I SHARDING [conn1] ChunkManager: time to load chunks for tjut.user_list: 0ms sequenceNumber: 2 version: 1|0||559f8bf07b054cbcf6c54eb4 based on: (empty)
+2015-07-10T02:10:08.906-0700 I SHARDING [conn1] about to log metadata event: { _id: "ubuntu-2015-07-10T09:10:08-559f8bf07b054cbcf6c54eb5", server: "ubuntu", clientAddr: "N/A", time: new Date(1436519408906), what: "shardCollection", ns: "tjut.user_list", details: { version: "1|0||559f8bf07b054cbcf6c54eb4" } }
+2015-07-10T02:10:10.492-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bf27b054cbcf6c54eb6
+2015-07-10T02:10:10.500-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:10:20.502-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8bfc7b054cbcf6c54eb8
+2015-07-10T02:10:20.508-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:10:29.262-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:10:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:10:30.510-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c067b054cbcf6c54eba
+2015-07-10T02:10:30.517-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:10:40.519-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c107b054cbcf6c54ebc
+2015-07-10T02:10:40.527-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:10:50.529-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c1a7b054cbcf6c54ebe
+2015-07-10T02:10:50.539-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:10:59.264-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:10:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:11:00.541-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c247b054cbcf6c54ec0
+2015-07-10T02:11:00.548-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:11:10.550-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c2e7b054cbcf6c54ec2
+2015-07-10T02:11:10.793-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:11:20.795-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c387b054cbcf6c54ec4
+2015-07-10T02:11:20.803-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:11:29.266-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:11:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:11:30.805-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c427b054cbcf6c54ec6
+2015-07-10T02:11:30.812-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:11:40.842-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c4c7b054cbcf6c54ec8
+2015-07-10T02:11:40.848-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:11:50.851-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c567b054cbcf6c54eca
+2015-07-10T02:11:50.857-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:11:59.267-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:11:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:12:00.858-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c607b054cbcf6c54ecc
+2015-07-10T02:12:00.898-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:12:10.900-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c6a7b054cbcf6c54ece
+2015-07-10T02:12:10.908-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:12:20.910-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c747b054cbcf6c54ed0
+2015-07-10T02:12:20.915-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:12:29.268-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:12:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:12:30.917-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c7e7b054cbcf6c54ed2
+2015-07-10T02:12:30.924-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:12:40.926-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c887b054cbcf6c54ed4
+2015-07-10T02:12:40.933-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:12:50.936-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c927b054cbcf6c54ed6
+2015-07-10T02:12:50.942-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:12:59.270-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:12:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:13:00.943-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8c9c7b054cbcf6c54ed8
+2015-07-10T02:13:00.950-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:13:10.953-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ca67b054cbcf6c54eda
+2015-07-10T02:13:11.021-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:13:21.023-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8cb17b054cbcf6c54edc
+2015-07-10T02:13:21.117-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:13:29.271-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:13:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:13:31.119-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8cbb7b054cbcf6c54ede
+2015-07-10T02:13:31.125-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:13:41.127-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8cc57b054cbcf6c54ee0
+2015-07-10T02:13:41.134-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:13:51.136-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ccf7b054cbcf6c54ee2
+2015-07-10T02:13:51.143-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:13:59.272-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:13:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:14:01.145-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8cd97b054cbcf6c54ee4
+2015-07-10T02:14:01.150-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:14:11.152-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ce37b054cbcf6c54ee6
+2015-07-10T02:14:11.159-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:14:21.161-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ced7b054cbcf6c54ee8
+2015-07-10T02:14:21.167-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:14:29.273-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:14:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:14:31.170-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8cf77b054cbcf6c54eea
+2015-07-10T02:14:31.177-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:14:41.178-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d017b054cbcf6c54eec
+2015-07-10T02:14:41.187-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:14:51.188-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d0b7b054cbcf6c54eee
+2015-07-10T02:14:51.194-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:14:59.275-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:14:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:15:01.195-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d157b054cbcf6c54ef0
+2015-07-10T02:15:01.202-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:15:11.204-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d1f7b054cbcf6c54ef2
+2015-07-10T02:15:11.211-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:15:21.213-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d297b054cbcf6c54ef4
+2015-07-10T02:15:21.220-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:15:29.276-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:15:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:15:31.222-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d337b054cbcf6c54ef6
+2015-07-10T02:15:31.228-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:15:41.230-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d3d7b054cbcf6c54ef8
+2015-07-10T02:15:41.238-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:15:51.239-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d477b054cbcf6c54efa
+2015-07-10T02:15:51.246-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:15:59.278-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:15:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:16:01.247-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d517b054cbcf6c54efc
+2015-07-10T02:16:01.254-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:16:11.256-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d5b7b054cbcf6c54efe
+2015-07-10T02:16:11.263-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:16:21.265-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d657b054cbcf6c54f00
+2015-07-10T02:16:21.271-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:16:29.280-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:16:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:16:31.273-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d6f7b054cbcf6c54f02
+2015-07-10T02:16:31.280-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:16:41.282-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d797b054cbcf6c54f04
+2015-07-10T02:16:41.288-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:16:51.290-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d837b054cbcf6c54f06
+2015-07-10T02:16:51.296-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:16:59.281-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:16:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:17:01.298-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d8d7b054cbcf6c54f08
+2015-07-10T02:17:01.304-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:17:11.306-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8d977b054cbcf6c54f0a
+2015-07-10T02:17:11.313-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:17:21.314-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8da17b054cbcf6c54f0c
+2015-07-10T02:17:21.320-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:17:29.283-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:17:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:17:31.322-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8dab7b054cbcf6c54f0e
+2015-07-10T02:17:31.329-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:17:41.331-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8db57b054cbcf6c54f10
+2015-07-10T02:17:41.338-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:17:51.340-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8dbf7b054cbcf6c54f12
+2015-07-10T02:17:51.346-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:17:59.285-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:17:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:18:01.348-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8dc97b054cbcf6c54f14
+2015-07-10T02:18:01.354-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:18:11.356-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8dd37b054cbcf6c54f16
+2015-07-10T02:18:11.363-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:18:21.365-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ddd7b054cbcf6c54f18
+2015-07-10T02:18:21.372-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:18:29.285-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:18:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:18:31.373-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8de77b054cbcf6c54f1a
+2015-07-10T02:18:31.379-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:18:41.380-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8df17b054cbcf6c54f1c
+2015-07-10T02:18:41.387-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:18:51.388-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8dfb7b054cbcf6c54f1e
+2015-07-10T02:18:51.394-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:18:59.287-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:18:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:19:01.396-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e057b054cbcf6c54f20
+2015-07-10T02:19:01.402-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:19:11.404-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e0f7b054cbcf6c54f22
+2015-07-10T02:19:11.410-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:19:21.411-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e197b054cbcf6c54f24
+2015-07-10T02:19:21.418-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:19:29.288-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:19:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:19:31.420-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e237b054cbcf6c54f26
+2015-07-10T02:19:31.427-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:19:41.429-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e2d7b054cbcf6c54f28
+2015-07-10T02:19:41.451-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:19:51.453-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e377b054cbcf6c54f2a
+2015-07-10T02:19:51.459-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:19:59.289-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:19:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:20:01.461-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e417b054cbcf6c54f2c
+2015-07-10T02:20:01.467-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:20:11.469-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e4b7b054cbcf6c54f2e
+2015-07-10T02:20:11.477-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:20:21.478-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e557b054cbcf6c54f30
+2015-07-10T02:20:21.486-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:20:29.290-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:20:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:20:31.488-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e5f7b054cbcf6c54f32
+2015-07-10T02:20:31.510-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:20:41.512-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e697b054cbcf6c54f34
+2015-07-10T02:20:41.519-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:20:51.521-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e737b054cbcf6c54f36
+2015-07-10T02:20:51.527-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:20:59.292-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:20:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:21:01.529-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e7d7b054cbcf6c54f38
+2015-07-10T02:21:01.534-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:21:11.536-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e877b054cbcf6c54f3a
+2015-07-10T02:21:11.542-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:21:21.544-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e917b054cbcf6c54f3c
+2015-07-10T02:21:21.551-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:21:29.293-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:21:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:21:31.552-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8e9b7b054cbcf6c54f3e
+2015-07-10T02:21:31.559-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:21:41.561-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ea57b054cbcf6c54f40
+2015-07-10T02:21:41.567-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:21:51.569-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8eaf7b054cbcf6c54f42
+2015-07-10T02:21:51.576-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:21:59.294-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:21:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:22:01.577-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8eb97b054cbcf6c54f44
+2015-07-10T02:22:01.583-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:22:11.586-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ec37b054cbcf6c54f46
+2015-07-10T02:22:11.593-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:22:21.595-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ecd7b054cbcf6c54f48
+2015-07-10T02:22:21.601-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:22:29.296-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:22:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:22:31.603-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ed77b054cbcf6c54f4a
+2015-07-10T02:22:31.611-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:22:41.613-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ee17b054cbcf6c54f4c
+2015-07-10T02:22:41.652-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:22:51.654-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8eeb7b054cbcf6c54f4e
+2015-07-10T02:22:51.661-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:22:59.297-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:22:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:23:01.662-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ef57b054cbcf6c54f50
+2015-07-10T02:23:01.668-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:23:11.669-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8eff7b054cbcf6c54f52
+2015-07-10T02:23:11.677-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:23:21.678-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f097b054cbcf6c54f54
+2015-07-10T02:23:21.685-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:23:29.299-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:23:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:23:31.688-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f137b054cbcf6c54f56
+2015-07-10T02:23:31.695-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:23:41.697-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f1d7b054cbcf6c54f58
+2015-07-10T02:23:41.704-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:23:51.706-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f277b054cbcf6c54f5a
+2015-07-10T02:23:51.713-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:23:59.300-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:23:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:24:01.714-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f317b054cbcf6c54f5c
+2015-07-10T02:24:01.720-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:24:11.723-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f3b7b054cbcf6c54f5e
+2015-07-10T02:24:11.731-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:24:21.733-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f457b054cbcf6c54f60
+2015-07-10T02:24:21.740-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:24:29.301-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:24:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:24:31.742-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f4f7b054cbcf6c54f62
+2015-07-10T02:24:31.750-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:24:41.752-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f597b054cbcf6c54f64
+2015-07-10T02:24:41.759-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:24:51.761-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f637b054cbcf6c54f66
+2015-07-10T02:24:51.767-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:24:59.303-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:24:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:25:01.769-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f6d7b054cbcf6c54f68
+2015-07-10T02:25:01.779-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:25:11.781-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f777b054cbcf6c54f6a
+2015-07-10T02:25:11.787-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:25:21.789-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f817b054cbcf6c54f6c
+2015-07-10T02:25:21.795-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:25:29.304-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:25:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:25:31.797-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f8b7b054cbcf6c54f6e
+2015-07-10T02:25:31.805-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:25:41.807-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f957b054cbcf6c54f70
+2015-07-10T02:25:41.814-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:25:51.816-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8f9f7b054cbcf6c54f72
+2015-07-10T02:25:51.822-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:25:59.305-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:25:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:26:01.824-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fa97b054cbcf6c54f74
+2015-07-10T02:26:01.829-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:26:11.831-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fb37b054cbcf6c54f76
+2015-07-10T02:26:11.841-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:26:21.843-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fbd7b054cbcf6c54f78
+2015-07-10T02:26:21.850-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:26:29.307-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:26:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:26:31.852-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fc77b054cbcf6c54f7a
+2015-07-10T02:26:31.860-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:26:41.861-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fd17b054cbcf6c54f7c
+2015-07-10T02:26:41.869-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:26:51.870-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fdb7b054cbcf6c54f7e
+2015-07-10T02:26:51.878-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:26:59.308-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:26:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:27:01.880-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fe57b054cbcf6c54f80
+2015-07-10T02:27:01.888-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:27:11.891-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8fef7b054cbcf6c54f82
+2015-07-10T02:27:11.898-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:27:21.900-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f8ff97b054cbcf6c54f84
+2015-07-10T02:27:21.908-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:27:29.309-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:27:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:27:31.910-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90037b054cbcf6c54f86
+2015-07-10T02:27:31.917-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:27:41.919-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f900d7b054cbcf6c54f88
+2015-07-10T02:27:41.928-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:27:51.930-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90177b054cbcf6c54f8a
+2015-07-10T02:27:51.937-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:27:59.311-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:27:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:28:01.940-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90217b054cbcf6c54f8c
+2015-07-10T02:28:01.946-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:28:11.948-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f902b7b054cbcf6c54f8e
+2015-07-10T02:28:11.957-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:28:21.960-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90357b054cbcf6c54f90
+2015-07-10T02:28:21.966-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:28:29.312-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:28:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:28:31.968-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f903f7b054cbcf6c54f92
+2015-07-10T02:28:31.975-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:28:41.977-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90497b054cbcf6c54f94
+2015-07-10T02:28:41.983-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:28:51.985-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90537b054cbcf6c54f96
+2015-07-10T02:28:51.993-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:28:59.314-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:28:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:29:01.995-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f905d7b054cbcf6c54f98
+2015-07-10T02:29:02.002-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:29:12.004-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90687b054cbcf6c54f9a
+2015-07-10T02:29:12.010-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:29:22.012-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90727b054cbcf6c54f9c
+2015-07-10T02:29:22.020-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:29:29.315-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:29:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:29:32.022-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f907c7b054cbcf6c54f9e
+2015-07-10T02:29:32.031-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:29:42.032-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90867b054cbcf6c54fa0
+2015-07-10T02:29:42.039-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:29:52.042-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90907b054cbcf6c54fa2
+2015-07-10T02:29:52.046-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:29:59.316-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:29:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:30:02.049-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f909a7b054cbcf6c54fa4
+2015-07-10T02:30:02.054-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:30:12.056-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90a47b054cbcf6c54fa6
+2015-07-10T02:30:12.065-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:30:22.066-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90ae7b054cbcf6c54fa8
+2015-07-10T02:30:22.074-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:30:29.318-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:30:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:30:32.076-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90b87b054cbcf6c54faa
+2015-07-10T02:30:32.082-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:30:42.084-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90c27b054cbcf6c54fac
+2015-07-10T02:30:42.091-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:30:52.093-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90cc7b054cbcf6c54fae
+2015-07-10T02:30:52.100-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:30:59.319-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:30:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:31:02.102-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90d67b054cbcf6c54fb0
+2015-07-10T02:31:02.108-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:31:12.110-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90e07b054cbcf6c54fb2
+2015-07-10T02:31:12.117-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:31:22.120-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90ea7b054cbcf6c54fb4
+2015-07-10T02:31:22.129-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:31:29.321-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:31:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:31:32.131-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90f47b054cbcf6c54fb6
+2015-07-10T02:31:32.139-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:31:42.140-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f90fe7b054cbcf6c54fb8
+2015-07-10T02:31:42.146-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:31:52.148-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91087b054cbcf6c54fba
+2015-07-10T02:31:52.156-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:31:59.322-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:31:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:32:02.158-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91127b054cbcf6c54fbc
+2015-07-10T02:32:02.166-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:32:12.168-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f911c7b054cbcf6c54fbe
+2015-07-10T02:32:12.174-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:32:22.176-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91267b054cbcf6c54fc0
+2015-07-10T02:32:22.184-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:32:29.324-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:32:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:32:32.185-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91307b054cbcf6c54fc2
+2015-07-10T02:32:32.193-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:32:42.194-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f913a7b054cbcf6c54fc4
+2015-07-10T02:32:42.200-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:32:52.202-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91447b054cbcf6c54fc6
+2015-07-10T02:32:52.211-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:32:59.325-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:32:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:33:02.213-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f914e7b054cbcf6c54fc8
+2015-07-10T02:33:02.220-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:33:12.222-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91587b054cbcf6c54fca
+2015-07-10T02:33:12.228-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:33:22.230-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91627b054cbcf6c54fcc
+2015-07-10T02:33:22.238-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:33:29.325-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:33:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:33:32.240-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f916c7b054cbcf6c54fce
+2015-07-10T02:33:32.248-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:33:42.249-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91767b054cbcf6c54fd0
+2015-07-10T02:33:42.256-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:33:52.258-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91807b054cbcf6c54fd2
+2015-07-10T02:33:52.264-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:33:59.326-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:33:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:34:02.266-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f918a7b054cbcf6c54fd4
+2015-07-10T02:34:02.273-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:34:12.275-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91947b054cbcf6c54fd6
+2015-07-10T02:34:12.282-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:34:22.283-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f919e7b054cbcf6c54fd8
+2015-07-10T02:34:22.289-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:34:29.327-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:34:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:34:32.292-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91a87b054cbcf6c54fda
+2015-07-10T02:34:32.299-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:34:42.300-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91b27b054cbcf6c54fdc
+2015-07-10T02:34:42.307-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:34:52.309-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91bc7b054cbcf6c54fde
+2015-07-10T02:34:52.316-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:34:59.328-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:34:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:35:02.319-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91c67b054cbcf6c54fe0
+2015-07-10T02:35:02.324-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:35:12.326-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91d07b054cbcf6c54fe2
+2015-07-10T02:35:12.334-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:35:22.335-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91da7b054cbcf6c54fe4
+2015-07-10T02:35:22.342-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:35:29.328-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:35:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:35:32.344-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91e47b054cbcf6c54fe6
+2015-07-10T02:35:32.351-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:35:42.353-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91ee7b054cbcf6c54fe8
+2015-07-10T02:35:42.359-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:35:52.361-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f91f87b054cbcf6c54fea
+2015-07-10T02:35:52.366-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:35:59.329-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:35:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:36:02.369-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92027b054cbcf6c54fec
+2015-07-10T02:36:02.374-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:36:12.376-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f920c7b054cbcf6c54fee
+2015-07-10T02:36:12.385-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:36:22.387-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92167b054cbcf6c54ff0
+2015-07-10T02:36:22.392-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:36:29.331-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:36:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:36:32.395-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92207b054cbcf6c54ff2
+2015-07-10T02:36:32.402-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:36:42.404-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f922a7b054cbcf6c54ff4
+2015-07-10T02:36:42.411-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:36:52.412-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92347b054cbcf6c54ff6
+2015-07-10T02:36:52.421-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:36:59.333-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:36:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:37:02.422-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f923e7b054cbcf6c54ff8
+2015-07-10T02:37:02.429-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:37:12.430-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92487b054cbcf6c54ffa
+2015-07-10T02:37:12.436-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:37:22.438-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92527b054cbcf6c54ffc
+2015-07-10T02:37:22.444-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:37:29.334-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:37:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:37:32.446-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f925c7b054cbcf6c54ffe
+2015-07-10T02:37:32.453-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:37:42.455-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92667b054cbcf6c55000
+2015-07-10T02:37:42.462-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:37:52.463-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92707b054cbcf6c55002
+2015-07-10T02:37:52.470-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:37:59.335-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:37:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:38:02.471-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f927a7b054cbcf6c55004
+2015-07-10T02:38:02.478-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:38:12.480-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92847b054cbcf6c55006
+2015-07-10T02:38:12.487-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:38:22.488-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f928e7b054cbcf6c55008
+2015-07-10T02:38:22.495-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:38:29.336-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:38:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:38:32.497-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92987b054cbcf6c5500a
+2015-07-10T02:38:32.502-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:38:42.504-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92a27b054cbcf6c5500c
+2015-07-10T02:38:42.537-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:38:52.538-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92ac7b054cbcf6c5500e
+2015-07-10T02:38:52.545-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:38:59.337-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:38:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:39:02.548-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92b67b054cbcf6c55010
+2015-07-10T02:39:02.554-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:39:12.555-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92c07b054cbcf6c55012
+2015-07-10T02:39:12.561-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:39:22.564-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92ca7b054cbcf6c55014
+2015-07-10T02:39:22.570-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:39:29.338-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:39:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:39:32.572-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92d47b054cbcf6c55016
+2015-07-10T02:39:32.580-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:39:42.582-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92de7b054cbcf6c55018
+2015-07-10T02:39:42.588-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:39:52.591-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92e87b054cbcf6c5501a
+2015-07-10T02:39:52.595-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:39:59.339-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:39:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:40:02.598-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92f27b054cbcf6c5501c
+2015-07-10T02:40:02.603-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:40:12.605-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f92fc7b054cbcf6c5501e
+2015-07-10T02:40:12.613-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:40:22.614-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93067b054cbcf6c55020
+2015-07-10T02:40:22.624-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:40:29.340-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:40:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:40:32.626-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93107b054cbcf6c55022
+2015-07-10T02:40:32.632-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:40:42.634-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f931a7b054cbcf6c55024
+2015-07-10T02:40:42.642-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:40:52.644-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93247b054cbcf6c55026
+2015-07-10T02:40:52.651-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:40:59.341-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:40:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:41:02.654-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f932e7b054cbcf6c55028
+2015-07-10T02:41:02.660-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:41:12.662-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93387b054cbcf6c5502a
+2015-07-10T02:41:12.668-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:41:22.670-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93427b054cbcf6c5502c
+2015-07-10T02:41:22.677-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:41:29.342-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:41:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:41:32.679-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f934c7b054cbcf6c5502e
+2015-07-10T02:41:32.687-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:41:42.688-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93567b054cbcf6c55030
+2015-07-10T02:41:42.694-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:41:52.696-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93607b054cbcf6c55032
+2015-07-10T02:41:52.703-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:41:59.343-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:41:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:42:02.705-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f936a7b054cbcf6c55034
+2015-07-10T02:42:02.712-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:42:12.713-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93747b054cbcf6c55036
+2015-07-10T02:42:12.728-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:42:22.729-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f937e7b054cbcf6c55038
+2015-07-10T02:42:22.735-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:42:29.344-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:42:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:42:32.737-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93887b054cbcf6c5503a
+2015-07-10T02:42:32.744-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:42:42.745-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93927b054cbcf6c5503c
+2015-07-10T02:42:42.753-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:42:52.755-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f939c7b054cbcf6c5503e
+2015-07-10T02:42:52.762-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:42:59.345-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:42:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:43:02.764-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93a67b054cbcf6c55040
+2015-07-10T02:43:02.769-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:43:12.770-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93b07b054cbcf6c55042
+2015-07-10T02:43:12.777-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:43:22.779-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93ba7b054cbcf6c55044
+2015-07-10T02:43:22.786-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:43:29.346-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:43:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:43:32.788-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93c47b054cbcf6c55046
+2015-07-10T02:43:32.795-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:43:42.797-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93ce7b054cbcf6c55048
+2015-07-10T02:43:42.804-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:43:52.806-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93d87b054cbcf6c5504a
+2015-07-10T02:43:52.813-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:43:59.348-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:43:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:44:02.816-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93e27b054cbcf6c5504c
+2015-07-10T02:44:02.822-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:44:12.824-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93ec7b054cbcf6c5504e
+2015-07-10T02:44:12.831-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:44:22.833-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f93f67b054cbcf6c55050
+2015-07-10T02:44:22.841-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:44:29.349-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:44:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:44:32.843-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94007b054cbcf6c55052
+2015-07-10T02:44:32.850-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:44:42.851-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f940a7b054cbcf6c55054
+2015-07-10T02:44:42.859-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:44:52.862-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94147b054cbcf6c55056
+2015-07-10T02:44:52.867-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:44:59.350-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:44:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:45:02.868-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f941e7b054cbcf6c55058
+2015-07-10T02:45:02.874-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:45:12.875-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94287b054cbcf6c5505a
+2015-07-10T02:45:12.882-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:45:22.883-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94327b054cbcf6c5505c
+2015-07-10T02:45:22.890-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:45:29.351-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:45:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:45:32.891-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f943c7b054cbcf6c5505e
+2015-07-10T02:45:32.898-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:45:42.900-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94467b054cbcf6c55060
+2015-07-10T02:45:42.906-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:45:52.908-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94507b054cbcf6c55062
+2015-07-10T02:45:52.915-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:45:59.352-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:45:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:46:02.916-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f945a7b054cbcf6c55064
+2015-07-10T02:46:02.922-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:46:12.925-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94647b054cbcf6c55066
+2015-07-10T02:46:12.933-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:46:22.934-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f946e7b054cbcf6c55068
+2015-07-10T02:46:22.940-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:46:29.354-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:46:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:46:32.942-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94787b054cbcf6c5506a
+2015-07-10T02:46:32.948-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:46:42.951-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94827b054cbcf6c5506c
+2015-07-10T02:46:42.958-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:46:52.960-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f948c7b054cbcf6c5506e
+2015-07-10T02:46:52.966-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:46:59.355-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:46:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:47:02.968-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94967b054cbcf6c55070
+2015-07-10T02:47:02.975-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:47:12.977-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94a07b054cbcf6c55072
+2015-07-10T02:47:12.983-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:47:22.985-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94aa7b054cbcf6c55074
+2015-07-10T02:47:22.990-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:47:29.356-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:47:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:47:32.992-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94b47b054cbcf6c55076
+2015-07-10T02:47:32.999-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:47:43.001-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94be7b054cbcf6c55078
+2015-07-10T02:47:43.007-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:47:53.009-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94c97b054cbcf6c5507a
+2015-07-10T02:47:53.015-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:47:59.357-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:47:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:48:03.016-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94d37b054cbcf6c5507c
+2015-07-10T02:48:03.021-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:48:13.023-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94dd7b054cbcf6c5507e
+2015-07-10T02:48:13.029-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:48:23.032-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94e77b054cbcf6c55080
+2015-07-10T02:48:23.038-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:48:29.358-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:48:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:48:33.039-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94f17b054cbcf6c55082
+2015-07-10T02:48:33.050-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:48:43.052-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f94fb7b054cbcf6c55084
+2015-07-10T02:48:43.062-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:48:53.063-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95057b054cbcf6c55086
+2015-07-10T02:48:53.071-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:48:59.359-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:48:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:49:03.073-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f950f7b054cbcf6c55088
+2015-07-10T02:49:03.081-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:49:13.083-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95197b054cbcf6c5508a
+2015-07-10T02:49:13.089-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:49:23.090-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95237b054cbcf6c5508c
+2015-07-10T02:49:23.098-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:49:29.360-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:49:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:49:33.100-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f952d7b054cbcf6c5508e
+2015-07-10T02:49:33.108-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:49:43.110-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95377b054cbcf6c55090
+2015-07-10T02:49:43.117-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:49:53.118-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95417b054cbcf6c55092
+2015-07-10T02:49:53.125-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:49:59.361-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:49:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:50:03.127-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f954b7b054cbcf6c55094
+2015-07-10T02:50:03.132-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:50:13.135-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95557b054cbcf6c55096
+2015-07-10T02:50:13.141-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:50:23.143-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f955f7b054cbcf6c55098
+2015-07-10T02:50:23.148-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:50:29.363-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:50:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:50:33.150-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95697b054cbcf6c5509a
+2015-07-10T02:50:33.157-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:50:43.159-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95737b054cbcf6c5509c
+2015-07-10T02:50:43.166-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:50:53.168-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f957d7b054cbcf6c5509e
+2015-07-10T02:50:53.174-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:50:59.364-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:50:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:51:03.176-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95877b054cbcf6c550a0
+2015-07-10T02:51:03.182-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:51:13.184-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95917b054cbcf6c550a2
+2015-07-10T02:51:13.190-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:51:23.192-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f959b7b054cbcf6c550a4
+2015-07-10T02:51:23.201-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:51:25.120-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54115 #2 (2 connections now open)
+2015-07-10T02:51:25.165-0700 I SHARDING [conn2] ChunkManager: time to load chunks for tjut.user_list: 0ms sequenceNumber: 3 version: 1|3||559f8bf07b054cbcf6c54eb4 based on: 1|0||559f8bf07b054cbcf6c54eb4
+2015-07-10T02:51:25.165-0700 I SHARDING [conn2] autosplitted tjut.user_list shard: ns: tjut.user_list, shard: ps1:ps1/192.168.154.130:27000,192.168.154.130:27001, lastmod: 1|0||000000000000000000000000, min: { __avpSessionId: MinKey }, max: { __avpSessionId: MaxKey } into 3 (splitThreshold 921) (migrate suggested)
+2015-07-10T02:51:25.166-0700 I SHARDING [conn2] moving chunk (auto): ns: tjut.user_list, shard: ps1:ps1/192.168.154.130:27000,192.168.154.130:27001, lastmod: 1|1||000000000000000000000000, min: { __avpSessionId: MinKey }, max: { __avpSessionId: "-56" } to: ps2
+2015-07-10T02:51:25.166-0700 I SHARDING [conn2] moving chunk ns: tjut.user_list moving ( ns: tjut.user_list, shard: ps1:ps1/192.168.154.130:27000,192.168.154.130:27001, lastmod: 1|1||000000000000000000000000, min: { __avpSessionId: MinKey }, max: { __avpSessionId: "-56" }) ps1:ps1/192.168.154.130:27000,192.168.154.130:27001 -> ps2:ps2/192.168.154.130:27010,192.168.154.130:27011
+2015-07-10T02:51:28.399-0700 I SHARDING [conn2] ChunkManager: time to load chunks for tjut.user_list: 0ms sequenceNumber: 4 version: 2|1||559f8bf07b054cbcf6c54eb4 based on: 1|3||559f8bf07b054cbcf6c54eb4
+2015-07-10T02:51:28.454-0700 I NETWORK  [conn2] end connection 192.168.154.128:54115 (1 connection now open)
+2015-07-10T02:51:29.365-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:51:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:51:33.202-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95a57b054cbcf6c550a6
+2015-07-10T02:51:33.216-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:51:43.218-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95af7b054cbcf6c550a8
+2015-07-10T02:51:43.225-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:51:53.227-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95b97b054cbcf6c550aa
+2015-07-10T02:51:53.233-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:51:59.366-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:51:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:52:03.235-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95c37b054cbcf6c550ac
+2015-07-10T02:52:03.244-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:52:13.246-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95cd7b054cbcf6c550ae
+2015-07-10T02:52:13.253-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:52:23.254-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95d77b054cbcf6c550b0
+2015-07-10T02:52:23.261-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:52:29.367-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:52:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:52:33.263-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95e17b054cbcf6c550b2
+2015-07-10T02:52:33.274-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:52:43.276-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95eb7b054cbcf6c550b4
+2015-07-10T02:52:43.282-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:52:50.032-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54116 #3 (2 connections now open)
+2015-07-10T02:52:53.283-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95f57b054cbcf6c550b6
+2015-07-10T02:52:53.293-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:52:58.183-0700 I NETWORK  [conn3] end connection 192.168.154.128:54116 (1 connection now open)
+2015-07-10T02:52:59.369-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:52:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:53:03.295-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f95ff7b054cbcf6c550b8
+2015-07-10T02:53:03.300-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:53:04.852-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54117 #4 (2 connections now open)
+2015-07-10T02:53:13.301-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96097b054cbcf6c550ba
+2015-07-10T02:53:13.307-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:53:13.482-0700 I NETWORK  [conn4] end connection 192.168.154.128:54117 (1 connection now open)
+2015-07-10T02:53:21.493-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54118 #5 (2 connections now open)
+2015-07-10T02:53:23.308-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96137b054cbcf6c550bc
+2015-07-10T02:53:23.315-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:53:29.369-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:53:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:53:29.993-0700 I NETWORK  [conn5] end connection 192.168.154.128:54118 (1 connection now open)
+2015-07-10T02:53:33.317-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f961d7b054cbcf6c550be
+2015-07-10T02:53:33.326-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:53:38.852-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54119 #6 (2 connections now open)
+2015-07-10T02:53:43.328-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96277b054cbcf6c550c0
+2015-07-10T02:53:43.343-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:53:47.388-0700 I NETWORK  [conn6] end connection 192.168.154.128:54119 (1 connection now open)
+2015-07-10T02:53:53.345-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96317b054cbcf6c550c2
+2015-07-10T02:53:53.379-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:53:59.371-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:53:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:54:00.356-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54120 #7 (2 connections now open)
+2015-07-10T02:54:03.381-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f963b7b054cbcf6c550c4
+2015-07-10T02:54:03.390-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:54:13.391-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96457b054cbcf6c550c6
+2015-07-10T02:54:13.399-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:54:23.402-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f964f7b054cbcf6c550c8
+2015-07-10T02:54:23.412-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:54:29.371-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:54:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:54:33.414-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96597b054cbcf6c550ca
+2015-07-10T02:54:33.420-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:54:43.421-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96637b054cbcf6c550cc
+2015-07-10T02:54:43.428-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:54:43.533-0700 I NETWORK  [conn7] end connection 192.168.154.128:54120 (1 connection now open)
+2015-07-10T02:54:53.430-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f966d7b054cbcf6c550ce
+2015-07-10T02:54:53.437-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:54:59.372-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:54:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:55:03.439-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96777b054cbcf6c550d0
+2015-07-10T02:55:03.446-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:55:13.448-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96817b054cbcf6c550d2
+2015-07-10T02:55:13.453-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:55:23.456-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f968b7b054cbcf6c550d4
+2015-07-10T02:55:23.464-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:55:29.373-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:55:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:55:33.466-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96957b054cbcf6c550d6
+2015-07-10T02:55:33.472-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:55:43.474-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f969f7b054cbcf6c550d8
+2015-07-10T02:55:43.481-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:55:53.483-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96a97b054cbcf6c550da
+2015-07-10T02:55:53.488-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:55:59.374-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:55:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:56:00.044-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54123 #8 (2 connections now open)
+2015-07-10T02:56:03.490-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96b37b054cbcf6c550dc
+2015-07-10T02:56:03.504-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:56:13.505-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96bd7b054cbcf6c550de
+2015-07-10T02:56:13.514-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:56:23.516-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96c77b054cbcf6c550e0
+2015-07-10T02:56:23.521-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:56:29.375-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:56:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:56:33.522-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96d17b054cbcf6c550e2
+2015-07-10T02:56:33.530-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:56:43.129-0700 I NETWORK  [conn8] end connection 192.168.154.128:54123 (1 connection now open)
+2015-07-10T02:56:43.532-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96db7b054cbcf6c550e4
+2015-07-10T02:56:43.831-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:56:53.833-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96e57b054cbcf6c550e6
+2015-07-10T02:56:53.841-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:56:59.376-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:56:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:57:03.843-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96ef7b054cbcf6c550e8
+2015-07-10T02:57:03.850-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:57:13.852-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f96f97b054cbcf6c550ea
+2015-07-10T02:57:13.859-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:57:23.860-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f97037b054cbcf6c550ec
+2015-07-10T02:57:23.868-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:57:29.377-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:57:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:57:33.869-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f970d7b054cbcf6c550ee
+2015-07-10T02:57:33.876-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:57:43.878-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f97177b054cbcf6c550f0
+2015-07-10T02:57:43.886-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:57:53.887-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f97217b054cbcf6c550f2
+2015-07-10T02:57:53.896-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:57:59.378-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:57:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:58:03.899-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f972b7b054cbcf6c550f4
+2015-07-10T02:58:03.905-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:58:05.388-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54124 #9 (2 connections now open)
+2015-07-10T02:58:13.894-0700 I NETWORK  [conn9] end connection 192.168.154.128:54124 (1 connection now open)
+2015-07-10T02:58:13.906-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f97357b054cbcf6c550f6
+2015-07-10T02:58:13.912-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T02:58:18.027-0700 I NETWORK  [mongosMain] connection accepted from 192.168.154.128:54125 #10 (2 connections now open)
+2015-07-10T02:58:22.617-0700 I SHARDING [conn10] ChunkManager: time to load chunks for tjut.user_list: 0ms sequenceNumber: 5 version: 2|4||559f8bf07b054cbcf6c54eb4 based on: 2|1||559f8bf07b054cbcf6c54eb4
+2015-07-10T02:58:22.617-0700 I SHARDING [conn10] autosplitted tjut.user_list shard: ns: tjut.user_list, shard: ps1:ps1/192.168.154.130:27000,192.168.154.130:27001, lastmod: 2|1||000000000000000000000000, min: { __avpSessionId: "-56" }, max: { __avpSessionId: "56" } into 3 (splitThreshold 16777216)
+2015-07-10T02:58:23.914-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f973f7b054cbcf6c550f8
+2015-07-10T02:58:23.916-0700 I SHARDING [Balancer]  ns: tjut.user_list going to move { _id: "tjut.user_list-__avpSessionId_"-56"", ns: "tjut.user_list", min: { __avpSessionId: "-56" }, max: { __avpSessionId: "05252639" }, version: Timestamp 2000|2, versionEpoch: ObjectId('559f8bf07b054cbcf6c54eb4'), lastmod: Timestamp 2000|2, lastmodEpoch: ObjectId('559f8bf07b054cbcf6c54eb4'), shard: "ps1" } from: ps1 to: ps2 tag []
+2015-07-10T02:58:23.916-0700 I SHARDING [Balancer] moving chunk ns: tjut.user_list moving ( ns: tjut.user_list, shard: ps1:ps1/192.168.154.130:27000,192.168.154.130:27001, lastmod: 2|2||000000000000000000000000, min: { __avpSessionId: "-56" }, max: { __avpSessionId: "05252639" }) ps1:ps1/192.168.154.130:27000,192.168.154.130:27001 -> ps2:ps2/192.168.154.130:27010,192.168.154.130:27011
+2015-07-10T02:58:28.194-0700 I NETWORK  [conn10] end connection 192.168.154.128:54125 (1 connection now open)
+2015-07-10T02:58:29.378-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:58:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:58:59.380-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:58:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:59:29.381-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:59:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T02:59:59.383-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 02:59:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:00:29.384-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:00:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:00:59.385-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:00:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:01:29.386-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:01:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:01:59.388-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:01:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:02:12.526-0700 I SHARDING [Balancer] ChunkManager: time to load chunks for tjut.user_list: 0ms sequenceNumber: 6 version: 3|1||559f8bf07b054cbcf6c54eb4 based on: 2|4||559f8bf07b054cbcf6c54eb4
+2015-07-10T03:02:12.662-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:02:13.740-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98257b054cbcf6c550fa
+2015-07-10T03:02:13.751-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:02:23.754-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f982f7b054cbcf6c550fc
+2015-07-10T03:02:23.761-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:02:29.391-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:02:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:02:33.762-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98397b054cbcf6c550fe
+2015-07-10T03:02:33.771-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:02:43.773-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98437b054cbcf6c55100
+2015-07-10T03:02:43.781-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:02:53.783-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f984d7b054cbcf6c55102
+2015-07-10T03:02:53.790-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:02:59.392-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:02:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:03:03.791-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98577b054cbcf6c55104
+2015-07-10T03:03:06.479-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:03:16.481-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98647b054cbcf6c55106
+2015-07-10T03:03:16.494-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:03:26.497-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f986e7b054cbcf6c55108
+2015-07-10T03:03:26.505-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:03:29.393-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:03:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:03:36.507-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98787b054cbcf6c5510a
+2015-07-10T03:03:37.689-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:03:47.691-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98837b054cbcf6c5510c
+2015-07-10T03:03:47.701-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:03:57.703-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f988d7b054cbcf6c5510e
+2015-07-10T03:03:57.709-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:03:59.395-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:03:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:04:07.713-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98977b054cbcf6c55110
+2015-07-10T03:04:07.721-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:04:17.722-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98a17b054cbcf6c55112
+2015-07-10T03:04:17.728-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:04:27.729-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98ab7b054cbcf6c55114
+2015-07-10T03:04:27.738-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:04:29.396-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:04:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:04:37.740-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98b57b054cbcf6c55116
+2015-07-10T03:04:37.750-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:04:47.751-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98bf7b054cbcf6c55118
+2015-07-10T03:04:47.760-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:04:57.762-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98c97b054cbcf6c5511a
+2015-07-10T03:04:57.780-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:04:59.398-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:04:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:05:07.807-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98d37b054cbcf6c5511c
+2015-07-10T03:05:07.817-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:05:17.819-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98dd7b054cbcf6c5511e
+2015-07-10T03:05:17.831-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:05:27.833-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98e77b054cbcf6c55120
+2015-07-10T03:05:27.841-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:05:29.399-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:05:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:05:37.843-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98f17b054cbcf6c55122
+2015-07-10T03:05:37.853-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:05:47.855-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f98fb7b054cbcf6c55124
+2015-07-10T03:05:47.866-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:05:57.867-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f99057b054cbcf6c55126
+2015-07-10T03:05:57.873-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:05:59.400-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:05:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:06:01.729-0700 I NETWORK  [conn1] end connection 192.168.154.130:46479 (0 connections now open)
+2015-07-10T03:06:07.875-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f990f7b054cbcf6c55128
+2015-07-10T03:06:07.882-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:06:17.884-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f99197b054cbcf6c5512a
+2015-07-10T03:06:17.892-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:06:27.921-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f99237b054cbcf6c5512c
+2015-07-10T03:06:27.933-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:06:29.401-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:06:29 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:06:37.935-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f992d7b054cbcf6c5512e
+2015-07-10T03:06:37.952-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:06:47.953-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f99377b054cbcf6c55130
+2015-07-10T03:06:47.959-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:06:57.961-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f99417b054cbcf6c55132
+2015-07-10T03:06:58.127-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:06:59.402-0700 I SHARDING [LockPinger] cluster 192.168.154.130:27020 pinged successfully at Fri Jul 10 03:06:59 2015 by distributed lock pinger '192.168.154.130:27020/ubuntu:27030:1436518948:1804289383', sleeping for 30000ms
+2015-07-10T03:07:08.129-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f994c7b054cbcf6c55134
+2015-07-10T03:07:08.138-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:07:18.140-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' acquired, ts : 559f99567b054cbcf6c55136
+2015-07-10T03:07:18.145-0700 I SHARDING [Balancer] distributed lock 'balancer/ubuntu:27030:1436518948:1804289383' unlocked. 
+2015-07-10T03:07:18.433-0700 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2015-07-10T03:07:18.433-0700 I SHARDING [signalProcessingThread] dbexit:  rc:0

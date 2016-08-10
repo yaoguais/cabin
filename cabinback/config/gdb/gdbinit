@@ -1,0 +1,66 @@
+define print_zval
+    printf "  "
+    if $arg0.u1.v.type == 0
+            printf "IS_UNDEF\n"
+    end
+    if $arg0.u1.v.type == 1
+            printf "IS_NULL\n"
+    end
+    if $arg0.u1.v.type == 2
+            printf "IS_FALSE\n"
+    end
+    if $arg0.u1.v.type == 3
+            printf "IS_TRUE\n"
+    end
+    if $arg0.u1.v.type == 4
+            printf "IS_LONG\n"
+    end
+    if $arg0.u1.v.type == 5
+            printf "IS_DOUBLE\n"
+    end
+    if $arg0.u1.v.type == 6
+            printf "IS_STRING %s\n",$arg0.value.str.val
+    end
+    if $arg0.u1.v.type == 7
+            printf "IS_ARRAY\n"
+    end
+    if $arg0.u1.v.type == 8
+            printf "IS_OBJECT\n"
+    end
+    if $arg0.u1.v.type >= 9
+            printf "%d %s\n",$arg0.u1.v.type,"IS_RESOURCE 9 IS_REFERENCE 10 IS_CONSTANT 11 IS_CONSTANT_AST 12 _IS_BOOL 13 IS_CALLABLE 14 IS_INDIRECT 15 IS_PTR 17\n"
+    end
+end
+
+
+define print_hash
+    set $i = 0
+    set $len = $arg0.nTableSize - 1
+    while $i < $len
+            if $arg0.arData[$i].key.len > 0			
+                    printf "%d: %s",$i,$arg0.arData[$i].key.val
+                    print_zval $arg0.arData[$i].val
+            end
+            set $i = $i + 1
+    end
+end
+
+define print_hash_on_index
+    set $i = 0
+    set $len = $arg0.nTableSize - 1
+    while $i < $len
+            if $arg0.arData[$i].key.len > 0 && $i == $arg1
+		    printf "%d: %s\n",$i,$arg0.arData[$i].key.val
+                    p $arg0.arData[$i].val
+            end
+            set $i = $i + 1
+    end
+end
+
+define get_op_handlers
+	set $i = 0
+	while $arg0[$i]
+		p $arg0[$i].handler
+		set $i = $i + 1
+	end
+end

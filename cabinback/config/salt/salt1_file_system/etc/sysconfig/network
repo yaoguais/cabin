@@ -1,0 +1,4 @@
+NETWORKING=yes
+#HOSTNAME=vagrant-centos65.vagrantup.com
+HOSTNAME=salt1
+GATEWAY=192.168.1.1

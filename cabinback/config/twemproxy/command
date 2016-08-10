@@ -1,0 +1,2 @@
+sudo /home/yaoguai/twemproxy/sbin/nutcracker -c /home/yaoguai/twemproxy/conf/nutcracker.yml
+sudo /home/yaoguai/twemproxy/sbin/nutcracker -d -c /home/yaoguai/twemproxy/conf/nutcracker.yml

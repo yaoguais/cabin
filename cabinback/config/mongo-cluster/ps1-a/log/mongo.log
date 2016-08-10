@@ -1,0 +1,1288 @@
+2015-07-10T00:27:11.771-0700 I JOURNAL  [initandlisten] journal dir=/home/yaoguai/mongodb/ps1-m/data/journal
+2015-07-10T00:27:11.771-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-07-10T00:27:12.004-0700 I JOURNAL  [durability] Durability thread started
+2015-07-10T00:27:12.004-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1503 port=27000 dbpath=/home/yaoguai/mongodb/ps1-m/data 64-bit host=ubuntu
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] db version v3.0.4
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-07-10T00:27:12.006-0700 I CONTROL  [initandlisten] options: { config: "/home/yaoguai/mongodb/ps1-m/mongo.conf", net: { bindIp: "192.168.154.130", port: 27000 }, processManagement: { fork: true, pidFilePath: "/home/yaoguai/mongodb/ps1-m/pid/mongo.pid" }, replication: { oplogSizeMB: 10000, replSet: "testrs" }, storage: { dbPath: "/home/yaoguai/mongodb/ps1-m/data", directoryPerDB: true, mmapv1: { preallocDataFiles: false } }, systemLog: { destination: "file", logAppend: true, path: "/home/yaoguai/mongodb/ps1-m/log/mongo.log" } }
+2015-07-10T00:27:12.009-0700 I INDEX    [initandlisten] allocating new ns file /home/yaoguai/mongodb/ps1-m/data/local/local.ns, filling with zeroes...
+2015-07-10T00:27:12.336-0700 I STORAGE  [FileAllocator] allocating new datafile /home/yaoguai/mongodb/ps1-m/data/local/local.0, filling with zeroes...
+2015-07-10T00:27:12.336-0700 I STORAGE  [FileAllocator] creating directory /home/yaoguai/mongodb/ps1-m/data/local/_tmp
+2015-07-10T00:27:12.338-0700 I STORAGE  [FileAllocator] done allocating datafile /home/yaoguai/mongodb/ps1-m/data/local/local.0, size: 64MB,  took 0 secs
+2015-07-10T00:27:12.341-0700 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument Did not find replica set configuration document in local.system.replset
+2015-07-10T00:27:12.343-0700 I NETWORK  [initandlisten] waiting for connections on port 27000
+2015-07-10T00:29:27.989-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:58501 #1 (1 connection now open)
+2015-07-10T00:30:49.311-0700 I QUERY    [conn1] assertion 13435 not master and slaveOk=false ns:test.foo query:{}
+2015-07-10T00:31:13.411-0700 I NETWORK  [conn1] end connection 192.168.154.130:58501 (0 connections now open)
+2015-07-10T00:34:15.461-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-07-10T00:34:15.483-0700 W -        [initandlisten] Detected unclean shutdown - /home/yaoguai/mongodb/ps1-a/data/mongod.lock is not empty.
+2015-07-10T00:34:15.495-0700 I JOURNAL  [initandlisten] journal dir=/home/yaoguai/mongodb/ps1-a/data/journal
+2015-07-10T00:34:15.495-0700 I JOURNAL  [initandlisten] recover begin
+2015-07-10T00:34:15.495-0700 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2015-07-10T00:34:15.495-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2015-07-10T00:34:15.495-0700 I JOURNAL  [initandlisten] recover /home/yaoguai/mongodb/ps1-a/data/journal/j._0
+2015-07-10T00:34:15.496-0700 I STORAGE  [initandlisten] recover create file /home/yaoguai/mongodb/ps1-a/data/local/local.ns 16MB
+2015-07-10T00:34:15.537-0700 I STORAGE  [initandlisten] recover create file /home/yaoguai/mongodb/ps1-a/data/local/local.0 64MB
+2015-07-10T00:34:15.610-0700 I JOURNAL  [initandlisten] recover cleaning up
+2015-07-10T00:34:15.610-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2015-07-10T00:34:15.610-0700 I JOURNAL  [initandlisten] recover done
+2015-07-10T00:34:15.709-0700 I JOURNAL  [durability] Durability thread started
+2015-07-10T00:34:15.709-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] MongoDB starting : pid=2186 port=27002 dbpath=/home/yaoguai/mongodb/ps1-a/data 64-bit host=ubuntu
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] db version v3.0.4
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-07-10T00:34:15.710-0700 I CONTROL  [initandlisten] options: { config: "/home/yaoguai/mongodb/ps1-a/mongo.conf", net: { bindIp: "192.168.154.130", port: 27002 }, processManagement: { fork: true, pidFilePath: "/home/yaoguai/mongodb/ps1-a/pid/mongo.pid" }, replication: { oplogSizeMB: 10000, replSet: "ps1" }, storage: { dbPath: "/home/yaoguai/mongodb/ps1-a/data", directoryPerDB: true, mmapv1: { preallocDataFiles: false } }, systemLog: { destination: "file", logAppend: true, path: "/home/yaoguai/mongodb/ps1-a/log/mongo.log" } }
+2015-07-10T00:34:15.713-0700 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument Did not find replica set configuration document in local.system.replset
+2015-07-10T00:34:15.713-0700 I NETWORK  [initandlisten] waiting for connections on port 27002
+2015-07-10T00:42:49.343-0700 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2015-07-10T00:42:49.347-0700 I CONTROL  [signalProcessingThread] now exiting
+2015-07-10T00:42:49.347-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-07-10T00:42:49.347-0700 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-07-10T00:42:49.347-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-07-10T00:42:49.347-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-07-10T00:42:49.347-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-07-10T00:42:49.347-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-07-10T00:42:49.347-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-07-10T00:42:49.347-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-07-10T00:42:49.349-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-07-10T00:42:49.451-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-07-10T00:42:49.451-0700 I JOURNAL  [durability] Durability thread stopped
+2015-07-10T00:42:49.451-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-07-10T00:42:49.452-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-07-10T00:42:49.452-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-07-10T00:42:49.452-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-07-10T00:45:39.795-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-07-10T00:45:39.848-0700 I JOURNAL  [initandlisten] journal dir=/home/yaoguai/mongodb/ps1-a/data/journal
+2015-07-10T00:45:39.848-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-07-10T00:45:39.943-0700 I JOURNAL  [durability] Durability thread started
+2015-07-10T00:45:39.943-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] MongoDB starting : pid=2343 port=27002 dbpath=/home/yaoguai/mongodb/ps1-a/data 64-bit host=ubuntu
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] 
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] db version v3.0.4
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-07-10T00:45:39.944-0700 I CONTROL  [initandlisten] options: { config: "/home/yaoguai/mongodb/ps1-a/mongo.conf", net: { bindIp: "192.168.154.130", port: 27002 }, processManagement: { fork: true, pidFilePath: "/home/yaoguai/mongodb/ps1-a/pid/mongo.pid" }, replication: { oplogSizeMB: 10000, replSet: "ps1" }, storage: { dbPath: "/home/yaoguai/mongodb/ps1-a/data", directoryPerDB: true, mmapv1: { preallocDataFiles: false } }, systemLog: { destination: "file", logAppend: true, path: "/home/yaoguai/mongodb/ps1-a/log/mongo.log" } }
+2015-07-10T00:45:39.949-0700 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument Did not find replica set configuration document in local.system.replset
+2015-07-10T00:45:39.949-0700 I NETWORK  [initandlisten] waiting for connections on port 27002
+2015-07-10T00:46:39.731-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49597 #1 (1 connection now open)
+2015-07-10T00:46:39.732-0700 I NETWORK  [conn1] end connection 192.168.154.130:49597 (0 connections now open)
+2015-07-10T00:46:39.733-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49599 #2 (1 connection now open)
+2015-07-10T00:46:39.738-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49604 #3 (2 connections now open)
+2015-07-10T00:46:39.739-0700 I NETWORK  [conn3] end connection 192.168.154.130:49604 (1 connection now open)
+2015-07-10T00:46:39.740-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49606 #4 (2 connections now open)
+2015-07-10T00:46:39.741-0700 I REPL     [WriteReplSetConfig] Starting replication applier threads
+2015-07-10T00:46:39.741-0700 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "ps1", version: 1, members: [ { _id: 0, host: "192.168.154.130:27000", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 2.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "192.168.154.130:27001", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "192.168.154.130:27002", arbiterOnly: true, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatTimeoutSecs: 10, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 } } }
+2015-07-10T00:46:39.741-0700 I REPL     [ReplicationExecutor] This node is 192.168.154.130:27002 in the config
+2015-07-10T00:46:39.741-0700 I REPL     [ReplicationExecutor] transition to ARBITER
+2015-07-10T00:46:39.741-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27000 is now in state STARTUP2
+2015-07-10T00:46:39.742-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27001 is now in state STARTUP2
+2015-07-10T00:47:09.748-0700 I NETWORK  [conn2] end connection 192.168.154.130:49599 (1 connection now open)
+2015-07-10T00:47:09.749-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49610 #5 (2 connections now open)
+2015-07-10T00:47:09.756-0700 I NETWORK  [conn4] end connection 192.168.154.130:49606 (1 connection now open)
+2015-07-10T00:47:09.757-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49613 #6 (2 connections now open)
+2015-07-10T00:47:39.763-0700 I NETWORK  [conn5] end connection 192.168.154.130:49610 (1 connection now open)
+2015-07-10T00:47:39.763-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49614 #7 (2 connections now open)
+2015-07-10T00:47:39.776-0700 I NETWORK  [conn6] end connection 192.168.154.130:49613 (1 connection now open)
+2015-07-10T00:47:39.776-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49618 #8 (2 connections now open)
+2015-07-10T00:48:09.779-0700 I NETWORK  [conn7] end connection 192.168.154.130:49614 (1 connection now open)
+2015-07-10T00:48:09.780-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49621 #9 (2 connections now open)
+2015-07-10T00:48:09.790-0700 I NETWORK  [conn8] end connection 192.168.154.130:49618 (1 connection now open)
+2015-07-10T00:48:09.790-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49624 #10 (2 connections now open)
+2015-07-10T00:48:39.794-0700 I NETWORK  [conn9] end connection 192.168.154.130:49621 (1 connection now open)
+2015-07-10T00:48:39.794-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49626 #11 (2 connections now open)
+2015-07-10T00:48:39.806-0700 I NETWORK  [conn10] end connection 192.168.154.130:49624 (1 connection now open)
+2015-07-10T00:48:39.806-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49630 #12 (2 connections now open)
+2015-07-10T00:49:09.809-0700 I NETWORK  [conn11] end connection 192.168.154.130:49626 (1 connection now open)
+2015-07-10T00:49:09.810-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49633 #13 (2 connections now open)
+2015-07-10T00:49:09.820-0700 I NETWORK  [conn12] end connection 192.168.154.130:49630 (1 connection now open)
+2015-07-10T00:49:09.820-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49635 #14 (2 connections now open)
+2015-07-10T00:49:39.827-0700 I NETWORK  [conn13] end connection 192.168.154.130:49633 (1 connection now open)
+2015-07-10T00:49:39.828-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49639 #15 (2 connections now open)
+2015-07-10T00:49:39.834-0700 I NETWORK  [conn14] end connection 192.168.154.130:49635 (1 connection now open)
+2015-07-10T00:49:39.834-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49642 #16 (2 connections now open)
+2015-07-10T00:50:09.844-0700 I NETWORK  [conn15] end connection 192.168.154.130:49639 (1 connection now open)
+2015-07-10T00:50:09.844-0700 I NETWORK  [conn16] end connection 192.168.154.130:49642 (0 connections now open)
+2015-07-10T00:50:09.845-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49645 #17 (1 connection now open)
+2015-07-10T00:50:09.845-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49648 #18 (2 connections now open)
+2015-07-10T00:50:39.863-0700 I NETWORK  [conn17] end connection 192.168.154.130:49645 (1 connection now open)
+2015-07-10T00:50:39.863-0700 I NETWORK  [conn18] end connection 192.168.154.130:49648 (0 connections now open)
+2015-07-10T00:50:39.864-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49650 #19 (1 connection now open)
+2015-07-10T00:50:39.864-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49653 #20 (2 connections now open)
+2015-07-10T00:51:09.883-0700 I NETWORK  [conn20] end connection 192.168.154.130:49653 (1 connection now open)
+2015-07-10T00:51:09.884-0700 I NETWORK  [conn19] end connection 192.168.154.130:49650 (0 connections now open)
+2015-07-10T00:51:09.884-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49656 #21 (1 connection now open)
+2015-07-10T00:51:09.884-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49658 #22 (2 connections now open)
+2015-07-10T00:51:39.902-0700 I NETWORK  [conn21] end connection 192.168.154.130:49656 (1 connection now open)
+2015-07-10T00:51:39.902-0700 I NETWORK  [conn22] end connection 192.168.154.130:49658 (0 connections now open)
+2015-07-10T00:51:39.903-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49665 #23 (1 connection now open)
+2015-07-10T00:51:39.903-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49667 #24 (2 connections now open)
+2015-07-10T00:52:09.920-0700 I NETWORK  [conn24] end connection 192.168.154.130:49667 (1 connection now open)
+2015-07-10T00:52:09.920-0700 I NETWORK  [conn23] end connection 192.168.154.130:49665 (0 connections now open)
+2015-07-10T00:52:09.921-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49668 #25 (1 connection now open)
+2015-07-10T00:52:09.921-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49673 #26 (2 connections now open)
+2015-07-10T00:52:39.938-0700 I NETWORK  [conn26] end connection 192.168.154.130:49673 (1 connection now open)
+2015-07-10T00:52:39.938-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49677 #27 (2 connections now open)
+2015-07-10T00:52:39.939-0700 I NETWORK  [conn25] end connection 192.168.154.130:49668 (1 connection now open)
+2015-07-10T00:52:39.939-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49679 #28 (2 connections now open)
+2015-07-10T00:53:09.956-0700 I NETWORK  [conn27] end connection 192.168.154.130:49677 (1 connection now open)
+2015-07-10T00:53:09.956-0700 I NETWORK  [conn28] end connection 192.168.154.130:49679 (0 connections now open)
+2015-07-10T00:53:09.957-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49681 #29 (1 connection now open)
+2015-07-10T00:53:09.957-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49683 #30 (2 connections now open)
+2015-07-10T00:53:39.972-0700 I NETWORK  [conn29] end connection 192.168.154.130:49681 (1 connection now open)
+2015-07-10T00:53:39.972-0700 I NETWORK  [conn30] end connection 192.168.154.130:49683 (0 connections now open)
+2015-07-10T00:53:39.972-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49686 #31 (1 connection now open)
+2015-07-10T00:53:39.972-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49687 #32 (2 connections now open)
+2015-07-10T00:54:09.993-0700 I NETWORK  [conn32] end connection 192.168.154.130:49687 (1 connection now open)
+2015-07-10T00:54:09.994-0700 I NETWORK  [conn31] end connection 192.168.154.130:49686 (0 connections now open)
+2015-07-10T00:54:09.994-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49692 #33 (1 connection now open)
+2015-07-10T00:54:09.994-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49696 #34 (2 connections now open)
+2015-07-10T00:54:40.007-0700 I NETWORK  [conn34] end connection 192.168.154.130:49696 (1 connection now open)
+2015-07-10T00:54:40.007-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49699 #35 (2 connections now open)
+2015-07-10T00:54:40.012-0700 I NETWORK  [conn33] end connection 192.168.154.130:49692 (1 connection now open)
+2015-07-10T00:54:40.012-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49703 #36 (2 connections now open)
+2015-07-10T00:55:10.024-0700 I NETWORK  [conn35] end connection 192.168.154.130:49699 (1 connection now open)
+2015-07-10T00:55:10.024-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49705 #37 (2 connections now open)
+2015-07-10T00:55:10.030-0700 I NETWORK  [conn36] end connection 192.168.154.130:49703 (1 connection now open)
+2015-07-10T00:55:10.031-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49710 #38 (2 connections now open)
+2015-07-10T00:55:15.354-0700 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2015-07-10T00:55:15.356-0700 I REPL     [signalProcessingThread] Stopping replication applier threads
+2015-07-10T00:55:15.356-0700 I NETWORK  [conn38] end connection 192.168.154.130:49710 (1 connection now open)
+2015-07-10T00:55:16.098-0700 I CONTROL  [signalProcessingThread] now exiting
+2015-07-10T00:55:16.098-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-07-10T00:55:16.098-0700 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-07-10T00:55:16.098-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-07-10T00:55:16.098-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-07-10T00:55:16.098-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-07-10T00:55:16.098-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-07-10T00:55:16.098-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-07-10T00:55:16.098-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-07-10T00:55:16.098-0700 I NETWORK  [conn37] end connection 192.168.154.130:49705 (0 connections now open)
+2015-07-10T00:55:16.099-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-07-10T00:55:16.203-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-07-10T00:55:16.203-0700 I JOURNAL  [durability] Durability thread stopped
+2015-07-10T00:55:16.203-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-07-10T00:55:16.204-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-07-10T00:55:16.204-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-07-10T00:55:16.204-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-07-10T01:08:07.989-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-07-10T01:08:08.070-0700 I JOURNAL  [initandlisten] journal dir=/home/yaoguai/mongodb/ps1-a/data/journal
+2015-07-10T01:08:08.070-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-07-10T01:08:08.220-0700 I JOURNAL  [initandlisten] preallocateIsFaster=true 2.14
+2015-07-10T01:08:08.353-0700 I JOURNAL  [durability] Durability thread started
+2015-07-10T01:08:08.354-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] MongoDB starting : pid=2853 port=27002 dbpath=/home/yaoguai/mongodb/ps1-a/data 64-bit host=ubuntu
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] db version v3.0.4
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-07-10T01:08:08.355-0700 I CONTROL  [initandlisten] options: { config: "/home/yaoguai/mongodb/ps1-a/mongo.conf", net: { bindIp: "192.168.154.130", port: 27002 }, processManagement: { fork: true, pidFilePath: "/home/yaoguai/mongodb/ps1-a/pid/mongo.pid" }, replication: { oplogSizeMB: 10000, replSet: "ps1" }, storage: { dbPath: "/home/yaoguai/mongodb/ps1-a/data", directoryPerDB: true, mmapv1: { preallocDataFiles: false } }, systemLog: { destination: "file", logAppend: true, path: "/home/yaoguai/mongodb/ps1-a/log/mongo.log" } }
+2015-07-10T01:08:08.356-0700 I INDEX    [initandlisten] allocating new ns file /home/yaoguai/mongodb/ps1-a/data/local/local.ns, filling with zeroes...
+2015-07-10T01:08:08.472-0700 I STORAGE  [FileAllocator] allocating new datafile /home/yaoguai/mongodb/ps1-a/data/local/local.0, filling with zeroes...
+2015-07-10T01:08:08.472-0700 I STORAGE  [FileAllocator] creating directory /home/yaoguai/mongodb/ps1-a/data/local/_tmp
+2015-07-10T01:08:08.473-0700 I STORAGE  [FileAllocator] done allocating datafile /home/yaoguai/mongodb/ps1-a/data/local/local.0, size: 64MB,  took 0 secs
+2015-07-10T01:08:08.477-0700 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument Did not find replica set configuration document in local.system.replset
+2015-07-10T01:08:08.478-0700 I NETWORK  [initandlisten] waiting for connections on port 27002
+2015-07-10T01:10:11.844-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49713 #1 (1 connection now open)
+2015-07-10T01:10:11.845-0700 I NETWORK  [conn1] end connection 192.168.154.130:49713 (0 connections now open)
+2015-07-10T01:10:11.845-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49715 #2 (1 connection now open)
+2015-07-10T01:10:11.853-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49720 #3 (2 connections now open)
+2015-07-10T01:10:11.859-0700 I NETWORK  [conn3] end connection 192.168.154.130:49720 (1 connection now open)
+2015-07-10T01:10:11.859-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49721 #4 (2 connections now open)
+2015-07-10T01:10:11.862-0700 I REPL     [WriteReplSetConfig] Starting replication applier threads
+2015-07-10T01:10:11.862-0700 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "ps1", version: 1, members: [ { _id: 0, host: "192.168.154.130:27000", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 2.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "192.168.154.130:27001", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "192.168.154.130:27002", arbiterOnly: true, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatTimeoutSecs: 10, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 } } }
+2015-07-10T01:10:11.862-0700 I REPL     [ReplicationExecutor] This node is 192.168.154.130:27002 in the config
+2015-07-10T01:10:11.862-0700 I REPL     [ReplicationExecutor] transition to ARBITER
+2015-07-10T01:10:11.862-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27000 is now in state STARTUP2
+2015-07-10T01:10:11.863-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27001 is now in state STARTUP2
+2015-07-10T01:10:13.862-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27000 is now in state SECONDARY
+2015-07-10T01:10:15.851-0700 I REPL     [ReplicationExecutor] replSetElect voting yea for 192.168.154.130:27000 (0)
+2015-07-10T01:10:15.862-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27000 is now in state PRIMARY
+2015-07-10T01:10:41.862-0700 I NETWORK  [conn2] end connection 192.168.154.130:49715 (1 connection now open)
+2015-07-10T01:10:41.863-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49726 #5 (2 connections now open)
+2015-07-10T01:10:41.874-0700 I NETWORK  [conn4] end connection 192.168.154.130:49721 (1 connection now open)
+2015-07-10T01:10:41.875-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49728 #6 (2 connections now open)
+2015-07-10T01:11:11.879-0700 I NETWORK  [conn5] end connection 192.168.154.130:49726 (1 connection now open)
+2015-07-10T01:11:11.880-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49732 #7 (2 connections now open)
+2015-07-10T01:11:11.889-0700 I NETWORK  [conn6] end connection 192.168.154.130:49728 (1 connection now open)
+2015-07-10T01:11:11.889-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49736 #8 (2 connections now open)
+2015-07-10T01:11:41.895-0700 I NETWORK  [conn7] end connection 192.168.154.130:49732 (1 connection now open)
+2015-07-10T01:11:41.896-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49738 #9 (2 connections now open)
+2015-07-10T01:11:41.908-0700 I NETWORK  [conn8] end connection 192.168.154.130:49736 (1 connection now open)
+2015-07-10T01:11:41.908-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49742 #10 (2 connections now open)
+2015-07-10T01:12:11.914-0700 I NETWORK  [conn9] end connection 192.168.154.130:49738 (1 connection now open)
+2015-07-10T01:12:11.915-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49744 #11 (2 connections now open)
+2015-07-10T01:12:11.927-0700 I NETWORK  [conn10] end connection 192.168.154.130:49742 (1 connection now open)
+2015-07-10T01:12:11.927-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49746 #12 (2 connections now open)
+2015-07-10T01:12:41.933-0700 I NETWORK  [conn11] end connection 192.168.154.130:49744 (1 connection now open)
+2015-07-10T01:12:41.933-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49750 #13 (2 connections now open)
+2015-07-10T01:12:41.944-0700 I NETWORK  [conn12] end connection 192.168.154.130:49746 (1 connection now open)
+2015-07-10T01:12:41.945-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49754 #14 (2 connections now open)
+2015-07-10T01:13:11.951-0700 I NETWORK  [conn13] end connection 192.168.154.130:49750 (1 connection now open)
+2015-07-10T01:13:11.952-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49756 #15 (2 connections now open)
+2015-07-10T01:13:11.961-0700 I NETWORK  [conn14] end connection 192.168.154.130:49754 (1 connection now open)
+2015-07-10T01:13:11.961-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49758 #16 (2 connections now open)
+2015-07-10T01:13:41.970-0700 I NETWORK  [conn15] end connection 192.168.154.130:49756 (1 connection now open)
+2015-07-10T01:13:41.970-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49762 #17 (2 connections now open)
+2015-07-10T01:13:41.978-0700 I NETWORK  [conn16] end connection 192.168.154.130:49758 (1 connection now open)
+2015-07-10T01:13:41.979-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49766 #18 (2 connections now open)
+2015-07-10T01:14:11.982-0700 I NETWORK  [conn17] end connection 192.168.154.130:49762 (1 connection now open)
+2015-07-10T01:14:11.982-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49768 #19 (2 connections now open)
+2015-07-10T01:14:11.995-0700 I NETWORK  [conn18] end connection 192.168.154.130:49766 (1 connection now open)
+2015-07-10T01:14:11.995-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49770 #20 (2 connections now open)
+2015-07-10T01:14:42.001-0700 I NETWORK  [conn19] end connection 192.168.154.130:49768 (1 connection now open)
+2015-07-10T01:14:42.001-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49774 #21 (2 connections now open)
+2015-07-10T01:14:42.012-0700 I NETWORK  [conn20] end connection 192.168.154.130:49770 (1 connection now open)
+2015-07-10T01:14:42.013-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49778 #22 (2 connections now open)
+2015-07-10T01:15:12.019-0700 I NETWORK  [conn21] end connection 192.168.154.130:49774 (1 connection now open)
+2015-07-10T01:15:12.020-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49780 #23 (2 connections now open)
+2015-07-10T01:15:12.027-0700 I NETWORK  [conn22] end connection 192.168.154.130:49778 (1 connection now open)
+2015-07-10T01:15:12.028-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49784 #24 (2 connections now open)
+2015-07-10T01:15:42.038-0700 I NETWORK  [conn23] end connection 192.168.154.130:49780 (1 connection now open)
+2015-07-10T01:15:42.038-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49786 #25 (2 connections now open)
+2015-07-10T01:15:42.044-0700 I NETWORK  [conn24] end connection 192.168.154.130:49784 (1 connection now open)
+2015-07-10T01:15:42.045-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49790 #26 (2 connections now open)
+2015-07-10T01:16:12.056-0700 I NETWORK  [conn25] end connection 192.168.154.130:49786 (1 connection now open)
+2015-07-10T01:16:12.056-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49792 #27 (3 connections now open)
+2015-07-10T01:16:12.060-0700 I NETWORK  [conn26] end connection 192.168.154.130:49790 (1 connection now open)
+2015-07-10T01:16:12.060-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49793 #28 (2 connections now open)
+2015-07-10T01:16:42.071-0700 I NETWORK  [conn27] end connection 192.168.154.130:49792 (1 connection now open)
+2015-07-10T01:16:42.071-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49798 #29 (2 connections now open)
+2015-07-10T01:16:42.075-0700 I NETWORK  [conn28] end connection 192.168.154.130:49793 (1 connection now open)
+2015-07-10T01:16:42.075-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49802 #30 (2 connections now open)
+2015-07-10T01:17:12.086-0700 I NETWORK  [conn29] end connection 192.168.154.130:49798 (1 connection now open)
+2015-07-10T01:17:12.086-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49804 #31 (2 connections now open)
+2015-07-10T01:17:12.089-0700 I NETWORK  [conn30] end connection 192.168.154.130:49802 (1 connection now open)
+2015-07-10T01:17:12.089-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49808 #32 (2 connections now open)
+2015-07-10T01:17:42.104-0700 I NETWORK  [conn31] end connection 192.168.154.130:49804 (1 connection now open)
+2015-07-10T01:17:42.104-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49811 #33 (2 connections now open)
+2015-07-10T01:17:42.106-0700 I NETWORK  [conn32] end connection 192.168.154.130:49808 (1 connection now open)
+2015-07-10T01:17:42.107-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49815 #34 (2 connections now open)
+2015-07-10T01:18:12.121-0700 I NETWORK  [conn33] end connection 192.168.154.130:49811 (1 connection now open)
+2015-07-10T01:18:12.122-0700 I NETWORK  [conn34] end connection 192.168.154.130:49815 (0 connections now open)
+2015-07-10T01:18:12.122-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49819 #35 (1 connection now open)
+2015-07-10T01:18:12.122-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49821 #36 (2 connections now open)
+2015-07-10T01:18:42.141-0700 I NETWORK  [conn36] end connection 192.168.154.130:49821 (1 connection now open)
+2015-07-10T01:18:42.141-0700 I NETWORK  [conn35] end connection 192.168.154.130:49819 (0 connections now open)
+2015-07-10T01:18:42.142-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49825 #37 (1 connection now open)
+2015-07-10T01:18:42.142-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49827 #38 (2 connections now open)
+2015-07-10T01:19:12.159-0700 I NETWORK  [conn38] end connection 192.168.154.130:49827 (1 connection now open)
+2015-07-10T01:19:12.159-0700 I NETWORK  [conn37] end connection 192.168.154.130:49825 (0 connections now open)
+2015-07-10T01:19:12.159-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49831 #39 (1 connection now open)
+2015-07-10T01:19:12.160-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49832 #40 (2 connections now open)
+2015-07-10T01:19:42.177-0700 I NETWORK  [conn40] end connection 192.168.154.130:49832 (1 connection now open)
+2015-07-10T01:19:42.177-0700 I NETWORK  [conn39] end connection 192.168.154.130:49831 (0 connections now open)
+2015-07-10T01:19:42.178-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49835 #41 (1 connection now open)
+2015-07-10T01:19:42.178-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49839 #42 (2 connections now open)
+2015-07-10T01:20:12.198-0700 I NETWORK  [conn42] end connection 192.168.154.130:49839 (1 connection now open)
+2015-07-10T01:20:12.198-0700 I NETWORK  [conn41] end connection 192.168.154.130:49835 (0 connections now open)
+2015-07-10T01:20:12.198-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49841 #43 (1 connection now open)
+2015-07-10T01:20:12.198-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49843 #44 (2 connections now open)
+2015-07-10T01:20:42.216-0700 I NETWORK  [conn44] end connection 192.168.154.130:49843 (1 connection now open)
+2015-07-10T01:20:42.217-0700 I NETWORK  [conn43] end connection 192.168.154.130:49841 (0 connections now open)
+2015-07-10T01:20:42.217-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49848 #45 (1 connection now open)
+2015-07-10T01:20:42.217-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49850 #46 (2 connections now open)
+2015-07-10T01:21:12.233-0700 I NETWORK  [conn45] end connection 192.168.154.130:49848 (1 connection now open)
+2015-07-10T01:21:12.234-0700 I NETWORK  [conn46] end connection 192.168.154.130:49850 (0 connections now open)
+2015-07-10T01:21:12.234-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49854 #47 (1 connection now open)
+2015-07-10T01:21:12.234-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49857 #48 (2 connections now open)
+2015-07-10T01:21:42.250-0700 I NETWORK  [conn48] end connection 192.168.154.130:49857 (1 connection now open)
+2015-07-10T01:21:42.250-0700 I NETWORK  [conn47] end connection 192.168.154.130:49854 (0 connections now open)
+2015-07-10T01:21:42.250-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49860 #49 (1 connection now open)
+2015-07-10T01:21:42.250-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49861 #50 (2 connections now open)
+2015-07-10T01:22:12.267-0700 I NETWORK  [conn49] end connection 192.168.154.130:49860 (1 connection now open)
+2015-07-10T01:22:12.268-0700 I NETWORK  [conn50] end connection 192.168.154.130:49861 (0 connections now open)
+2015-07-10T01:22:12.268-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49867 #51 (1 connection now open)
+2015-07-10T01:22:12.268-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49868 #52 (2 connections now open)
+2015-07-10T01:22:42.288-0700 I NETWORK  [conn52] end connection 192.168.154.130:49868 (1 connection now open)
+2015-07-10T01:22:42.288-0700 I NETWORK  [conn51] end connection 192.168.154.130:49867 (0 connections now open)
+2015-07-10T01:22:42.288-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49873 #53 (1 connection now open)
+2015-07-10T01:22:42.289-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49876 #54 (2 connections now open)
+2015-07-10T01:23:12.302-0700 I NETWORK  [conn54] end connection 192.168.154.130:49876 (1 connection now open)
+2015-07-10T01:23:12.303-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49879 #55 (2 connections now open)
+2015-07-10T01:23:12.304-0700 I NETWORK  [conn53] end connection 192.168.154.130:49873 (1 connection now open)
+2015-07-10T01:23:12.304-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49882 #56 (2 connections now open)
+2015-07-10T01:23:42.322-0700 I NETWORK  [conn56] end connection 192.168.154.130:49882 (1 connection now open)
+2015-07-10T01:23:42.322-0700 I NETWORK  [conn55] end connection 192.168.154.130:49879 (0 connections now open)
+2015-07-10T01:23:42.323-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49885 #57 (1 connection now open)
+2015-07-10T01:23:42.323-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49886 #58 (2 connections now open)
+2015-07-10T01:24:12.341-0700 I NETWORK  [conn57] end connection 192.168.154.130:49885 (1 connection now open)
+2015-07-10T01:24:12.341-0700 I NETWORK  [conn58] end connection 192.168.154.130:49886 (0 connections now open)
+2015-07-10T01:24:12.341-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49892 #59 (1 connection now open)
+2015-07-10T01:24:12.342-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49895 #60 (2 connections now open)
+2015-07-10T01:24:42.361-0700 I NETWORK  [conn60] end connection 192.168.154.130:49895 (1 connection now open)
+2015-07-10T01:24:42.362-0700 I NETWORK  [conn59] end connection 192.168.154.130:49892 (0 connections now open)
+2015-07-10T01:24:42.362-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49898 #61 (1 connection now open)
+2015-07-10T01:24:42.362-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49899 #62 (2 connections now open)
+2015-07-10T01:25:12.379-0700 I NETWORK  [conn62] end connection 192.168.154.130:49899 (1 connection now open)
+2015-07-10T01:25:12.379-0700 I NETWORK  [conn61] end connection 192.168.154.130:49898 (0 connections now open)
+2015-07-10T01:25:12.380-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49906 #63 (1 connection now open)
+2015-07-10T01:25:12.380-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49909 #64 (2 connections now open)
+2015-07-10T01:25:42.400-0700 I NETWORK  [conn63] end connection 192.168.154.130:49906 (1 connection now open)
+2015-07-10T01:25:42.400-0700 I NETWORK  [conn64] end connection 192.168.154.130:49909 (0 connections now open)
+2015-07-10T01:25:42.401-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49915 #65 (1 connection now open)
+2015-07-10T01:25:42.401-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49916 #66 (2 connections now open)
+2015-07-10T01:26:12.419-0700 I NETWORK  [conn65] end connection 192.168.154.130:49915 (1 connection now open)
+2015-07-10T01:26:12.419-0700 I NETWORK  [conn66] end connection 192.168.154.130:49916 (0 connections now open)
+2015-07-10T01:26:12.420-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49921 #67 (1 connection now open)
+2015-07-10T01:26:12.420-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49923 #68 (2 connections now open)
+2015-07-10T01:26:42.437-0700 I NETWORK  [conn68] end connection 192.168.154.130:49923 (1 connection now open)
+2015-07-10T01:26:42.438-0700 I NETWORK  [conn67] end connection 192.168.154.130:49921 (0 connections now open)
+2015-07-10T01:26:42.438-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49927 #69 (1 connection now open)
+2015-07-10T01:26:42.438-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49929 #70 (2 connections now open)
+2015-07-10T01:27:12.453-0700 I NETWORK  [conn69] end connection 192.168.154.130:49927 (1 connection now open)
+2015-07-10T01:27:12.454-0700 I NETWORK  [conn70] end connection 192.168.154.130:49929 (0 connections now open)
+2015-07-10T01:27:12.454-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49932 #71 (1 connection now open)
+2015-07-10T01:27:12.454-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49935 #72 (2 connections now open)
+2015-07-10T01:27:22.461-0700 I NETWORK  [ReplExecNetThread-0] DBClientCursor::init call() failed
+2015-07-10T01:27:22.461-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location10276 DBClientBase::findN: transport error: 192.168.154.130:27001 ns: admin.$cmd query: { replSetHeartbeat: "ps1", pv: 1, v: 1, from: "192.168.154.130:27002", fromId: 2, checkEmpty: false }
+2015-07-10T01:27:22.587-0700 I NETWORK  [ReplExecNetThread-0] Socket recv() errno:104 Connection reset by peer 192.168.154.130:27001
+2015-07-10T01:27:22.587-0700 I NETWORK  [ReplExecNetThread-0] SocketException: remote: 192.168.154.130:27001 error: 9001 socket exception [RECV_ERROR] server [192.168.154.130:27001] 
+2015-07-10T01:27:22.587-0700 I NETWORK  [ReplExecNetThread-0] DBClientCursor::init call() failed
+2015-07-10T01:27:22.588-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location10276 DBClientBase::findN: transport error: 192.168.154.130:27001 ns: admin.$cmd query: { replSetHeartbeat: "ps1", pv: 1, v: 1, from: "192.168.154.130:27002", fromId: 2, checkEmpty: false }
+2015-07-10T01:27:22.588-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:22.589-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:22.588-0700 I NETWORK  [conn72] end connection 192.168.154.130:49935 (1 connection now open)
+2015-07-10T01:27:24.590-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:24.590-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:24.590-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:24.590-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:24.590-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:24.590-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:26.591-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:26.591-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:26.591-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:26.592-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:26.592-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:26.592-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:28.594-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:28.594-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:28.594-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:28.594-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:28.594-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:28.594-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:30.595-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:30.595-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:30.595-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:30.595-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:30.596-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:30.596-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:32.598-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:32.598-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:32.598-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:32.598-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:32.599-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:32.599-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:34.600-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:34.600-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:34.600-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:34.600-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:34.600-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:34.600-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:36.601-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:36.601-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:36.601-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:36.601-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:36.602-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:36.602-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:38.604-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:38.604-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:38.604-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:38.604-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:38.604-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:38.604-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:40.606-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:40.606-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:40.606-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:40.606-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:40.606-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:40.606-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:42.470-0700 I NETWORK  [conn71] end connection 192.168.154.130:49932 (0 connections now open)
+2015-07-10T01:27:42.470-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:49996 #73 (1 connection now open)
+2015-07-10T01:27:42.607-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:42.607-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:42.607-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:42.607-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:42.607-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:42.607-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:44.608-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:44.608-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:44.608-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:44.608-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:44.608-0700 W NETWORK  [ReplExecNetThread-0] Failed to connect to 192.168.154.130:27001, reason: errno:111 Connection refused
+2015-07-10T01:27:44.608-0700 I REPL     [ReplicationExecutor] Error in heartbeat request to 192.168.154.130:27001; Location18915 Failed attempt to connect to 192.168.154.130:27001; couldn't connect to server 192.168.154.130:27001 (192.168.154.130), connection attempt failed
+2015-07-10T01:27:45.276-0700 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2015-07-10T01:27:45.276-0700 I REPL     [signalProcessingThread] Stopping replication applier threads
+2015-07-10T01:27:45.606-0700 I CONTROL  [signalProcessingThread] now exiting
+2015-07-10T01:27:45.607-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-07-10T01:27:45.607-0700 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-07-10T01:27:45.607-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-07-10T01:27:45.607-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-07-10T01:27:45.607-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-07-10T01:27:45.607-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-07-10T01:27:45.607-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-07-10T01:27:45.607-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-07-10T01:27:45.608-0700 I NETWORK  [conn73] end connection 192.168.154.130:49996 (0 connections now open)
+2015-07-10T01:27:45.608-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-07-10T01:27:45.712-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-07-10T01:27:45.712-0700 I JOURNAL  [durability] Durability thread stopped
+2015-07-10T01:27:45.712-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-07-10T01:27:45.713-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-07-10T01:27:45.713-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-07-10T01:27:45.713-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-07-10T01:31:14.234-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-07-10T01:31:14.302-0700 I JOURNAL  [initandlisten] journal dir=/home/yaoguai/mongodb/ps1-a/data/journal
+2015-07-10T01:31:14.302-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-07-10T01:31:14.447-0700 I JOURNAL  [durability] Durability thread started
+2015-07-10T01:31:14.448-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] MongoDB starting : pid=3688 port=27002 dbpath=/home/yaoguai/mongodb/ps1-a/data 64-bit host=ubuntu
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] db version v3.0.4
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-07-10T01:31:14.449-0700 I CONTROL  [initandlisten] options: { config: "/home/yaoguai/mongodb/ps1-a/mongo.conf", net: { bindIp: "192.168.154.130", port: 27002 }, processManagement: { fork: true, pidFilePath: "/home/yaoguai/mongodb/ps1-a/pid/mongo.pid" }, replication: { oplogSizeMB: 100, replSet: "ps1" }, storage: { dbPath: "/home/yaoguai/mongodb/ps1-a/data", directoryPerDB: true, mmapv1: { preallocDataFiles: false } }, systemLog: { destination: "file", logAppend: true, path: "/home/yaoguai/mongodb/ps1-a/log/mongo.log" } }
+2015-07-10T01:31:14.449-0700 I INDEX    [initandlisten] allocating new ns file /home/yaoguai/mongodb/ps1-a/data/local/local.ns, filling with zeroes...
+2015-07-10T01:31:14.512-0700 I STORAGE  [FileAllocator] allocating new datafile /home/yaoguai/mongodb/ps1-a/data/local/local.0, filling with zeroes...
+2015-07-10T01:31:14.512-0700 I STORAGE  [FileAllocator] creating directory /home/yaoguai/mongodb/ps1-a/data/local/_tmp
+2015-07-10T01:31:14.513-0700 I STORAGE  [FileAllocator] done allocating datafile /home/yaoguai/mongodb/ps1-a/data/local/local.0, size: 64MB,  took 0 secs
+2015-07-10T01:31:14.517-0700 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument Did not find replica set configuration document in local.system.replset
+2015-07-10T01:31:14.517-0700 I NETWORK  [initandlisten] waiting for connections on port 27002
+2015-07-10T01:31:46.636-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50011 #1 (1 connection now open)
+2015-07-10T01:31:46.637-0700 I NETWORK  [conn1] end connection 192.168.154.130:50011 (0 connections now open)
+2015-07-10T01:31:46.637-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50013 #2 (1 connection now open)
+2015-07-10T01:31:46.642-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50017 #3 (2 connections now open)
+2015-07-10T01:31:46.644-0700 I NETWORK  [conn3] end connection 192.168.154.130:50017 (1 connection now open)
+2015-07-10T01:31:46.644-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50019 #4 (2 connections now open)
+2015-07-10T01:31:46.646-0700 I REPL     [WriteReplSetConfig] Starting replication applier threads
+2015-07-10T01:31:46.647-0700 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "ps1", version: 1, members: [ { _id: 0, host: "192.168.154.130:27000", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 2.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "192.168.154.130:27001", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "192.168.154.130:27002", arbiterOnly: true, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatTimeoutSecs: 10, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 } } }
+2015-07-10T01:31:46.647-0700 I REPL     [ReplicationExecutor] This node is 192.168.154.130:27002 in the config
+2015-07-10T01:31:46.647-0700 I REPL     [ReplicationExecutor] transition to ARBITER
+2015-07-10T01:31:46.647-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27000 is now in state SECONDARY
+2015-07-10T01:31:46.648-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27001 is now in state STARTUP2
+2015-07-10T01:31:48.639-0700 I REPL     [ReplicationExecutor] replSetElect voting yea for 192.168.154.130:27000 (0)
+2015-07-10T01:31:48.648-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27000 is now in state PRIMARY
+2015-07-10T01:31:50.649-0700 I REPL     [ReplicationExecutor] Member 192.168.154.130:27001 is now in state SECONDARY
+2015-07-10T01:32:16.654-0700 I NETWORK  [conn2] end connection 192.168.154.130:50013 (1 connection now open)
+2015-07-10T01:32:16.654-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50024 #5 (2 connections now open)
+2015-07-10T01:32:16.663-0700 I NETWORK  [conn4] end connection 192.168.154.130:50019 (1 connection now open)
+2015-07-10T01:32:16.663-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50028 #6 (2 connections now open)
+2015-07-10T01:32:46.669-0700 I NETWORK  [conn5] end connection 192.168.154.130:50024 (1 connection now open)
+2015-07-10T01:32:46.670-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50031 #7 (2 connections now open)
+2015-07-10T01:32:46.677-0700 I NETWORK  [conn6] end connection 192.168.154.130:50028 (1 connection now open)
+2015-07-10T01:32:46.678-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50034 #8 (2 connections now open)
+2015-07-10T01:33:16.682-0700 I NETWORK  [conn7] end connection 192.168.154.130:50031 (1 connection now open)
+2015-07-10T01:33:16.683-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50037 #9 (2 connections now open)
+2015-07-10T01:33:16.690-0700 I NETWORK  [conn8] end connection 192.168.154.130:50034 (1 connection now open)
+2015-07-10T01:33:16.691-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50040 #10 (2 connections now open)
+2015-07-10T01:33:46.697-0700 I NETWORK  [conn9] end connection 192.168.154.130:50037 (1 connection now open)
+2015-07-10T01:33:46.697-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50041 #11 (2 connections now open)
+2015-07-10T01:33:46.705-0700 I NETWORK  [conn10] end connection 192.168.154.130:50040 (1 connection now open)
+2015-07-10T01:33:46.706-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50045 #12 (2 connections now open)
+2015-07-10T01:34:16.709-0700 I NETWORK  [conn11] end connection 192.168.154.130:50041 (1 connection now open)
+2015-07-10T01:34:16.709-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50047 #13 (2 connections now open)
+2015-07-10T01:34:16.718-0700 I NETWORK  [conn12] end connection 192.168.154.130:50045 (1 connection now open)
+2015-07-10T01:34:16.719-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50050 #14 (2 connections now open)
+2015-07-10T01:34:46.724-0700 I NETWORK  [conn13] end connection 192.168.154.130:50047 (1 connection now open)
+2015-07-10T01:34:46.724-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50055 #15 (2 connections now open)
+2015-07-10T01:34:46.733-0700 I NETWORK  [conn14] end connection 192.168.154.130:50050 (1 connection now open)
+2015-07-10T01:34:46.733-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50058 #16 (2 connections now open)
+2015-07-10T01:35:16.738-0700 I NETWORK  [conn15] end connection 192.168.154.130:50055 (1 connection now open)
+2015-07-10T01:35:16.738-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50062 #17 (2 connections now open)
+2015-07-10T01:35:16.746-0700 I NETWORK  [conn16] end connection 192.168.154.130:50058 (1 connection now open)
+2015-07-10T01:35:16.747-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50065 #18 (2 connections now open)
+2015-07-10T01:35:46.752-0700 I NETWORK  [conn17] end connection 192.168.154.130:50062 (1 connection now open)
+2015-07-10T01:35:46.753-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50068 #19 (2 connections now open)
+2015-07-10T01:35:46.761-0700 I NETWORK  [conn18] end connection 192.168.154.130:50065 (1 connection now open)
+2015-07-10T01:35:46.762-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50071 #20 (2 connections now open)
+2015-07-10T01:36:16.766-0700 I NETWORK  [conn19] end connection 192.168.154.130:50068 (1 connection now open)
+2015-07-10T01:36:16.767-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50074 #21 (2 connections now open)
+2015-07-10T01:36:16.773-0700 I NETWORK  [conn20] end connection 192.168.154.130:50071 (1 connection now open)
+2015-07-10T01:36:16.774-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50077 #22 (2 connections now open)
+2015-07-10T01:36:46.779-0700 I NETWORK  [conn21] end connection 192.168.154.130:50074 (1 connection now open)
+2015-07-10T01:36:46.780-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50080 #23 (2 connections now open)
+2015-07-10T01:36:46.787-0700 I NETWORK  [conn22] end connection 192.168.154.130:50077 (1 connection now open)
+2015-07-10T01:36:46.787-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50083 #24 (2 connections now open)
+2015-07-10T01:37:16.788-0700 I NETWORK  [conn23] end connection 192.168.154.130:50080 (1 connection now open)
+2015-07-10T01:37:16.789-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50085 #25 (2 connections now open)
+2015-07-10T01:37:16.804-0700 I NETWORK  [conn24] end connection 192.168.154.130:50083 (1 connection now open)
+2015-07-10T01:37:16.804-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50088 #26 (2 connections now open)
+2015-07-10T01:37:46.800-0700 I NETWORK  [conn25] end connection 192.168.154.130:50085 (1 connection now open)
+2015-07-10T01:37:46.801-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50091 #27 (2 connections now open)
+2015-07-10T01:37:46.823-0700 I NETWORK  [conn26] end connection 192.168.154.130:50088 (1 connection now open)
+2015-07-10T01:37:46.823-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50095 #28 (2 connections now open)
+2015-07-10T01:38:16.812-0700 I NETWORK  [conn27] end connection 192.168.154.130:50091 (1 connection now open)
+2015-07-10T01:38:16.812-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50097 #29 (2 connections now open)
+2015-07-10T01:38:16.841-0700 I NETWORK  [conn28] end connection 192.168.154.130:50095 (1 connection now open)
+2015-07-10T01:38:16.841-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50101 #30 (2 connections now open)
+2015-07-10T01:38:46.823-0700 I NETWORK  [conn29] end connection 192.168.154.130:50097 (1 connection now open)
+2015-07-10T01:38:46.823-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50102 #31 (2 connections now open)
+2015-07-10T01:38:46.856-0700 I NETWORK  [conn30] end connection 192.168.154.130:50101 (1 connection now open)
+2015-07-10T01:38:46.856-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50107 #32 (2 connections now open)
+2015-07-10T01:39:16.837-0700 I NETWORK  [conn31] end connection 192.168.154.130:50102 (1 connection now open)
+2015-07-10T01:39:16.837-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50110 #33 (2 connections now open)
+2015-07-10T01:39:16.868-0700 I NETWORK  [conn32] end connection 192.168.154.130:50107 (1 connection now open)
+2015-07-10T01:39:16.868-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50114 #34 (2 connections now open)
+2015-07-10T01:39:46.851-0700 I NETWORK  [conn33] end connection 192.168.154.130:50110 (1 connection now open)
+2015-07-10T01:39:46.852-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50116 #35 (2 connections now open)
+2015-07-10T01:39:46.883-0700 I NETWORK  [conn34] end connection 192.168.154.130:50114 (1 connection now open)
+2015-07-10T01:39:46.883-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50119 #36 (2 connections now open)
+2015-07-10T01:40:16.867-0700 I NETWORK  [conn35] end connection 192.168.154.130:50116 (1 connection now open)
+2015-07-10T01:40:16.868-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50123 #37 (2 connections now open)
+2015-07-10T01:40:16.900-0700 I NETWORK  [conn36] end connection 192.168.154.130:50119 (1 connection now open)
+2015-07-10T01:40:16.901-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50127 #38 (2 connections now open)
+2015-07-10T01:40:46.879-0700 I NETWORK  [conn37] end connection 192.168.154.130:50123 (1 connection now open)
+2015-07-10T01:40:46.880-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50132 #39 (2 connections now open)
+2015-07-10T01:40:46.917-0700 I NETWORK  [conn38] end connection 192.168.154.130:50127 (1 connection now open)
+2015-07-10T01:40:46.917-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50137 #40 (2 connections now open)
+2015-07-10T01:41:16.892-0700 I NETWORK  [conn39] end connection 192.168.154.130:50132 (1 connection now open)
+2015-07-10T01:41:16.892-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50139 #41 (2 connections now open)
+2015-07-10T01:41:16.934-0700 I NETWORK  [conn40] end connection 192.168.154.130:50137 (1 connection now open)
+2015-07-10T01:41:16.934-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50143 #42 (2 connections now open)
+2015-07-10T01:41:46.905-0700 I NETWORK  [conn41] end connection 192.168.154.130:50139 (1 connection now open)
+2015-07-10T01:41:46.906-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50144 #43 (2 connections now open)
+2015-07-10T01:41:46.949-0700 I NETWORK  [conn42] end connection 192.168.154.130:50143 (1 connection now open)
+2015-07-10T01:41:46.949-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50149 #44 (2 connections now open)
+2015-07-10T01:42:16.918-0700 I NETWORK  [conn43] end connection 192.168.154.130:50144 (1 connection now open)
+2015-07-10T01:42:16.919-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50150 #45 (2 connections now open)
+2015-07-10T01:42:16.962-0700 I NETWORK  [conn44] end connection 192.168.154.130:50149 (1 connection now open)
+2015-07-10T01:42:16.963-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50155 #46 (2 connections now open)
+2015-07-10T01:42:46.931-0700 I NETWORK  [conn45] end connection 192.168.154.130:50150 (1 connection now open)
+2015-07-10T01:42:46.931-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50157 #47 (2 connections now open)
+2015-07-10T01:42:46.980-0700 I NETWORK  [conn46] end connection 192.168.154.130:50155 (1 connection now open)
+2015-07-10T01:42:46.980-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50162 #48 (2 connections now open)
+2015-07-10T01:43:16.941-0700 I NETWORK  [conn47] end connection 192.168.154.130:50157 (1 connection now open)
+2015-07-10T01:43:16.942-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50178 #49 (2 connections now open)
+2015-07-10T01:43:16.997-0700 I NETWORK  [conn48] end connection 192.168.154.130:50162 (1 connection now open)
+2015-07-10T01:43:16.997-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50181 #50 (2 connections now open)
+2015-07-10T01:43:46.953-0700 I NETWORK  [conn49] end connection 192.168.154.130:50178 (1 connection now open)
+2015-07-10T01:43:46.953-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50189 #51 (2 connections now open)
+2015-07-10T01:43:47.015-0700 I NETWORK  [conn50] end connection 192.168.154.130:50181 (1 connection now open)
+2015-07-10T01:43:47.016-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50193 #52 (2 connections now open)
+2015-07-10T01:44:16.963-0700 I NETWORK  [conn51] end connection 192.168.154.130:50189 (1 connection now open)
+2015-07-10T01:44:16.964-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50202 #53 (2 connections now open)
+2015-07-10T01:44:17.029-0700 I NETWORK  [conn52] end connection 192.168.154.130:50193 (1 connection now open)
+2015-07-10T01:44:17.030-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50205 #54 (2 connections now open)
+2015-07-10T01:44:46.975-0700 I NETWORK  [conn53] end connection 192.168.154.130:50202 (1 connection now open)
+2015-07-10T01:44:46.976-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50214 #55 (2 connections now open)
+2015-07-10T01:44:47.044-0700 I NETWORK  [conn54] end connection 192.168.154.130:50205 (1 connection now open)
+2015-07-10T01:44:47.045-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50217 #56 (2 connections now open)
+2015-07-10T01:45:16.989-0700 I NETWORK  [conn55] end connection 192.168.154.130:50214 (1 connection now open)
+2015-07-10T01:45:16.990-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50225 #57 (2 connections now open)
+2015-07-10T01:45:17.061-0700 I NETWORK  [conn56] end connection 192.168.154.130:50217 (1 connection now open)
+2015-07-10T01:45:17.061-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50229 #58 (2 connections now open)
+2015-07-10T01:45:47.000-0700 I NETWORK  [conn57] end connection 192.168.154.130:50225 (1 connection now open)
+2015-07-10T01:45:47.000-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50236 #59 (2 connections now open)
+2015-07-10T01:45:47.076-0700 I NETWORK  [conn58] end connection 192.168.154.130:50229 (1 connection now open)
+2015-07-10T01:45:47.076-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50241 #60 (2 connections now open)
+2015-07-10T01:46:17.011-0700 I NETWORK  [conn59] end connection 192.168.154.130:50236 (1 connection now open)
+2015-07-10T01:46:17.011-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50249 #61 (2 connections now open)
+2015-07-10T01:46:17.091-0700 I NETWORK  [conn60] end connection 192.168.154.130:50241 (1 connection now open)
+2015-07-10T01:46:17.092-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50253 #62 (2 connections now open)
+2015-07-10T01:46:47.023-0700 I NETWORK  [conn61] end connection 192.168.154.130:50249 (1 connection now open)
+2015-07-10T01:46:47.024-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50262 #63 (2 connections now open)
+2015-07-10T01:46:47.109-0700 I NETWORK  [conn62] end connection 192.168.154.130:50253 (1 connection now open)
+2015-07-10T01:46:47.109-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50265 #64 (2 connections now open)
+2015-07-10T01:47:17.038-0700 I NETWORK  [conn63] end connection 192.168.154.130:50262 (1 connection now open)
+2015-07-10T01:47:17.038-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50273 #65 (2 connections now open)
+2015-07-10T01:47:17.125-0700 I NETWORK  [conn64] end connection 192.168.154.130:50265 (1 connection now open)
+2015-07-10T01:47:17.125-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50277 #66 (2 connections now open)
+2015-07-10T01:47:47.051-0700 I NETWORK  [conn65] end connection 192.168.154.130:50273 (1 connection now open)
+2015-07-10T01:47:47.051-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50285 #67 (2 connections now open)
+2015-07-10T01:47:47.141-0700 I NETWORK  [conn66] end connection 192.168.154.130:50277 (1 connection now open)
+2015-07-10T01:47:47.142-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50289 #68 (2 connections now open)
+2015-07-10T01:48:17.062-0700 I NETWORK  [conn67] end connection 192.168.154.130:50285 (1 connection now open)
+2015-07-10T01:48:17.062-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50297 #69 (2 connections now open)
+2015-07-10T01:48:17.158-0700 I NETWORK  [conn68] end connection 192.168.154.130:50289 (1 connection now open)
+2015-07-10T01:48:17.158-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50301 #70 (2 connections now open)
+2015-07-10T01:48:47.076-0700 I NETWORK  [conn69] end connection 192.168.154.130:50297 (1 connection now open)
+2015-07-10T01:48:47.076-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50310 #71 (2 connections now open)
+2015-07-10T01:48:47.170-0700 I NETWORK  [conn70] end connection 192.168.154.130:50301 (1 connection now open)
+2015-07-10T01:48:47.170-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50313 #72 (2 connections now open)
+2015-07-10T01:49:17.089-0700 I NETWORK  [conn71] end connection 192.168.154.130:50310 (1 connection now open)
+2015-07-10T01:49:17.089-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50322 #73 (2 connections now open)
+2015-07-10T01:49:17.184-0700 I NETWORK  [conn72] end connection 192.168.154.130:50313 (1 connection now open)
+2015-07-10T01:49:17.184-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50325 #74 (2 connections now open)
+2015-07-10T01:49:47.103-0700 I NETWORK  [conn73] end connection 192.168.154.130:50322 (1 connection now open)
+2015-07-10T01:49:47.104-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50334 #75 (2 connections now open)
+2015-07-10T01:49:47.196-0700 I NETWORK  [conn74] end connection 192.168.154.130:50325 (1 connection now open)
+2015-07-10T01:49:47.196-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50337 #76 (2 connections now open)
+2015-07-10T01:50:17.117-0700 I NETWORK  [conn75] end connection 192.168.154.130:50334 (1 connection now open)
+2015-07-10T01:50:17.117-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50344 #77 (2 connections now open)
+2015-07-10T01:50:17.210-0700 I NETWORK  [conn76] end connection 192.168.154.130:50337 (1 connection now open)
+2015-07-10T01:50:17.211-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50349 #78 (2 connections now open)
+2015-07-10T01:50:47.130-0700 I NETWORK  [conn77] end connection 192.168.154.130:50344 (1 connection now open)
+2015-07-10T01:50:47.131-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50357 #79 (2 connections now open)
+2015-07-10T01:50:47.222-0700 I NETWORK  [conn78] end connection 192.168.154.130:50349 (1 connection now open)
+2015-07-10T01:50:47.222-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50361 #80 (2 connections now open)
+2015-07-10T01:51:17.146-0700 I NETWORK  [conn79] end connection 192.168.154.130:50357 (1 connection now open)
+2015-07-10T01:51:17.147-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50370 #81 (2 connections now open)
+2015-07-10T01:51:17.234-0700 I NETWORK  [conn80] end connection 192.168.154.130:50361 (1 connection now open)
+2015-07-10T01:51:17.235-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50373 #82 (2 connections now open)
+2015-07-10T01:51:47.160-0700 I NETWORK  [conn81] end connection 192.168.154.130:50370 (1 connection now open)
+2015-07-10T01:51:47.160-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50381 #83 (2 connections now open)
+2015-07-10T01:51:47.250-0700 I NETWORK  [conn82] end connection 192.168.154.130:50373 (1 connection now open)
+2015-07-10T01:51:47.251-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50383 #84 (2 connections now open)
+2015-07-10T01:52:17.174-0700 I NETWORK  [conn83] end connection 192.168.154.130:50381 (1 connection now open)
+2015-07-10T01:52:17.175-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50394 #85 (2 connections now open)
+2015-07-10T01:52:17.265-0700 I NETWORK  [conn84] end connection 192.168.154.130:50383 (1 connection now open)
+2015-07-10T01:52:17.266-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50397 #86 (2 connections now open)
+2015-07-10T01:52:47.193-0700 I NETWORK  [conn85] end connection 192.168.154.130:50394 (1 connection now open)
+2015-07-10T01:52:47.194-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50406 #87 (2 connections now open)
+2015-07-10T01:52:47.283-0700 I NETWORK  [conn86] end connection 192.168.154.130:50397 (1 connection now open)
+2015-07-10T01:52:47.284-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50407 #88 (2 connections now open)
+2015-07-10T01:53:17.213-0700 I NETWORK  [conn87] end connection 192.168.154.130:50406 (1 connection now open)
+2015-07-10T01:53:17.213-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50417 #89 (2 connections now open)
+2015-07-10T01:53:17.299-0700 I NETWORK  [conn88] end connection 192.168.154.130:50407 (1 connection now open)
+2015-07-10T01:53:17.302-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50419 #90 (2 connections now open)
+2015-07-10T01:53:47.231-0700 I NETWORK  [conn89] end connection 192.168.154.130:50417 (1 connection now open)
+2015-07-10T01:53:47.231-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50429 #91 (2 connections now open)
+2015-07-10T01:53:47.320-0700 I NETWORK  [conn90] end connection 192.168.154.130:50419 (1 connection now open)
+2015-07-10T01:53:47.321-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50431 #92 (2 connections now open)
+2015-07-10T01:54:17.246-0700 I NETWORK  [conn91] end connection 192.168.154.130:50429 (1 connection now open)
+2015-07-10T01:54:17.246-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50441 #93 (2 connections now open)
+2015-07-10T01:54:17.340-0700 I NETWORK  [conn92] end connection 192.168.154.130:50431 (1 connection now open)
+2015-07-10T01:54:17.340-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50444 #94 (2 connections now open)
+2015-07-10T01:54:47.263-0700 I NETWORK  [conn93] end connection 192.168.154.130:50441 (1 connection now open)
+2015-07-10T01:54:47.264-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50454 #95 (2 connections now open)
+2015-07-10T01:54:47.359-0700 I NETWORK  [conn94] end connection 192.168.154.130:50444 (1 connection now open)
+2015-07-10T01:54:47.359-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50457 #96 (2 connections now open)
+2015-07-10T01:55:17.284-0700 I NETWORK  [conn95] end connection 192.168.154.130:50454 (1 connection now open)
+2015-07-10T01:55:17.284-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50466 #97 (2 connections now open)
+2015-07-10T01:55:17.377-0700 I NETWORK  [conn96] end connection 192.168.154.130:50457 (1 connection now open)
+2015-07-10T01:55:17.378-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50469 #98 (2 connections now open)
+2015-07-10T01:55:47.302-0700 I NETWORK  [conn97] end connection 192.168.154.130:50466 (1 connection now open)
+2015-07-10T01:55:47.303-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50478 #99 (2 connections now open)
+2015-07-10T01:55:47.392-0700 I NETWORK  [conn98] end connection 192.168.154.130:50469 (1 connection now open)
+2015-07-10T01:55:47.393-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50481 #100 (2 connections now open)
+2015-07-10T01:56:17.323-0700 I NETWORK  [conn99] end connection 192.168.154.130:50478 (1 connection now open)
+2015-07-10T01:56:17.323-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50489 #101 (2 connections now open)
+2015-07-10T01:56:17.408-0700 I NETWORK  [conn100] end connection 192.168.154.130:50481 (1 connection now open)
+2015-07-10T01:56:17.409-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50491 #102 (2 connections now open)
+2015-07-10T01:56:47.338-0700 I NETWORK  [conn101] end connection 192.168.154.130:50489 (1 connection now open)
+2015-07-10T01:56:47.338-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50502 #103 (2 connections now open)
+2015-07-10T01:56:47.421-0700 I NETWORK  [conn102] end connection 192.168.154.130:50491 (1 connection now open)
+2015-07-10T01:56:47.421-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50503 #104 (2 connections now open)
+2015-07-10T01:57:17.358-0700 I NETWORK  [conn103] end connection 192.168.154.130:50502 (1 connection now open)
+2015-07-10T01:57:17.358-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50514 #105 (2 connections now open)
+2015-07-10T01:57:17.434-0700 I NETWORK  [conn104] end connection 192.168.154.130:50503 (1 connection now open)
+2015-07-10T01:57:17.434-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50515 #106 (2 connections now open)
+2015-07-10T01:57:47.378-0700 I NETWORK  [conn105] end connection 192.168.154.130:50514 (1 connection now open)
+2015-07-10T01:57:47.379-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50526 #107 (2 connections now open)
+2015-07-10T01:57:47.444-0700 I NETWORK  [conn106] end connection 192.168.154.130:50515 (1 connection now open)
+2015-07-10T01:57:47.444-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50527 #108 (2 connections now open)
+2015-07-10T01:58:17.397-0700 I NETWORK  [conn107] end connection 192.168.154.130:50526 (1 connection now open)
+2015-07-10T01:58:17.398-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50538 #109 (2 connections now open)
+2015-07-10T01:58:17.456-0700 I NETWORK  [conn108] end connection 192.168.154.130:50527 (1 connection now open)
+2015-07-10T01:58:17.457-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50539 #110 (2 connections now open)
+2015-07-10T01:58:47.419-0700 I NETWORK  [conn109] end connection 192.168.154.130:50538 (1 connection now open)
+2015-07-10T01:58:47.419-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50550 #111 (2 connections now open)
+2015-07-10T01:58:47.471-0700 I NETWORK  [conn110] end connection 192.168.154.130:50539 (1 connection now open)
+2015-07-10T01:58:47.471-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50551 #112 (2 connections now open)
+2015-07-10T01:59:17.439-0700 I NETWORK  [conn111] end connection 192.168.154.130:50550 (1 connection now open)
+2015-07-10T01:59:17.439-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50561 #113 (2 connections now open)
+2015-07-10T01:59:17.483-0700 I NETWORK  [conn112] end connection 192.168.154.130:50551 (1 connection now open)
+2015-07-10T01:59:17.483-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50563 #114 (2 connections now open)
+2015-07-10T01:59:47.459-0700 I NETWORK  [conn113] end connection 192.168.154.130:50561 (1 connection now open)
+2015-07-10T01:59:47.460-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50574 #115 (2 connections now open)
+2015-07-10T01:59:47.497-0700 I NETWORK  [conn114] end connection 192.168.154.130:50563 (1 connection now open)
+2015-07-10T01:59:47.498-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50575 #116 (2 connections now open)
+2015-07-10T02:00:17.479-0700 I NETWORK  [conn115] end connection 192.168.154.130:50574 (1 connection now open)
+2015-07-10T02:00:17.479-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50586 #117 (2 connections now open)
+2015-07-10T02:00:17.512-0700 I NETWORK  [conn116] end connection 192.168.154.130:50575 (1 connection now open)
+2015-07-10T02:00:17.512-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50587 #118 (2 connections now open)
+2015-07-10T02:00:47.501-0700 I NETWORK  [conn117] end connection 192.168.154.130:50586 (1 connection now open)
+2015-07-10T02:00:47.501-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50597 #119 (2 connections now open)
+2015-07-10T02:00:47.525-0700 I NETWORK  [conn118] end connection 192.168.154.130:50587 (1 connection now open)
+2015-07-10T02:00:47.525-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50599 #120 (2 connections now open)
+2015-07-10T02:01:17.522-0700 I NETWORK  [conn119] end connection 192.168.154.130:50597 (1 connection now open)
+2015-07-10T02:01:17.522-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50609 #121 (2 connections now open)
+2015-07-10T02:01:17.538-0700 I NETWORK  [conn120] end connection 192.168.154.130:50599 (1 connection now open)
+2015-07-10T02:01:17.538-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50611 #122 (2 connections now open)
+2015-07-10T02:01:47.542-0700 I NETWORK  [conn121] end connection 192.168.154.130:50609 (1 connection now open)
+2015-07-10T02:01:47.543-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50622 #123 (2 connections now open)
+2015-07-10T02:01:47.550-0700 I NETWORK  [conn122] end connection 192.168.154.130:50611 (1 connection now open)
+2015-07-10T02:01:47.550-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50623 #124 (2 connections now open)
+2015-07-10T02:02:17.563-0700 I NETWORK  [conn123] end connection 192.168.154.130:50622 (1 connection now open)
+2015-07-10T02:02:17.563-0700 I NETWORK  [conn124] end connection 192.168.154.130:50623 (1 connection now open)
+2015-07-10T02:02:17.564-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50634 #125 (1 connection now open)
+2015-07-10T02:02:17.564-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50635 #126 (2 connections now open)
+2015-07-10T02:02:47.582-0700 I NETWORK  [conn125] end connection 192.168.154.130:50634 (1 connection now open)
+2015-07-10T02:02:47.582-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50649 #127 (2 connections now open)
+2015-07-10T02:02:47.583-0700 I NETWORK  [conn126] end connection 192.168.154.130:50635 (1 connection now open)
+2015-07-10T02:02:47.584-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50650 #128 (2 connections now open)
+2015-07-10T02:03:17.601-0700 I NETWORK  [conn127] end connection 192.168.154.130:50649 (1 connection now open)
+2015-07-10T02:03:17.602-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50661 #129 (2 connections now open)
+2015-07-10T02:03:17.602-0700 I NETWORK  [conn128] end connection 192.168.154.130:50650 (1 connection now open)
+2015-07-10T02:03:17.602-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50662 #130 (2 connections now open)
+2015-07-10T02:03:47.621-0700 I NETWORK  [conn130] end connection 192.168.154.130:50662 (1 connection now open)
+2015-07-10T02:03:47.621-0700 I NETWORK  [conn129] end connection 192.168.154.130:50661 (0 connections now open)
+2015-07-10T02:03:47.622-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50674 #131 (1 connection now open)
+2015-07-10T02:03:47.622-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50675 #132 (2 connections now open)
+2015-07-10T02:04:17.634-0700 I NETWORK  [conn131] end connection 192.168.154.130:50674 (1 connection now open)
+2015-07-10T02:04:17.635-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50685 #133 (2 connections now open)
+2015-07-10T02:04:17.635-0700 I NETWORK  [conn132] end connection 192.168.154.130:50675 (1 connection now open)
+2015-07-10T02:04:17.635-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50687 #134 (2 connections now open)
+2015-07-10T02:04:47.647-0700 I NETWORK  [conn133] end connection 192.168.154.130:50685 (1 connection now open)
+2015-07-10T02:04:47.647-0700 I NETWORK  [conn134] end connection 192.168.154.130:50687 (0 connections now open)
+2015-07-10T02:04:47.648-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50698 #135 (1 connection now open)
+2015-07-10T02:04:47.648-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50699 #136 (2 connections now open)
+2015-07-10T02:05:17.664-0700 I NETWORK  [conn136] end connection 192.168.154.130:50699 (1 connection now open)
+2015-07-10T02:05:17.665-0700 I NETWORK  [conn135] end connection 192.168.154.130:50698 (0 connections now open)
+2015-07-10T02:05:17.665-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50710 #137 (1 connection now open)
+2015-07-10T02:05:17.665-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50711 #138 (2 connections now open)
+2015-07-10T02:05:47.679-0700 I NETWORK  [conn138] end connection 192.168.154.130:50711 (1 connection now open)
+2015-07-10T02:05:47.679-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50722 #139 (2 connections now open)
+2015-07-10T02:05:47.682-0700 I NETWORK  [conn137] end connection 192.168.154.130:50710 (1 connection now open)
+2015-07-10T02:05:47.683-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50724 #140 (2 connections now open)
+2015-07-10T02:06:17.693-0700 I NETWORK  [conn139] end connection 192.168.154.130:50722 (1 connection now open)
+2015-07-10T02:06:17.693-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50734 #141 (2 connections now open)
+2015-07-10T02:06:17.698-0700 I NETWORK  [conn140] end connection 192.168.154.130:50724 (1 connection now open)
+2015-07-10T02:06:17.698-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50736 #142 (2 connections now open)
+2015-07-10T02:06:47.708-0700 I NETWORK  [conn141] end connection 192.168.154.130:50734 (1 connection now open)
+2015-07-10T02:06:47.708-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50746 #143 (2 connections now open)
+2015-07-10T02:06:47.717-0700 I NETWORK  [conn142] end connection 192.168.154.130:50736 (1 connection now open)
+2015-07-10T02:06:47.718-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50748 #144 (2 connections now open)
+2015-07-10T02:07:17.723-0700 I NETWORK  [conn143] end connection 192.168.154.130:50746 (1 connection now open)
+2015-07-10T02:07:17.723-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50758 #145 (2 connections now open)
+2015-07-10T02:07:17.754-0700 I NETWORK  [conn144] end connection 192.168.154.130:50748 (1 connection now open)
+2015-07-10T02:07:17.754-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50759 #146 (2 connections now open)
+2015-07-10T02:07:47.739-0700 I NETWORK  [conn145] end connection 192.168.154.130:50758 (1 connection now open)
+2015-07-10T02:07:47.739-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50776 #147 (2 connections now open)
+2015-07-10T02:07:47.773-0700 I NETWORK  [conn146] end connection 192.168.154.130:50759 (1 connection now open)
+2015-07-10T02:07:47.773-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50777 #148 (2 connections now open)
+2015-07-10T02:08:17.753-0700 I NETWORK  [conn147] end connection 192.168.154.130:50776 (1 connection now open)
+2015-07-10T02:08:17.753-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50788 #149 (2 connections now open)
+2015-07-10T02:08:17.792-0700 I NETWORK  [conn148] end connection 192.168.154.130:50777 (1 connection now open)
+2015-07-10T02:08:17.792-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50789 #150 (2 connections now open)
+2015-07-10T02:08:47.766-0700 I NETWORK  [conn149] end connection 192.168.154.130:50788 (1 connection now open)
+2015-07-10T02:08:47.767-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50800 #151 (2 connections now open)
+2015-07-10T02:08:47.809-0700 I NETWORK  [conn150] end connection 192.168.154.130:50789 (1 connection now open)
+2015-07-10T02:08:47.810-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50802 #152 (2 connections now open)
+2015-07-10T02:09:17.780-0700 I NETWORK  [conn151] end connection 192.168.154.130:50800 (1 connection now open)
+2015-07-10T02:09:17.780-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50812 #153 (2 connections now open)
+2015-07-10T02:09:17.829-0700 I NETWORK  [conn152] end connection 192.168.154.130:50802 (1 connection now open)
+2015-07-10T02:09:17.830-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50814 #154 (2 connections now open)
+2015-07-10T02:09:47.796-0700 I NETWORK  [conn153] end connection 192.168.154.130:50812 (1 connection now open)
+2015-07-10T02:09:47.796-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50824 #155 (2 connections now open)
+2015-07-10T02:09:47.851-0700 I NETWORK  [conn154] end connection 192.168.154.130:50814 (1 connection now open)
+2015-07-10T02:09:47.852-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50828 #156 (2 connections now open)
+2015-07-10T02:10:17.812-0700 I NETWORK  [conn155] end connection 192.168.154.130:50824 (1 connection now open)
+2015-07-10T02:10:17.812-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50841 #157 (2 connections now open)
+2015-07-10T02:10:17.872-0700 I NETWORK  [conn156] end connection 192.168.154.130:50828 (1 connection now open)
+2015-07-10T02:10:17.872-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50843 #158 (2 connections now open)
+2015-07-10T02:10:47.827-0700 I NETWORK  [conn157] end connection 192.168.154.130:50841 (1 connection now open)
+2015-07-10T02:10:47.827-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50853 #159 (2 connections now open)
+2015-07-10T02:10:47.891-0700 I NETWORK  [conn158] end connection 192.168.154.130:50843 (1 connection now open)
+2015-07-10T02:10:47.892-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50857 #160 (2 connections now open)
+2015-07-10T02:11:17.843-0700 I NETWORK  [conn159] end connection 192.168.154.130:50853 (1 connection now open)
+2015-07-10T02:11:17.843-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50865 #161 (2 connections now open)
+2015-07-10T02:11:17.910-0700 I NETWORK  [conn160] end connection 192.168.154.130:50857 (1 connection now open)
+2015-07-10T02:11:17.911-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50869 #162 (2 connections now open)
+2015-07-10T02:11:47.859-0700 I NETWORK  [conn161] end connection 192.168.154.130:50865 (1 connection now open)
+2015-07-10T02:11:47.859-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50877 #163 (2 connections now open)
+2015-07-10T02:11:47.927-0700 I NETWORK  [conn162] end connection 192.168.154.130:50869 (1 connection now open)
+2015-07-10T02:11:47.928-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50881 #164 (2 connections now open)
+2015-07-10T02:12:17.876-0700 I NETWORK  [conn163] end connection 192.168.154.130:50877 (1 connection now open)
+2015-07-10T02:12:17.876-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50889 #165 (2 connections now open)
+2015-07-10T02:12:17.946-0700 I NETWORK  [conn164] end connection 192.168.154.130:50881 (1 connection now open)
+2015-07-10T02:12:17.947-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50890 #166 (2 connections now open)
+2015-07-10T02:12:47.892-0700 I NETWORK  [conn165] end connection 192.168.154.130:50889 (1 connection now open)
+2015-07-10T02:12:47.892-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50901 #167 (2 connections now open)
+2015-07-10T02:12:47.965-0700 I NETWORK  [conn166] end connection 192.168.154.130:50890 (1 connection now open)
+2015-07-10T02:12:47.965-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50904 #168 (2 connections now open)
+2015-07-10T02:13:17.908-0700 I NETWORK  [conn167] end connection 192.168.154.130:50901 (1 connection now open)
+2015-07-10T02:13:17.908-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50913 #169 (2 connections now open)
+2015-07-10T02:13:17.985-0700 I NETWORK  [conn168] end connection 192.168.154.130:50904 (1 connection now open)
+2015-07-10T02:13:17.985-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50917 #170 (2 connections now open)
+2015-07-10T02:13:47.925-0700 I NETWORK  [conn169] end connection 192.168.154.130:50913 (1 connection now open)
+2015-07-10T02:13:47.925-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50925 #171 (2 connections now open)
+2015-07-10T02:13:48.005-0700 I NETWORK  [conn170] end connection 192.168.154.130:50917 (1 connection now open)
+2015-07-10T02:13:48.006-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50929 #172 (2 connections now open)
+2015-07-10T02:14:17.942-0700 I NETWORK  [conn171] end connection 192.168.154.130:50925 (1 connection now open)
+2015-07-10T02:14:17.942-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50937 #173 (2 connections now open)
+2015-07-10T02:14:18.028-0700 I NETWORK  [conn172] end connection 192.168.154.130:50929 (1 connection now open)
+2015-07-10T02:14:18.029-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50941 #174 (2 connections now open)
+2015-07-10T02:14:47.959-0700 I NETWORK  [conn173] end connection 192.168.154.130:50937 (1 connection now open)
+2015-07-10T02:14:47.960-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50949 #175 (2 connections now open)
+2015-07-10T02:14:48.049-0700 I NETWORK  [conn174] end connection 192.168.154.130:50941 (1 connection now open)
+2015-07-10T02:14:48.049-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50950 #176 (2 connections now open)
+2015-07-10T02:15:17.976-0700 I NETWORK  [conn175] end connection 192.168.154.130:50949 (1 connection now open)
+2015-07-10T02:15:17.976-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50961 #177 (2 connections now open)
+2015-07-10T02:15:18.067-0700 I NETWORK  [conn176] end connection 192.168.154.130:50950 (1 connection now open)
+2015-07-10T02:15:18.068-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50962 #178 (2 connections now open)
+2015-07-10T02:15:47.990-0700 I NETWORK  [conn177] end connection 192.168.154.130:50961 (1 connection now open)
+2015-07-10T02:15:47.990-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50973 #179 (2 connections now open)
+2015-07-10T02:15:48.105-0700 I NETWORK  [conn178] end connection 192.168.154.130:50962 (1 connection now open)
+2015-07-10T02:15:48.105-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50976 #180 (2 connections now open)
+2015-07-10T02:16:18.006-0700 I NETWORK  [conn179] end connection 192.168.154.130:50973 (1 connection now open)
+2015-07-10T02:16:18.007-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50985 #181 (2 connections now open)
+2015-07-10T02:16:18.123-0700 I NETWORK  [conn180] end connection 192.168.154.130:50976 (1 connection now open)
+2015-07-10T02:16:18.123-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50988 #182 (2 connections now open)
+2015-07-10T02:16:48.023-0700 I NETWORK  [conn181] end connection 192.168.154.130:50985 (1 connection now open)
+2015-07-10T02:16:48.023-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50997 #183 (2 connections now open)
+2015-07-10T02:16:48.142-0700 I NETWORK  [conn182] end connection 192.168.154.130:50988 (1 connection now open)
+2015-07-10T02:16:48.143-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:50998 #184 (2 connections now open)
+2015-07-10T02:17:18.041-0700 I NETWORK  [conn183] end connection 192.168.154.130:50997 (1 connection now open)
+2015-07-10T02:17:18.041-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51009 #185 (2 connections now open)
+2015-07-10T02:17:18.159-0700 I NETWORK  [conn184] end connection 192.168.154.130:50998 (1 connection now open)
+2015-07-10T02:17:18.160-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51013 #186 (2 connections now open)
+2015-07-10T02:17:48.059-0700 I NETWORK  [conn185] end connection 192.168.154.130:51009 (1 connection now open)
+2015-07-10T02:17:48.059-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51021 #187 (2 connections now open)
+2015-07-10T02:17:48.174-0700 I NETWORK  [conn186] end connection 192.168.154.130:51013 (1 connection now open)
+2015-07-10T02:17:48.174-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51024 #188 (2 connections now open)
+2015-07-10T02:18:18.077-0700 I NETWORK  [conn187] end connection 192.168.154.130:51021 (1 connection now open)
+2015-07-10T02:18:18.078-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51033 #189 (2 connections now open)
+2015-07-10T02:18:18.189-0700 I NETWORK  [conn188] end connection 192.168.154.130:51024 (1 connection now open)
+2015-07-10T02:18:18.190-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51034 #190 (2 connections now open)
+2015-07-10T02:18:48.094-0700 I NETWORK  [conn189] end connection 192.168.154.130:51033 (1 connection now open)
+2015-07-10T02:18:48.094-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51045 #191 (2 connections now open)
+2015-07-10T02:18:48.205-0700 I NETWORK  [conn190] end connection 192.168.154.130:51034 (1 connection now open)
+2015-07-10T02:18:48.206-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51049 #192 (2 connections now open)
+2015-07-10T02:19:18.113-0700 I NETWORK  [conn191] end connection 192.168.154.130:51045 (1 connection now open)
+2015-07-10T02:19:18.113-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51057 #193 (2 connections now open)
+2015-07-10T02:19:18.223-0700 I NETWORK  [conn192] end connection 192.168.154.130:51049 (1 connection now open)
+2015-07-10T02:19:18.223-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51058 #194 (2 connections now open)
+2015-07-10T02:19:48.127-0700 I NETWORK  [conn193] end connection 192.168.154.130:51057 (1 connection now open)
+2015-07-10T02:19:48.127-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51069 #195 (2 connections now open)
+2015-07-10T02:19:48.239-0700 I NETWORK  [conn194] end connection 192.168.154.130:51058 (1 connection now open)
+2015-07-10T02:19:48.239-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51072 #196 (2 connections now open)
+2015-07-10T02:20:18.144-0700 I NETWORK  [conn195] end connection 192.168.154.130:51069 (1 connection now open)
+2015-07-10T02:20:18.144-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51081 #197 (2 connections now open)
+2015-07-10T02:20:18.259-0700 I NETWORK  [conn196] end connection 192.168.154.130:51072 (1 connection now open)
+2015-07-10T02:20:18.259-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51084 #198 (2 connections now open)
+2015-07-10T02:20:48.158-0700 I NETWORK  [conn197] end connection 192.168.154.130:51081 (1 connection now open)
+2015-07-10T02:20:48.159-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51093 #199 (2 connections now open)
+2015-07-10T02:20:48.276-0700 I NETWORK  [conn198] end connection 192.168.154.130:51084 (1 connection now open)
+2015-07-10T02:20:48.276-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51097 #200 (2 connections now open)
+2015-07-10T02:21:18.174-0700 I NETWORK  [conn199] end connection 192.168.154.130:51093 (1 connection now open)
+2015-07-10T02:21:18.174-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51105 #201 (2 connections now open)
+2015-07-10T02:21:18.297-0700 I NETWORK  [conn200] end connection 192.168.154.130:51097 (1 connection now open)
+2015-07-10T02:21:18.298-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51107 #202 (2 connections now open)
+2015-07-10T02:21:48.187-0700 I NETWORK  [conn201] end connection 192.168.154.130:51105 (1 connection now open)
+2015-07-10T02:21:48.187-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51117 #203 (2 connections now open)
+2015-07-10T02:21:48.314-0700 I NETWORK  [conn202] end connection 192.168.154.130:51107 (1 connection now open)
+2015-07-10T02:21:48.314-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51120 #204 (2 connections now open)
+2015-07-10T02:22:18.203-0700 I NETWORK  [conn203] end connection 192.168.154.130:51117 (1 connection now open)
+2015-07-10T02:22:18.203-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51129 #205 (2 connections now open)
+2015-07-10T02:22:18.330-0700 I NETWORK  [conn204] end connection 192.168.154.130:51120 (1 connection now open)
+2015-07-10T02:22:18.330-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51130 #206 (2 connections now open)
+2015-07-10T02:22:48.218-0700 I NETWORK  [conn205] end connection 192.168.154.130:51129 (1 connection now open)
+2015-07-10T02:22:48.218-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51141 #207 (2 connections now open)
+2015-07-10T02:22:48.349-0700 I NETWORK  [conn206] end connection 192.168.154.130:51130 (1 connection now open)
+2015-07-10T02:22:48.349-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51144 #208 (2 connections now open)
+2015-07-10T02:23:18.233-0700 I NETWORK  [conn207] end connection 192.168.154.130:51141 (1 connection now open)
+2015-07-10T02:23:18.234-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51153 #209 (2 connections now open)
+2015-07-10T02:23:18.364-0700 I NETWORK  [conn208] end connection 192.168.154.130:51144 (1 connection now open)
+2015-07-10T02:23:18.364-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51155 #210 (2 connections now open)
+2015-07-10T02:23:48.252-0700 I NETWORK  [conn209] end connection 192.168.154.130:51153 (1 connection now open)
+2015-07-10T02:23:48.252-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51165 #211 (2 connections now open)
+2015-07-10T02:23:48.380-0700 I NETWORK  [conn210] end connection 192.168.154.130:51155 (1 connection now open)
+2015-07-10T02:23:48.380-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51168 #212 (2 connections now open)
+2015-07-10T02:24:18.267-0700 I NETWORK  [conn211] end connection 192.168.154.130:51165 (1 connection now open)
+2015-07-10T02:24:18.267-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51177 #213 (2 connections now open)
+2015-07-10T02:24:18.396-0700 I NETWORK  [conn212] end connection 192.168.154.130:51168 (1 connection now open)
+2015-07-10T02:24:18.396-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51179 #214 (2 connections now open)
+2015-07-10T02:24:48.281-0700 I NETWORK  [conn213] end connection 192.168.154.130:51177 (1 connection now open)
+2015-07-10T02:24:48.282-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51189 #215 (2 connections now open)
+2015-07-10T02:24:48.414-0700 I NETWORK  [conn214] end connection 192.168.154.130:51179 (1 connection now open)
+2015-07-10T02:24:48.414-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51192 #216 (2 connections now open)
+2015-07-10T02:25:18.297-0700 I NETWORK  [conn215] end connection 192.168.154.130:51189 (1 connection now open)
+2015-07-10T02:25:18.297-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51201 #217 (2 connections now open)
+2015-07-10T02:25:18.429-0700 I NETWORK  [conn216] end connection 192.168.154.130:51192 (1 connection now open)
+2015-07-10T02:25:18.430-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51203 #218 (2 connections now open)
+2015-07-10T02:25:48.312-0700 I NETWORK  [conn217] end connection 192.168.154.130:51201 (1 connection now open)
+2015-07-10T02:25:48.312-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51213 #219 (2 connections now open)
+2015-07-10T02:25:48.449-0700 I NETWORK  [conn218] end connection 192.168.154.130:51203 (1 connection now open)
+2015-07-10T02:25:48.450-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51214 #220 (2 connections now open)
+2015-07-10T02:26:18.324-0700 I NETWORK  [conn219] end connection 192.168.154.130:51213 (1 connection now open)
+2015-07-10T02:26:18.325-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51225 #221 (2 connections now open)
+2015-07-10T02:26:18.465-0700 I NETWORK  [conn220] end connection 192.168.154.130:51214 (1 connection now open)
+2015-07-10T02:26:18.465-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51227 #222 (2 connections now open)
+2015-07-10T02:26:48.342-0700 I NETWORK  [conn221] end connection 192.168.154.130:51225 (1 connection now open)
+2015-07-10T02:26:48.342-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51237 #223 (2 connections now open)
+2015-07-10T02:26:48.479-0700 I NETWORK  [conn222] end connection 192.168.154.130:51227 (1 connection now open)
+2015-07-10T02:26:48.480-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51238 #224 (2 connections now open)
+2015-07-10T02:27:18.357-0700 I NETWORK  [conn223] end connection 192.168.154.130:51237 (1 connection now open)
+2015-07-10T02:27:18.357-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51249 #225 (2 connections now open)
+2015-07-10T02:27:18.490-0700 I NETWORK  [conn224] end connection 192.168.154.130:51238 (1 connection now open)
+2015-07-10T02:27:18.492-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51253 #226 (2 connections now open)
+2015-07-10T02:27:48.374-0700 I NETWORK  [conn225] end connection 192.168.154.130:51249 (1 connection now open)
+2015-07-10T02:27:48.374-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51261 #227 (2 connections now open)
+2015-07-10T02:27:48.509-0700 I NETWORK  [conn226] end connection 192.168.154.130:51253 (1 connection now open)
+2015-07-10T02:27:48.510-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51263 #228 (2 connections now open)
+2015-07-10T02:28:18.391-0700 I NETWORK  [conn227] end connection 192.168.154.130:51261 (1 connection now open)
+2015-07-10T02:28:18.391-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51273 #229 (2 connections now open)
+2015-07-10T02:28:18.525-0700 I NETWORK  [conn228] end connection 192.168.154.130:51263 (1 connection now open)
+2015-07-10T02:28:18.525-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51277 #230 (2 connections now open)
+2015-07-10T02:28:48.407-0700 I NETWORK  [conn229] end connection 192.168.154.130:51273 (1 connection now open)
+2015-07-10T02:28:48.407-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51285 #231 (2 connections now open)
+2015-07-10T02:28:48.544-0700 I NETWORK  [conn230] end connection 192.168.154.130:51277 (1 connection now open)
+2015-07-10T02:28:48.544-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51289 #232 (2 connections now open)
+2015-07-10T02:29:18.424-0700 I NETWORK  [conn231] end connection 192.168.154.130:51285 (1 connection now open)
+2015-07-10T02:29:18.424-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51297 #233 (2 connections now open)
+2015-07-10T02:29:18.555-0700 I NETWORK  [conn232] end connection 192.168.154.130:51289 (1 connection now open)
+2015-07-10T02:29:18.555-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51298 #234 (2 connections now open)
+2015-07-10T02:29:48.441-0700 I NETWORK  [conn233] end connection 192.168.154.130:51297 (1 connection now open)
+2015-07-10T02:29:48.441-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51309 #235 (2 connections now open)
+2015-07-10T02:29:48.570-0700 I NETWORK  [conn234] end connection 192.168.154.130:51298 (1 connection now open)
+2015-07-10T02:29:48.570-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51310 #236 (2 connections now open)
+2015-07-10T02:30:18.457-0700 I NETWORK  [conn235] end connection 192.168.154.130:51309 (1 connection now open)
+2015-07-10T02:30:18.458-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51321 #237 (2 connections now open)
+2015-07-10T02:30:18.587-0700 I NETWORK  [conn236] end connection 192.168.154.130:51310 (1 connection now open)
+2015-07-10T02:30:18.587-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51322 #238 (2 connections now open)
+2015-07-10T02:30:48.474-0700 I NETWORK  [conn237] end connection 192.168.154.130:51321 (1 connection now open)
+2015-07-10T02:30:48.474-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51333 #239 (2 connections now open)
+2015-07-10T02:30:48.606-0700 I NETWORK  [conn238] end connection 192.168.154.130:51322 (1 connection now open)
+2015-07-10T02:30:48.607-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51337 #240 (2 connections now open)
+2015-07-10T02:31:18.490-0700 I NETWORK  [conn239] end connection 192.168.154.130:51333 (1 connection now open)
+2015-07-10T02:31:18.490-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51345 #241 (2 connections now open)
+2015-07-10T02:31:18.623-0700 I NETWORK  [conn240] end connection 192.168.154.130:51337 (1 connection now open)
+2015-07-10T02:31:18.624-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51349 #242 (2 connections now open)
+2015-07-10T02:31:48.508-0700 I NETWORK  [conn241] end connection 192.168.154.130:51345 (1 connection now open)
+2015-07-10T02:31:48.508-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51357 #243 (2 connections now open)
+2015-07-10T02:31:48.640-0700 I NETWORK  [conn242] end connection 192.168.154.130:51349 (1 connection now open)
+2015-07-10T02:31:48.641-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51361 #244 (2 connections now open)
+2015-07-10T02:32:18.523-0700 I NETWORK  [conn243] end connection 192.168.154.130:51357 (1 connection now open)
+2015-07-10T02:32:18.523-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51369 #245 (2 connections now open)
+2015-07-10T02:32:18.655-0700 I NETWORK  [conn244] end connection 192.168.154.130:51361 (1 connection now open)
+2015-07-10T02:32:18.655-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51371 #246 (2 connections now open)
+2015-07-10T02:32:48.541-0700 I NETWORK  [conn245] end connection 192.168.154.130:51369 (1 connection now open)
+2015-07-10T02:32:48.541-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51381 #247 (2 connections now open)
+2015-07-10T02:32:48.673-0700 I NETWORK  [conn246] end connection 192.168.154.130:51371 (1 connection now open)
+2015-07-10T02:32:48.674-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51383 #248 (2 connections now open)
+2015-07-10T02:33:18.556-0700 I NETWORK  [conn247] end connection 192.168.154.130:51381 (1 connection now open)
+2015-07-10T02:33:18.557-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51393 #249 (2 connections now open)
+2015-07-10T02:33:18.688-0700 I NETWORK  [conn248] end connection 192.168.154.130:51383 (1 connection now open)
+2015-07-10T02:33:18.688-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51394 #250 (2 connections now open)
+2015-07-10T02:33:48.573-0700 I NETWORK  [conn249] end connection 192.168.154.130:51393 (1 connection now open)
+2015-07-10T02:33:48.573-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51405 #251 (2 connections now open)
+2015-07-10T02:33:48.703-0700 I NETWORK  [conn250] end connection 192.168.154.130:51394 (1 connection now open)
+2015-07-10T02:33:48.703-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51407 #252 (2 connections now open)
+2015-07-10T02:34:18.592-0700 I NETWORK  [conn251] end connection 192.168.154.130:51405 (1 connection now open)
+2015-07-10T02:34:18.592-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51417 #253 (2 connections now open)
+2015-07-10T02:34:18.717-0700 I NETWORK  [conn252] end connection 192.168.154.130:51407 (1 connection now open)
+2015-07-10T02:34:18.717-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51421 #254 (2 connections now open)
+2015-07-10T02:34:48.608-0700 I NETWORK  [conn253] end connection 192.168.154.130:51417 (1 connection now open)
+2015-07-10T02:34:48.609-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51429 #255 (2 connections now open)
+2015-07-10T02:34:48.730-0700 I NETWORK  [conn254] end connection 192.168.154.130:51421 (1 connection now open)
+2015-07-10T02:34:48.730-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51433 #256 (2 connections now open)
+2015-07-10T02:35:18.626-0700 I NETWORK  [conn255] end connection 192.168.154.130:51429 (1 connection now open)
+2015-07-10T02:35:18.626-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51441 #257 (2 connections now open)
+2015-07-10T02:35:18.746-0700 I NETWORK  [conn256] end connection 192.168.154.130:51433 (1 connection now open)
+2015-07-10T02:35:18.747-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51443 #258 (2 connections now open)
+2015-07-10T02:35:48.641-0700 I NETWORK  [conn257] end connection 192.168.154.130:51441 (1 connection now open)
+2015-07-10T02:35:48.642-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51453 #259 (2 connections now open)
+2015-07-10T02:35:48.760-0700 I NETWORK  [conn258] end connection 192.168.154.130:51443 (1 connection now open)
+2015-07-10T02:35:48.760-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51455 #260 (2 connections now open)
+2015-07-10T02:36:18.656-0700 I NETWORK  [conn259] end connection 192.168.154.130:51453 (1 connection now open)
+2015-07-10T02:36:18.656-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51465 #261 (2 connections now open)
+2015-07-10T02:36:18.780-0700 I NETWORK  [conn260] end connection 192.168.154.130:51455 (1 connection now open)
+2015-07-10T02:36:18.780-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51468 #262 (2 connections now open)
+2015-07-10T02:36:48.674-0700 I NETWORK  [conn261] end connection 192.168.154.130:51465 (1 connection now open)
+2015-07-10T02:36:48.674-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51477 #263 (2 connections now open)
+2015-07-10T02:36:48.798-0700 I NETWORK  [conn262] end connection 192.168.154.130:51468 (1 connection now open)
+2015-07-10T02:36:48.799-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51481 #264 (2 connections now open)
+2015-07-10T02:37:18.687-0700 I NETWORK  [conn263] end connection 192.168.154.130:51477 (1 connection now open)
+2015-07-10T02:37:18.687-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51489 #265 (2 connections now open)
+2015-07-10T02:37:18.814-0700 I NETWORK  [conn264] end connection 192.168.154.130:51481 (1 connection now open)
+2015-07-10T02:37:18.815-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51493 #266 (2 connections now open)
+2015-07-10T02:37:48.703-0700 I NETWORK  [conn265] end connection 192.168.154.130:51489 (1 connection now open)
+2015-07-10T02:37:48.703-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51501 #267 (2 connections now open)
+2015-07-10T02:37:48.829-0700 I NETWORK  [conn266] end connection 192.168.154.130:51493 (1 connection now open)
+2015-07-10T02:37:48.830-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51502 #268 (2 connections now open)
+2015-07-10T02:38:18.718-0700 I NETWORK  [conn267] end connection 192.168.154.130:51501 (1 connection now open)
+2015-07-10T02:38:18.718-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51513 #269 (2 connections now open)
+2015-07-10T02:38:18.846-0700 I NETWORK  [conn268] end connection 192.168.154.130:51502 (1 connection now open)
+2015-07-10T02:38:18.847-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51517 #270 (2 connections now open)
+2015-07-10T02:38:48.734-0700 I NETWORK  [conn269] end connection 192.168.154.130:51513 (1 connection now open)
+2015-07-10T02:38:48.734-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51525 #271 (2 connections now open)
+2015-07-10T02:38:48.860-0700 I NETWORK  [conn270] end connection 192.168.154.130:51517 (1 connection now open)
+2015-07-10T02:38:48.860-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51526 #272 (2 connections now open)
+2015-07-10T02:39:18.749-0700 I NETWORK  [conn271] end connection 192.168.154.130:51525 (1 connection now open)
+2015-07-10T02:39:18.749-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51537 #273 (2 connections now open)
+2015-07-10T02:39:18.879-0700 I NETWORK  [conn272] end connection 192.168.154.130:51526 (1 connection now open)
+2015-07-10T02:39:18.879-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51539 #274 (2 connections now open)
+2015-07-10T02:39:48.763-0700 I NETWORK  [conn273] end connection 192.168.154.130:51537 (1 connection now open)
+2015-07-10T02:39:48.763-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51549 #275 (2 connections now open)
+2015-07-10T02:39:48.895-0700 I NETWORK  [conn274] end connection 192.168.154.130:51539 (1 connection now open)
+2015-07-10T02:39:48.895-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51552 #276 (2 connections now open)
+2015-07-10T02:40:18.779-0700 I NETWORK  [conn275] end connection 192.168.154.130:51549 (1 connection now open)
+2015-07-10T02:40:18.779-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51561 #277 (2 connections now open)
+2015-07-10T02:40:18.911-0700 I NETWORK  [conn276] end connection 192.168.154.130:51552 (1 connection now open)
+2015-07-10T02:40:18.911-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51564 #278 (2 connections now open)
+2015-07-10T02:40:48.795-0700 I NETWORK  [conn277] end connection 192.168.154.130:51561 (1 connection now open)
+2015-07-10T02:40:48.796-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51573 #279 (2 connections now open)
+2015-07-10T02:40:48.923-0700 I NETWORK  [conn278] end connection 192.168.154.130:51564 (1 connection now open)
+2015-07-10T02:40:48.924-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51574 #280 (2 connections now open)
+2015-07-10T02:41:18.811-0700 I NETWORK  [conn279] end connection 192.168.154.130:51573 (1 connection now open)
+2015-07-10T02:41:18.811-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51585 #281 (2 connections now open)
+2015-07-10T02:41:18.941-0700 I NETWORK  [conn280] end connection 192.168.154.130:51574 (1 connection now open)
+2015-07-10T02:41:18.941-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51588 #282 (2 connections now open)
+2015-07-10T02:41:48.827-0700 I NETWORK  [conn281] end connection 192.168.154.130:51585 (1 connection now open)
+2015-07-10T02:41:48.827-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51597 #283 (2 connections now open)
+2015-07-10T02:41:48.957-0700 I NETWORK  [conn282] end connection 192.168.154.130:51588 (1 connection now open)
+2015-07-10T02:41:48.957-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51600 #284 (2 connections now open)
+2015-07-10T02:42:18.845-0700 I NETWORK  [conn283] end connection 192.168.154.130:51597 (1 connection now open)
+2015-07-10T02:42:18.845-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51609 #285 (2 connections now open)
+2015-07-10T02:42:18.973-0700 I NETWORK  [conn284] end connection 192.168.154.130:51600 (1 connection now open)
+2015-07-10T02:42:18.973-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51612 #286 (2 connections now open)
+2015-07-10T02:42:48.861-0700 I NETWORK  [conn285] end connection 192.168.154.130:51609 (1 connection now open)
+2015-07-10T02:42:48.861-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51621 #287 (2 connections now open)
+2015-07-10T02:42:48.986-0700 I NETWORK  [conn286] end connection 192.168.154.130:51612 (1 connection now open)
+2015-07-10T02:42:48.986-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51624 #288 (2 connections now open)
+2015-07-10T02:43:18.876-0700 I NETWORK  [conn287] end connection 192.168.154.130:51621 (1 connection now open)
+2015-07-10T02:43:18.876-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51633 #289 (2 connections now open)
+2015-07-10T02:43:19.005-0700 I NETWORK  [conn288] end connection 192.168.154.130:51624 (1 connection now open)
+2015-07-10T02:43:19.005-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51636 #290 (2 connections now open)
+2015-07-10T02:43:48.891-0700 I NETWORK  [conn289] end connection 192.168.154.130:51633 (1 connection now open)
+2015-07-10T02:43:48.891-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51645 #291 (2 connections now open)
+2015-07-10T02:43:49.021-0700 I NETWORK  [conn290] end connection 192.168.154.130:51636 (1 connection now open)
+2015-07-10T02:43:49.022-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51649 #292 (2 connections now open)
+2015-07-10T02:44:18.911-0700 I NETWORK  [conn291] end connection 192.168.154.130:51645 (1 connection now open)
+2015-07-10T02:44:18.912-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51657 #293 (2 connections now open)
+2015-07-10T02:44:19.035-0700 I NETWORK  [conn292] end connection 192.168.154.130:51649 (1 connection now open)
+2015-07-10T02:44:19.036-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51661 #294 (2 connections now open)
+2015-07-10T02:44:48.929-0700 I NETWORK  [conn293] end connection 192.168.154.130:51657 (1 connection now open)
+2015-07-10T02:44:48.930-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51669 #295 (2 connections now open)
+2015-07-10T02:44:49.050-0700 I NETWORK  [conn294] end connection 192.168.154.130:51661 (1 connection now open)
+2015-07-10T02:44:49.051-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51672 #296 (2 connections now open)
+2015-07-10T02:45:18.948-0700 I NETWORK  [conn295] end connection 192.168.154.130:51669 (1 connection now open)
+2015-07-10T02:45:18.948-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51681 #297 (2 connections now open)
+2015-07-10T02:45:19.070-0700 I NETWORK  [conn296] end connection 192.168.154.130:51672 (1 connection now open)
+2015-07-10T02:45:19.070-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51685 #298 (2 connections now open)
+2015-07-10T02:45:48.960-0700 I NETWORK  [conn297] end connection 192.168.154.130:51681 (1 connection now open)
+2015-07-10T02:45:48.960-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51693 #299 (2 connections now open)
+2015-07-10T02:45:49.081-0700 I NETWORK  [conn298] end connection 192.168.154.130:51685 (1 connection now open)
+2015-07-10T02:45:49.081-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51695 #300 (2 connections now open)
+2015-07-10T02:46:18.974-0700 I NETWORK  [conn299] end connection 192.168.154.130:51693 (1 connection now open)
+2015-07-10T02:46:18.974-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51705 #301 (2 connections now open)
+2015-07-10T02:46:19.093-0700 I NETWORK  [conn300] end connection 192.168.154.130:51695 (1 connection now open)
+2015-07-10T02:46:19.093-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51707 #302 (2 connections now open)
+2015-07-10T02:46:48.990-0700 I NETWORK  [conn301] end connection 192.168.154.130:51705 (1 connection now open)
+2015-07-10T02:46:48.990-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51717 #303 (2 connections now open)
+2015-07-10T02:46:49.105-0700 I NETWORK  [conn302] end connection 192.168.154.130:51707 (1 connection now open)
+2015-07-10T02:46:49.105-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51719 #304 (2 connections now open)
+2015-07-10T02:47:19.005-0700 I NETWORK  [conn303] end connection 192.168.154.130:51717 (1 connection now open)
+2015-07-10T02:47:19.005-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51729 #305 (2 connections now open)
+2015-07-10T02:47:19.119-0700 I NETWORK  [conn304] end connection 192.168.154.130:51719 (1 connection now open)
+2015-07-10T02:47:19.119-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51731 #306 (2 connections now open)
+2015-07-10T02:47:49.021-0700 I NETWORK  [conn305] end connection 192.168.154.130:51729 (1 connection now open)
+2015-07-10T02:47:49.022-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51741 #307 (2 connections now open)
+2015-07-10T02:47:49.134-0700 I NETWORK  [conn306] end connection 192.168.154.130:51731 (1 connection now open)
+2015-07-10T02:47:49.134-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51743 #308 (2 connections now open)
+2015-07-10T02:48:19.039-0700 I NETWORK  [conn307] end connection 192.168.154.130:51741 (1 connection now open)
+2015-07-10T02:48:19.040-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51753 #309 (2 connections now open)
+2015-07-10T02:48:19.149-0700 I NETWORK  [conn308] end connection 192.168.154.130:51743 (1 connection now open)
+2015-07-10T02:48:19.149-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51755 #310 (2 connections now open)
+2015-07-10T02:48:49.055-0700 I NETWORK  [conn309] end connection 192.168.154.130:51753 (1 connection now open)
+2015-07-10T02:48:49.055-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51765 #311 (2 connections now open)
+2015-07-10T02:48:49.160-0700 I NETWORK  [conn310] end connection 192.168.154.130:51755 (1 connection now open)
+2015-07-10T02:48:49.160-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51766 #312 (2 connections now open)
+2015-07-10T02:49:19.071-0700 I NETWORK  [conn311] end connection 192.168.154.130:51765 (1 connection now open)
+2015-07-10T02:49:19.071-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51777 #313 (2 connections now open)
+2015-07-10T02:49:19.173-0700 I NETWORK  [conn312] end connection 192.168.154.130:51766 (1 connection now open)
+2015-07-10T02:49:19.173-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51779 #314 (2 connections now open)
+2015-07-10T02:49:49.087-0700 I NETWORK  [conn313] end connection 192.168.154.130:51777 (1 connection now open)
+2015-07-10T02:49:49.087-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51789 #315 (2 connections now open)
+2015-07-10T02:49:49.188-0700 I NETWORK  [conn314] end connection 192.168.154.130:51779 (1 connection now open)
+2015-07-10T02:49:49.188-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51791 #316 (2 connections now open)
+2015-07-10T02:50:19.100-0700 I NETWORK  [conn315] end connection 192.168.154.130:51789 (1 connection now open)
+2015-07-10T02:50:19.100-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51801 #317 (2 connections now open)
+2015-07-10T02:50:19.204-0700 I NETWORK  [conn316] end connection 192.168.154.130:51791 (1 connection now open)
+2015-07-10T02:50:19.204-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51802 #318 (2 connections now open)
+2015-07-10T02:50:49.115-0700 I NETWORK  [conn317] end connection 192.168.154.130:51801 (1 connection now open)
+2015-07-10T02:50:49.116-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51813 #319 (2 connections now open)
+2015-07-10T02:50:49.220-0700 I NETWORK  [conn318] end connection 192.168.154.130:51802 (1 connection now open)
+2015-07-10T02:50:49.220-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51815 #320 (2 connections now open)
+2015-07-10T02:51:19.129-0700 I NETWORK  [conn319] end connection 192.168.154.130:51813 (1 connection now open)
+2015-07-10T02:51:19.129-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51825 #321 (2 connections now open)
+2015-07-10T02:51:19.234-0700 I NETWORK  [conn320] end connection 192.168.154.130:51815 (1 connection now open)
+2015-07-10T02:51:19.234-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51827 #322 (2 connections now open)
+2015-07-10T02:51:49.144-0700 I NETWORK  [conn321] end connection 192.168.154.130:51825 (1 connection now open)
+2015-07-10T02:51:49.144-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51852 #323 (2 connections now open)
+2015-07-10T02:51:49.245-0700 I NETWORK  [conn322] end connection 192.168.154.130:51827 (1 connection now open)
+2015-07-10T02:51:49.246-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51854 #324 (2 connections now open)
+2015-07-10T02:52:19.161-0700 I NETWORK  [conn323] end connection 192.168.154.130:51852 (1 connection now open)
+2015-07-10T02:52:19.161-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51864 #325 (2 connections now open)
+2015-07-10T02:52:19.260-0700 I NETWORK  [conn324] end connection 192.168.154.130:51854 (1 connection now open)
+2015-07-10T02:52:19.260-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51866 #326 (2 connections now open)
+2015-07-10T02:52:49.177-0700 I NETWORK  [conn325] end connection 192.168.154.130:51864 (1 connection now open)
+2015-07-10T02:52:49.177-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51876 #327 (2 connections now open)
+2015-07-10T02:52:49.275-0700 I NETWORK  [conn326] end connection 192.168.154.130:51866 (1 connection now open)
+2015-07-10T02:52:49.275-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51878 #328 (2 connections now open)
+2015-07-10T02:53:19.186-0700 I NETWORK  [conn327] end connection 192.168.154.130:51876 (1 connection now open)
+2015-07-10T02:53:19.186-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51888 #329 (2 connections now open)
+2015-07-10T02:53:19.282-0700 I NETWORK  [conn328] end connection 192.168.154.130:51878 (1 connection now open)
+2015-07-10T02:53:19.282-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51889 #330 (2 connections now open)
+2015-07-10T02:53:49.194-0700 I NETWORK  [conn329] end connection 192.168.154.130:51888 (1 connection now open)
+2015-07-10T02:53:49.195-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51900 #331 (3 connections now open)
+2015-07-10T02:53:49.288-0700 I NETWORK  [conn330] end connection 192.168.154.130:51889 (1 connection now open)
+2015-07-10T02:53:49.288-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51901 #332 (2 connections now open)
+2015-07-10T02:54:19.204-0700 I NETWORK  [conn331] end connection 192.168.154.130:51900 (1 connection now open)
+2015-07-10T02:54:19.205-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51912 #333 (2 connections now open)
+2015-07-10T02:54:19.342-0700 I NETWORK  [conn332] end connection 192.168.154.130:51901 (1 connection now open)
+2015-07-10T02:54:19.343-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51916 #334 (2 connections now open)
+2015-07-10T02:54:49.215-0700 I NETWORK  [conn333] end connection 192.168.154.130:51912 (1 connection now open)
+2015-07-10T02:54:49.215-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51924 #335 (2 connections now open)
+2015-07-10T02:54:49.349-0700 I NETWORK  [conn334] end connection 192.168.154.130:51916 (1 connection now open)
+2015-07-10T02:54:49.350-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51927 #336 (2 connections now open)
+2015-07-10T02:55:19.232-0700 I NETWORK  [conn335] end connection 192.168.154.130:51924 (1 connection now open)
+2015-07-10T02:55:19.232-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51936 #337 (2 connections now open)
+2015-07-10T02:55:19.364-0700 I NETWORK  [conn336] end connection 192.168.154.130:51927 (1 connection now open)
+2015-07-10T02:55:19.364-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51939 #338 (2 connections now open)
+2015-07-10T02:55:49.248-0700 I NETWORK  [conn337] end connection 192.168.154.130:51936 (1 connection now open)
+2015-07-10T02:55:49.248-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51948 #339 (2 connections now open)
+2015-07-10T02:55:49.376-0700 I NETWORK  [conn338] end connection 192.168.154.130:51939 (1 connection now open)
+2015-07-10T02:55:49.376-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51949 #340 (2 connections now open)
+2015-07-10T02:56:19.254-0700 I NETWORK  [conn339] end connection 192.168.154.130:51948 (1 connection now open)
+2015-07-10T02:56:19.254-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51960 #341 (2 connections now open)
+2015-07-10T02:56:19.383-0700 I NETWORK  [conn340] end connection 192.168.154.130:51949 (1 connection now open)
+2015-07-10T02:56:19.383-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51962 #342 (2 connections now open)
+2015-07-10T02:56:49.257-0700 I NETWORK  [conn341] end connection 192.168.154.130:51960 (1 connection now open)
+2015-07-10T02:56:49.257-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51972 #343 (2 connections now open)
+2015-07-10T02:56:49.386-0700 I NETWORK  [conn342] end connection 192.168.154.130:51962 (1 connection now open)
+2015-07-10T02:56:49.387-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51974 #344 (2 connections now open)
+2015-07-10T02:57:19.273-0700 I NETWORK  [conn343] end connection 192.168.154.130:51972 (1 connection now open)
+2015-07-10T02:57:19.273-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51984 #345 (2 connections now open)
+2015-07-10T02:57:19.401-0700 I NETWORK  [conn344] end connection 192.168.154.130:51974 (1 connection now open)
+2015-07-10T02:57:19.401-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51986 #346 (2 connections now open)
+2015-07-10T02:57:49.287-0700 I NETWORK  [conn345] end connection 192.168.154.130:51984 (1 connection now open)
+2015-07-10T02:57:49.287-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:51996 #347 (3 connections now open)
+2015-07-10T02:57:49.417-0700 I NETWORK  [conn346] end connection 192.168.154.130:51986 (1 connection now open)
+2015-07-10T02:57:49.418-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52000 #348 (2 connections now open)
+2015-07-10T02:58:19.330-0700 I NETWORK  [conn347] end connection 192.168.154.130:51996 (1 connection now open)
+2015-07-10T02:58:19.330-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52008 #349 (2 connections now open)
+2015-07-10T02:58:19.426-0700 I NETWORK  [conn348] end connection 192.168.154.130:52000 (1 connection now open)
+2015-07-10T02:58:19.427-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52011 #350 (2 connections now open)
+2015-07-10T02:58:49.343-0700 I NETWORK  [conn349] end connection 192.168.154.130:52008 (1 connection now open)
+2015-07-10T02:58:49.343-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52020 #351 (2 connections now open)
+2015-07-10T02:58:49.442-0700 I NETWORK  [conn350] end connection 192.168.154.130:52011 (1 connection now open)
+2015-07-10T02:58:49.442-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52021 #352 (2 connections now open)
+2015-07-10T02:59:19.371-0700 I NETWORK  [conn351] end connection 192.168.154.130:52020 (1 connection now open)
+2015-07-10T02:59:19.371-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52032 #353 (2 connections now open)
+2015-07-10T02:59:19.457-0700 I NETWORK  [conn352] end connection 192.168.154.130:52021 (1 connection now open)
+2015-07-10T02:59:19.457-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52033 #354 (2 connections now open)
+2015-07-10T02:59:49.383-0700 I NETWORK  [conn353] end connection 192.168.154.130:52032 (1 connection now open)
+2015-07-10T02:59:49.383-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52044 #355 (2 connections now open)
+2015-07-10T02:59:49.463-0700 I NETWORK  [conn354] end connection 192.168.154.130:52033 (1 connection now open)
+2015-07-10T02:59:49.464-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52045 #356 (2 connections now open)
+2015-07-10T03:00:19.441-0700 I NETWORK  [conn355] end connection 192.168.154.130:52044 (1 connection now open)
+2015-07-10T03:00:19.442-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52056 #357 (2 connections now open)
+2015-07-10T03:00:19.474-0700 I NETWORK  [conn356] end connection 192.168.154.130:52045 (1 connection now open)
+2015-07-10T03:00:19.474-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52057 #358 (2 connections now open)
+2015-07-10T03:00:49.462-0700 I NETWORK  [conn357] end connection 192.168.154.130:52056 (1 connection now open)
+2015-07-10T03:00:49.463-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52068 #359 (2 connections now open)
+2015-07-10T03:00:49.491-0700 I NETWORK  [conn358] end connection 192.168.154.130:52057 (1 connection now open)
+2015-07-10T03:00:49.491-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52069 #360 (2 connections now open)
+2015-07-10T03:01:19.476-0700 I NETWORK  [conn359] end connection 192.168.154.130:52068 (1 connection now open)
+2015-07-10T03:01:19.476-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52080 #361 (2 connections now open)
+2015-07-10T03:01:19.502-0700 I NETWORK  [conn360] end connection 192.168.154.130:52069 (1 connection now open)
+2015-07-10T03:01:19.502-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52082 #362 (2 connections now open)
+2015-07-10T03:01:49.497-0700 I NETWORK  [conn361] end connection 192.168.154.130:52080 (1 connection now open)
+2015-07-10T03:01:49.498-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52092 #363 (2 connections now open)
+2015-07-10T03:01:49.576-0700 I NETWORK  [conn362] end connection 192.168.154.130:52082 (1 connection now open)
+2015-07-10T03:01:49.577-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52093 #364 (2 connections now open)
+2015-07-10T03:02:19.507-0700 I NETWORK  [conn363] end connection 192.168.154.130:52092 (1 connection now open)
+2015-07-10T03:02:19.507-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52104 #365 (2 connections now open)
+2015-07-10T03:02:19.588-0700 I NETWORK  [conn364] end connection 192.168.154.130:52093 (1 connection now open)
+2015-07-10T03:02:19.588-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52105 #366 (2 connections now open)
+2015-07-10T03:02:49.519-0700 I NETWORK  [conn365] end connection 192.168.154.130:52104 (1 connection now open)
+2015-07-10T03:02:49.520-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52116 #367 (2 connections now open)
+2015-07-10T03:02:49.603-0700 I NETWORK  [conn366] end connection 192.168.154.130:52105 (1 connection now open)
+2015-07-10T03:02:49.603-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52118 #368 (2 connections now open)
+2015-07-10T03:03:19.556-0700 I NETWORK  [conn367] end connection 192.168.154.130:52116 (1 connection now open)
+2015-07-10T03:03:19.557-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52128 #369 (2 connections now open)
+2015-07-10T03:03:19.617-0700 I NETWORK  [conn368] end connection 192.168.154.130:52118 (1 connection now open)
+2015-07-10T03:03:19.618-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52129 #370 (2 connections now open)
+2015-07-10T03:03:49.577-0700 I NETWORK  [conn369] end connection 192.168.154.130:52128 (1 connection now open)
+2015-07-10T03:03:49.578-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52140 #371 (2 connections now open)
+2015-07-10T03:03:50.172-0700 I NETWORK  [conn370] end connection 192.168.154.130:52129 (1 connection now open)
+2015-07-10T03:03:50.172-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52141 #372 (2 connections now open)
+2015-07-10T03:04:19.618-0700 I NETWORK  [conn371] end connection 192.168.154.130:52140 (1 connection now open)
+2015-07-10T03:04:19.619-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52152 #373 (2 connections now open)
+2015-07-10T03:04:20.186-0700 I NETWORK  [conn372] end connection 192.168.154.130:52141 (1 connection now open)
+2015-07-10T03:04:20.187-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52156 #374 (2 connections now open)
+2015-07-10T03:04:49.633-0700 I NETWORK  [conn373] end connection 192.168.154.130:52152 (1 connection now open)
+2015-07-10T03:04:49.634-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52164 #375 (2 connections now open)
+2015-07-10T03:04:50.199-0700 I NETWORK  [conn374] end connection 192.168.154.130:52156 (1 connection now open)
+2015-07-10T03:04:50.199-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52165 #376 (2 connections now open)
+2015-07-10T03:05:19.648-0700 I NETWORK  [conn375] end connection 192.168.154.130:52164 (1 connection now open)
+2015-07-10T03:05:19.649-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52176 #377 (2 connections now open)
+2015-07-10T03:05:20.216-0700 I NETWORK  [conn376] end connection 192.168.154.130:52165 (1 connection now open)
+2015-07-10T03:05:20.217-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52177 #378 (2 connections now open)
+2015-07-10T03:05:49.811-0700 I NETWORK  [conn377] end connection 192.168.154.130:52176 (1 connection now open)
+2015-07-10T03:05:49.827-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52187 #379 (2 connections now open)
+2015-07-10T03:05:50.468-0700 I NETWORK  [conn378] end connection 192.168.154.130:52177 (1 connection now open)
+2015-07-10T03:05:50.468-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52189 #380 (2 connections now open)
+2015-07-10T03:06:19.842-0700 I NETWORK  [conn379] end connection 192.168.154.130:52187 (1 connection now open)
+2015-07-10T03:06:19.842-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52199 #381 (3 connections now open)
+2015-07-10T03:06:20.481-0700 I NETWORK  [conn380] end connection 192.168.154.130:52189 (1 connection now open)
+2015-07-10T03:06:24.562-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52204 #382 (3 connections now open)
+2015-07-10T03:06:50.571-0700 I NETWORK  [conn381] end connection 192.168.154.130:52199 (1 connection now open)
+2015-07-10T03:06:50.572-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52211 #383 (2 connections now open)
+2015-07-10T03:06:50.573-0700 I NETWORK  [conn382] end connection 192.168.154.130:52204 (1 connection now open)
+2015-07-10T03:06:50.573-0700 I NETWORK  [initandlisten] connection accepted from 192.168.154.130:52212 #384 (2 connections now open)
+2015-07-10T03:07:18.405-0700 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2015-07-10T03:07:18.608-0700 I REPL     [signalProcessingThread] Stopping replication applier threads
+2015-07-10T03:07:19.084-0700 I NETWORK  [conn383] end connection 192.168.154.130:52211 (1 connection now open)
+2015-07-10T03:07:19.402-0700 I CONTROL  [signalProcessingThread] now exiting
+2015-07-10T03:07:19.402-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-07-10T03:07:19.402-0700 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-07-10T03:07:19.402-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-07-10T03:07:19.402-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-07-10T03:07:19.402-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-07-10T03:07:19.402-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-07-10T03:07:19.402-0700 I NETWORK  [conn384] end connection 192.168.154.130:52212 (0 connections now open)
+2015-07-10T03:07:19.439-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-07-10T03:07:19.439-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-07-10T03:07:19.445-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-07-10T03:07:19.544-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-07-10T03:07:19.544-0700 I JOURNAL  [durability] Durability thread stopped
+2015-07-10T03:07:19.544-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-07-10T03:07:19.544-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-07-10T03:07:19.545-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-07-10T03:07:19.545-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0

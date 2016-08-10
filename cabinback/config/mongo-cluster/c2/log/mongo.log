@@ -1,0 +1,45 @@
+2015-07-10T01:54:56.461-0700 I JOURNAL  [initandlisten] journal dir=/home/yaoguai/mongodb/c2/data/journal
+2015-07-10T01:54:56.461-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-07-10T01:54:56.606-0700 I JOURNAL  [durability] Durability thread started
+2015-07-10T01:54:56.607-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-10T01:54:56.608-0700 I CONTROL  [initandlisten] MongoDB starting : pid=5191 port=27021 dbpath=/home/yaoguai/mongodb/c2/data master=1 64-bit host=ubuntu
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] 
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] db version v3.0.4
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] git version: 0481c958daeb2969800511e7475dc66986fa9ed5
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] build info: Linux ip-10-7-204-115 3.2.0-36-virtual #57-Ubuntu SMP Tue Jan 8 22:04:49 UTC 2013 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-07-10T01:54:56.609-0700 I CONTROL  [initandlisten] options: { net: { port: 27021 }, processManagement: { fork: true }, sharding: { clusterRole: "configsvr" }, storage: { dbPath: "/home/yaoguai/mongodb/c2/data" }, systemLog: { destination: "file", path: "/home/yaoguai/mongodb/c2/log/mongo.log" } }
+2015-07-10T01:54:56.609-0700 I INDEX    [initandlisten] allocating new ns file /home/yaoguai/mongodb/c2/data/local.ns, filling with zeroes...
+2015-07-10T01:54:56.932-0700 I STORAGE  [FileAllocator] allocating new datafile /home/yaoguai/mongodb/c2/data/local.0, filling with zeroes...
+2015-07-10T01:54:56.932-0700 I STORAGE  [FileAllocator] creating directory /home/yaoguai/mongodb/c2/data/_tmp
+2015-07-10T01:54:56.934-0700 I STORAGE  [FileAllocator] done allocating datafile /home/yaoguai/mongodb/c2/data/local.0, size: 16MB,  took 0 secs
+2015-07-10T01:54:56.937-0700 I REPL     [initandlisten] ******
+2015-07-10T01:54:56.937-0700 I REPL     [initandlisten] creating replication oplog of size: 5MB...
+2015-07-10T01:54:56.940-0700 I REPL     [initandlisten] ******
+2015-07-10T01:54:56.941-0700 I NETWORK  [initandlisten] waiting for connections on port 27021
+2015-07-10T03:07:18.388-0700 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2015-07-10T03:07:18.427-0700 I CONTROL  [signalProcessingThread] now exiting
+2015-07-10T03:07:18.427-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27021.sock
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-07-10T03:07:18.443-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-07-10T03:07:18.443-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-07-10T03:07:18.443-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-07-10T03:07:18.511-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-07-10T03:07:18.513-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-07-10T03:07:18.681-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-07-10T03:07:18.754-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-07-10T03:07:18.754-0700 I JOURNAL  [durability] Durability thread stopped
+2015-07-10T03:07:18.754-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-07-10T03:07:18.755-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-07-10T03:07:18.755-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-07-10T03:07:18.755-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0

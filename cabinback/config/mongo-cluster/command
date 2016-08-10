@@ -1,0 +1,36 @@
+/home/yaoguai/mongo/bin/mongod -f /home/yaoguai/mongodb/ps1-m/mongo.conf
+/home/yaoguai/mongo/bin/mongod -f /home/yaoguai/mongodb/ps1-s/mongo.conf
+/home/yaoguai/mongo/bin/mongod -f /home/yaoguai/mongodb/ps1-a/mongo.conf
+/home/yaoguai/mongo/bin/mongo --host 192.168.154.130 --port 27000
+/home/yaoguai/mongo/bin/mongo 192.168.154.130:27000
+use admin
+cfg = { _id:"ps1",
+  members:[
+		 {_id:0,host:'192.168.154.130:27000',priority:2}, 
+		 {_id:1,host:'192.168.154.130:27001',priority:1},   
+	 	 {_id:2,host:'192.168.154.130:27002',arbiterOnly:true}
+        ]
+};
+rs.initiate(cfg);
+/home/yaoguai/mongo/bin/mongod -f /home/yaoguai/mongodb/ps2-m/mongo.conf
+/home/yaoguai/mongo/bin/mongod -f /home/yaoguai/mongodb/ps2-s/mongo.conf
+/home/yaoguai/mongo/bin/mongod -f /home/yaoguai/mongodb/ps2-a/mongo.conf
+cfg = { _id:"ps2",
+  members:[
+                 {_id:0,host:'192.168.154.130:27010',priority:2},
+                 {_id:1,host:'192.168.154.130:27011',priority:1},
+                 {_id:2,host:'192.168.154.130:27012',arbiterOnly:true}
+        ]
+};
+
+/home/yaoguai/mongo/bin/mongod --configsvr --dbpath /home/yaoguai/mongodb/c1/data --port 27020 --fork --logpath /home/yaoguai/mongodb/c1/log/mongo.log
+/home/yaoguai/mongo/bin/mongod --configsvr --dbpath /home/yaoguai/mongodb/c2/data --port 27021 --fork --logpath /home/yaoguai/mongodb/c2/log/mongo.log
+
+/home/yaoguai/mongo/bin/mongos --configdb 192.168.154.130:27020 --port 27030 --fork --logpath=/home/yaoguai/mongodb/mongos/log/mongo.log
+
+sh.addShard("ps1/192.168.154.130:27000");
+sh.addShard("ps2/192.168.154.130:27010");
+
+
+db.runCommand({enableSharding:"tjut"});
+db.runCommand({shardCollection:"tjut.user_list",key:{"__avpSessionId":1}});
