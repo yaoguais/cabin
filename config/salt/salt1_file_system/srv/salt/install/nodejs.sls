@@ -4,3 +4,6 @@ include:
   {% elif grains['os'] == 'Ubuntu' %}
 
   {% endif %}
+
+npm install -g bower:
+  cmd.run

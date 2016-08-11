@@ -31,12 +31,64 @@ mongod.service:
 
 {% if grains['os'] == 'CentOS' %}
 /etc/nginx:
-  file.directory:
+  file.recurse:
+    - source: salt://dev/rpm/files/etc/nginx
     - user: root
     - group: root
-    - mode: 660
+    - file_mode: 660
+    - dir_mode: 660
 {% elif grains['os'] == 'Ubuntu' %}
 {% endif %}
+
+service nginx reload:
+  cmd.run:
+    - user: root
+
+{% if grains['os'] == 'CentOS' %}
+/etc/php.d:
+  file.recurse:
+    - source: salt://dev/rpm/files/etc/php.d
+    - user: root
+    - group: root
+    - file_mode: 660
+    - dir_mode: 660
+
+/etc/php-fpm.d:
+  file.recurse:
+    - source: salt://dev/rpm/files/etc/php-fpm.d
+    - user: root
+    - group: root
+    - file_mode: 660
+    - dir_mode: 660
+
+/etc/php-zts.d:
+  file.recurse:
+    - source: salt://dev/rpm/files/etc/php-zts.d
+    - user: root
+    - group: root
+    - file_mode: 660
+    - dir_mode: 660
+
+/etc/php-fpm.conf:
+  file.managed:
+    - source: salt://dev/rpm/files/etc/php-fpm.conf
+    - user: root
+    - group: root
+    - mode: 644
+
+/etc/php.ini:
+  file.managed:
+    - source: salt://dev/rpm/files/etc/php.ini
+    - user: root
+    - group: root
+    - mode: 644
+
+service php-fpm reload:
+  cmd.run
+
+{% elif grains['os'] == 'Ubuntu' %}
+{% endif %}
+
 
 /tmp/dev_install.sh:
   file.managed:

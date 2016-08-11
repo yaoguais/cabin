@@ -20,9 +20,15 @@ do
     cd "${data_dir}/server/${i}"
     chmod -R 744 "${data_dir}/server/${i}/storage"
     chown -R $worker:$worker "${data_dir}/server/${i}/storage"
-    composer install
-    cd "${data_dir}/server/${i}/public"
-    npm install
+    if [ -f "${data_dir}/server/${i}/composer.json" ]; then
+        composer install --no-scripts
+        composer install
+        composer dump-autoload
+    fi
+    if [ -f "${data_dir}/server/${i}/public/bower.json" ]; then
+        cd "${data_dir}/server/${i}/public"
+        bower --allow-root install
+    fi
 done
 
 cd "${data_dir}/android"
@@ -39,4 +45,5 @@ git clone git@github.com:HelloWorldDev/im-server.git ./im-server
 cd "${data_dir}/daemon"
 git clone git@github.com:HelloWorldDev/daemon-service.git ./daemon-service
 
+cd $workspace
 exit 0

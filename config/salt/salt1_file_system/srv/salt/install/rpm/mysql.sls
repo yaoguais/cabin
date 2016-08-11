@@ -32,3 +32,8 @@ mysql.packages:
       - mysql-community-server
       - mysql-community-client
 
+# mysql安装成功后会将初始密码写到/var/log/mysqld.sql中
+# 使用密码登录mysql服务器,会强制要求用户更改密码
+# 使用 alter user 'root'@'localhost' identified by 'qaz($123LXvV'; 修改密码
+# 注意密码会根据策略要求密码强度,简单的密码不会让通过
+
