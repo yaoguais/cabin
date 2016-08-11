@@ -3,6 +3,7 @@ base.packages:
     - pkgs:
       - wget
       - ntpdate
+      - strace
 
 cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime:
   cmd.run
@@ -10,10 +11,20 @@ cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime:
 ntpdate us.pool.ntp.org:
   cmd.run
 
-yum remove git:
-  cmd.run
+/tmp/git_install.sh:
+  file.managed:
+    - source: salt://install/rpm/scripts/git_install.sh
+    - user: root
+    - group: root
+    - mode: 755
+  cmd.run:
+    - user: root
+    - shell: /bin/bash
 
-yum -y install http://mirrors.neusoft.edu.cn/repoforge/redhat/el6/en/x86_64/extras/RPMS/perl-Git-1.7.12.4-1.el6.rfx.x86_64.rpm http://mirrors.neusoft.edu.cn/repoforge/redhat/el6/en/x86_64/extras/RPMS/git-1.7.12.4-1.el6.rfx.x86_64.rpm:
-  cmd.run
-
+/etc/environment:
+  file.managed:
+    - source: salt://install/rpm/files/etc/environment
+    - user: root
+    - group: root
+    - mode: 644
 

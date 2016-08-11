@@ -7,3 +7,9 @@ include:
   - uninstall.mongodb
   - uninstall.postgresql
   - uninstall.mysql
+
+
+user.worker:
+  user.absent:
+    - name: {{ pillar['dev']['user']['worker'] }}
+

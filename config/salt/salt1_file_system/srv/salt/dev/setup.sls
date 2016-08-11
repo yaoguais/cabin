@@ -7,3 +7,10 @@ include:
   - install.mongodb
   - install.postgresql
   - install.mysql
+
+user.worker:
+  user.present:
+    - name: {{ pillar['dev']['user']['worker'] }}
+    - shell: /bin/bash
+    - createhome: False
+
