@@ -2,6 +2,7 @@ base.packages:
   pkg.installed:
     - pkgs:
       - wget
+      - vim
       - ntpdate
       - strace
 

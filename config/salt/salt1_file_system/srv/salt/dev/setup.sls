@@ -7,6 +7,7 @@ include:
   - install.mongodb
   - install.postgresql
   - install.mysql
+  - install.supervisor
 
 user.worker:
   user.present:

@@ -7,6 +7,7 @@ include:
   - uninstall.mongodb
   - uninstall.postgresql
   - uninstall.mysql
+  - uninstall.supervisor
 
 
 user.worker:

@@ -28,6 +28,18 @@ mongod.service:
     - name: mongod
     - enable: True
 
+supervisor.service:
+  service.running:
+    - name: supervisor
+    - enable: True
+
+/etc/supervisor:
+  file.recurse:
+    - source: salt://dev/source/files/etc/supervisor
+    - user: root
+    - group: root
+    - file_mode: 660
+    - dir_mode: 660
 
 {% if grains['os'] == 'CentOS' %}
 /etc/nginx:
