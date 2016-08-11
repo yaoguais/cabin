@@ -25,7 +25,7 @@ start()
 {
        echo -n $"Starting $prog: "
        daemon $prog_bin -c /etc/supervisor/supervisord.conf --pidfile $PIDFILE
-       [ -f $PIDFILE ] && success $"$prog startup" || failure $"$prog startup"
+       [ -f $PIDFILE ] || success $"$prog startup"
        echo
 }
 

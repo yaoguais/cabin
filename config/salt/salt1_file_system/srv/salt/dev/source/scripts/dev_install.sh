@@ -31,6 +31,13 @@ do
     fi
 done
 
+# rsync -avz --exclude '.git*' \
+      --exclude '.env' \
+      --exclude 'composer.phar' \
+      --exclude 'storage/logs/*' \
+      --delete --delete-after \
+      "rsync://${worker}@127.0.0.1/rsync_source/server/fame" /data/server/fame
+
 cd "${data_dir}/android"
 git clone git@github.com:HelloWorldDev/app-android.git ./app-android
 git clone git@github.com:HelloWorldDev/fame-android.git ./fame-android
