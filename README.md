@@ -23,6 +23,7 @@
 - [redis集群配置](./config/redis)
 - [twemproxy配置](./config/twemproxy)
 - [svn配置](./config/svn)
+- [salt部署集群](./config/salt)
 - [常用组件下载地址](./config/server)
 - [repo脚本](./scripts)
 - [单词查找脚本](./scripts)
