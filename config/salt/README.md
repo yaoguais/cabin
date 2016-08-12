@@ -84,11 +84,14 @@
 - PhpMyAdmin phpmyadmin.sls
 - Golang golang.sls
 - Sync sync.sls
+- Lvs lvs.sls
 
 写完这些配置文件,我们依次安装这些组件.
+所有的配置文件可以到[这里找到](https://github.com/Yaoguais/cabin/tree/master/config/salt/salt1_file_system).
 
     # salt 'web-server*' state.sls install.base,install.nginx,install.php7,install.redis,
     install.mysql,install.mongodb,install.postgresql,install.nodejs,install.supervisor,install.phpmyadmin,
     install.golang,install.sync
+    # salt 'web-lb' state.sls install.lvs
 
 运行完上面的这条命令,等待一段时间,所有的组件就安装完毕了.
