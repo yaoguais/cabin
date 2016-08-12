@@ -70,6 +70,25 @@
     	True
 
 
-然后我们配置2台minion服务器的NGINX/PHP7/MYSQL/REDIS/MONGODB:
+然后我们配置2台minion服务器组件:
 
+- 基础组件 base.sls
+- NGINX nginx.sls
+- PHP7 php7.sls
+- Redis redis.sls
+- MySql mysql.sls
+- MongoDB mongodb.sls
+- Postgresql postgresql.sls
+- NodeJs nodejs.sls
+- Supervisor supervisor.sls
+- PhpMyAdmin phpmyadmin.sls
+- Golang golang.sls
+- Sync sync.sls
 
+写完这些配置文件,我们依次安装这些组件.
+
+    # salt 'web-server*' state.sls install.base,install.nginx,install.php7,install.redis,
+    install.mysql,install.mongodb,install.postgresql,install.nodejs,install.supervisor,install.phpmyadmin,
+    install.golang,install.sync
+
+运行完上面的这条命令,等待一段时间,所有的组件就安装完毕了.
