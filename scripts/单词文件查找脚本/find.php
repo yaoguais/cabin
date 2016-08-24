@@ -47,7 +47,7 @@ foreach($files as $file){
 	if($ext && !in_array(pathinfo($file,PATHINFO_EXTENSION),$ext)){
 		continue;
 	}
-	if(is_word_in_file($file,$word)){
+	if(is_word_in_file($file,$word, false)){
 		echo $file,"\n";
 		$found = true;
 	}

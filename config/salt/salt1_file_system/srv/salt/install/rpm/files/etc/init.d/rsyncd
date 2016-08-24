@@ -1,0 +1,55 @@
+#!/bin/sh
+#
+# /etc/init.d/rsyncd
+#
+
+# Source init functions
+. /etc/rc.d/init.d/functions
+
+prog="rsync"
+prog_bin="/usr/bin/rsync"
+PIDFILE="/var/run/rsyncd.pid"
+
+start()
+{
+       echo -n $"Starting $prog: "
+       $prog_bin --daemon --config=/etc/rsyncd/rsyncd.conf
+       if [ $? -eq 0 ]; then
+            success $"$prog startup"
+       else
+            failure $"$prog startup"
+       fi
+       echo
+}
+
+stop()
+{
+       echo -n $"Shutting down $prog: "
+       [ -f $PIDFILE ] && killproc $prog && rm -f $PIDFILE && success $"$prog shutdown" || failure $"$prog shutdown"
+       echo
+}
+
+case "$1" in
+
+ start)
+   start
+ ;;
+
+ stop)
+   stop
+ ;;
+
+ status)
+       status $prog
+ ;;
+
+ restart)
+   stop
+   start
+ ;;
+
+ *)
+   echo "Usage: $0 {start|stop|restart|status}"
+ ;;
+
+esac
