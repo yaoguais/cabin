@@ -8,6 +8,7 @@ include:
   - install.postgresql
   - install.mysql
   - install.supervisor
+  - install.rsync
 
 user.worker:
   user.present:

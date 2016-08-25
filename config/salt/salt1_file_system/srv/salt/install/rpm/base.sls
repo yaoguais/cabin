@@ -2,9 +2,13 @@ base.packages:
   pkg.installed:
     - pkgs:
       - wget
-      - vim
+      - vim-minimal
       - ntpdate
       - strace
+      - openssl
+      - openssl-devel
+      - libxml2
+      - libxml2-devel
 
 cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime:
   cmd.run
