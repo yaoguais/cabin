@@ -2,7 +2,7 @@
 # from http://blog.csdn.net/linvo/article/details/9173511
 # from http://www.cnblogs.com/guogangj/p/4118605.html
 
-dir=/tmp/ssl2
+dir=/tmp/ssl
 workspace=`pwd`
 
 if [ -d $dir ]; then
