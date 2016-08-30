@@ -1,2 +1,4 @@
 .DS_Store
 .idea
+small_projects/IMServer/emqtt_benchmark
+small_projects/IMServer/emqttd
