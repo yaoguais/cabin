@@ -22,7 +22,7 @@ workspace_init ()
         fi
     fi
 
-    for d in ${WORKSPACE} "${WORKSPACE}/root" "${WORKSPACE}/server" "${WORKSPACE}/client" "${WORKSPACE}/certs"
+    for d in ${WORKSPACE} "${WORKSPACE}/root" "${WORKSPACE}/server" "${WORKSPACE}/client" "${WORKSPACE}/certs" "${WORKSPACE}/app"
     do
         if [ ! -d $d ]; then
             mkdir $d
@@ -128,10 +128,14 @@ create_client_keys ()
     mv client/client.key client/client.ori.key
     openssl rsa -in client/client.ori.key -out client/client.key
     openssl ca -config openssl.cnf -in client/client.csr -cert root/ca.crt -keyfile root/ca.key -out client/client.crt -days 3650
+}
+
+create_app_keys ()
+{
+    openssl x509 -in server/server.crt -outform DER -out app/server.cer
     read -p "Enter your client.p12 password [1111]: " PASSWORD
     echo "client.p12 password: $PASSWORD" >> $PASSWD
-    openssl pkcs12 -export -in client/client.crt -inkey client/client.key -out client/client.p12 -certfile root/ca.crt
-
+    openssl pkcs12 -export -in client/client.crt -inkey client/client.key -out app/client.p12 -certfile root/ca.crt
 }
 
 workspace_init;
@@ -139,4 +143,5 @@ create_openssl_config;
 create_ca_keys;
 create_server_keys;
 create_client_keys;
+create_app_keys;
 cd $PWD
