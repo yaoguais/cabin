@@ -1,3 +1,4 @@
 mysql-master/var/lib/mysql/*
 mysql-slave/var/lib/mysql/*
 redis/data/*
+redis-slave/data/*

@@ -54,22 +54,6 @@ nginx:
   links:
     - php-fpm:php-fpm
 
-######################### PHP-FPM ###############################
-## php-fpm
-php-fpm:
-  build: ./php-fpm
-  container_name: php-fpm
-  ports:
-    - "9000:9000"
-  volumes:
-    - ./php-fpm/usr/local/etc/php/php.ini-production:/usr/local/etc/php/php.ini:ro
-    # project dockertest
-    - ../projects/dockertest:/data/dockertest
-    - ../projects/fame-server:/data/fame-server
-  links:
-    - mysql:mysql
-    - redis:redis-server
-
 ######################### REDIS-SERVER #############################
 ## redis-server
 redis:
@@ -78,5 +62,37 @@ redis:
   ports:
     - "6379:6379"
   volumes:
+    - ./redis/var/log/redis:/var/log/redis
     - ./redis/data:/data
+## redis-slave
+redis-slave:
+  build: ./redis-slave
+  container_name: redis-slave
+  ports:
+    - "6380:6380"
+  volumes:
+    - ./redis/var/log/redis:/var/log/redis
+    - ./redis/data:/data
+  links:
+    - redis:redis
+
+######################### PHP-FPM ###############################
+## php-fpm
+php-fpm:
+  build: ./php-fpm
+  container_name: php-fpm
+  ports:
+    - "9000:9000"
+  volumes:
+    - ./php-fpm/var/log/php:/var/log/php
+    - ./php-fpm/usr/local/etc/php/php.ini-development:/usr/local/etc/php/php.ini:ro
+    - ./php-fpm/usr/local/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf:ro
+    - ./php-fpm/usr/local/etc/php-fpm.d/www.conf:/usr/local/etc/php-fpm.d/www.conf:ro
+    # project dockertest
+    - ../projects/dockertest:/data/dockertest
+    - ../projects/fame-server:/data/fame-server
+  links:
+    - mysql:mysql
+    - redis:redis
+
 
