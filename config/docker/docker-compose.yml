@@ -1,0 +1,82 @@
+################# DATABASE #####################
+## mysql-master
+mysql:
+  #build: ./mysql-master
+  image: mysql:5.7.16
+  container_name: mysql-master
+  ports:
+    - "3306:3306"
+  volumes:
+    - ./mysql-master/var/log/mysql/error.log:/var/log/mysql/error.log
+    - ./mysql-master/var/log/mysql/slow.log:/var/log/mysql/slow.log
+    - ./mysql-master/var/log/mysql/general.log:/var/log/mysql/general.log
+    - ./mysql-master/var/lib/mysql:/var/lib/mysql
+    - ./mysql-master/etc/mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
+  environment:
+    - MYSQL_ROOT_PASSWORD=yaoguais_2014
+## mysql-slave
+mysql-slave:
+  build: ./mysql-slave
+  #image: mysql:5.7.16
+  container_name: mysql-slave
+  ports:
+    - "3307:3307"
+  volumes:
+    - ./mysql-slave/var/log/mysql/error.log:/var/log/mysql/error.log
+    - ./mysql-slave/var/log/mysql/slow.log:/var/log/mysql/slow.log
+    - ./mysql-slave/var/log/mysql/general.log:/var/log/mysql/general.log
+    - ./mysql-slave/var/lib/mysql:/var/lib/mysql
+    - ./mysql-slave/etc/mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
+  environment:
+    - MYSQL_ROOT_PASSWORD=yaoguais_2014
+  links:
+    - mysql:mysql
+
+###################### WEB-SERVER ###########################
+## nginx
+nginx:
+  build: ./nginx
+  #image: nginx:latest
+  container_name: nginx
+  ports:
+    - "80:80"
+    - "443:443"
+    - "8000:8000"
+  volumes:
+    - ./nginx/var/log/nginx:/var/log/nginx
+    - ./nginx/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    - ./nginx/etc/nginx/conf.d/:/etc/nginx/conf.d/:ro
+    - ./nginx/etc/nginx/server.crt/:/etc/nginx/server.crt:ro
+    - ./nginx/etc/nginx/server.key/:/etc/nginx/server.key:ro
+    # project dockertest
+    - ../projects/dockertest:/data/dockertest
+    - ../projects/fame-server:/data/fame-server
+  links:
+    - php-fpm:php-fpm
+
+######################### PHP-FPM ###############################
+## php-fpm
+php-fpm:
+  build: ./php-fpm
+  container_name: php-fpm
+  ports:
+    - "9000:9000"
+  volumes:
+    - ./php-fpm/usr/local/etc/php/php.ini-production:/usr/local/etc/php/php.ini:ro
+    # project dockertest
+    - ../projects/dockertest:/data/dockertest
+    - ../projects/fame-server:/data/fame-server
+  links:
+    - mysql:mysql
+    - redis:redis-server
+
+######################### REDIS-SERVER #############################
+## redis-server
+redis:
+  build: ./redis
+  container_name: redis
+  ports:
+    - "6379:6379"
+  volumes:
+    - ./redis/data:/data
+

@@ -1,0 +1,97 @@
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2016-11-13T17:45:55.463587Z
+# User@Host: root[root] @  [172.17.0.1]  Id:     5
+# Query_time: 1.006507  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1479059155;
+select sleep(1);
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2016-11-13T18:01:29.460121Z
+# User@Host: root[root] @  [172.17.0.1]  Id:     4
+# Query_time: 1.002029  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1479060089;
+select sleep(1);
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2016-11-13T18:09:52.137097Z
+# User@Host: root[root] @  [172.17.0.1]  Id:     2
+# Query_time: 1.001653  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1479060592;
+select sleep(1);
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2016-11-13T18:18:10.097349Z
+# User@Host: root[root] @  [172.17.0.1]  Id:     2
+# Query_time: 1.005878  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1479061090;
+select sleep(1);
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2016-11-13T18:22:29.933402Z
+# User@Host: root[root] @  [172.17.0.1]  Id:     2
+# Query_time: 1.001539  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1479061349;
+select sleep(1);
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.16-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
