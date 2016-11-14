@@ -4,6 +4,8 @@ data_dir=/data
 workspace=`pwd`
 worker=$WORKER_USER
 
+chown "${WORKER_USER}:root" /var/lib/nginx
+
 for i in server android ios im daemon
 do
   mkdir "${data_dir}/${i}"
