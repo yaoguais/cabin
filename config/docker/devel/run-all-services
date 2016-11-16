@@ -1,0 +1,9 @@
+#!/bin/bash
+# yaoguais <newtopstdio@163.com>
+# start all the services
+
+docker-entrypoint-mysql mysqld
+docker-entrypoint-redis redis-server
+nginx &
+# make script run forever
+php-fpm
