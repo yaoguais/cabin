@@ -62,7 +62,6 @@ RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/mysql.conf.d/mysqld.cnf \
 
 #VOLUME /var/lib/mysql
 
-COPY docker-entrypoint-mysql.sh /usr/local/bin/docker-entrypoint-mysql
 #COPY docker-entrypoint-mysql.sh /usr/local/bin/
 #RUN ln -s usr/local/bin/docker-entrypoint-mysql.sh /entrypoint-mysql.sh # backwards compat
 #ENTRYPOINT ["docker-entrypoint-mysql.sh"]
@@ -121,7 +120,6 @@ RUN mkdir -p /var/lib/redis && chown redis:redis /var/lib/redis
 #VOLUME /data
 #WORKDIR /data
 
-COPY docker-entrypoint-redis.sh /usr/local/bin/docker-entrypoint-redis
 #COPY docker-entrypoint-redis.sh /usr/local/bin/
 #RUN ln -s usr/local/bin/docker-entrypoint-redis.sh /entrypoint-redis.sh # backwards compat
 #ENTRYPOINT ["docker-entrypoint-redis.sh"]
@@ -352,5 +350,7 @@ EXPOSE 80 443 3306 6379 9000
 ####################### CMD ##########################################
 ######################################################################
 
+COPY docker-entrypoint-mysql.sh /usr/local/bin/
+COPY docker-entrypoint-redis.sh /usr/local/bin/
 COPY run-all-services /usr/local/bin/
 CMD ["run-all-services"]

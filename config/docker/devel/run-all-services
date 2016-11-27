@@ -2,8 +2,13 @@
 # yaoguais <newtopstdio@163.com>
 # start all the services
 
-docker-entrypoint-mysql mysqld
-docker-entrypoint-redis redis-server
+cd /var/lib/mysql
+/usr/local/bin/docker-entrypoint-mysql.sh mysqld
+
+cd /var/lib/redis
+/usr/local/bin/docker-entrypoint-redis.sh redis-server
+
 nginx &
 # make script run forever
 php-fpm
+
