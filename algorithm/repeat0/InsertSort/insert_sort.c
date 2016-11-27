@@ -8,7 +8,7 @@ int insert_sort_cmp(void * a, void * b);
 void insert_sort(void * arr, int left, int right, cmp_func func, int size);
 
 int main() {
-	int i, l,  arr[] = {9, 4, 3, 5, 2, 10, 6};
+	int i, l,  arr[] = {49, 38, 65, 97, 76, 13, 27, 49, 55, 4};
 	insert_sort(arr, 0, sizeof(arr), insert_sort_cmp, sizeof(int));
 	for (i = 0, l = sizeof(arr) / sizeof(int); i < l; i++) {
 		printf("%d ", arr[i]);
@@ -39,4 +39,7 @@ void insert_sort(void * arr, int left, int right, cmp_func func, int size) {
 	free(key);
 }
 
+// 时间复杂度 O(n^2)
+// 空间复杂度 O(0) 
+// 稳定性:    稳定算法
 
