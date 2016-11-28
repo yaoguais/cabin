@@ -1,0 +1,8 @@
+[2016-11-28 13:03:40,462] INFO [Kafka Server 0], shutting down (kafka.server.KafkaServer)
+[2016-11-28 13:03:40,485] INFO [Kafka Server 0], Starting controlled shutdown (kafka.server.KafkaServer)
+[2016-11-28 13:04:24,098] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2016-11-28 13:14:24,096] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2016-11-28 13:24:24,096] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2016-11-28 13:34:24,097] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2016-11-28 13:44:24,098] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2016-11-28 13:54:24,097] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
