@@ -1,0 +1,29 @@
+[root@devel kafka_2.11-0.10.1.0]# bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+Created topic "test".
+[root@devel kafka_2.11-0.10.1.0]#
+[root@devel kafka_2.11-0.10.1.0]#
+[root@devel kafka_2.11-0.10.1.0]# bin/kafka-topics.sh --list --zookeeper localhost:2181
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+test
+[root@devel kafka_2.11-0.10.1.0]#
+[root@devel kafka_2.11-0.10.1.0]# bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+hello
+
+
+[2016-11-28 12:12:28,542] INFO Got user-level KeeperException when processing sessionid:0x158aad4a3b30000 type:create cxid:0x120 zxid:0world
+^C[root@devel kafka_2.11-0.10.1.0]#
+[root@devel kafka_2.11-0.10.1.0]#
+[root@devel kafka_2.11-0.10.1.0]# bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+
+
+[2016-11-28 12:12:30,071] INFO [Group Metadata Manager on Broker 0]: Finished loading offsets from [__consumer_offsets,39] in 2 milliseOpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+hello
+world
+
+
+
+^CProcessed a total of 2 messages
+[root@devel kafka_2.11-0.10.1.0]#
+
