@@ -19,6 +19,8 @@ int main() {
 	printf("atoi=%d ", atoi("000000")); printf("atoi_error=%d\n", atoi_error);
 	printf("atoi=%d ", atoi("00000123")); printf("atoi_error=%d\n", atoi_error);
 	printf("atoi=%d ", atoi("-0000123")); printf("atoi_error=%d\n", atoi_error);
+	printf("atoi=%d ", atoi("123")); printf("atoi_error=%d\n", atoi_error);
+	printf("atoi=%d ", atoi("-123")); printf("atoi_error=%d\n", atoi_error);
 
 	return 0;
 }
