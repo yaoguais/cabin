@@ -1,6 +1,4 @@
-FROM yaoguais/lnmp:1.1.0
-
-### install-mongodb ###
+FROM yaoguais/lnmp:1.2.0
 
 ### expose ###
 

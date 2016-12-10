@@ -22,3 +22,5 @@ echo "/*STOP SLAVE IO_THREAD FOR CHANNEL ''; reset slave;*/ \
       select sleep(1); \
       start slave;" \
     | mysql --protocol tcp -h127.0.0.1 -P3307 -uroot -pyaoguais_2014
+
+apt-get install -y git wget strace vim net-tools tcpdump zip unzip tree
