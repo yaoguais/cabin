@@ -15,3 +15,7 @@ files/php-fpm/var/log/php/*
 files/php-fpm/var/lib/php/*
 
 files/nginx/var/log/nginx/*
+
+files/mongodb/var/lib/mongodb/db/*
+files/mongodb/var/lib/mongodb/configdb/*
+files/mongodb/var/log/mongodb/*

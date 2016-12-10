@@ -1,5 +1,6 @@
 RUN apt-get update \
     && apt-get install -y --no-install-recommends wget unzip \
+    && mkdir -p /var/lib/php \
     && cd /var/lib/php \
     && wget "https://github.com/phpredis/phpredis/archive/php7.zip" \
     && unzip php7.zip \
@@ -10,5 +11,6 @@ RUN apt-get update \
     && cp -a modules/redis.so "$(php -r 'echo ini_get("extension_dir");')" \
     && docker-php-ext-enable redis \
     && cd /var/lib/php \
-    && rm -rf php7.zip phpredis-php7 \
-    && apt-get purge -y --auto-remove wget unzip
+    && rm -rf php7.zip phpredis-php7
+
+RUN apt-get purge -y --auto-remove wget unzip

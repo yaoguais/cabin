@@ -1,6 +1,6 @@
-FROM yaoguais:lnmp
+FROM yaoguais/lnmp:1.1.0
 
-### install-php-ext-redis ###
+### install-mongodb ###
 
 ### expose ###
 

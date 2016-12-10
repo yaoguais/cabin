@@ -8,6 +8,7 @@ devel:
     - "80:80"
     - "443:443"
     - "9000:9000"
+    - "27017:27017"
   volumes:
   # mysql
     - ./files/mysql/var/log/mysql:/var/log/mysql
@@ -39,6 +40,10 @@ devel:
     - ./files/php-fpm/usr/local/etc/php/conf.d:/usr/local/etc/php/conf.d
     - ./files/php-fpm/usr/local/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf:ro
     - ./files/php-fpm/usr/local/etc/php-fpm.d:/usr/local/etc/php-fpm.d
+  # mongodb
+    - ./files/mongodb/var/log/mongodb:/var/log/mongodb
+    - ./files/mongodb/var/lib/mongodb:/var/lib/mongodb
+    - ./files/mongodb/etc/mongodb:/etc/mongodb
   environment:
   # mysql
     - MYSQL_ROOT_PASSWORD=yaoguais_2014

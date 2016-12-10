@@ -30,4 +30,6 @@ nginx -c /etc/nginx/nginx.conf &
 
 php-fpm &
 
+/scripts/mongodb/docker-entrypoint.sh mongod -f /etc/mongodb/mongod.conf &
+
 tail -f /dev/null
