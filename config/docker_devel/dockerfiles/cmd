@@ -1,0 +1,2 @@
+ENTRYPOINT ["/scripts/mysql/docker-entrypoint.sh"]
+CMD ["mysqld"]

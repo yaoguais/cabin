@@ -1,0 +1,12 @@
+devel:
+  build: ./
+  ports:
+    - "3306:3306"
+  volumes:
+  # mysql
+    - ./files/mysql/var/log/mysql:/var/log/mysql
+    - ./files/mysql/var/lib/mysql:/var/lib/mysql
+    - ./files/mysql/etc/mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
+  environment:
+  # mysql
+    - MYSQL_ROOT_PASSWORD=yaoguais_2014

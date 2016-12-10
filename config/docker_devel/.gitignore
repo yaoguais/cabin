@@ -1,0 +1,2 @@
+files/mysql/var/lib/mysql/*
+files/mysql/var/log/mysql/*
