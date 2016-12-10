@@ -28,4 +28,6 @@ cd /var/lib/redis-slave
 
 nginx -c /etc/nginx/nginx.conf &
 
-php-fpm
+php-fpm &
+
+tail -f /dev/null

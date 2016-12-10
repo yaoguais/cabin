@@ -12,5 +12,6 @@ files/redis-slave/var/lib/redis-slave/*
 files/redis-slave/var/log/redis-slave/*
 
 files/php-fpm/var/log/php/*
+files/php-fpm/var/lib/php/*
 
 files/nginx/var/log/nginx/*

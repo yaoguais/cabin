@@ -1,18 +1,6 @@
-FROM debian:jessie
+FROM yaoguais:lnmp
 
-### install-mysql ###
-
-### install-mysql-slave ###
-
-### install-redis ###
-
-### install-redis-slave ###
-
-### install-nginx ###
-
-### install-php-fpm ###
-
-### install-php-ext ###
+### install-php-ext-redis ###
 
 ### expose ###
 

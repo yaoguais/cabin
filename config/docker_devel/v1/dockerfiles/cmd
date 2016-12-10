@@ -1,0 +1,6 @@
+ADD scripts /scripts
+RUN chmod a+x /scripts/run-all-services
+RUN chmod a+x /scripts/mysql/docker-entrypoint.sh
+RUN chmod a+x /scripts/redis/docker-entrypoint.sh
+
+ENTRYPOINT ["/scripts/run-all-services"]

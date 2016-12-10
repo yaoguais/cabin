@@ -36,6 +36,7 @@ devel:
     - ./files/php-fpm/var/log/php:/var/log/php
     - ./files/php-fpm/var/lib/php:/var/lib/php
     - ./files/php-fpm/usr/local/etc/php/php.ini-development:/usr/local/etc/php/php.ini:ro
+    - ./files/php-fpm/usr/local/etc/php/conf.d:/usr/local/etc/php/conf.d
     - ./files/php-fpm/usr/local/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf:ro
     - ./files/php-fpm/usr/local/etc/php-fpm.d:/usr/local/etc/php-fpm.d
   environment:
