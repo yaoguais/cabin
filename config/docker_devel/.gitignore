@@ -3,3 +3,14 @@ files/mysql/var/log/mysql/*
 
 files/mysql-slave/var/lib/mysql-slave/*
 files/mysql-slave/var/log/mysql-slave/*
+
+files/redis/var/lib/redis/*
+files/redis/var/log/redis/*
+
+
+files/redis-slave/var/lib/redis-slave/*
+files/redis-slave/var/log/redis-slave/*
+
+files/php-fpm/var/log/php/*
+
+files/nginx/var/log/nginx/*

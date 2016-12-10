@@ -18,6 +18,14 @@
  --pid-file=/var/lib/mysql-slave/mysql.pid \
  --datadir=/var/lib/mysql-slave \
  --socket=/var/run/mysqld/mysqld-slave.sock \
- --port=3307
+ --port=3307 &
 
+cd /var/lib/redis
+/scripts/redis/docker-entrypoint.sh redis-server /etc/redis/redis.conf &
 
+cd /var/lib/redis-slave
+/scripts/redis/docker-entrypoint.sh redis-server /etc/redis-slave/redis.conf &
+
+nginx -c /etc/nginx/nginx.conf &
+
+php-fpm

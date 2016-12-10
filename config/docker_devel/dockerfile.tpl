@@ -12,6 +12,8 @@ FROM debian:jessie
 
 ### install-php-fpm ###
 
+### install-php-ext ###
+
 ### expose ###
 
 ### cmd ###
