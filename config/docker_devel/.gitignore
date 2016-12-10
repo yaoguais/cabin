@@ -1,2 +1,5 @@
 files/mysql/var/lib/mysql/*
 files/mysql/var/log/mysql/*
+
+files/mysql-slave/var/lib/mysql-slave/*
+files/mysql-slave/var/log/mysql-slave/*

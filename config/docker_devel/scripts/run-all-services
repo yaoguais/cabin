@@ -1,0 +1,23 @@
+#!/bin/bash
+# yaoguais <newtopstdio@163.com>
+# start all the services
+
+/scripts/mysql/docker-entrypoint.sh \
+ mysqld \
+ --defaults-file=/etc/mysql/conf.d/my.cnf \
+ --user=mysql \
+ --pid-file=/var/lib/mysql/mysql.pid \
+ --datadir=/var/lib/mysql \
+ --socket=/var/run/mysqld/mysqld.sock \
+ --port=3306 &
+
+/scripts/mysql/docker-entrypoint.sh \
+ mysqld \
+ --defaults-file=/etc/mysql-slave/conf.d/my.cnf \
+ --user=mysql \
+ --pid-file=/var/lib/mysql-slave/mysql.pid \
+ --datadir=/var/lib/mysql-slave \
+ --socket=/var/run/mysqld/mysqld-slave.sock \
+ --port=3307
+
+

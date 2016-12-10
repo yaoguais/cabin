@@ -72,7 +72,8 @@ RUN chmod a+x /scripts/mysql/docker-entrypoint.sh
 
 
 
-### install-mysql-slave ###
+
+
 
 ### install-redis ###
 
@@ -85,6 +86,9 @@ RUN chmod a+x /scripts/mysql/docker-entrypoint.sh
 EXPOSE 3306
 
 
-ENTRYPOINT ["/scripts/mysql/docker-entrypoint.sh"]
-CMD ["mysqld"]
+ADD scripts /scripts
+RUN chmod a+x /scripts/run-all-services
+RUN chmod a+x /scripts/mysql/docker-entrypoint.sh
+
+ENTRYPOINT ["/scripts/run-all-services"]
 
