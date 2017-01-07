@@ -1,7 +1,7 @@
-files/mysql/var/lib/mysql/*
+files/mysql/var/lib/*
 files/mysql/var/log/mysql/*
 
-files/mysql-slave/var/lib/mysql-slave/*
+files/mysql-slave/var/lib/*
 files/mysql-slave/var/log/mysql-slave/*
 
 files/redis/var/lib/redis/*
