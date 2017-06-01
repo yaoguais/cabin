@@ -1,3 +1,0 @@
-2016/11/14 00:11:43 [error] 5#5: *1 directory index of "/data/dockertest/" is forbidden, client: 172.17.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
-2016/11/14 00:12:16 [error] 5#5: *11 directory index of "/data/dockertest/" is forbidden, client: 172.17.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
-2016/11/14 01:05:55 [error] 5#5: *1 directory index of "/data/fame-server/public/" is forbidden, client: 172.17.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8000"
