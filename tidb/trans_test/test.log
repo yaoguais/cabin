@@ -1,0 +1,37 @@
+595dafa6296ef begin ret 1
+595dafa6296ef last insertId 5008
+595dafa62a7da begin ret 1
+595dafa62a9d6 begin ret 1
+595dafa62ae01 begin ret 1
+595dafa62ae28 begin ret 1
+595dafa62ae6c begin ret 1
+595dafa62a7da last insertId 5009
+595dafa62a9d6 last insertId 5010
+595dafa62c0f1 begin ret 1
+595dafa62cad3 begin ret 1
+595dafa62ae01 last insertId 2
+595dafa62ae28 last insertId 3
+595dafa62cf26 begin ret 1
+595dafa6296ef commit ret 1
+595dafa62cf26 rollback 1 exception #0 /data/time-server/public/bug_test.php(28): PDO->exec('update test set...')
+#1 {main}
+595dafa62ae28 commit ret 1
+595dafa6296ef inserted data {"id":5008,"stock":158}
+595dafa62a7da commit ret 1
+595dafa62a7da inserted data false
+595dafa62ae28 inserted data false
+595dafa62ae01 commit ret 1
+595dafa62ae01 inserted data false
+595dafa630db7 begin ret 1
+595dafa62cad3 rollback 1 exception #0 /data/time-server/public/bug_test.php(28): PDO->exec('update test set...')
+#1 {main}
+595dafa630db7 rollback 1 exception #0 /data/time-server/public/bug_test.php(28): PDO->exec('update test set...')
+#1 {main}
+595dafa62ae6c last insertId 10002
+595dafa62ae6c commit ret 1
+595dafa62ae6c inserted data false
+595dafa62c0f1 last insertId 4
+595dafa62c0f1 commit ret 1
+595dafa62c0f1 inserted data false
+595dafa62a9d6 commit ret 1
+595dafa62a9d6 inserted data false
