@@ -1,0 +1,36 @@
+595db615152d3 begin ret 0
+595db6151559f begin ret 0
+595db6151576c begin ret 0
+595db6151585e begin ret 0
+595db615159f3 begin ret 0
+595db615152d3 last insertId 5
+595db6151559f last insertId 6
+595db6151576c last insertId 7
+595db61515e01 begin ret 0
+595db6151585e last insertId 10003
+595db615159f3 last insertId 10004
+595db61515e01 last insertId 10005
+595db615152d3 commit ret 0
+595db61519574 begin ret 0
+595db615152d3 inserted data {"id":5,"stock":9743}
+595db61519574 rollback 0 exception #0 /data/time-server/public/ok_test.php(28): PDO->exec('update test set...')
+#1 {main}
+595db6151a5bc begin ret 0
+595db6151b227 begin ret 0
+595db6151b254 begin ret 0
+595db6151a5bc rollback 0 exception #0 /data/time-server/public/ok_test.php(28): PDO->exec('update test set...')
+#1 {main}
+595db6151b227 rollback 0 exception #0 /data/time-server/public/ok_test.php(28): PDO->exec('update test set...')
+#1 {main}
+595db6151b254 rollback 0 exception #0 /data/time-server/public/ok_test.php(28): PDO->exec('update test set...')
+#1 {main}
+595db6151585e rollback 0 exception #0 /data/time-server/public/ok_test.php(38): PDO->exec('COMMIT')
+#1 {main}
+595db615159f3 rollback 0 exception #0 /data/time-server/public/ok_test.php(38): PDO->exec('COMMIT')
+#1 {main}
+595db6151559f rollback 0 exception #0 /data/time-server/public/ok_test.php(38): PDO->exec('COMMIT')
+#1 {main}
+595db6151576c rollback 0 exception #0 /data/time-server/public/ok_test.php(38): PDO->exec('COMMIT')
+#1 {main}
+595db61515e01 rollback 0 exception #0 /data/time-server/public/ok_test.php(38): PDO->exec('COMMIT')
+#1 {main}
