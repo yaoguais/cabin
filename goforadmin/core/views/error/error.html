@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{.WebsiteTitle}}</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{.StaticHost}}static/favicon.ico">
+    <link rel="stylesheet" href="{{.StaticHost}}static/bower_components/toastr/toastr.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/blur-admin/styles/vendor.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/blur-admin/styles/app.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/blur-admin/styles/404.css">
+</head>
+<body>
+<div class="page-not-found-modal">
+    <h1>{{.Title}}</h1>
+
+    <p>{{.Message}} <a href="javascript:history.go(-1)">返回上一级页面</a></p>
+</div>
+</body>
+</html>

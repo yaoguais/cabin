@@ -1,0 +1,582 @@
+{{ define "content" }}
+<content-top>
+    <div class="content-top clearfix">
+        <h1 class="al-title ng-binding">表单/图标/按钮</h1>
+
+        <ul class="breadcrumb al-breadcrumb">
+            <li>
+                <a href="/component">组件</a></li>
+            <li>组件模块</li>
+        </ul>
+    </div>
+</content-top>
+
+<!-- 表单 -->
+<div class="row">
+    <div class="col-md-6">
+        <div>
+            <div class="panel with-scroll animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">Standard Fields</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <form class="ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label for="input01">Text</label>
+                                <input type="text" class="form-control" id="input01" placeholder="Text">
+                            </div>
+                            <div class="form-group">
+                                <label for="input02">Password</label>
+                                <input type="password" class="form-control" id="input02" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="input03">Rounded Corners</label>
+                                <input type="text" class="form-control form-control-rounded" id="input03" placeholder="Rounded Corners">
+                            </div>
+                            <div class="form-group">
+                                <label for="input04">With help</label>
+                                <input type="text" class="form-control" id="input04" placeholder="With help">
+                                <span class="help-block sub-little-text">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="input05">Disabled Input</label>
+                                <input type="text" class="form-control" id="input05" placeholder="Disabled Input" disabled="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="textarea01">Textarea</label>
+                                <textarea placeholder="Default Input" class="form-control" id="textarea01"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control input-sm" id="input2" placeholder="Small Input">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" id="input4" placeholder="Large Input">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="panel animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">Date Range</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div>
+                            <div>
+                                <div class="form-group">
+                                    <div class="daterange">
+                                        <input class="form-control" value="" type="text">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div>
+            <div class="panel with-scroll animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">Checkboxes &amp; Radios</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div class="checkbox-demo-row">
+                            <div class="input-demo checkbox-demo row">
+                                <div class="col-md-4">
+                                    <label class="checkbox-inline custom-checkbox nowrap">
+                                        <input type="checkbox" id="inlineCheckbox01" value="option1">
+                                        <span>Check 1</span>
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="checkbox-inline custom-checkbox nowrap">
+                                        <input type="checkbox" id="inlineCheckbox02" value="option2">
+                                        <span>Check 2</span>
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="checkbox-inline custom-checkbox nowrap">
+                                        <input type="checkbox" id="inlineCheckbox03" value="option3">
+                                        <span>Check 3</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-demo radio-demo row">
+                                <div class="col-md-4">
+                                    <label class="radio-inline custom-radio nowrap">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <span>Option 1</span>
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="radio-inline custom-radio nowrap">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <span>Option 2</span>
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="radio-inline custom-radio nowrap">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                        <span>Option3</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="checkbox disabled">
+                                <label class="custom-checkbox nowrap">
+                                    <input type="checkbox" value="" disabled="">
+                                    <span>Checkbox is disabled</span>
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label class="custom-radio nowrap">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+                                    <span>Disabled option</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="panel with-scroll animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">On/Off Switches</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div>
+                            <label class="switcher-container">
+                                <input type="checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <div class="switcher primary">
+                                    <div class="handle-container">
+                                        <span class="handle handle-on">ON</span>
+                                        <span class="handle"></span>
+                                        <span class="handle handle-off">OFF</span>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="switcher-container">
+                                <input type="checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <div class="switcher success">
+                                    <div class="handle-container">
+                                        <span class="handle handle-on">ON</span>
+                                        <span class="handle"></span>
+                                        <span class="handle handle-off">OFF</span>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="switcher-container">
+                                <input type="checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <div class="switcher warning">
+                                    <div class="handle-container">
+                                        <span class="handle handle-on">ON</span>
+                                        <span class="handle"></span>
+                                        <span class="handle handle-off">OFF</span>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="switcher-container">
+                                <input type="checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <div class="switcher danger">
+                                    <div class="handle-container">
+                                        <span class="handle handle-on">ON</span>
+                                        <span class="handle"></span>
+                                        <span class="handle handle-off">OFF</span>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="switcher-container">
+                                <input type="checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <div class="switcher info">
+                                    <div class="handle-container">
+                                        <span class="handle handle-on">ON</span>
+                                        <span class="handle"></span>
+                                        <span class="handle handle-off">OFF</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="z-index:8888;position:relative">
+            <div class="panel animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">Ajax Search Select</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div>
+                            <select class="form-control"
+                                    data-live-search="true"
+                                    data-url="/component/selects/ajax">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="panel with-scroll animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">Upload Files</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div>
+
+                            <input type="hidden" id="gupload-form" name="gupload" value="">
+                            <div class="gupload"
+                                 style="clear: both"
+                                 data-domain="{{.UploadDomain}}"
+                                 data-multi="1"
+                                 data-target="gupload-form"></div>
+
+                            <!--
+                            <div class="form-control">
+                                <button type="button" style="float: left;" class="btn btn-primary" id="pickfiles">浏览</button>
+                                <div style="float:left;width: 80%;margin-left: 10px">
+                                    <div>
+                                        <div style="display: inline-block;width: 60px;margin: 5px;word-break: break-all">
+                                            <img style="width: 60px; height: 60px;" src="/static/favicon.ico"/>
+                                        </div>
+                                        <div class="progress" style="display: inline-block; margin-bottom: 0px; width: 70%">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                                20% Complete
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div style="display: inline-block;width: 60px;margin: 5px;word-break: break-all">
+                                            <img style="width: 60px; height: 60px;" src="/static/favicon.ico"/>
+                                        </div>
+                                        <div class="progress" style="display: inline-block; margin-bottom: 0px; width: 50%">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                20% Complete
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div style="display: inline-block;width: 60px;margin: 5px;word-break: break-all">
+                                            agergeroafjaerfjeajferajfaelrjfearjfaer.zip
+                                        </div>
+                                        <div class="progress" style="display: inline-block; margin-bottom: 0px; width: 50%">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                20% Complete
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="z-index:8888;position:relative">
+            <div class="panel animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">Date Picker</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div>
+                            <div class="input-group date datetime" data-date-format="yyyy-mm-dd hh:ii">
+                                <input value="2017-03-14 09:50:00" type="text" class="form-control">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 按钮 -->
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel with-scroll button-panel animated zoomIn">
+            <div class="panel-heading clearfix"><h3 class="panel-title">Flat Buttons</h3></div>
+            <div class="panel-body">
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-default">Default</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-success">Success</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-info">Info</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-warning">Warning</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel with-scroll button-panel animated zoomIn">
+            <div class="panel-heading clearfix"><h3 class="panel-title">Raised Buttons</h3></div>
+            <div class="panel-body">
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-default btn-raised">Default</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary btn-raised">Primary</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-success btn-raised">Success</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-info btn-raised">Info</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-warning btn-raised">Warning</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-danger btn-raised">Danger</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel with-scroll button-panel df-size-button-panel animated zoomIn">
+            <div class="panel-heading clearfix"><h3 class="panel-title">Different sizes</h3></div>
+            <div class="panel-body">
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-default  btn-xs">Default</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary  btn-sm">Primary</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-success btn-mm">Success</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-info btn-md">Info</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-warning btn-xm">Warning</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-danger btn-lg">Danger</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel with-scroll button-panel animated zoomIn">
+            <div class="panel-heading clearfix"><h3 class="panel-title">Disabled</h3></div>
+            <div class="panel-body">
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-default" disabled="disabled">Default</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary" disabled="disabled">Primary</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-success" disabled="disabled">Success</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-info" disabled="disabled">Info</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-warning" disabled="disabled">Warning</button>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-danger" disabled="disabled">Danger</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 图标 -->
+<div class="row">
+    <div class="col-md-6">
+        <div>
+            <div class="panel with-scroll animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">ionicons</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div class="row icons-list primary">
+                            <div class="col-xs-2"><i class="ion-ionic"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-right-b"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-down-b"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-left-b"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-up-c"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-right-c"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-down-c"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-left-c"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-return-right"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-return-left"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-swap"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-shrink"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-expand"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-move"></i></div>
+                            <div class="col-xs-2"><i class="ion-arrow-resize"></i></div>
+                            <div class="col-xs-2"><i class="ion-chevron-up"></i></div>
+                            <div class="col-xs-2"><i class="ion-chevron-right"></i></div>
+                            <div class="col-xs-2"><i class="ion-chevron-down"></i></div>
+                            <div class="col-xs-2"><i class="ion-chevron-left"></i></div>
+                            <div class="col-xs-2"><i class="ion-navicon-round"></i></div>
+                            <div class="col-xs-2"><i class="ion-navicon"></i></div>
+                            <div class="col-xs-2"><i class="ion-drag"></i></div>
+                            <div class="col-xs-2"><i class="ion-log-in"></i></div>
+                            <div class="col-xs-2"><i class="ion-log-out"></i></div>
+                            <div class="col-xs-2"><i class="ion-checkmark-round"></i></div>
+                            <div class="col-xs-2"><i class="ion-checkmark"></i></div>
+                            <div class="col-xs-2"><i class="ion-checkmark-circled"></i></div>
+                            <div class="col-xs-2"><i class="ion-close-round"></i></div>
+                            <div class="col-xs-2"><i class="ion-plus-round"></i></div>
+                            <div class="col-xs-2"><i class="ion-minus-round"></i></div>
+                            <div class="col-xs-2"><i class="ion-information"></i></div>
+                            <div class="col-xs-2"><i class="ion-help"></i></div>
+                            <div class="col-xs-2"><i class="ion-backspace-outline"></i></div>
+                            <div class="col-xs-2"><i class="ion-help-buoy"></i></div>
+                            <div class="col-xs-2"><i class="ion-asterisk"></i></div>
+                            <div class="col-xs-2"><i class="ion-alert"></i></div>
+                            <div class="col-xs-2"><i class="ion-alert-circled"></i></div>
+                            <div class="col-xs-2"><i class="ion-refresh"></i></div>
+                            <div class="col-xs-2"><i class="ion-loop"></i></div>
+                            <div class="col-xs-2"><i class="ion-shuffle"></i></div>
+                            <div class="col-xs-2"><i class="ion-home"></i></div>
+                            <div class="col-xs-2"><i class="ion-search"></i></div>
+                            <div class="col-xs-2"><i class="ion-flag"></i></div>
+                            <div class="col-xs-2"><i class="ion-star"></i></div>
+                            <div class="col-xs-2"><i class="ion-heart"></i></div>
+                            <div class="col-xs-2"><i class="ion-heart-broken"></i></div>
+                            <div class="col-xs-2"><i class="ion-gear-a"></i></div>
+                            <div class="col-xs-2"><i class="ion-gear-b"></i></div>
+                            <div class="col-xs-2"><i class="ion-toggle-filled"></i></div>
+                            <div class="col-xs-2"><i class="ion-toggle"></i></div>
+                            <div class="col-xs-2"><i class="ion-settings"></i></div>
+                            <div class="col-xs-2"><i class="ion-wrench"></i></div>
+                            <div class="col-xs-2"><i class="ion-hammer"></i></div>
+                            <div class="col-xs-2"><i class="ion-edit"></i></div>
+                            <div class="col-xs-2"><i class="ion-trash-a"></i></div>
+                            <div class="col-xs-2"><i class="ion-trash-b"></i></div>
+                            <div class="col-xs-2"><i class="ion-document"></i></div>
+                            <div class="col-xs-2"><i class="ion-document-text"></i></div>
+                            <div class="col-xs-2"><i class="ion-clipboard"></i></div>
+                            <div class="col-xs-2"><i class="ion-scissors"></i></div>
+                            <div class="col-xs-2"><i class="ion-funnel"></i></div>
+                            <div class="col-xs-2"><i class="ion-bookmark"></i></div>
+                            <div class="col-xs-2"><i class="ion-email"></i></div>
+                            <div class="col-xs-2"><i class="ion-email-unread"></i></div>
+                            <div class="col-xs-2"><i class="ion-folder"></i></div>
+                            <div class="col-xs-2"><i class="ion-filing"></i></div>
+                            <div class="col-xs-2"><i class="ion-archive"></i></div>
+                            <div class="col-xs-2"><i class="ion-reply"></i></div>
+                            <div class="col-xs-2"><i class="ion-reply-all"></i></div>
+                            <div class="col-xs-2"><i class="ion-forward"></i></div>
+                        </div>
+                        <a href="http://ionicons.com/" target="_blank" class="see-all-icons">See all ionicons icons</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div>
+            <div class="panel with-scroll animated zoomIn">
+                <div class="panel-heading clearfix"><h3 class="panel-title">Socicon</h3></div>
+                <div class="panel-body">
+                    <div>
+                        <div class="row icons-list danger">
+                            <div class="col-xs-2"><i class="socicon ng-binding">a</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">b</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">c</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">d</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">e</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">f</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">g</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">h</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">i</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">j</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">k</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">l</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">m</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">n</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">o</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">p</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">q</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">r</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">s</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">t</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">u</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">v</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">w</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">x</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">y</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">A</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">B</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">C</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">D</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">E</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">F</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">G</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">H</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">I</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">J</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">K</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">L</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">M</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">N</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">O</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">P</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">Q</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">R</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">S</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">T</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">U</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">V</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">W</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">X</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">Y</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">Z</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">1</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">2</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">3</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">4</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">5</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">6</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">7</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">8</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">9</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">10</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">,</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">;</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">:</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">+</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">@</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">=</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">-</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">^</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">?</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">$</i></div>
+                            <div class="col-xs-2"><i class="socicon ng-binding">*</i></div>
+                        </div>
+                        <a href="http://www.socicon.com/chart.php" target="_blank" class="see-all-icons">See all Socicon icons</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ template "layout" . }}

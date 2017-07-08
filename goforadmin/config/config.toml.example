@@ -1,0 +1,37 @@
+[app]
+name = "gadmin"
+host = ":1323"
+static_host = "/"
+
+[core]
+view="app/views/core"
+
+[log]
+path = "app/storages/logs"
+level = "DEBUG"
+
+[session]
+driver = "file"
+path = "app/storages/sessions"
+secret = ""
+
+[db]
+driver = "mysql"
+host = "127.0.0.1"
+port = 3306
+user = "root"
+password = ""
+database = "project"
+charset = "utf8mb4"
+
+[redis]
+host = "127.0.0.1"
+port = 6379
+database = 0
+password = ""
+
+[qiniu]
+access_key = ""
+secret_key = ""
+bucket     = ""
+domain     = ""

@@ -1,0 +1,17 @@
+{
+  "name": "gadmin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "toastr": "~2.1.1",
+    "bootstrap": "~3.3.5",
+    "datatables.net": "^2.1.1",
+    "datatables.net-bs": "^2.1.1",
+    "bootstrap-select": "^1.12.2",
+    "jquery.easy-pie-chart": "^2.1.6",
+    "qiniu": "^1.0.18",
+    "bootstrap-datepicker": "^1.6.4",
+    "smalot-bootstrap-datetimepicker": "^2.4.4",
+    "bootstrap-daterangepicker": "^2.1.25"
+  }
+}

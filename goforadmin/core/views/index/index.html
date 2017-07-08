@@ -1,0 +1,145 @@
+{{ define "content" }}
+<content-top>
+    <div class="content-top clearfix">
+        <h1 class="al-title ng-binding">DASHBOARD</h1>
+
+        <ul class="breadcrumb al-breadcrumb">
+            <li>
+                <a href="/">Home</a></li>
+            <li>Dashboard</li>
+        </ul>
+    </div>
+</content-top>
+<div class="row pie-charts">
+    <div class="pie-chart-item-container ng-scope">
+        <div>
+            <div class="panel animated zoomIn">
+                <div class="panel-body">
+                    <div class="pie-chart-item ng-scope">
+                        <div class="chart" rel="rgba(102, 102, 102, 0.2)" data-percent="60"><span class="percent">86</span>
+                            <canvas height="168" width="168" style="height: 84px; width: 84px;"></canvas>
+                        </div>
+                        <div class="description">
+                            <div class="ng-binding">New Visits</div>
+                            <div class="description-stats ng-binding">57,820</div>
+                        </div>
+                        <i class="chart-icon i-person"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pie-chart-item-container ng-scope">
+        <div>
+            <div class="panel animated zoomIn">
+                <div class="panel-body">
+                    <div class="pie-chart-item ng-scope">
+                        <div class="chart" rel="rgba(102, 102, 102, 0.2)" data-percent="60"><span class="percent">60</span>
+                            <canvas height="168" width="168" style="height: 84px; width: 84px;"></canvas>
+                        </div>
+                        <div class="description">
+                            <div class="ng-binding">Purchases</div>
+                            <div class="description-stats ng-binding">$ 89,745</div>
+                        </div>
+                        <i class="chart-icon i-money"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pie-chart-item-container ng-scope">
+        <div>
+            <div class="panel animated zoomIn">
+                <div class="panel-body">
+                    <div class="pie-chart-item ng-scope">
+                        <div class="chart" rel="rgba(102, 102, 102, 0.2)" data-percent="60"><span class="percent">67</span>
+                            <canvas height="168" width="168" style="height: 84px; width: 84px;"></canvas>
+                        </div>
+                        <div class="description">
+                            <div class="ng-binding">Active Users</div>
+                            <div class="description-stats ng-binding">178,391</div>
+                        </div>
+                        <i class="chart-icon i-face"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pie-chart-item-container ng-scope">
+        <div>
+            <div class="panel animated zoomIn">
+                <div class="panel-body">
+                    <div class="pie-chart-item ng-scope">
+                        <div class="chart" rel="rgba(102, 102, 102, 0.2)" data-percent="60"><span class="percent">78</span>
+                            <canvas height="168" width="168" style="height: 84px; width: 84px;"></canvas>
+                        </div>
+                        <div class="description">
+                            <div class="ng-binding">Returned</div>
+                            <div class="description-stats ng-binding">32,592</div>
+                        </div>
+                        <i class="chart-icon i-refresh"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel with-scroll animated zoomIn">
+            <div class="panel-heading clearfix"><h3 class="panel-title">Feedback</h3></div>
+            <div class="panel-body">
+                <div class="feed-messages-container ng-isolate-scope">
+                    <div class="feed-message ng-scope">
+                        <div class="message-icon ng-scope">
+                            <img class="photo-icon pop-img" src="{{.StaticHost}}static/blur-admin/assets/img/app/profile/Kostya.png">
+                        </div>
+                        <div class="text-block text-message">
+                            <div class="message-header">
+                                <span class="author ng-binding">Kostya Danovsky</span>
+                            </div>
+                            <div class="message-content line-clamp ng-binding line-clamp-2">
+                                Guys, check this out:
+                                A police officer found a perfect hiding place for watching for speeding motorists. One day, the officer was amazed when everyone was under the speed limit, so he investigated and found the problem. A 10 years old
+                                boy was standing on the side of the road with a huge hand painted sign which said "Radar Trap Ahead." A little more investigative work led the officer to the boy's accomplice: another boy about 100 yards beyond the
+                                radar trap with a sign reading "TIPS" and a bucket at his feet full of change.
+                            </div>
+                            <div class="message-time ng-hide">
+                                <div class="post-time ng-binding">
+                                    Today 11:55 pm
+                                </div>
+                                <div class="ago-time ng-binding">
+                                    25 minutes ago
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.chart').each(function () {
+            var chart = $(this);
+            chart.easyPieChart({
+                easing: 'easeOutBounce',
+                onStep: function (from, to, percent) {
+                    $(this.el).find('.percent').text(Math.round(percent));
+                },
+                barColor: chart.attr('rel'),
+                trackColor: 'rgba(0,0,0,0)',
+                size: 84,
+                scaleLength: 0,
+                animation: 2000,
+                lineWidth: 9,
+                lineCap: 'round',
+            });
+        });
+    });
+</script>
+{{ end }}
+{{ template "layout" . }}

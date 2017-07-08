@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{.WebsiteTitle}}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{.StaticHost}}static/gadmin/favicon.ico">
+    <link rel="stylesheet" href="{{.StaticHost}}static/blur-admin/styles/vendor.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/blur-admin/styles/app.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/blur-admin/styles/auth.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/bower_components/toastr/toastr.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="{{.StaticHost}}static/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <script src="{{.StaticHost}}static/bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<main class="auth-main">
+    <div class="auth-block">
+        <h1>{{.Title}}</h1>
+
+        <form class="form-horizontal" onsubmit="return false">
+            <div class="form-group">
+                <label for="inputUsername3" class="col-sm-2 control-label">用户名</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputUsername3" placeholder="Username"
+                           name="username"
+                           data-regexp="^[a-zA-Z0-9_]{5,18}$" data-msg="用户名5-18长度, 可以是字母和数字"
+                           data-options='{"style":"login"}' />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password"
+                           name="password"
+                           data-regexp="^[^ ]{6,18}$" data-msg="密码6-18长度"
+                           data-options='{"style":"login"}' />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default btn-auth">登录</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<script src="{{.StaticHost}}static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{.StaticHost}}static/bower_components/toastr/toastr.js"></script>
+<script src="{{.StaticHost}}static/bower_components/notifyjs/dist/notify.js"></script>
+<script src="{{.StaticHost}}static/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="{{.StaticHost}}static/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="{{.StaticHost}}static/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="{{.StaticHost}}static/bower_components/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="{{.StaticHost}}static/gadmin/libs.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.btn-auth').click(function() {
+            var err = app_form_validate_error("form");
+            if (err) {
+                return app_toast_error(err);
+            }
+
+            app_ajax({
+                        currentTarget: this,
+                        url: "/login",
+                        method: "POST",
+                        data: $('form').serialize(),
+                        success: function (data) {
+                            if (app_parse_response(data)) {
+                                toastr.success("登录成功!");
+                                setTimeout(function(){
+                                    window.location.href = "/";
+                                }, 1000)
+                            }
+                        }
+                    }
+            );
+
+            return false
+        });
+    });
+</script>
+</body>
+</html>
