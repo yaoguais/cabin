@@ -1,0 +1,1300 @@
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  316   0:>mysqlnd_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   12   1:| >mysqlnd_driver::get_connection
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   12   2:| | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   2:| | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | info : New state=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   2:| | <mysqlnd_conn_data::set_state (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   2:| | >mysqlnd_conn_data::get_reference
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   3:| | | info : conn=0 new_refcount=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   2:| | <mysqlnd_conn_data::get_reference (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  297   2:| | >mysqlnd_conn_data::init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  124   3:| | | >mysqlnd_net_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   25   4:| | | | >mysqlnd_object_factory::get_io_channel
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   25   5:| | | | | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  114   5:| | | | | >mysqlnd_net::init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   6:| | | | | | >mysqlnd_net::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   7:| | | | | | | info : option=202
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   7:| | | | | | | info : MYSQLND_OPT_NET_CMD_BUFFER_SIZE
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   76   7:| | | | | | | info : new_length=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   87   6:| | | | | | <mysqlnd_net::set_client_option (total=24 own=24 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   6:| | | | | | >mysqlnd_net::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   7:| | | | | | | info : option=203
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   77   7:| | | | | | | info : MYSQLND_OPT_NET_READ_BUFFER_SIZE
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   77   7:| | | | | | | info : new_length=32768
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   87   6:| | | | | | <mysqlnd_net::set_client_option (total=17 own=17 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   6:| | | | | | >mysqlnd_net::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   7:| | | | | | | info : option=11
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   87   6:| | | | | | <mysqlnd_net::set_client_option (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  115   5:| | | | | <mysqlnd_net::init (total=80 own=34 in_calls=46)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   27   4:| | | | <mysqlnd_object_factory::get_io_channel (total=98 own=18 in_calls=80)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  125   3:| | | <mysqlnd_net_init (total=114 own=16 in_calls=98)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  259   3:| | | >mysqlnd_protocol_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   29   4:| | | | >mysqlnd_object_factory::get_protocol_decoder
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   29   5:| | | | | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   29   4:| | | | <mysqlnd_object_factory::get_protocol_decoder (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  259   3:| | | <mysqlnd_protocol_init (total=18 own=12 in_calls=6)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  298   2:| | <mysqlnd_conn_data::init (total=158 own=26 in_calls=132)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   15   1:| <mysqlnd_driver::get_connection (total=221 own=51 in_calls=170)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  293   1:| >mysqlnd_conn_data::negotiate_client_api_capabilities
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  293   1:| <mysqlnd_conn_data::negotiate_client_api_capabilities (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  316   0:<mysqlnd_init (total=251 own=30 in_calls=221)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   0:>mysqlnd_conn_data::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   1:| info : conn=0 option=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   1:| >mysqlnd_net::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   75   2:| | info : option=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   77   2:| | info : MYSQL_OPT_CONNECT_TIMEOUT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   87   1:| <mysqlnd_net::set_client_option (total=10 own=10 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| <mysqlnd_conn_data::local_tx_end (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  247   0:<mysqlnd_conn_data::set_client_option (total=51 own=40 in_calls=11)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   0:>mysqlnd_conn_data::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   1:| info : conn=0 option=8
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  247   0:<mysqlnd_conn_data::set_client_option (total=28 own=28 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  115   0:>mysqlnd_connect
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  116   1:| info : host=10.80.90.30 user=root db=test port=4000 flags=196608
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  113   1:| >mysqlnd_conn::connect
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  249   2:| | >mysqlnd_conn_data::set_client_option_2d
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  249   3:| | | info : conn=0 option=25
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  250   3:| | | info : Initializing connect_attr hash
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  251   3:| | | info : Adding [_client_name][mysqlnd]
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  252   2:| | <mysqlnd_conn_data::set_client_option_2d (total=44 own=44 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   88   2:| | >mysqlnd_conn_data::connect
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   88   3:| | | info : conn=0x7f5cb9682508
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   3:| | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   3:| | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   89   3:| | | info : host=10.80.90.30 user=root db=test port=4000 flags=196608 persistent=0 state=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   3:| | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   3:| | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   3:| | | >mysqlnd_conn_data::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   4:| | | | info : conn=0 option=210
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   4:| | | | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   4:| | | | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   4:| | | | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   4:| | | | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  247   3:| | | <mysqlnd_conn_data::set_client_option (total=28 own=28 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   98   3:| | | info : transport=tcp://10.80.90.30:4000 conn->scheme=(null)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   75   3:| | | >mysqlnd_conn_data::get_updated_connect_flags
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   78   3:| | | <mysqlnd_conn_data::get_updated_connect_flags (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   79   3:| | | >mysqlnd_conn_data::connect_handshake
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  234   4:| | | | >mysqlnd_protocol::get_greet_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  235   4:| | | | <mysqlnd_protocol::get_greet_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   35   4:| | | | >mysqlnd_net::connect_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  111   5:| | | | | >mysqlnd_net::close_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | info : 0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  113   5:| | | | | <mysqlnd_net::close_stream (total=18 own=13 in_calls=5)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   32   5:| | | | | >mysqlnd_net::get_open_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   34   5:| | | | | <mysqlnd_net::get_open_stream (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   21   5:| | | | | >mysqlnd_net::open_tcp_or_unix
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   23   6:| | | | | | info : calling php_stream_xport_create
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   28   5:| | | | | <mysqlnd_net::open_tcp_or_unix (total=1992 own=1992 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  119   5:| | | | | >mysqlnd_net::set_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  120   5:| | | | | <mysqlnd_net::set_stream (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=10 own=10 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   29   5:| | | | | >mysqlnd_net::post_connect_set_opt
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   30   6:| | | | | | info : setting 31536000 as PHP_STREAM_OPTION_READ_TIMEOUT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:    7   6:| | | | | | >mysqlnd_set_sock_no_delay
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:    7   6:| | | | | | <mysqlnd_set_sock_no_delay (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:    9   6:| | | | | | >mysqlnd_set_sock_keepalive
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:    9   6:| | | | | | <mysqlnd_set_sock_keepalive (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   31   5:| | | | | <mysqlnd_net::post_connect_set_opt (total=57 own=57 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   37   4:| | | | <mysqlnd_net::connect_ex (total=2203 own=125 in_calls=2078)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   81   4:| | | | info : stream=0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   32   4:| | | | >php_mysqlnd_greet_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   33   5:| | | | | info : buf=0x7fff302fccc0 size=2048
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   6:| | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   6:| | | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   7:| | | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   6:| | | | | | <mysqlnd_net::network_read_ex (total=760 own=760 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=60
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=680 own=680 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   43   5:| | | | | info : proto=10 server=5.7.1-TiDB-1.0 thread_id=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   44   5:| | | | | info : server_capabilities=41615 charset_no=83 server_status=2 auth_protocol=n/a scramble_length=20
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   44   4:| | | | <php_mysqlnd_greet_read (total=1576 own=891 in_calls=685)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   58   4:| | | | >_mysqlnd_pestrdup
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   60   4:| | | | <_mysqlnd_pestrdup (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   70   4:| | | | >mysqlnd_connect_run_authentication
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   44   5:| | | | | >mysqlnd_switch_to_ssl_if_needed
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   44   6:| | | | | | info : client_capability_flags=762509
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_LONG_PASSWORD=	1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_FOUND_ROWS=		0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_LONG_FLAG=		1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_NO_SCHEMA=		0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_COMPRESS=		0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_ODBC=			0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_LOCAL_FILES=	1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_IGNORE_SPACE=	0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_PROTOCOL_41=	1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   45   6:| | | | | | info : CLIENT_INTERACTIVE=	0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_SSL=			0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_IGNORE_SIGPIPE=	0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_TRANSACTIONS=	1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_RESERVED=		0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_SECURE_CONNECTION=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_MULTI_STATEMENTS=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_MULTI_RESULTS=	1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_PS_MULTI_RESULTS=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_CONNECT_ATTRS=	1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   46   6:| | | | | | info : CLIENT_PLUGIN_AUTH_LENENC_CLIENT_DATA=	0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   47   6:| | | | | | info : CLIENT_CAN_HANDLE_EXPIRED_PASSWORDS=	0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   47   6:| | | | | | info : CLIENT_SESSION_TRACK=		0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   47   6:| | | | | | info : CLIENT_SSL_DONT_VERIFY_SERVER_CERT=	0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   47   6:| | | | | | info : CLIENT_SSL_VERIFY_SERVER_CERT=	0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   47   6:| | | | | | info : CLIENT_REMEMBER_OPTIONS=		0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  236   6:| | | | | | >mysqlnd_protocol::get_auth_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  236   6:| | | | | | <mysqlnd_protocol::get_auth_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   52   6:| | | | | | info : PACKET_FREE(0x7f5cb96746e8)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   52   5:| | | | | <mysqlnd_switch_to_ssl_if_needed (total=163 own=163 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   58   5:| | | | | >mysqlnd_run_authentication
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   58   6:| | | | | | >_mysqlnd_pestrdup
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   60   6:| | | | | | <_mysqlnd_pestrdup (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   54   6:| | | | | | >mysqlnd_conn_data::fetch_auth_plugin_by_name
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   54   7:| | | | | | | info : looking for auth_plugin_mysql_native_password auth plugin
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   54   6:| | | | | | <mysqlnd_conn_data::fetch_auth_plugin_by_name (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   60   6:| | | | | | info : plugin found
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   62   6:| | | | | | info : salt(20)=[;%&G:fWQSy9vNut1n,]
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_auth.c:   36   6:| | | | | | >mysqlnd_native_auth_get_auth_data
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_auth.c:   38   6:| | | | | | <mysqlnd_native_auth_get_auth_data (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_auth.c:    5   6:| | | | | | >mysqlnd_auth_handshake
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  237   7:| | | | | | | >mysqlnd_protocol::get_auth_response_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  238   7:| | | | | | | <mysqlnd_protocol::get_auth_response_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  236   7:| | | | | | | >mysqlnd_protocol::get_auth_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  236   7:| | | | | | | <mysqlnd_protocol::get_auth_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   48   7:| | | | | | | >php_mysqlnd_auth_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   8:| | | | | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   9:| | | | | | | | | info : count=65 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   9:| | | | | | | | | info : to_be_sent=65
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   9:| | | | | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   9:| | | | | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   9:| | | | | | | | | info : packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   9:| | | | | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   9:| | | | | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14  10:| | | | | | | | | | info : sending 69 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118  10:| | | | | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118  11:| | | | | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118  10:| | | | | | | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   9:| | | | | | | | | <mysqlnd_net::network_write_ex (total=43 own=38 in_calls=5)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   9:| | | | | | | | | info : packet_size=0 packet_no=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   8:| | | | | | | | <mysqlnd_net::send_ex (total=97 own=54 in_calls=43)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   65   7:| | | | | | | <php_mysqlnd_auth_write (total=113 own=16 in_calls=97)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   68   7:| | | | | | | >php_mysqlnd_auth_response_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   69   8:| | | | | | | | info : buf=0x7f5cb966f008 size=4095
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   9:| | | | | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   9:| | | | | | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   9:| | | | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118  10:| | | | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   9:| | | | | | | | | <mysqlnd_net::get_stream (total=13 own=13 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   9:| | | | | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11  10:| | | | | | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   9:| | | | | | | | | <mysqlnd_net::network_read_ex (total=25981 own=25981 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   8:| | | | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   8:| | | | | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   9:| | | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   8:| | | | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   9:| | | | | | | | | info : count=7
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   8:| | | | | | | | <mysqlnd_net::network_read_ex (total=22 own=22 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   75   8:| | | | | | | | info : OK packet: aff_rows=0 last_ins_id=0 server_status=2 warnings=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   75   7:| | | | | | | <php_mysqlnd_auth_response_read (total=30268 own=30240 in_calls=28)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_auth.c:   14   7:| | | | | | | info : PACKET_FREE(0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_auth.c:   14   7:| | | | | | | info : PACKET_FREE(0x7f5cb9674a08)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_auth.c:   14   7:| | | | | | | info : PACKET_FREE(0x7f5cb9671308)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_auth.c:   14   6:| | | | | | <mysqlnd_auth_handshake (total=30454 own=72 in_calls=30382)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   65   6:| | | | | | info : switch_to_auth_protocol=n/a
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   66   6:| | | | | | info : conn->error_info->error_no = 0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   67   6:| | | | | | info : saving requested_protocol=mysql_native_password
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   6:| | | | | | >mysqlnd_conn_data::set_client_option
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  232   7:| | | | | | | info : conn=287353 option=211
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   7:| | | | | | | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   7:| | | | | | | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   58   7:| | | | | | | >_mysqlnd_pestrdup
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   60   7:| | | | | | | <_mysqlnd_pestrdup (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  244   7:| | | | | | | info : auth_protocol=mysql_native_password
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   7:| | | | | | | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   7:| | | | | | | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  247   6:| | | | | | <mysqlnd_conn_data::set_client_option (total=49 own=48 in_calls=1)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   68   5:| | | | | <mysqlnd_run_authentication (total=30605 own=94 in_calls=30511)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   71   4:| | | | <mysqlnd_connect_run_authentication (total=30793 own=25 in_calls=30768)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   85   4:| | | | info : PACKET_FREE(0x7f5cb9671008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   85   3:| | | <mysqlnd_conn_data::connect_handshake (total=35535 own=955 in_calls=34580)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   4:| | | | info : New state=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   3:| | | <mysqlnd_conn_data::set_state (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   58   3:| | | >_mysqlnd_pestrdup
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   60   3:| | | <_mysqlnd_pestrdup (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   72   3:| | | >mysqlnd_conn_data::execute_init_commands
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   74   3:| | | <mysqlnd_conn_data::execute_init_commands (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  109   3:| | | info : connection_id=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  109   2:| | <mysqlnd_conn_data::connect (total=35723 own=154 in_calls=35569)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  114   1:| <mysqlnd_conn::connect (total=35816 own=48 in_calls=35768)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  118   0:<mysqlnd_connect (total=35834 own=18 in_calls=35816)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   0:>mysqlnd_conn_data::query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   1:| info : conn=0x7f5cb9682508 conn=287353 query=START TRANSACTION
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   1:| >mysqlnd_conn_data::send_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   2:| | info : conn=287353 query=START TRANSACTION
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   2:| | info : conn->server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   2:| | >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : command=QUERY silent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : conn->server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : sending 18 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   4:| | | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   4:| | | | <mysqlnd_protocol::get_command_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   4:| | | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   5:| | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   6:| | | | | | info : count=18 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : to_be_sent=18
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   6:| | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   6:| | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   7:| | | | | | | info : sending 22 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=8 own=8 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   6:| | | | | | <mysqlnd_net::network_write_ex (total=52 own=44 in_calls=8)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   6:| | | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   5:| | | | | <mysqlnd_net::send_ex (total=144 own=92 in_calls=52)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   4:| | | | <php_mysqlnd_cmd_write (total=164 own=20 in_calls=144)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   4:| | | | info : PACKET_FREE(0x7f5cb965ff68)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   3:| | | <mysqlnd_conn_data::simple_command_send_request (total=304 own=139 in_calls=165)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   2:| | <mysqlnd_conn_data::simple_command (total=340 own=36 in_calls=304)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   2:| | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | info : New state=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   2:| | <mysqlnd_conn_data::set_state (total=8 own=8 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   2:| | info : conn->server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   1:| <mysqlnd_conn_data::send_query (total=450 own=101 in_calls=349)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  124   1:| >mysqlnd_conn_data::reap_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   2:| | info : conn=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   2:| | info : conn->server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   2:| | >mysqlnd_query_read_result_set_header
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   3:| | | info : stmt=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | >mysqlnd_protocol::get_rset_header_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | <mysqlnd_protocol::get_rset_header_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   3:| | | >php_mysqlnd_rset_header_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   4:| | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=3899 own=3899 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=7
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=19 own=19 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  113   4:| | | | info : UPSERT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  116   4:| | | | info : affected_rows=0 last_insert_id=0 server_status=3 warning_count=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  117   3:| | | <php_mysqlnd_rset_header_read (total=4045 own=4020 in_calls=25)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   46   3:| | | info : UPSERT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   4:| | | | info : New state=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   3:| | | <mysqlnd_conn_data::set_state (total=9 own=9 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PACKET_FREE(0x7f5cb9671008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | >php_mysqlnd_rset_header_free_mem
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | <php_mysqlnd_rset_header_free_mem (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   2:| | <mysqlnd_query_read_result_set_header (total=4161 own=106 in_calls=4055)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   1:| <mysqlnd_conn_data::reap_query (total=4222 own=60 in_calls=4162)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  121   0:<mysqlnd_conn_data::query (total=4761 own=89 in_calls=4672)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:>mysqlnd_conn_data::more_results
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:<mysqlnd_conn_data::more_results (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   0:>mysqlnd_conn_data::query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   1:| info : conn=0x7f5cb9682508 conn=287353 query=update test set stock = stock - 10 where id = 1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   1:| >mysqlnd_conn_data::send_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   2:| | info : conn=287353 query=update test set stock = stock - 10 where id = 1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   2:| | >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : command=QUERY silent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : sending 48 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   4:| | | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   4:| | | | <mysqlnd_protocol::get_command_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   4:| | | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   5:| | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   6:| | | | | | info : count=48 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : to_be_sent=48
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   6:| | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   6:| | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   7:| | | | | | | info : sending 52 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=12 own=12 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   6:| | | | | | <mysqlnd_net::network_write_ex (total=59 own=47 in_calls=12)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   6:| | | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   5:| | | | | <mysqlnd_net::send_ex (total=150 own=91 in_calls=59)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   4:| | | | <php_mysqlnd_cmd_write (total=172 own=22 in_calls=150)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   4:| | | | info : PACKET_FREE(0x7f5cb968b368)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   3:| | | <mysqlnd_conn_data::simple_command_send_request (total=239 own=67 in_calls=172)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   2:| | <mysqlnd_conn_data::simple_command (total=260 own=21 in_calls=239)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   2:| | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | info : New state=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   2:| | <mysqlnd_conn_data::set_state (total=8 own=8 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   1:| <mysqlnd_conn_data::send_query (total=358 own=89 in_calls=269)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  124   1:| >mysqlnd_conn_data::reap_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   2:| | info : conn=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   2:| | >mysqlnd_query_read_result_set_header
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   3:| | | info : stmt=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | >mysqlnd_protocol::get_rset_header_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | <mysqlnd_protocol::get_rset_header_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   3:| | | >php_mysqlnd_rset_header_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   4:| | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=15 own=15 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=88680 own=88680 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=11 own=11 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=7
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=28 own=28 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  113   4:| | | | info : UPSERT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  116   4:| | | | info : affected_rows=1 last_insert_id=0 server_status=3 warning_count=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  117   3:| | | <php_mysqlnd_rset_header_read (total=88997 own=88958 in_calls=39)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   46   3:| | | info : UPSERT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   4:| | | | info : New state=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   3:| | | <mysqlnd_conn_data::set_state (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PACKET_FREE(0x7f5cb9671008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | >php_mysqlnd_rset_header_free_mem
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | <php_mysqlnd_rset_header_free_mem (total=2 own=2 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   2:| | <mysqlnd_query_read_result_set_header (total=89114 own=110 in_calls=89004)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   1:| <mysqlnd_conn_data::reap_query (total=89178 own=64 in_calls=89114)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  121   0:<mysqlnd_conn_data::query (total=89615 own=79 in_calls=89536)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:>mysqlnd_conn_data::more_results
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:<mysqlnd_conn_data::more_results (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   0:>mysqlnd_conn_data::query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   1:| info : conn=0x7f5cb9682508 conn=287353 query=insert into test(stock) values(8889)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| <mysqlnd_conn_data::local_tx_start (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   1:| >mysqlnd_conn_data::send_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   2:| | info : conn=287353 query=insert into test(stock) values(8889)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   2:| | >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : command=QUERY silent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : sending 37 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   4:| | | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   4:| | | | <mysqlnd_protocol::get_command_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   4:| | | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   5:| | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   6:| | | | | | info : count=37 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : to_be_sent=37
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   6:| | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   6:| | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   7:| | | | | | | info : sending 41 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=14 own=14 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   6:| | | | | | <mysqlnd_net::network_write_ex (total=85 own=71 in_calls=14)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   6:| | | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   5:| | | | | <mysqlnd_net::send_ex (total=152 own=67 in_calls=85)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   4:| | | | <php_mysqlnd_cmd_write (total=178 own=26 in_calls=152)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   4:| | | | info : PACKET_FREE(0x7f5cb968b368)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   3:| | | <mysqlnd_conn_data::simple_command_send_request (total=249 own=71 in_calls=178)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   2:| | <mysqlnd_conn_data::simple_command (total=275 own=26 in_calls=249)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   2:| | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | info : New state=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   2:| | <mysqlnd_conn_data::set_state (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   1:| <mysqlnd_conn_data::send_query (total=347 own=66 in_calls=281)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  124   1:| >mysqlnd_conn_data::reap_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   2:| | info : conn=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   2:| | >mysqlnd_query_read_result_set_header
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   3:| | | info : stmt=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | >mysqlnd_protocol::get_rset_header_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | <mysqlnd_protocol::get_rset_header_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   3:| | | >php_mysqlnd_rset_header_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   4:| | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=8 own=8 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=674 own=674 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=7
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=14 own=14 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  113   4:| | | | info : UPSERT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  116   4:| | | | info : affected_rows=1 last_insert_id=32 server_status=3 warning_count=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  117   3:| | | <php_mysqlnd_rset_header_read (total=869 own=849 in_calls=20)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   46   3:| | | info : UPSERT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   4:| | | | info : New state=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   3:| | | <mysqlnd_conn_data::set_state (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PACKET_FREE(0x7f5cb9671008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | >php_mysqlnd_rset_header_free_mem
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | <php_mysqlnd_rset_header_free_mem (total=2 own=2 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   2:| | <mysqlnd_query_read_result_set_header (total=957 own=80 in_calls=877)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   2:| | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   1:| <mysqlnd_conn_data::reap_query (total=1011 own=53 in_calls=958)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  121   0:<mysqlnd_conn_data::query (total=1438 own=79 in_calls=1359)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:>mysqlnd_conn_data::more_results
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:<mysqlnd_conn_data::more_results (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  276   0:>mysqlnd_conn_data::tx_commit_or_rollback
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  271   1:| >mysqlnd_escape_string_for_tx_name_in_comment
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  275   1:| <mysqlnd_escape_string_for_tx_name_in_comment (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   1:| >mysqlnd_conn_data::query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  119   2:| | info : conn=0x7f5cb9682508 conn=287353 query=COMMIT 
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   2:| | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   2:| | >mysqlnd_conn_data::send_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   3:| | | info : conn=287353 query=COMMIT 
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  122   3:| | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | <mysqlnd_conn_data::local_tx_start (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   3:| | | >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   5:| | | | | info : command=QUERY silent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   5:| | | | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   5:| | | | | info : sending 8 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   5:| | | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   5:| | | | | <mysqlnd_conn_data::get_state (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   5:| | | | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   5:| | | | | <mysqlnd_protocol::get_command_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   5:| | | | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   6:| | | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   7:| | | | | | | info : count=8 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   7:| | | | | | | info : to_be_sent=8
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   7:| | | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   7:| | | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   7:| | | | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   7:| | | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   7:| | | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   8:| | | | | | | | info : sending 12 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   9:| | | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | <mysqlnd_net::get_stream (total=9 own=9 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   7:| | | | | | | <mysqlnd_net::network_write_ex (total=57 own=48 in_calls=9)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   7:| | | | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   6:| | | | | | <mysqlnd_net::send_ex (total=148 own=91 in_calls=57)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   5:| | | | | <php_mysqlnd_cmd_write (total=160 own=12 in_calls=148)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   5:| | | | | info : PACKET_FREE(0x7f5cb968b368)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   4:| | | | <mysqlnd_conn_data::simple_command_send_request (total=237 own=75 in_calls=162)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   4:| | | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   3:| | | <mysqlnd_conn_data::simple_command (total=254 own=17 in_calls=237)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   4:| | | | info : New state=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   3:| | | <mysqlnd_conn_data::set_state (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   3:| | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  123   2:| | <mysqlnd_conn_data::send_query (total=323 own=63 in_calls=260)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | <mysqlnd_conn_data::get_state (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  124   2:| | >mysqlnd_conn_data::reap_query
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   3:| | | info : conn=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  125   3:| | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   3:| | | <mysqlnd_conn_data::local_tx_start (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   3:| | | >mysqlnd_query_read_result_set_header
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   4:| | | | info : stmt=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   4:| | | | >mysqlnd_protocol::get_rset_header_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   4:| | | | <mysqlnd_protocol::get_rset_header_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   4:| | | | >php_mysqlnd_rset_header_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   5:| | | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   6:| | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   6:| | | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | <mysqlnd_net::get_stream (total=88 own=88 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   7:| | | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   6:| | | | | | <mysqlnd_net::network_read_ex (total=2522 own=2522 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=59
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=17 own=17 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   24   5:| | | | | >php_mysqlnd_read_error_from_line
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   27   5:| | | | | <php_mysqlnd_read_error_from_line (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  110   5:| | | | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  111   4:| | | | <php_mysqlnd_rset_header_read (total=2747 own=2724 in_calls=23)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   58   4:| | | | >_mysqlnd_pestrdup
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_alloc.c:   60   4:| | | | <_mysqlnd_pestrdup (total=3 own=3 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   44   4:| | | | info : adding error [BIGINT UNSIGNED value is out of range in '(0, 10)'] to the list
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   44   4:| | | | error: error=BIGINT UNSIGNED value is out of range in '(0, 10)'
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   4:| | | | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   5:| | | | | info : New state=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   4:| | | | <mysqlnd_conn_data::set_state (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   4:| | | | info : PACKET_FREE(0x7f5cb9671008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   4:| | | | >php_mysqlnd_rset_header_free_mem
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   4:| | | | <php_mysqlnd_rset_header_free_mem (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   4:| | | | info : FAIL
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | <mysqlnd_query_read_result_set_header (total=2846 own=89 in_calls=2757)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   3:| | | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   3:| | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  126   2:| | <mysqlnd_conn_data::reap_query (total=2896 own=50 in_calls=2846)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   2:| | <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  121   1:| <mysqlnd_conn_data::query (total=3287 own=67 in_calls=3220)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  279   0:<mysqlnd_conn_data::tx_commit_or_rollback (total=3341 own=54 in_calls=3287)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  238   0:>_mysqlnd_stmt_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   19   1:| >mysqlnd_object_factory::get_prepared_statement
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   20   2:| | info : stmt=0x7f5cb967d008
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   2:| | >mysqlnd_conn_data::get_reference
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   3:| | | info : conn=287353 new_refcount=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   2:| | <mysqlnd_conn_data::get_reference (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   23   1:| <mysqlnd_object_factory::get_prepared_statement (total=27 own=22 in_calls=5)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  238   0:<_mysqlnd_stmt_init (total=43 own=16 in_calls=27)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   38   0:>mysqlnd_stmt::prepare
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   38   1:| info : stmt=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   38   1:| info : query=select * from test where id = 32
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   10   1:| >mysqlnd_error_list_pdtor
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_driver.c:   10   1:| <mysqlnd_error_list_pdtor (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   1:| >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   2:| | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | info : command=STMT_PREPARE silent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | info : sending 33 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   3:| | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   3:| | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   3:| | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   3:| | | <mysqlnd_protocol::get_command_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   3:| | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   4:| | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   5:| | | | | info : count=33 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   5:| | | | | info : to_be_sent=33
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   5:| | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   5:| | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   5:| | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   5:| | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   5:| | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   6:| | | | | | info : sending 37 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   5:| | | | | <mysqlnd_net::network_write_ex (total=57 own=51 in_calls=6)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   5:| | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   4:| | | | <mysqlnd_net::send_ex (total=112 own=55 in_calls=57)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   3:| | | <php_mysqlnd_cmd_write (total=124 own=12 in_calls=112)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   3:| | | info : PACKET_FREE(0x7f5cb968b488)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   2:| | <mysqlnd_conn_data::simple_command_send_request (total=210 own=86 in_calls=124)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   2:| | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   1:| <mysqlnd_conn_data::simple_command (total=228 own=18 in_calls=210)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   30   1:| >mysqlnd_stmt_read_prepare_response
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   30   2:| | info : stmt=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  251   2:| | >mysqlnd_protocol::get_prepare_response_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  251   2:| | <mysqlnd_protocol::get_prepare_response_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  199   2:| | >php_mysqlnd_prepare_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  199   3:| | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=301 own=301 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   3:| | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   3:| | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   3:| | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | info : count=12
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   3:| | | <mysqlnd_net::network_read_ex (total=13 own=13 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  204   3:| | | info : Prepare packet read: stmt_id=1 fields=2 params=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  204   2:| | <php_mysqlnd_prepare_read (total=417 own=398 in_calls=19)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   33   2:| | info : PACKET_FREE(0x7f5cb9678008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   33   1:| <mysqlnd_stmt_read_prepare_response (total=462 own=45 in_calls=417)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  190   1:| >mysqlnd_result_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  191   1:| <mysqlnd_result_init (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   1:| >mysqlnd_conn_data::get_reference
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   2:| | info : conn=287353 new_refcount=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  196   1:| <mysqlnd_conn_data::get_reference (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   35   1:| >mysqlnd_res::read_result_metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   35   2:| | >mysqlnd_result_meta_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   35   3:| | | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   37   3:| | | info : meta=0x7f5cb9680088
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   37   2:| | <mysqlnd_result_meta_init (total=14 own=14 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:    5   2:| | >mysqlnd_res_meta::read_metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  246   3:| | | >mysqlnd_protocol::get_result_field_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  247   3:| | | <mysqlnd_protocol::get_result_field_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   3:| | | >php_mysqlnd_rset_field_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   4:| | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=15 own=15 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=32
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=14 own=14 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  139   4:| | | | info : allocing root. persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   4:| | | | info : FIELD=[test..]
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   3:| | | <php_mysqlnd_rset_field_read (total=136 own=116 in_calls=20)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   3:| | | >php_mysqlnd_rset_field_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   4:| | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=13 own=13 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=35
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=14 own=14 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  139   4:| | | | info : allocing root. persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   4:| | | | info : FIELD=[test..]
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   3:| | | <php_mysqlnd_rset_field_read (total=134 own=114 in_calls=20)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   14   3:| | | info : PACKET_FREE(0x7f5cb9678008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   14   2:| | <mysqlnd_res_meta::read_metadata (total=318 own=47 in_calls=271)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   39   1:| <mysqlnd_res::read_result_metadata (total=370 own=38 in_calls=332)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   34   1:| >mysqlnd_stmt_prepare_read_eof
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   34   2:| | info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  242   2:| | >mysqlnd_protocol::get_eof_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  242   2:| | <mysqlnd_protocol::get_eof_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   94   2:| | >php_mysqlnd_eof_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   94   3:| | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=13 own=13 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   3:| | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   3:| | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   3:| | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | info : count=5
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   3:| | | <mysqlnd_net::network_read_ex (total=12 own=12 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   98   3:| | | info : EOF packet: fields=254 status=2 warnings=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   98   2:| | <php_mysqlnd_eof_read (total=120 own=103 in_calls=17)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   36   2:| | info : PACKET_FREE(0x7f5cb9678008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   37   1:| <mysqlnd_stmt_prepare_read_eof (total=160 own=39 in_calls=121)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   47   1:| info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   47   0:<mysqlnd_stmt::prepare (total=1366 own=139 in_calls=1227)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   61   0:>mysqlnd_stmt::execute
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   63   1:| >mysqlnd_stmt::send_execute
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   63   2:| | info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  128   2:| | >mysqlnd_stmt::flush
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  129   3:| | | info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  130   3:| | | info : skipping result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  147   3:| | | >mysqlnd_res::skip_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  149   3:| | | <mysqlnd_res::skip_result (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   21   3:| | | >mysqlnd_stmt::more_results
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   22   3:| | | <mysqlnd_stmt::more_results (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  131   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  131   2:| | <mysqlnd_stmt::flush (total=39 own=39 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   29   2:| | >mysqlnd_res::free_result_buffers
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   29   3:| | | info : unknown
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   31   2:| | <mysqlnd_res::free_result_buffers (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   91   2:| | >mysqlnd_stmt_execute_generate_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   84   3:| | | >mysqlnd_stmt_execute_store_params
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   57   4:| | | | >mysqlnd_stmt_execute_prepare_param_types
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   62   4:| | | | <mysqlnd_stmt_execute_prepare_param_types (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   68   4:| | | | >mysqlnd_stmt_execute_calculate_param_values_size
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   75   4:| | | | <mysqlnd_stmt_execute_calculate_param_values_size (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   90   4:| | | | info : ret=PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   90   3:| | | <mysqlnd_stmt_execute_store_params (total=36 own=36 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   93   3:| | | info : ret=PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps_codec.c:   93   2:| | <mysqlnd_stmt_execute_generate_request (total=52 own=16 in_calls=36)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   2:| | >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : command=STMT_EXECUTE silent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : conn->server_status=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : sending 11 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   4:| | | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   4:| | | | <mysqlnd_protocol::get_command_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   4:| | | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   5:| | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   6:| | | | | | info : count=11 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : to_be_sent=11
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   6:| | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   6:| | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   7:| | | | | | | info : sending 15 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=17 own=17 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   6:| | | | | | <mysqlnd_net::network_write_ex (total=49 own=32 in_calls=17)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   6:| | | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   5:| | | | | <mysqlnd_net::send_ex (total=101 own=52 in_calls=49)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   4:| | | | <php_mysqlnd_cmd_write (total=113 own=12 in_calls=101)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   4:| | | | info : PACKET_FREE(0x7f5cb968b968)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   3:| | | <mysqlnd_conn_data::simple_command_send_request (total=173 own=59 in_calls=114)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   2:| | <mysqlnd_conn_data::simple_command (total=190 own=17 in_calls=173)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   74   1:| <mysqlnd_stmt::send_execute (total=401 own=114 in_calls=287)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   49   1:| >mysqlnd_stmt_execute_parse_response
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   2:| | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | info : New state=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   2:| | <mysqlnd_conn_data::set_state (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   2:| | >mysqlnd_query_read_result_set_header
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   40   3:| | | info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | >mysqlnd_protocol::get_rset_header_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  245   3:| | | <mysqlnd_protocol::get_rset_header_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   3:| | | >php_mysqlnd_rset_header_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  109   4:| | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=1359 own=1359 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=13 own=13 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  116   4:| | | | info : SELECT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  117   3:| | | <php_mysqlnd_rset_header_read (total=1491 own=1473 in_calls=18)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   48   3:| | | info : Result set pending
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   4:| | | | info : New state=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   3:| | | <mysqlnd_conn_data::set_state (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   35   3:| | | >mysqlnd_res::read_result_metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   4:| | | | >mysqlnd_res_meta::free
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   5:| | | | | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   5:| | | | | info : Freeing fields metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   16   5:| | | | | info : Freeing zend_hash_keys
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   17   5:| | | | | info : Freeing metadata structure
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   17   4:| | | | <mysqlnd_res_meta::free (total=30 own=30 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   35   4:| | | | >mysqlnd_result_meta_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   35   5:| | | | | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   37   5:| | | | | info : meta=0x7f5cb9680088
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   37   4:| | | | <mysqlnd_result_meta_init (total=11 own=11 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:    5   4:| | | | >mysqlnd_res_meta::read_metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  246   5:| | | | | >mysqlnd_protocol::get_result_field_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  247   5:| | | | | <mysqlnd_protocol::get_result_field_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   5:| | | | | >php_mysqlnd_rset_field_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   6:| | | | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   7:| | | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   7:| | | | | | | <mysqlnd_net::receive_ex (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   7:| | | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   8:| | | | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   7:| | | | | | | <mysqlnd_net::network_read_ex (total=13 own=13 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   6:| | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   6:| | | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   7:| | | | | | | info : count=30
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   6:| | | | | | <mysqlnd_net::network_read_ex (total=12 own=12 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  139   6:| | | | | | info : allocing root. persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   6:| | | | | | info : FIELD=[.test.id]
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   5:| | | | | <php_mysqlnd_rset_field_read (total=126 own=109 in_calls=17)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   5:| | | | | >php_mysqlnd_rset_field_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  123   6:| | | | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   7:| | | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   7:| | | | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   7:| | | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   8:| | | | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   7:| | | | | | | <mysqlnd_net::network_read_ex (total=11 own=11 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   6:| | | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   6:| | | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   7:| | | | | | | info : count=36
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   6:| | | | | | <mysqlnd_net::network_read_ex (total=15 own=15 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  139   6:| | | | | | info : allocing root. persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   6:| | | | | | info : FIELD=[.test.stock]
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  140   5:| | | | | <php_mysqlnd_rset_field_read (total=131 own=111 in_calls=20)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   14   5:| | | | | info : PACKET_FREE(0x7f5cb9678008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   14   4:| | | | <mysqlnd_res_meta::read_metadata (total=300 own=43 in_calls=257)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   39   3:| | | <mysqlnd_res::read_result_metadata (total=379 own=38 in_calls=341)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  242   3:| | | >mysqlnd_protocol::get_eof_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  242   3:| | | <mysqlnd_protocol::get_eof_packet (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   94   3:| | | >php_mysqlnd_eof_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   94   4:| | | | info : buf=0x7f5cb966f008 size=4096
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=18 own=18 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=12 own=12 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=7 own=7 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=5
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=11 own=11 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   98   4:| | | | info : EOF packet: fields=254 status=2 warnings=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:   98   3:| | | <php_mysqlnd_eof_read (total=138 own=120 in_calls=18)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   56   3:| | | info : warnings=0 server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PACKET_FREE(0x7f5cb9678008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PACKET_FREE(0x7f5cb9671008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | >php_mysqlnd_rset_header_free_mem
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  119   3:| | | <php_mysqlnd_rset_header_free_mem (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   58   2:| | <mysqlnd_query_read_result_set_header (total=2134 own=119 in_calls=2015)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   55   2:| | info : server_status=2 cursor=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   58   2:| | info : no cursor
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   58   2:| | info : use_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   59   2:| | info : server_status=2 cursor=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   60   2:| | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   60   1:| <mysqlnd_stmt_execute_parse_response (total=2189 own=50 in_calls=2139)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   61   0:<mysqlnd_stmt::execute (total=2619 own=29 in_calls=2590)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  164   0:>mysqlnd_stmt::bind_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  164   1:| info : stmt=1 field_count=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  206   1:| >mysqlnd_stmt_separate_one_result_bind
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  206   2:| | info : stmt=1 result_bind=0 field_count=2 param_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  206   1:| <mysqlnd_stmt_separate_one_result_bind (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  168   1:| info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  168   0:<mysqlnd_stmt::bind_result (total=30 own=24 in_calls=6)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  164   0:>mysqlnd_stmt::bind_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  164   1:| info : stmt=1 field_count=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  206   1:| >mysqlnd_stmt_separate_one_result_bind
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  206   2:| | info : stmt=1 result_bind=0x7f5cb968ba88 field_count=2 param_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  208   1:| <mysqlnd_stmt_separate_one_result_bind (total=11 own=11 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  168   1:| info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  168   0:<mysqlnd_stmt::bind_result (total=51 own=40 in_calls=11)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  182   0:>mysqlnd_stmt::result_metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  182   1:| info : stmt=1 field_count=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  190   1:| >mysqlnd_result_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  191   1:| <mysqlnd_result_init (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  192   1:| >mysqlnd_result_unbuffered_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   15   2:| | >mysqlnd_mempool_create
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   16   2:| | <mysqlnd_mempool_create (total=2 own=2 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  195   1:| <mysqlnd_result_unbuffered_init (total=15 own=13 in_calls=2)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   19   1:| >mysqlnd_res_meta::clone_metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   19   2:| | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   26   1:| <mysqlnd_res_meta::clone_metadata (total=10 own=10 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  186   1:| info : result=0x7f5cb966c308
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  186   0:<mysqlnd_stmt::result_metadata (total=78 own=53 in_calls=25)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  167   0:>mysqlnd_res::fetch_fields
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  168   0:<mysqlnd_res::fetch_fields (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   31   0:>mysqlnd_res_meta::fetch_fields
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   31   0:<mysqlnd_res_meta::fetch_fields (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:    5   0:>mysqlnd_stmt::store_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:    5   1:| info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  196   1:| >mysqlnd_result_buffered_zval_init
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   15   2:| | >mysqlnd_mempool_create
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   16   2:| | <mysqlnd_mempool_create (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  199   1:| <mysqlnd_result_buffered_zval_init (total=14 own=13 in_calls=1)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  127   1:| >mysqlnd_res::store_result_fetch_data
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  248   2:| | >mysqlnd_protocol::get_row_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  248   2:| | <mysqlnd_protocol::get_row_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  182   2:| | >php_mysqlnd_rowp_read
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  144   3:| | | >php_mysqlnd_read_row_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   5:| | | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   5:| | | | | <mysqlnd_net::receive_ex (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   6:| | | | | | info : count=4
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   5:| | | | | <mysqlnd_net::network_read_ex (total=32 own=32 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   11   4:| | | | >mysqlnd_mempool_get_chunk
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   14   4:| | | | <mysqlnd_mempool_get_chunk (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   69   4:| | | | >mysqlnd_net::receive_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   74   4:| | | | <mysqlnd_net::receive_ex (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   4:| | | | >mysqlnd_net::network_read_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   11   5:| | | | | info : count=5
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   13   4:| | | | <mysqlnd_net::network_read_ex (total=12 own=12 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  151   3:| | | <php_mysqlnd_read_row_ex (total=143 own=124 in_calls=19)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  187   3:| | | info : server_status=2 warning_count=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  190   2:| | <php_mysqlnd_rowp_read (total=163 own=20 in_calls=143)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   2:| | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | info : New state=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   2:| | <mysqlnd_conn_data::set_state (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  138   2:| | info : ret=PASS row_count=0 warnings=0 server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  138   2:| | info : PACKET_FREE(0x7f5cb9671008)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  191   2:| | >php_mysqlnd_rowp_free_mem
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:    3   3:| | | >mysqlnd_mempool_free_chunk
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:    5   3:| | | <mysqlnd_mempool_free_chunk (total=2 own=2 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  192   3:| | | info : stack_allocation=0 persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  193   2:| | <php_mysqlnd_rowp_free_mem (total=32 own=30 in_calls=2)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  138   2:| | info : rows=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  138   1:| <mysqlnd_res::store_result_fetch_data (total=277 own=75 in_calls=202)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   13   0:<mysqlnd_stmt::store_result (total=339 own=48 in_calls=291)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  117   0:>mysqlnd_stmt::fetch
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  118   1:| info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  120   1:| info : result_bind=0x7f5cb967d048 separated_once=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   75   1:| >mysqlnd_stmt_fetch_row_buffered
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   75   2:| | info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   83   2:| | info : no more data
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   84   2:| | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   84   1:| <mysqlnd_stmt_fetch_row_buffered (total=15 own=15 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  122   0:<mysqlnd_stmt::fetch (total=38 own=23 in_calls=15)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  150   0:>mysqlnd_res::free_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   33   1:| >mysqlnd_res::free_result_internal
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  147   2:| | >mysqlnd_res::skip_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  149   2:| | <mysqlnd_res::skip_result (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   31   2:| | >mysqlnd_res::free_result_contents_internal
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   29   3:| | | >mysqlnd_res::free_result_buffers
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   29   4:| | | | info : unbuffered
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   18   4:| | | | >mysqlnd_result_unbuffered, free_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   14   5:| | | | | >mysqlnd_res::unbuffered_free_last_data
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   15   6:| | | | | | info : field_count=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   17   5:| | | | | <mysqlnd_res::unbuffered_free_last_data (total=10 own=10 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   17   5:| | | | | >mysqlnd_mempool_destroy
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   18   5:| | | | | <mysqlnd_mempool_destroy (total=2 own=2 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   20   4:| | | | <mysqlnd_result_unbuffered, free_result (total=54 own=42 in_calls=12)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   31   3:| | | <mysqlnd_res::free_result_buffers (total=84 own=30 in_calls=54)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   3:| | | >mysqlnd_res_meta::free
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   4:| | | | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   4:| | | | info : Freeing fields metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   16   4:| | | | info : Freeing zend_hash_keys
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   17   4:| | | | info : Freeing metadata structure
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   17   3:| | | <mysqlnd_res_meta::free (total=24 own=24 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   32   2:| | <mysqlnd_res::free_result_contents_internal (total=132 own=24 in_calls=108)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   34   1:| <mysqlnd_res::free_result_internal (total=158 own=26 in_calls=132)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  151   0:<mysqlnd_res::free_result (total=172 own=14 in_calls=158)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  224   0:>mysqlnd_stmt::dtor
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  225   1:| info : stmt=0x7f5cb967d008
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  216   1:| >mysqlnd_stmt::net_close
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  216   2:| | info : stmt=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  219   2:| | info : skipping result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  147   2:| | >mysqlnd_res::skip_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  149   2:| | <mysqlnd_res::skip_result (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   21   2:| | >mysqlnd_stmt::more_results
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:   22   2:| | <mysqlnd_stmt::more_results (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   2:| | >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : command=STMT_CLOSE silent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : conn->server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : sending 5 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   4:| | | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   4:| | | | <mysqlnd_protocol::get_command_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   4:| | | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   5:| | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   6:| | | | | | info : count=5 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : to_be_sent=5
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   6:| | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   6:| | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   7:| | | | | | | info : sending 9 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   6:| | | | | | <mysqlnd_net::network_write_ex (total=40 own=34 in_calls=6)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   6:| | | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   5:| | | | | <mysqlnd_net::send_ex (total=93 own=53 in_calls=40)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   4:| | | | <php_mysqlnd_cmd_write (total=104 own=11 in_calls=93)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   4:| | | | info : PACKET_FREE(0x7f5cb969b188)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   3:| | | <mysqlnd_conn_data::simple_command_send_request (total=162 own=57 in_calls=105)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   2:| | <mysqlnd_conn_data::simple_command (total=179 own=17 in_calls=162)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  212   2:| | >mysqlnd_stmt::free_stmt_content
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  212   3:| | | info : stmt=1 param_bind=0 param_count=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  209   3:| | | >mysqlnd_stmt::free_stmt_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  202   4:| | | | >mysqlnd_stmt_separate_result_bind
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  202   5:| | | | | info : stmt=1 result_bind=0x7f5cb968ba88 field_count=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  204   5:| | | | | info : 0 has refcount=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  204   5:| | | | | info : 1 has refcount=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  205   4:| | | | <mysqlnd_stmt_separate_result_bind (total=24 own=24 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   33   4:| | | | >mysqlnd_res::free_result_internal
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  147   5:| | | | | >mysqlnd_res::skip_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:  149   5:| | | | | <mysqlnd_res::skip_result (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   31   5:| | | | | >mysqlnd_res::free_result_contents_internal
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   29   6:| | | | | | >mysqlnd_res::free_result_buffers
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   29   7:| | | | | | | info : buffered
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   25   7:| | | | | | | >mysqlnd_result_buffered::free_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   25   8:| | | | | | | | info : Freeing 0 row(s)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   21   8:| | | | | | | | >mysqlnd_result_buffered_zval::free_result
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   23   8:| | | | | | | | <mysqlnd_result_buffered_zval::free_result (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   17   8:| | | | | | | | >mysqlnd_mempool_destroy
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_block_alloc.c:   18   8:| | | | | | | | <mysqlnd_mempool_destroy (total=2 own=2 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   28   7:| | | | | | | <mysqlnd_result_buffered::free_result (total=35 own=33 in_calls=2)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   31   6:| | | | | | <mysqlnd_res::free_result_buffers (total=64 own=29 in_calls=35)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   6:| | | | | | >mysqlnd_res_meta::free
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   7:| | | | | | | info : persistent=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   15   7:| | | | | | | info : Freeing fields metadata
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   16   7:| | | | | | | info : Freeing zend_hash_keys
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   17   7:| | | | | | | info : Freeing metadata structure
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result_meta.c:   17   6:| | | | | | <mysqlnd_res_meta::free (total=25 own=25 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   32   5:| | | | | <mysqlnd_res::free_result_contents_internal (total=111 own=22 in_calls=89)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  197   5:| | | | | >mysqlnd_conn_data::free_reference
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  197   6:| | | | | | info : conn=287353 old_refcount=3
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  198   5:| | | | | <mysqlnd_conn_data::free_reference (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_result.c:   34   4:| | | | <mysqlnd_res::free_result_internal (total=157 own=40 in_calls=117)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  211   3:| | | <mysqlnd_stmt::free_stmt_result (total=208 own=27 in_calls=181)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  215   2:| | <mysqlnd_stmt::free_stmt_content (total=225 own=17 in_calls=208)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  197   2:| | >mysqlnd_conn_data::free_reference
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  197   3:| | | info : conn=287353 old_refcount=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  198   2:| | <mysqlnd_conn_data::free_reference (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  223   1:| <mysqlnd_stmt::net_close (total=496 own=86 in_calls=410)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  226   1:| info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_ps.c:  226   0:<mysqlnd_stmt::dtor (total=523 own=27 in_calls=496)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:>mysqlnd_conn_data::more_results
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  215   0:<mysqlnd_conn_data::more_results (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  312   0:>mysqlnd_conn::close
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  312   1:| info : conn=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| >mysqlnd_conn_data::local_tx_start
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  295   1:| <mysqlnd_conn_data::local_tx_start (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   1:| <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   1:| >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   2:| | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   1:| <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  190   1:| >mysqlnd_send_close
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  190   2:| | info : conn=287353 net->data->stream->abstract=0x7f5cb965a730
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | <mysqlnd_conn_data::get_state (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   2:| | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  191   2:| | info : state=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  191   2:| | info : Connection clean, sending COM_QUIT
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   37   2:| | >mysqlnd_conn_data::simple_command
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   3:| | | >mysqlnd_conn_data::simple_command_send_request
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : command=QUIT silent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : conn->server_status=2
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   32   4:| | | | info : sending 1 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  243   4:| | | | >mysqlnd_protocol::get_command_packet
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  244   4:| | | | <mysqlnd_protocol::get_command_packet (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  101   4:| | | | >php_mysqlnd_cmd_write
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   40   5:| | | | | >mysqlnd_net::send_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   41   6:| | | | | | info : count=1 compression=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : to_be_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packets_sent=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : compressed_envelope_packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   42   6:| | | | | | info : packet_no=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   47   6:| | | | | | info : no compression
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   6:| | | | | | >mysqlnd_net::network_write_ex
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   14   7:| | | | | | | info : sending 5 bytes
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   15   6:| | | | | | <mysqlnd_net::network_write_ex (total=34 own=28 in_calls=6)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   49   6:| | | | | | info : packet_size=0 packet_no=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:   51   5:| | | | | <mysqlnd_net::send_ex (total=90 own=56 in_calls=34)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  106   4:| | | | <php_mysqlnd_cmd_write (total=102 own=12 in_calls=90)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   4:| | | | info : PACKET_FREE(0x7f5cb965f308)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   36   3:| | | <mysqlnd_conn_data::simple_command_send_request (total=164 own=61 in_calls=103)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   3:| | | info : PASS
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   38   2:| | <mysqlnd_conn_data::simple_command (total=182 own=18 in_calls=164)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  111   2:| | >mysqlnd_net::close_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | info : 0x7f5cb96668c0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  111   3:| | | info : Freeing stream. abstract=0x7f5cb965a730
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  119   3:| | | >mysqlnd_net::set_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  120   3:| | | <mysqlnd_net::set_stream (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  113   2:| | <mysqlnd_net::close_stream (total=52 own=46 in_calls=6)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   2:| | >mysqlnd_conn_data::set_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  200   3:| | | info : New state=6
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  201   2:| | <mysqlnd_conn_data::set_state (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  195   1:| <mysqlnd_send_close (total=313 own=73 in_calls=240)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| >mysqlnd_conn_data::local_tx_end
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  296   1:| <mysqlnd_conn_data::local_tx_end (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  310   1:| >mysqlnd_conn::dtor
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  310   2:| | info : conn=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  197   2:| | >mysqlnd_conn_data::free_reference
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  197   3:| | | info : conn=287353 old_refcount=1
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   4:| | | | info : 0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   3:| | | <mysqlnd_net::get_stream (total=6 own=6 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  190   3:| | | >mysqlnd_send_close
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  190   4:| | | | info : conn=287353 net->data->stream->abstract=0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | >mysqlnd_conn_data::get_state
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  199   4:| | | | <mysqlnd_conn_data::get_state (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  191   4:| | | | info : state=6
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  111   4:| | | | >mysqlnd_net::close_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   6:| | | | | | info : 0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   5:| | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  113   4:| | | | <mysqlnd_net::close_stream (total=16 own=11 in_calls=5)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  195   3:| | | <mysqlnd_send_close (total=104 own=88 in_calls=16)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   18   3:| | | >mysqlnd_conn_data::dtor
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   18   4:| | | | info : conn=287353
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   11   4:| | | | >mysqlnd_conn_data::free_contents
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  107   5:| | | | | >mysqlnd_net::free_contents
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  110   5:| | | | | <mysqlnd_net::free_contents (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   12   5:| | | | | info : Freeing memory of members
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   14   5:| | | | | info : scheme=tcp://10.80.90.30:4000
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   17   4:| | | | <mysqlnd_conn_data::free_contents (total=29 own=29 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  125   4:| | | | >mysqlnd_net_free
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  116   5:| | | | | >mysqlnd_net::dtor
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  107   6:| | | | | | >mysqlnd_net::free_contents
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  110   6:| | | | | | <mysqlnd_net::free_contents (total=0 own=0 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  111   6:| | | | | | >mysqlnd_net::close_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | >mysqlnd_net::get_stream
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   8:| | | | | | | | info : 0
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  118   7:| | | | | | | <mysqlnd_net::get_stream (total=5 own=5 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  113   6:| | | | | | <mysqlnd_net::close_stream (total=16 own=11 in_calls=5)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  116   6:| | | | | | info : Freeing cmd buffer
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  117   5:| | | | | <mysqlnd_net::dtor (total=46 own=30 in_calls=16)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_net.c:  126   4:| | | | <mysqlnd_net_free (total=61 own=15 in_calls=46)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  260   4:| | | | >mysqlnd_protocol_free
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd_wireprotocol.c:  260   4:| | | | <mysqlnd_protocol_free (total=1 own=1 in_calls=0)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:   20   3:| | | <mysqlnd_conn_data::dtor (total=136 own=45 in_calls=91)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  198   2:| | <mysqlnd_conn_data::free_reference (total=289 own=43 in_calls=246)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  310   1:| <mysqlnd_conn::dtor (total=307 own=18 in_calls=289)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/mysqlnd.c:  314   0:<mysqlnd_conn::close (total=703 own=76 in_calls=627)
+27581: /home/liuyong/php-7.0.16/ext/mysqlnd/php_mysqlnd.c:   30   0:>RSHUTDOWN
