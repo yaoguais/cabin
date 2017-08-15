@@ -1,0 +1,7 @@
+syntax = "proto3";
+package main;
+
+message Reply
+{
+    int32 c = 1;
+}
