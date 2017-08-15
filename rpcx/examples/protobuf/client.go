@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
+	"github.com/golang/protobuf/proto"
 	"github.com/smallnest/rpcx"
 	"github.com/smallnest/rpcx/codec"
 	"github.com/smallnest/rpcx/log"
-    "github.com/golang/protobuf/proto"
 )
 
 func main() {
@@ -15,10 +15,10 @@ func main() {
 	client := rpcx.NewClient(s)
 	client.ClientCodecFunc = codec.NewProtobufClientCodec
 
-    args := &Args{
-        A: *proto.Int32(7),
-        B: *proto.Int32(8),
-    }
+	args := &Args{
+		A: *proto.Int32(7),
+		B: *proto.Int32(8),
+	}
 	var reply Reply
 	err := client.Call(context.Background(), "Arith.Mul", args, &reply)
 	if err != nil {

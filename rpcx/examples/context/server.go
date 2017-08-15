@@ -1,8 +1,8 @@
 package main
 
 import (
+	"fmt"
 	"net"
-    "fmt"
 
 	"github.com/smallnest/rpcx"
 	"github.com/smallnest/rpcx/log"
@@ -36,7 +36,7 @@ type Arith int
 
 func (t *Arith) Mul(args *Args, reply *Reply) error {
 	reply.C = args.A * args.B
-    fmt.Printf("%v\n", args)
+	fmt.Printf("%v\n", args)
 	conn := args.Value("conn").(net.Conn)
 	log.Infof("Client IP: %s", conn.RemoteAddr().String())
 	return nil
