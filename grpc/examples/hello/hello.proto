@@ -1,0 +1,14 @@
+syntax = "proto3";
+package main;
+
+message Req {
+    int32 id = 1;
+}
+
+message Resp {
+    string name = 1;
+}
+
+service Hello {
+    rpc Hello(Req) returns (Resp);
+}
