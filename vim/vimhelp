@@ -1,0 +1,19 @@
+#!/bin/bash
+# use in vim :!vimhelp
+
+cat <<EOF
+:NERDTree <C-E>
+replace all :%s/old/new/g
+open new file horizontal :split filename
+open new file vertical :vsplit filename
+save all files :wall
+close other windows :only
+close current window :close
+increase window height :res +20
+decrease window height :res -20
+increase window width :vert res +20
+decrease window width :vert res -20
+move window cursor <C-w w>/<C-w k,j,h,l>
+move to next word tail <e>
+move to last word head <b>
+EOF
