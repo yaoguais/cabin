@@ -45,8 +45,8 @@ $ go get ./... && make serve
 
 ## Screenshot
 
-![Dashboard](https://github.com/Yaoguais/gadmin/raw/master/screenshot/dashboard.png)
+![Dashboard](https://github.com/Yaoguais/cabin/raw/master/goforadmin/screenshot/dashboard.png)
 
-![Privilege](https://github.com/Yaoguais/gadmin/raw/master/screenshot/privilege.png)
+![Privilege](https://github.com/Yaoguais/cabin/raw/master/goforadmin/screenshot/privilege.png)
 
-![Component](https://github.com/Yaoguais/gadmin/raw/master/screenshot/component.png)
+![Component](https://github.com/Yaoguais/cabin/raw/master/goforadmin/screenshot/component.png)
