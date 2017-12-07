@@ -1,0 +1,29 @@
+#!/bin/bash
+
+namespace="default"
+if [ "x$1" != "x" ]; then
+    namespace=$1
+fi
+
+echo "Nodes"
+kubectl get nodes -o wide --namespace=$namespace
+echo
+
+echo "Pod"
+kubectl get pod -o wide --namespace=$namespace
+echo
+
+echo "Deploy"
+kubectl get deploy -o wide --namespace=$namespace
+echo
+
+echo "Svc"
+kubectl get svc -o wide --namespace=$namespace
+echo
+
+echo "Rc"
+kubectl get rc -o wide --namespace=$namespace
+echo
+
+echo "Namespace"
+kubectl get namespace -o wide --namespace=$namespace

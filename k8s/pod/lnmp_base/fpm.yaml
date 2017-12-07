@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fpm
+  namespace: lnmp-base
+  labels:
+    name: fpm
+spec:
+  containers:
+  -
+    name: fpm
+    image: yaoguais/k8s-lnmp-base-fpm
+    ports:
+    - containerPort: 9000
+

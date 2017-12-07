@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+  namespace: lnmp-base
+  labels:
+    name: redis
+spec:
+  containers:
+  -
+    name: redis
+    image: redis
+    ports:
+    - containerPort: 6379
+    volumeMounts:
+    - mountPath: /data
+      name: redis-data
+  volumes:
+    - name: redis-data
+      emptyDir: {}

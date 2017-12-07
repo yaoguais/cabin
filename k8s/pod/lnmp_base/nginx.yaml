@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: lnmp-base
+  labels:
+    name: nginx
+spec:
+  containers:
+  -
+    name: nginx
+    image: yaoguais/k8s-lnmp-base-nginx
+    ports:
+    - containerPort: 6000
+
