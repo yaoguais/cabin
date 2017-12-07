@@ -8,12 +8,12 @@ metadata:
 spec: 
   containers: 
     - 
-      image: yaoguais/k8s-php-ping-redis-mysql
+      image: yaoguais/k8s-php-ping-redis-mysql:v1
       name: php
       env: 
         - 
           name: "MYSQL_HOST"
-          value: "127.0.0.1"
+          value: "10.68.63.78"
         - 
           name: "MYSQL_PORT"
           value: "3306"
@@ -28,7 +28,7 @@ spec:
           value: "test"
         - 
           name: "REDIS_HOST"
-          value: "172.20.114.136"
+          value: "10.68.95.182"
         - 
           name: "REDIS_PORT"
           value: "6379"

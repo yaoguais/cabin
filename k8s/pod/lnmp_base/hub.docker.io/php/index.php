@@ -20,6 +20,7 @@ while(true) {
 function ping_redis() {
     $host = getenv('REDIS_HOST');
     $port = getenv('REDIS_PORT');
+    printf("ping host:%s port:%s\n", $host, $port);
     $redis = new Redis();
     $redis->connect($host, $port);
     $ret = $redis->ping();
@@ -36,6 +37,7 @@ function ping_mysql() {
     $charset = 'utf8';
 
     $dsn = sprintf('mysql:host=%s;port=%s;dbname=%s;charset=%s', $host, $port, $database, $charset);
+    printf("ping dsn:%s user:%s password:%s\n", $dsn, $user, $password);
     $db = new PDO($dsn, $user, $password);
     $ret = $db->exec('SELECT 1');
     printf("mysql ping: %s\n", $ret);
