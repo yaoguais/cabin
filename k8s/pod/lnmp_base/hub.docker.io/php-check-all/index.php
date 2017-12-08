@@ -13,8 +13,7 @@ while(true) {
         printf("exception: %s\n", $e->getMessage());
     }
 
-    curl_nginx_80();
-    curl_nginx_6000();
+    curl_urls();
 
     sleep(5);
 }
@@ -47,21 +46,15 @@ function ping_mysql() {
     $db = null;
 }
 
-function curl_nginx_80() {
-	$url = "http://127.0.0.1:80/index.html";
-	$ch = curl_init ($url) ;
-        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1) ;
-        $res = curl_exec ($ch) ;
-        curl_close ($ch) ;
-        printf("curl nginx 80:%s\n", $res);
+function curl_urls() {
+    $urls = getenv('CURL_URLS');
+    $urls = explode(';', $urls);
+    $urls = array_filter($urls);
+    foreach($urls as $url) {
+        $ch = curl_init ($url);
+        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+        $res = curl_exec ($ch);
+        curl_close ($ch);
+        printf("curl %s:%s\n", $url, $res);
+    }
 }
-
-function curl_nginx_6000() {
-	$url = "http://127.0.0.1:6000/index.php?key=val";
-	$ch = curl_init ($url) ;
-        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1) ;
-        $res = curl_exec ($ch) ;
-        curl_close ($ch) ;
-        printf("curl nginx 6000:%s\n", $res);
-}
-

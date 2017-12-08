@@ -41,7 +41,7 @@ spec:
             - containerPort: 80
             - containerPort: 6000
         - 
-          image: yaoguais/k8s-php-lnmp-base-check-all
+          image: yaoguais/k8s-php-lnmp-base-check-all:v1
           name: php
           env: 
               - 
@@ -65,6 +65,9 @@ spec:
               - 
                 name: "REDIS_PORT"
                 value: "6379"
+              - 
+                name: "CURL_URLS"
+                value: "http://127.0.0.1:80/index.html;http://127.0.0.1:6000/index.php?key=val"
       volumes:
         - name: redis-data
           emptyDir: {}

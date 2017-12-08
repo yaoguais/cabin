@@ -1,0 +1,166 @@
+---
+# Fpm Pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fpm-pod
+  namespace: lnmp-base
+  labels:
+    name: fpm-pod
+spec:
+  containers:
+  -
+    name: fpm
+    image: yaoguais/k8s-lnmp-base-fpm:v2
+    ports:
+    - containerPort: 9000
+---
+# Fpm Service
+apiVersion: v1
+kind: Service
+metadata: 
+  name: fpm
+  namespace: lnmp-base
+spec: 
+  ports:
+    - port: 9000
+  selector: 
+    name: fpm-pod
+---
+# MySQL Pod
+apiVersion: v1
+kind: Pod
+metadata: 
+  labels: 
+    name: mysql-pod
+  name: mysql-pod
+  namespace: lnmp-base
+spec: 
+  containers: 
+    - 
+      image: mysql
+      name: mysql
+      env:
+        - 
+          name: "MYSQL_ROOT_PASSWORD"
+          value: "123456"
+        - 
+          name: "MYSQL_DATABASE"
+          value: "test"
+---
+# MySQL Service
+apiVersion: v1
+kind: Service
+metadata: 
+  name: mysql
+  namespace: lnmp-base
+spec: 
+  ports:
+    - port: 3306
+  selector: 
+    name: mysql-pod
+---
+# Redis Pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  namespace: lnmp-base
+  labels:
+    name: redis-pod
+spec:
+  containers:
+  -
+    name: redis
+    image: redis
+    ports:
+    - containerPort: 6379
+    volumeMounts: 
+    - mountPath: /data
+      name: redis-data
+  volumes:
+    - name: redis-data
+      emptyDir: {}
+---
+# Redis Service
+apiVersion: v1
+kind: Service
+metadata: 
+  name: redis
+  namespace: lnmp-base
+spec: 
+  ports:
+    - port: 6379
+  selector: 
+    name: redis-pod
+---
+# Nginx Pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: lnmp-base
+  labels:
+    name: nginx-pod
+spec:
+  containers:
+  -
+    name: nginx
+    image: yaoguais/k8s-lnmp-base-nginx-svc
+    ports:
+    - containerPort: 80
+    - containerPort: 6000
+---
+# Nginx Service
+apiVersion: v1
+kind: Service
+metadata: 
+  name: nginx
+  namespace: lnmp-base
+spec: 
+  ports:
+    - port: 80
+      name: static
+    - port: 6000
+      name: fpm
+  selector: 
+    name: nginx-pod
+---
+# PHP Checker Pod
+apiVersion: v1
+kind: Pod
+metadata: 
+  labels: 
+    name: php-pod
+  name: php-pod
+  namespace: lnmp-base
+spec: 
+  containers: 
+    - 
+      image: yaoguais/k8s-php-lnmp-base-check-all:v1
+      name: php
+      env: 
+        - 
+          name: "MYSQL_HOST"
+          value: "mysql.lnmp-base"
+        - 
+          name: "MYSQL_PORT"
+          value: "3306"
+        - 
+          name: "MYSQL_USER"
+          value: "root"
+        - 
+          name: "MYSQL_PASSWORD"
+          value: "123456"
+        - 
+          name: "MYSQL_DATABASE"
+          value: "test"
+        - 
+          name: "REDIS_HOST"
+          value: "redis.lnmp-base"
+        - 
+          name: "REDIS_PORT"
+          value: "6379"
+        - 
+          name: "CURL_URLS"
+          value: "http://nginx.lnmp-base:80/index.html;http://nginx.lnmp-base:6000/index.php?key=val"
