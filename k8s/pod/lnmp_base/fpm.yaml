@@ -9,7 +9,7 @@ spec:
   containers:
   -
     name: fpm
-    image: yaoguais/k8s-lnmp-base-fpm
+    image: yaoguais/k8s-lnmp-base-fpm:v1
     ports:
     - containerPort: 9000
 

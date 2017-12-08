@@ -1,7 +1,7 @@
 <?php
 
 
-for([$_POST, $_GET, $_SERVER, $_COOKIE] as $g) {
+foreach([$_POST, $_GET, $_SERVER, $_COOKIE] as $g) {
 	echo json_encode($g), "\n";
 }
 

@@ -2,7 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata: 
   name: lnmp-one-deployment
-  namespace: lnmp-one
+  namespace: lnmp-base
 spec:
   replicas: 1
   template:
@@ -31,16 +31,17 @@ spec:
               name: redis-data
         -
           name: fpm
-          image: fpm
+          image: yaoguais/k8s-lnmp-base-fpm:v2
           ports:
             - containerPort: 9000
         -
           name: nginx
-          image: yaoguais/k8s-lnmp-base-nginx
+          image: yaoguais/k8s-lnmp-base-nginx:v4
           ports:
+            - containerPort: 80
             - containerPort: 6000
         - 
-          image: yaoguais/k8s-php-ping-redis-mysql
+          image: yaoguais/k8s-php-lnmp-base-check-all
           name: php
           env: 
               - 
