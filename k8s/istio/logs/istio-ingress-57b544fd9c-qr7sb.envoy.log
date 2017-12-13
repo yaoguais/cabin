@@ -1,0 +1,165 @@
+kubectl logs istio-ingress-57b544fd9c-qr7sb -n istio-system > tmp.log     
+➜  istio-0.3.0 grep -i error tmp.log 
+ERROR: logging before flag.Parse: I1212 09:12:16.596534       1 main.go:68] Version root@24c944bda24b-0.3.0-24ec6a3ac3a1d592d1873d2d8198278a849b8301
+ERROR: logging before flag.Parse: I1212 09:12:16.596617       1 main.go:109] Proxy role: proxy.Node{Type:"ingress", IPAddress:"", ID:"istio-ingress-57b544fd9c-qr7sb.istio-system", Domain:"istio-system.svc.cluster.local"}
+ERROR: logging before flag.Parse: I1212 09:12:16.596640       1 resolve.go:35] Attempting to lookup address: istio-mixer
+ERROR: logging before flag.Parse: I1212 09:12:16.597277       1 resolve.go:45] Addr resolved to: 10.68.159.137:9125
+ERROR: logging before flag.Parse: I1212 09:12:16.597290       1 resolve.go:46] Finished lookup of address: istio-mixer
+ERROR: logging before flag.Parse: I1212 09:12:16.597618       1 main.go:169] Effective config: binaryPath: /usr/local/bin/envoy
+ERROR: logging before flag.Parse: I1212 09:12:16.597635       1 main.go:186] Monitored certs: []envoy.CertSource{envoy.CertSource{Directory:"/etc/certs/", Files:[]string{"cert-chain.pem", "key.pem", "root-cert.pem"}}, envoy.CertSource{Directory:"/etc/istio/ingress-certs/", Files:[]string{"tls.crt", "tls.key"}}}
+ERROR: logging before flag.Parse: I1212 09:12:16.597805       1 agent.go:164] Starting proxy agent
+ERROR: logging before flag.Parse: I1212 09:12:16.597850       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1212 09:12:16.597859       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1212 09:12:16.597889       1 agent.go:281] Epoch 0 starting
+ERROR: logging before flag.Parse: I1212 09:12:16.597933       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev0.json
+}ERROR: logging before flag.Parse: I1212 09:12:16.598496       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+ERROR: logging before flag.Parse: I1212 09:12:18.070580       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_12_12_17_12_18.017645228": CREATE
+ERROR: logging before flag.Parse: I1212 09:12:18.070617       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_12_12_17_12_18.017645228": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1212 09:12:18.070631       1 watcher.go:123] watchFileEvents: "/etc/certs//key.pem": CREATE
+ERROR: logging before flag.Parse: I1212 09:12:18.070751       1 watcher.go:123] watchFileEvents: "/etc/certs//root-cert.pem": CREATE
+ERROR: logging before flag.Parse: I1212 09:12:18.070788       1 watcher.go:123] watchFileEvents: "/etc/certs//cert-chain.pem": CREATE
+ERROR: logging before flag.Parse: I1212 09:12:18.070806       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1212 09:12:18.070834       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1212 09:12:28.070736       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1212 09:12:28.071039       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1212 09:12:28.071050       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1212 09:12:28.071131       1 agent.go:281] Epoch 1 starting
+ERROR: logging before flag.Parse: I1212 09:12:28.071149       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev1.json
+}ERROR: logging before flag.Parse: I1212 09:12:28.071448       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev1.json --restart-epoch 1 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1212 09:13:28.300531       1 agent.go:211] Epoch 0 exited normally
+ERROR: logging before flag.Parse: I1212 10:11:27.384314       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_12_12_18_11_27.497813030": CREATE
+ERROR: logging before flag.Parse: I1212 10:11:27.384343       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_12_12_18_11_27.497813030": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1212 10:11:27.384353       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": CREATE
+ERROR: logging before flag.Parse: I1212 10:11:27.384372       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1212 10:11:27.384379       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1212 10:11:27.384384       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_12_12_17_12_18.017645228": DELETE
+ERROR: logging before flag.Parse: I1212 10:11:37.384394       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1212 10:11:37.384606       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1212 10:11:37.384615       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1212 10:11:37.384681       1 agent.go:281] Epoch 2 starting
+ERROR: logging before flag.Parse: I1212 10:11:37.384698       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev2.json
+}ERROR: logging before flag.Parse: I1212 10:11:37.384920       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev2.json --restart-epoch 2 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1212 10:12:37.613710       1 agent.go:211] Epoch 1 exited normally
+ERROR: logging before flag.Parse: I1213 02:11:15.313684       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_10_11_15.017756971": CREATE
+ERROR: logging before flag.Parse: I1213 02:11:15.313706       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_10_11_15.017756971": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 02:11:15.313714       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": CREATE
+ERROR: logging before flag.Parse: I1213 02:11:15.313732       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 02:11:15.313740       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 02:11:15.313751       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_12_12_18_11_27.497813030": DELETE
+ERROR: logging before flag.Parse: I1213 02:11:25.313803       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 02:11:25.314029       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 02:11:25.314040       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 02:11:25.314141       1 agent.go:281] Epoch 3 starting
+ERROR: logging before flag.Parse: I1213 02:11:25.314166       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev3.json
+}ERROR: logging before flag.Parse: I1213 02:11:25.314388       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev3.json --restart-epoch 3 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 02:12:25.536112       1 agent.go:211] Epoch 2 exited normally
+ERROR: logging before flag.Parse: I1213 03:05:39.323323       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_11_05_39.325420272": CREATE
+ERROR: logging before flag.Parse: I1213 03:05:39.323358       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_11_05_39.325420272": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 03:05:39.323371       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": CREATE
+ERROR: logging before flag.Parse: I1213 03:05:39.323425       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 03:05:39.323448       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 03:05:39.323463       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_10_11_15.017756971": DELETE
+ERROR: logging before flag.Parse: I1213 03:05:49.323482       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 03:05:49.323728       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 03:05:49.323740       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 03:05:49.323828       1 agent.go:281] Epoch 4 starting
+ERROR: logging before flag.Parse: I1213 03:05:49.323850       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev4.json
+}ERROR: logging before flag.Parse: I1213 03:05:49.324124       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev4.json --restart-epoch 4 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 03:06:49.554818       1 agent.go:211] Epoch 3 exited normally
+ERROR: logging before flag.Parse: I1213 04:05:03.389319       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_12_05_03.119186212": CREATE
+ERROR: logging before flag.Parse: I1213 04:05:03.389386       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_12_05_03.119186212": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 04:05:03.389410       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 04:05:03.389533       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 04:05:03.389557       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_11_05_39.325420272": DELETE
+ERROR: logging before flag.Parse: I1213 04:05:13.389528       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 04:05:13.390013       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 04:05:13.390035       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 04:05:13.390217       1 agent.go:281] Epoch 5 starting
+ERROR: logging before flag.Parse: I1213 04:05:13.390274       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev5.json
+}ERROR: logging before flag.Parse: I1213 04:05:13.390899       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev5.json --restart-epoch 5 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 04:06:13.622002       1 agent.go:211] Epoch 4 exited normally
+ERROR: logging before flag.Parse: I1213 05:03:59.316401       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_13_03_59.687378934": CREATE
+ERROR: logging before flag.Parse: I1213 05:03:59.316433       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_13_03_59.687378934": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 05:03:59.316444       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": CREATE
+ERROR: logging before flag.Parse: I1213 05:03:59.316500       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 05:03:59.316529       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 05:03:59.316550       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_12_05_03.119186212": DELETE
+ERROR: logging before flag.Parse: I1213 05:04:09.316610       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 05:04:09.317326       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 05:04:09.317358       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 05:04:09.317648       1 agent.go:281] Epoch 6 starting
+ERROR: logging before flag.Parse: I1213 05:04:09.317701       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev6.json
+}ERROR: logging before flag.Parse: I1213 05:04:09.318334       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev6.json --restart-epoch 6 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 05:05:09.539732       1 agent.go:211] Epoch 5 exited normally
+ERROR: logging before flag.Parse: I1213 06:03:42.352773       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_14_03_42.695089546": CREATE
+ERROR: logging before flag.Parse: I1213 06:03:42.352809       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_14_03_42.695089546": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 06:03:42.352825       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": CREATE
+ERROR: logging before flag.Parse: I1213 06:03:42.352851       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 06:03:42.352865       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 06:03:42.352877       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_13_03_59.687378934": DELETE
+ERROR: logging before flag.Parse: I1213 06:03:52.352931       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 06:03:52.353083       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 06:03:52.353089       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 06:03:52.353137       1 agent.go:281] Epoch 7 starting
+ERROR: logging before flag.Parse: I1213 06:03:52.353150       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev7.json
+}ERROR: logging before flag.Parse: I1213 06:03:52.353307       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev7.json --restart-epoch 7 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 06:04:52.573877       1 agent.go:211] Epoch 6 exited normally
+ERROR: logging before flag.Parse: I1213 07:02:29.345797       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_15_02_29.987200094": CREATE
+ERROR: logging before flag.Parse: I1213 07:02:29.345841       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_15_02_29.987200094": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 07:02:29.345858       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 07:02:29.345934       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 07:02:29.345962       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_14_03_42.695089546": DELETE
+ERROR: logging before flag.Parse: I1213 07:02:39.345941       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 07:02:39.346287       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 07:02:39.346303       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 07:02:39.346451       1 agent.go:281] Epoch 8 starting
+ERROR: logging before flag.Parse: I1213 07:02:39.346492       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev8.json
+}ERROR: logging before flag.Parse: I1213 07:02:39.346954       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev8.json --restart-epoch 8 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 07:03:39.568870       1 agent.go:211] Epoch 7 exited normally
+ERROR: logging before flag.Parse: I1213 08:01:57.313366       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_16_01_57.077286002": CREATE
+ERROR: logging before flag.Parse: I1213 08:01:57.313402       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_16_01_57.077286002": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 08:01:57.313416       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": CREATE
+ERROR: logging before flag.Parse: I1213 08:01:57.313446       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 08:01:57.313462       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 08:01:57.313479       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_15_02_29.987200094": DELETE
+ERROR: logging before flag.Parse: I1213 08:02:07.313491       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 08:02:07.313684       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 08:02:07.313692       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 08:02:07.313744       1 agent.go:281] Epoch 9 starting
+ERROR: logging before flag.Parse: I1213 08:02:07.313760       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev9.json
+}ERROR: logging before flag.Parse: I1213 08:02:07.313937       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev9.json --restart-epoch 9 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 08:03:07.542433       1 agent.go:211] Epoch 8 exited normally
+ERROR: logging before flag.Parse: I1213 09:00:49.332010       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_17_00_49.793208262": CREATE
+ERROR: logging before flag.Parse: I1213 09:00:49.332036       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_17_00_49.793208262": MODIFY|ATTRIB
+ERROR: logging before flag.Parse: I1213 09:00:49.332046       1 watcher.go:123] watchFileEvents: "/etc/certs//..data_tmp": RENAME
+ERROR: logging before flag.Parse: I1213 09:00:49.332072       1 watcher.go:123] watchFileEvents: "/etc/certs//..data": CREATE
+ERROR: logging before flag.Parse: I1213 09:00:49.332082       1 watcher.go:123] watchFileEvents: "/etc/certs//..129812_13_12_16_01_57.077286002": DELETE
+ERROR: logging before flag.Parse: I1213 09:00:59.332136       1 watcher.go:136] watchFileEvents: notifying
+ERROR: logging before flag.Parse: I1213 09:00:59.332300       1 agent.go:186] Received new config, resetting budget
+ERROR: logging before flag.Parse: I1213 09:00:59.332307       1 agent.go:261] Reconciling configuration (budget 10)
+ERROR: logging before flag.Parse: I1213 09:00:59.332362       1 agent.go:281] Epoch 10 starting
+ERROR: logging before flag.Parse: I1213 09:00:59.332378       1 config.go:49] writing configuration to /etc/istio/proxy/envoy-rev10.json
+}ERROR: logging before flag.Parse: I1213 09:00:59.332538       1 watcher.go:270] Envoy command: [-c /etc/istio/proxy/envoy-rev10.json --restart-epoch 10 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-ingress --service-node ingress~~istio-ingress-57b544fd9c-qr7sb.istio-system~istio-system.svc.cluster.local --max-obj-name-len 189]
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: destination.ip: 
+[libprotobuf ERROR external/mixerclient_git/src/attributes_builder.cc:54] Could not convert to ip: source.ip: 
+ERROR: logging before flag.Parse: I1213 09:01:59.547504       1 agent.go:211] Epoch 9 exited normally
