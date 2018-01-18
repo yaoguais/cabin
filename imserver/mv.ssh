@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp -f ssl/client/client.crt ssl/client/client.key client
+cp -f ssl/server/server.crt ssl/server/server.key server

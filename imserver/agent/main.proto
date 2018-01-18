@@ -1,0 +1,106 @@
+syntax = "proto3";
+
+package main;
+
+import "google/api/annotations.proto";
+import "github.com/mwitkow/go-proto-validators/validator.proto";
+
+service IM {
+    rpc Publish (PublishRequest) returns (RetResponse) {
+        option (google.api.http) = {
+            post: "/v1/publish"
+            body: "*"
+        };
+    }
+}
+
+service User {
+    rpc Add (AddUserRequest) returns (RetResponse) {
+        option (google.api.http) = {
+            post: "/v1/user/add"
+            body: "*"
+        };
+    }
+    rpc Del (DelUserRequest) returns (RetResponse) {
+        option (google.api.http) = {
+            post: "/v1/user/del"
+            body: "*"
+        };
+    }
+    rpc Get (GetUserRequest) returns (GetUserResponse) {
+        option (google.api.http) = {
+            post: "/v1/user/get"
+            body: "*"
+        };
+    }
+}
+
+service Group {
+    rpc AddMembers (AddMembersRequest) returns (RetResponse) {
+        option (google.api.http) = {
+            post: "/v1/group/member/add"
+            body: "*"
+        };
+    }
+    rpc DelMembers (DelMembersRequest) returns (RetResponse) {
+        option (google.api.http) = {
+            post: "/v1/group/member/del"
+            body: "*"
+        };
+    }
+    rpc ListMembers (ListMembersRequest) returns (ListMembersResponse) {
+        option (google.api.http) = {
+            post: "/v1/group/member/list"
+            body: "*"
+        };
+    }
+}
+
+message PublishRequest {
+    string topic    = 1 [(validator.field) = {string_not_empty: true}];
+    string payload  = 2 [(validator.field) = {string_not_empty: true}];
+    sint32 qos      = 3 [(validator.field) = {int_gt: -1, int_lt: 3}];
+    bool   retained = 4;
+}
+
+message RetResponse {
+    bool ok = 1;
+}
+
+message AddUserRequest {
+    string id       = 1 [(validator.field) = {string_not_empty: true}];
+    string username = 2;
+    string password = 3;
+}
+
+message DelUserRequest {
+    string username = 1;
+}
+
+message GetUserRequest {
+    string username = 1;
+}
+
+message GetUserResponse {
+    string id       = 1;
+    string username = 2;
+    string password = 3;
+}
+
+message AddMembersRequest {
+    string group_id = 1         [(validator.field) = {string_not_empty: true}];
+    repeated string members = 2 [(validator.field) = {repeated_count_min: 1}];
+}
+
+message DelMembersRequest {
+    string group_id = 1         [(validator.field) = {string_not_empty: true}];
+    repeated string members = 2 [(validator.field) = {repeated_count_min: 1}];
+}
+
+message ListMembersRequest {
+    string group_id = 1 [(validator.field) = {string_not_empty: true}];
+}
+
+message ListMembersResponse {
+    repeated string members = 1;
+}
