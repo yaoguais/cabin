@@ -1,5 +1,0 @@
-node_modules
-mosca.log
-package-lock.json
-external_persist.db
-internal_persist.db

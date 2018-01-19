@@ -1,1 +1,5 @@
-/ssl
+/agent
+/agent_tester
+/worker
+/node_modules
+/mosca.log
