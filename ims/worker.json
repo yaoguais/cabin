@@ -1,0 +1,20 @@
+{
+    "worker": {
+        "id": "robot",
+        "username": "robot",
+        "password": "949baa1737e1ec41fde32ec89517608f",
+        "number": 2,
+        "jobSize": 4
+    },
+    "agent": {
+        "host": "127.0.0.1",
+        "ports": {
+            "grpc": "50051",
+            "http": "50050"
+        }
+    },
+    "kafka": {
+        "brokers": "localhost:9092",
+        "topic": "im"
+    }
+}

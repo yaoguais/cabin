@@ -1,0 +1,18 @@
+{
+    "agent": {
+        "host": "127.0.0.1",
+        "ports": {
+            "grpc": "50051",
+            "http": "50050"
+        },
+        "redis": {
+            "address": "127.0.0.1:6379",
+            "password": "",
+            "db": 0
+        }
+    },
+    "kafka": {
+        "brokers": "localhost:9092",
+        "topic": "im"
+    }
+}

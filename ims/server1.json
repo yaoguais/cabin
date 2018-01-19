@@ -1,0 +1,28 @@
+{
+    "server": {
+        "host": "127.0.0.1",
+        "internal": {
+            "port": 1883
+        },
+        "external": {
+            "port": 8883,
+            "certPath": "./server.crt",
+            "keyPath": "./server.key"
+        },
+        "logger": {
+            "level": "info",
+            "path": "./mosca.log"
+        }
+    },
+    "worker": {
+        "username": "robot",
+        "password": "949baa1737e1ec41fde32ec89517608f"
+    },
+    "agent": {
+        "host": "127.0.0.1",
+        "ports": {
+            "grpc": "50051",
+            "http": "50050"
+        }
+    }
+}
