@@ -8,6 +8,7 @@ import (
 	"os/signal"
 	"strings"
 	"syscall"
+	"time"
 
 	"github.com/Shopify/sarama"
 	"github.com/VolantMQ/volantmq/configuration"
@@ -32,6 +33,7 @@ var (
 	producer      sarama.SyncProducer
 	kafkaBrokers  = "localhost:9092"
 	kafkaTopic    = "im"
+	brokersCache  []*Broker
 )
 
 type HanlderFromEndpointFunc func(context.Context, *runtime.ServeMux, string, []grpc.DialOption) error
@@ -45,6 +47,7 @@ func main() {
 	defer closeRedis()
 	initProducer()
 	defer closeProducer()
+	go updateBrokersCache()
 	go startGrpcServer()
 	go startHttpServer()
 	watch()
@@ -100,9 +103,10 @@ func startHttpServer() {
 	opts := []grpc.DialOption{grpc.WithInsecure()}
 
 	handlers := []HanlderFromEndpointFunc{
-		RegisterIMHandlerFromEndpoint,
-		RegisterUserHandlerFromEndpoint,
-		RegisterGroupHandlerFromEndpoint,
+		RegisterBrokerSvcHandlerFromEndpoint,
+		RegisterIMSvcHandlerFromEndpoint,
+		RegisterUserSvcHandlerFromEndpoint,
+		RegisterGroupSvcHandlerFromEndpoint,
 	}
 	for _, h := range handlers {
 		if err := h(ctx, mux, grpcEndpoint, opts); err != nil {
@@ -124,9 +128,10 @@ func startGrpcServer() {
 	}
 	s := grpc.NewServer()
 
-	RegisterIMServer(s, new(imServer))
-	RegisterUserServer(s, new(userServer))
-	RegisterGroupServer(s, new(groupServer))
+	RegisterBrokerSvcServer(s, new(brokerSvc))
+	RegisterIMSvcServer(s, new(imSvc))
+	RegisterUserSvcServer(s, new(userSvc))
+	RegisterGroupSvcServer(s, new(groupSvc))
 
 	logger.Info("Serve grpc", zap.String("address", grpcEndpoint))
 	err = s.Serve(ln)
@@ -165,8 +170,107 @@ Exit:
 	}
 }
 
+// Broker
+type brokerSvc struct {
+}
+
+func saveBroker(broker Broker) error {
+	data, err := jsoniter.Marshal(broker)
+	if err != nil {
+		logger.Error("JSON encode", zap.Error(err))
+		return err
+	}
+
+	hkey := "im:brokers"
+	err = redisClient.HSet(hkey, broker.External, data).Err()
+	if err != nil {
+		logger.Error("Redis exec", zap.Error(err))
+		return err
+	}
+	return nil
+}
+
+func listBroker() ([]*Broker, error) {
+	var brokers []*Broker
+	hkey := "im:brokers"
+	vals, err := redisClient.HVals(hkey).Result()
+	if err != nil {
+		return nil, err
+	}
+	// logger.Info("List brokers", zap.Strings("brokers", vals))
+	for _, v := range vals {
+		var broker Broker
+		err = jsoniter.Unmarshal([]byte(v), &broker)
+		if err != nil {
+			logger.Error("JSON decode", zap.Error(err))
+			return nil, err
+		}
+		brokers = append(brokers, &broker)
+	}
+	return brokers, nil
+}
+
+func brokerForUser(user User) *Broker {
+	now := time.Now().Unix()
+	for _, v := range brokersCache {
+		if now-v.UpdateTime < 300 && (v.MaxConn < 0 || int64(v.Conn) < v.MaxConn-100) {
+			return v
+		}
+	}
+	return nil
+}
+
+func updateBrokersCache() {
+	brokers, err := listBroker()
+	if err != nil {
+		logger.Fatal("List brokers", zap.Error(err))
+	}
+	brokersCache = brokers
+
+	for range time.NewTicker(time.Second).C {
+		brokers, err := listBroker()
+		if err != nil {
+			logger.Error("List brokers", zap.Error(err))
+		} else {
+			brokersCache = brokers
+		}
+	}
+}
+
+func (*brokerSvc) Update(ctx context.Context, req *UpdateBrokerRequest) (*Broker, error) {
+	if err := req.Validate(); err != nil {
+		return nil, status.Error(codes.InvalidArgument, err.Error())
+	}
+
+	broker := Broker{
+		External:   req.External,
+		Internal:   req.Internal,
+		Conn:       req.Conn,
+		MaxConn:    req.MaxConn,
+		UpdateTime: time.Now().Unix(),
+	}
+
+	err := saveBroker(broker)
+	if err != nil {
+		return nil, status.Error(codes.Internal, err.Error())
+	}
+
+	return &broker, nil
+}
+
+func (*brokerSvc) List(context.Context, *ListBrokerRequest) (*ListBrokerResponse, error) {
+	brokers, err := listBroker()
+	if err != nil {
+		return nil, status.Error(codes.Internal, err.Error())
+	}
+
+	return &ListBrokerResponse{
+		Brokers: brokers,
+	}, nil
+}
+
 // IM
-type imServer struct {
+type imSvc struct {
 }
 
 type jobModel struct {
@@ -176,7 +280,7 @@ type jobModel struct {
 	Retained bool   `json:"retained"`
 }
 
-func (*imServer) Publish(ctx context.Context, req *PublishRequest) (*RetResponse, error) {
+func (*imSvc) Publish(ctx context.Context, req *PublishRequest) (*RetResponse, error) {
 	if err := req.Validate(); err != nil {
 		return nil, status.Error(codes.InvalidArgument, err.Error())
 	}
@@ -208,83 +312,112 @@ func (*imServer) Publish(ctx context.Context, req *PublishRequest) (*RetResponse
 }
 
 // User
-type userServer struct {
+type userSvc struct {
 }
 
-type userModel struct {
-	ID  string `json:"id"`
-	Pwd string `json:"pwd"`
+func saveUser(user User) error {
+	data, err := jsoniter.Marshal(user)
+	if err != nil {
+		logger.Error("JSON encode", zap.Error(err))
+		return err
+	}
+
+	key := fmt.Sprintf("im:user:%s", user.Username)
+	err = redisClient.Set(key, data, 0).Err()
+	if err != nil {
+		logger.Error("Redis exec", zap.Error(err))
+		return err
+	}
+	return nil
 }
 
-func (*userServer) Add(ctx context.Context, req *AddUserRequest) (*RetResponse, error) {
+func getUserByUsername(username string) (*User, error) {
+	key := fmt.Sprintf("im:user:%s", username)
+	data, err := redisClient.Get(key).Bytes()
+	if err == redis.Nil {
+		return nil, err
+	} else if err != nil {
+		logger.Error("Redis exec", zap.Error(err))
+		return nil, err
+	}
+
+	var user User
+	err = jsoniter.Unmarshal(data, &user)
+	if err != nil {
+		logger.Error("JSON decode", zap.Error(err))
+		return nil, err
+	}
+	return &user, nil
+}
+
+func delUserByUsername(username string) error {
+	key := fmt.Sprintf("im:user:%s", username)
+	err := redisClient.Del(key).Err()
+	if err != nil {
+		logger.Error("Redis exec", zap.Error(err))
+		return err
+	}
+	return nil
+}
+
+func (*userSvc) Add(ctx context.Context, req *AddUserRequest) (*User, error) {
 	if err := req.Validate(); err != nil {
 		return nil, status.Error(codes.InvalidArgument, err.Error())
 	}
 
-	user := userModel{
-		ID:  req.Id,
-		Pwd: req.Password,
-	}
-	data, err := jsoniter.Marshal(user)
-	if err != nil {
-		logger.Error("JSON encode", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
-	}
-
-	key := fmt.Sprintf("im:user:%s", req.Username)
-	err = redisClient.Set(key, data, 0).Err()
-	if err != nil {
-		logger.Error("Redis exec", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
-	}
-
-	return &RetResponse{
-		Ok: true,
-	}, nil
-}
-
-func (*userServer) Del(ctx context.Context, req *DelUserRequest) (*RetResponse, error) {
-	key := fmt.Sprintf("im:user:%s", req.Username)
-	err := redisClient.Del(key).Err()
-	if err != nil {
-		logger.Error("Redis exec", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
-	}
-
-	return &RetResponse{
-		Ok: true,
-	}, nil
-}
-
-func (*userServer) Get(ctx context.Context, req *GetUserRequest) (*GetUserResponse, error) {
-	key := fmt.Sprintf("im:user:%s", req.Username)
-	data, err := redisClient.Get(key).Bytes()
-	if err == redis.Nil {
-		return nil, status.Error(codes.NotFound, err.Error())
-	} else if err != nil {
-		logger.Error("Redis exec", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
-	}
-
-	var user userModel
-	err = jsoniter.Unmarshal(data, &user)
-	if err != nil {
-		logger.Error("JSON decode", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
-	}
-
-	return &GetUserResponse{
-		Id:       user.ID,
+	user := User{
+		Id:       req.Id,
 		Username: req.Username,
-		Password: user.Pwd,
-	}, nil
+		Password: req.Password,
+		Ip:       req.Ip,
+		Broker:   "",
+	}
+	if broker := brokerForUser(user); broker != nil {
+		user.Broker = broker.External
+	}
+
+	err := saveUser(user)
+	if err != nil {
+		return nil, status.Error(codes.Internal, err.Error())
+	}
+
+	return &user, nil
+}
+
+func (*userSvc) Del(ctx context.Context, req *DelUserRequest) (*User, error) {
+	user, err := getUserByUsername(req.Username)
+	if err != nil {
+		if err == redis.Nil {
+			return nil, status.Error(codes.NotFound, err.Error())
+		}
+		return nil, status.Error(codes.Internal, err.Error())
+	}
+
+	err = delUserByUsername(req.Username)
+	if err != nil {
+		return nil, status.Error(codes.Internal, err.Error())
+	}
+
+	return user, nil
+}
+
+func (*userSvc) Get(ctx context.Context, req *GetUserRequest) (*User, error) {
+	user, err := getUserByUsername(req.Username)
+	if err != nil {
+		if err == redis.Nil {
+			return nil, status.Error(codes.NotFound, err.Error())
+		}
+		return nil, status.Error(codes.Internal, err.Error())
+	}
+
+	return user, nil
 }
 
 // Group
-type groupServer struct {
+type groupSvc struct {
 }
 
-func (*groupServer) AddMembers(ctx context.Context, req *AddMembersRequest) (*RetResponse, error) {
+func (*groupSvc) AddMembers(ctx context.Context, req *AddMembersRequest) (*RetResponse, error) {
 	if err := req.Validate(); err != nil {
 		return nil, status.Error(codes.InvalidArgument, err.Error())
 	}
@@ -309,7 +442,7 @@ func sliceStringToInterface(s []string) []interface{} {
 	return t
 }
 
-func (*groupServer) DelMembers(ctx context.Context, req *DelMembersRequest) (*RetResponse, error) {
+func (*groupSvc) DelMembers(ctx context.Context, req *DelMembersRequest) (*RetResponse, error) {
 	if err := req.Validate(); err != nil {
 		return nil, status.Error(codes.InvalidArgument, err.Error())
 	}
@@ -326,7 +459,7 @@ func (*groupServer) DelMembers(ctx context.Context, req *DelMembersRequest) (*Re
 	}, nil
 }
 
-func (*groupServer) ListMembers(ctx context.Context, req *ListMembersRequest) (*ListMembersResponse, error) {
+func (*groupSvc) ListMembers(ctx context.Context, req *ListMembersRequest) (*ListMembersResponse, error) {
 	if err := req.Validate(); err != nil {
 		return nil, status.Error(codes.InvalidArgument, err.Error())
 	}

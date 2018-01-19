@@ -28,7 +28,33 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
-func request_IM_Publish_0(ctx context.Context, marshaler runtime.Marshaler, client IMClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_BrokerSvc_Update_0(ctx context.Context, marshaler runtime.Marshaler, client BrokerSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq UpdateBrokerRequest
+	var metadata runtime.ServerMetadata
+
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+
+	msg, err := client.Update(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+
+}
+
+func request_BrokerSvc_List_0(ctx context.Context, marshaler runtime.Marshaler, client BrokerSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq ListBrokerRequest
+	var metadata runtime.ServerMetadata
+
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+
+	msg, err := client.List(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+
+}
+
+func request_IMSvc_Publish_0(ctx context.Context, marshaler runtime.Marshaler, client IMSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq PublishRequest
 	var metadata runtime.ServerMetadata
 
@@ -41,7 +67,7 @@ func request_IM_Publish_0(ctx context.Context, marshaler runtime.Marshaler, clie
 
 }
 
-func request_User_Add_0(ctx context.Context, marshaler runtime.Marshaler, client UserClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_UserSvc_Add_0(ctx context.Context, marshaler runtime.Marshaler, client UserSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AddUserRequest
 	var metadata runtime.ServerMetadata
 
@@ -54,7 +80,7 @@ func request_User_Add_0(ctx context.Context, marshaler runtime.Marshaler, client
 
 }
 
-func request_User_Del_0(ctx context.Context, marshaler runtime.Marshaler, client UserClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_UserSvc_Del_0(ctx context.Context, marshaler runtime.Marshaler, client UserSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DelUserRequest
 	var metadata runtime.ServerMetadata
 
@@ -67,7 +93,7 @@ func request_User_Del_0(ctx context.Context, marshaler runtime.Marshaler, client
 
 }
 
-func request_User_Get_0(ctx context.Context, marshaler runtime.Marshaler, client UserClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_UserSvc_Get_0(ctx context.Context, marshaler runtime.Marshaler, client UserSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq GetUserRequest
 	var metadata runtime.ServerMetadata
 
@@ -80,7 +106,7 @@ func request_User_Get_0(ctx context.Context, marshaler runtime.Marshaler, client
 
 }
 
-func request_Group_AddMembers_0(ctx context.Context, marshaler runtime.Marshaler, client GroupClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_GroupSvc_AddMembers_0(ctx context.Context, marshaler runtime.Marshaler, client GroupSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AddMembersRequest
 	var metadata runtime.ServerMetadata
 
@@ -93,7 +119,7 @@ func request_Group_AddMembers_0(ctx context.Context, marshaler runtime.Marshaler
 
 }
 
-func request_Group_DelMembers_0(ctx context.Context, marshaler runtime.Marshaler, client GroupClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_GroupSvc_DelMembers_0(ctx context.Context, marshaler runtime.Marshaler, client GroupSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DelMembersRequest
 	var metadata runtime.ServerMetadata
 
@@ -106,7 +132,7 @@ func request_Group_DelMembers_0(ctx context.Context, marshaler runtime.Marshaler
 
 }
 
-func request_Group_ListMembers_0(ctx context.Context, marshaler runtime.Marshaler, client GroupClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_GroupSvc_ListMembers_0(ctx context.Context, marshaler runtime.Marshaler, client GroupSvcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq ListMembersRequest
 	var metadata runtime.ServerMetadata
 
@@ -119,9 +145,9 @@ func request_Group_ListMembers_0(ctx context.Context, marshaler runtime.Marshale
 
 }
 
-// RegisterIMHandlerFromEndpoint is same as RegisterIMHandler but
+// RegisterBrokerSvcHandlerFromEndpoint is same as RegisterBrokerSvcHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
-func RegisterIMHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
+func RegisterBrokerSvcHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
 	conn, err := grpc.Dial(endpoint, opts...)
 	if err != nil {
 		return err
@@ -141,23 +167,23 @@ func RegisterIMHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, e
 		}()
 	}()
 
-	return RegisterIMHandler(ctx, mux, conn)
+	return RegisterBrokerSvcHandler(ctx, mux, conn)
 }
 
-// RegisterIMHandler registers the http handlers for service IM to "mux".
+// RegisterBrokerSvcHandler registers the http handlers for service BrokerSvc to "mux".
 // The handlers forward requests to the grpc endpoint over "conn".
-func RegisterIMHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
-	return RegisterIMHandlerClient(ctx, mux, NewIMClient(conn))
+func RegisterBrokerSvcHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
+	return RegisterBrokerSvcHandlerClient(ctx, mux, NewBrokerSvcClient(conn))
 }
 
-// RegisterIMHandler registers the http handlers for service IM to "mux".
-// The handlers forward requests to the grpc endpoint over the given implementation of "IMClient".
-// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "IMClient"
+// RegisterBrokerSvcHandler registers the http handlers for service BrokerSvc to "mux".
+// The handlers forward requests to the grpc endpoint over the given implementation of "BrokerSvcClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "BrokerSvcClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
-// "IMClient" to call the correct interceptors.
-func RegisterIMHandlerClient(ctx context.Context, mux *runtime.ServeMux, client IMClient) error {
+// "BrokerSvcClient" to call the correct interceptors.
+func RegisterBrokerSvcHandlerClient(ctx context.Context, mux *runtime.ServeMux, client BrokerSvcClient) error {
 
-	mux.Handle("POST", pattern_IM_Publish_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_BrokerSvc_Update_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -175,14 +201,43 @@ func RegisterIMHandlerClient(ctx context.Context, mux *runtime.ServeMux, client 
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_IM_Publish_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_BrokerSvc_Update_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_IM_Publish_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_BrokerSvc_Update_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+
+	})
+
+	mux.Handle("POST", pattern_BrokerSvc_List_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		if cn, ok := w.(http.CloseNotifier); ok {
+			go func(done <-chan struct{}, closed <-chan bool) {
+				select {
+				case <-done:
+				case <-closed:
+					cancel()
+				}
+			}(ctx.Done(), cn.CloseNotify())
+		}
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		rctx, err := runtime.AnnotateContext(ctx, mux, req)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_BrokerSvc_List_0(rctx, inboundMarshaler, client, req, pathParams)
+		ctx = runtime.NewServerMetadataContext(ctx, md)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+
+		forward_BrokerSvc_List_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -190,16 +245,20 @@ func RegisterIMHandlerClient(ctx context.Context, mux *runtime.ServeMux, client 
 }
 
 var (
-	pattern_IM_Publish_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "publish"}, ""))
+	pattern_BrokerSvc_Update_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "broker", "update"}, ""))
+
+	pattern_BrokerSvc_List_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "broker", "list"}, ""))
 )
 
 var (
-	forward_IM_Publish_0 = runtime.ForwardResponseMessage
+	forward_BrokerSvc_Update_0 = runtime.ForwardResponseMessage
+
+	forward_BrokerSvc_List_0 = runtime.ForwardResponseMessage
 )
 
-// RegisterUserHandlerFromEndpoint is same as RegisterUserHandler but
+// RegisterIMSvcHandlerFromEndpoint is same as RegisterIMSvcHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
-func RegisterUserHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
+func RegisterIMSvcHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
 	conn, err := grpc.Dial(endpoint, opts...)
 	if err != nil {
 		return err
@@ -219,23 +278,23 @@ func RegisterUserHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux,
 		}()
 	}()
 
-	return RegisterUserHandler(ctx, mux, conn)
+	return RegisterIMSvcHandler(ctx, mux, conn)
 }
 
-// RegisterUserHandler registers the http handlers for service User to "mux".
+// RegisterIMSvcHandler registers the http handlers for service IMSvc to "mux".
 // The handlers forward requests to the grpc endpoint over "conn".
-func RegisterUserHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
-	return RegisterUserHandlerClient(ctx, mux, NewUserClient(conn))
+func RegisterIMSvcHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
+	return RegisterIMSvcHandlerClient(ctx, mux, NewIMSvcClient(conn))
 }
 
-// RegisterUserHandler registers the http handlers for service User to "mux".
-// The handlers forward requests to the grpc endpoint over the given implementation of "UserClient".
-// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "UserClient"
+// RegisterIMSvcHandler registers the http handlers for service IMSvc to "mux".
+// The handlers forward requests to the grpc endpoint over the given implementation of "IMSvcClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "IMSvcClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
-// "UserClient" to call the correct interceptors.
-func RegisterUserHandlerClient(ctx context.Context, mux *runtime.ServeMux, client UserClient) error {
+// "IMSvcClient" to call the correct interceptors.
+func RegisterIMSvcHandlerClient(ctx context.Context, mux *runtime.ServeMux, client IMSvcClient) error {
 
-	mux.Handle("POST", pattern_User_Add_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_IMSvc_Publish_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -253,72 +312,14 @@ func RegisterUserHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_User_Add_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_IMSvc_Publish_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_User_Add_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("POST", pattern_User_Del_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		if cn, ok := w.(http.CloseNotifier); ok {
-			go func(done <-chan struct{}, closed <-chan bool) {
-				select {
-				case <-done:
-				case <-closed:
-					cancel()
-				}
-			}(ctx.Done(), cn.CloseNotify())
-		}
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := request_User_Del_0(rctx, inboundMarshaler, client, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_User_Del_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("POST", pattern_User_Get_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		if cn, ok := w.(http.CloseNotifier); ok {
-			go func(done <-chan struct{}, closed <-chan bool) {
-				select {
-				case <-done:
-				case <-closed:
-					cancel()
-				}
-			}(ctx.Done(), cn.CloseNotify())
-		}
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := request_User_Get_0(rctx, inboundMarshaler, client, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_User_Get_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_IMSvc_Publish_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -326,24 +327,16 @@ func RegisterUserHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 }
 
 var (
-	pattern_User_Add_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "user", "add"}, ""))
-
-	pattern_User_Del_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "user", "del"}, ""))
-
-	pattern_User_Get_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "user", "get"}, ""))
+	pattern_IMSvc_Publish_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "publish"}, ""))
 )
 
 var (
-	forward_User_Add_0 = runtime.ForwardResponseMessage
-
-	forward_User_Del_0 = runtime.ForwardResponseMessage
-
-	forward_User_Get_0 = runtime.ForwardResponseMessage
+	forward_IMSvc_Publish_0 = runtime.ForwardResponseMessage
 )
 
-// RegisterGroupHandlerFromEndpoint is same as RegisterGroupHandler but
+// RegisterUserSvcHandlerFromEndpoint is same as RegisterUserSvcHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
-func RegisterGroupHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
+func RegisterUserSvcHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
 	conn, err := grpc.Dial(endpoint, opts...)
 	if err != nil {
 		return err
@@ -363,23 +356,23 @@ func RegisterGroupHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux
 		}()
 	}()
 
-	return RegisterGroupHandler(ctx, mux, conn)
+	return RegisterUserSvcHandler(ctx, mux, conn)
 }
 
-// RegisterGroupHandler registers the http handlers for service Group to "mux".
+// RegisterUserSvcHandler registers the http handlers for service UserSvc to "mux".
 // The handlers forward requests to the grpc endpoint over "conn".
-func RegisterGroupHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
-	return RegisterGroupHandlerClient(ctx, mux, NewGroupClient(conn))
+func RegisterUserSvcHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
+	return RegisterUserSvcHandlerClient(ctx, mux, NewUserSvcClient(conn))
 }
 
-// RegisterGroupHandler registers the http handlers for service Group to "mux".
-// The handlers forward requests to the grpc endpoint over the given implementation of "GroupClient".
-// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "GroupClient"
+// RegisterUserSvcHandler registers the http handlers for service UserSvc to "mux".
+// The handlers forward requests to the grpc endpoint over the given implementation of "UserSvcClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "UserSvcClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
-// "GroupClient" to call the correct interceptors.
-func RegisterGroupHandlerClient(ctx context.Context, mux *runtime.ServeMux, client GroupClient) error {
+// "UserSvcClient" to call the correct interceptors.
+func RegisterUserSvcHandlerClient(ctx context.Context, mux *runtime.ServeMux, client UserSvcClient) error {
 
-	mux.Handle("POST", pattern_Group_AddMembers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_UserSvc_Add_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -397,18 +390,18 @@ func RegisterGroupHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Group_AddMembers_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_UserSvc_Add_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Group_AddMembers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_UserSvc_Add_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Group_DelMembers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_UserSvc_Del_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -426,18 +419,18 @@ func RegisterGroupHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Group_DelMembers_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_UserSvc_Del_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Group_DelMembers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_UserSvc_Del_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Group_ListMembers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_UserSvc_Get_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -455,14 +448,14 @@ func RegisterGroupHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Group_ListMembers_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_UserSvc_Get_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Group_ListMembers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_UserSvc_Get_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -470,17 +463,161 @@ func RegisterGroupHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Group_AddMembers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "group", "member", "add"}, ""))
+	pattern_UserSvc_Add_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "user", "add"}, ""))
 
-	pattern_Group_DelMembers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "group", "member", "del"}, ""))
+	pattern_UserSvc_Del_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "user", "del"}, ""))
 
-	pattern_Group_ListMembers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "group", "member", "list"}, ""))
+	pattern_UserSvc_Get_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "user", "get"}, ""))
 )
 
 var (
-	forward_Group_AddMembers_0 = runtime.ForwardResponseMessage
+	forward_UserSvc_Add_0 = runtime.ForwardResponseMessage
 
-	forward_Group_DelMembers_0 = runtime.ForwardResponseMessage
+	forward_UserSvc_Del_0 = runtime.ForwardResponseMessage
 
-	forward_Group_ListMembers_0 = runtime.ForwardResponseMessage
+	forward_UserSvc_Get_0 = runtime.ForwardResponseMessage
+)
+
+// RegisterGroupSvcHandlerFromEndpoint is same as RegisterGroupSvcHandler but
+// automatically dials to "endpoint" and closes the connection when "ctx" gets done.
+func RegisterGroupSvcHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
+	conn, err := grpc.Dial(endpoint, opts...)
+	if err != nil {
+		return err
+	}
+	defer func() {
+		if err != nil {
+			if cerr := conn.Close(); cerr != nil {
+				grpclog.Printf("Failed to close conn to %s: %v", endpoint, cerr)
+			}
+			return
+		}
+		go func() {
+			<-ctx.Done()
+			if cerr := conn.Close(); cerr != nil {
+				grpclog.Printf("Failed to close conn to %s: %v", endpoint, cerr)
+			}
+		}()
+	}()
+
+	return RegisterGroupSvcHandler(ctx, mux, conn)
+}
+
+// RegisterGroupSvcHandler registers the http handlers for service GroupSvc to "mux".
+// The handlers forward requests to the grpc endpoint over "conn".
+func RegisterGroupSvcHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
+	return RegisterGroupSvcHandlerClient(ctx, mux, NewGroupSvcClient(conn))
+}
+
+// RegisterGroupSvcHandler registers the http handlers for service GroupSvc to "mux".
+// The handlers forward requests to the grpc endpoint over the given implementation of "GroupSvcClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "GroupSvcClient"
+// doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
+// "GroupSvcClient" to call the correct interceptors.
+func RegisterGroupSvcHandlerClient(ctx context.Context, mux *runtime.ServeMux, client GroupSvcClient) error {
+
+	mux.Handle("POST", pattern_GroupSvc_AddMembers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		if cn, ok := w.(http.CloseNotifier); ok {
+			go func(done <-chan struct{}, closed <-chan bool) {
+				select {
+				case <-done:
+				case <-closed:
+					cancel()
+				}
+			}(ctx.Done(), cn.CloseNotify())
+		}
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		rctx, err := runtime.AnnotateContext(ctx, mux, req)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_GroupSvc_AddMembers_0(rctx, inboundMarshaler, client, req, pathParams)
+		ctx = runtime.NewServerMetadataContext(ctx, md)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+
+		forward_GroupSvc_AddMembers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+
+	})
+
+	mux.Handle("POST", pattern_GroupSvc_DelMembers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		if cn, ok := w.(http.CloseNotifier); ok {
+			go func(done <-chan struct{}, closed <-chan bool) {
+				select {
+				case <-done:
+				case <-closed:
+					cancel()
+				}
+			}(ctx.Done(), cn.CloseNotify())
+		}
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		rctx, err := runtime.AnnotateContext(ctx, mux, req)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_GroupSvc_DelMembers_0(rctx, inboundMarshaler, client, req, pathParams)
+		ctx = runtime.NewServerMetadataContext(ctx, md)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+
+		forward_GroupSvc_DelMembers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+
+	})
+
+	mux.Handle("POST", pattern_GroupSvc_ListMembers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		if cn, ok := w.(http.CloseNotifier); ok {
+			go func(done <-chan struct{}, closed <-chan bool) {
+				select {
+				case <-done:
+				case <-closed:
+					cancel()
+				}
+			}(ctx.Done(), cn.CloseNotify())
+		}
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		rctx, err := runtime.AnnotateContext(ctx, mux, req)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_GroupSvc_ListMembers_0(rctx, inboundMarshaler, client, req, pathParams)
+		ctx = runtime.NewServerMetadataContext(ctx, md)
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+
+		forward_GroupSvc_ListMembers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+
+	})
+
+	return nil
+}
+
+var (
+	pattern_GroupSvc_AddMembers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "group", "member", "add"}, ""))
+
+	pattern_GroupSvc_DelMembers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "group", "member", "del"}, ""))
+
+	pattern_GroupSvc_ListMembers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "group", "member", "list"}, ""))
+)
+
+var (
+	forward_GroupSvc_AddMembers_0 = runtime.ForwardResponseMessage
+
+	forward_GroupSvc_DelMembers_0 = runtime.ForwardResponseMessage
+
+	forward_GroupSvc_ListMembers_0 = runtime.ForwardResponseMessage
 )

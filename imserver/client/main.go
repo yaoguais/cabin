@@ -21,14 +21,13 @@ import (
 
 // 10000 client subscribe 10000+500+500 topics
 var (
-	logger       *zap.Logger
-	userCount    = 1
-	groupCount   = 500
-	publicCount  = 500
-	groupTopics  []string
-	publicTopics []string
-	server       = "tcp://127.0.0.1:1883"
-	// server              = "ssl://127.0.0.1:8883"
+	logger              *zap.Logger
+	userCount           = 1
+	groupCount          = 500
+	publicCount         = 500
+	groupTopics         []string
+	publicTopics        []string
+	server              = "tcp://127.0.0.1:8883"
 	wg                  sync.WaitGroup
 	clientCertFile      = "./client.crt"
 	clientKeyFile       = "./client.key"

@@ -22,6 +22,7 @@ func init() {
 }
 
 func main() {
+	testBroker()
 	testUser()
 	testGroup()
 	testPublish()
@@ -46,6 +47,28 @@ func request(path string, body []byte) []byte {
 	return respBody
 }
 
+func testBroker() {
+	// Update
+	params := map[string]interface{}{
+		"external": "127.0.0.1:8883",
+		"internal": "127.0.0.1:1883",
+		"conn":     0,
+		"max_conn": -1,
+	}
+	body, _ := jsoniter.Marshal(params)
+	data := request("/v1/broker/update", body)
+	if !assert.ObjectsAreEqual("127.0.0.1:8883", jsoniter.Get(data, "external").ToString()) {
+		logger.Fatal("Assert")
+	}
+	// List
+	params = map[string]interface{}{}
+	body, _ = jsoniter.Marshal(params)
+	data = request("/v1/broker/list", body)
+	if !assert.ObjectsAreEqual(1, jsoniter.Get(data, "brokers").Size()) {
+		logger.Fatal("Assert")
+	}
+}
+
 func testUser() {
 	// Add
 	id := "1"
@@ -58,7 +81,7 @@ func testUser() {
 	}
 	body, _ := jsoniter.Marshal(params)
 	data := request("/v1/user/add", body)
-	if !assert.ObjectsAreEqual(true, jsoniter.Get(data, "ok").ToBool()) {
+	if !assert.ObjectsAreEqual(id, jsoniter.Get(data, "id").ToString()) {
 		logger.Fatal("Assert")
 	}
 	// Get
@@ -78,7 +101,7 @@ func testUser() {
 	}
 	body, _ = jsoniter.Marshal(params)
 	data = request("/v1/user/del", body)
-	if !assert.ObjectsAreEqual(true, jsoniter.Get(data, "ok").ToBool()) {
+	if !assert.ObjectsAreEqual(username, jsoniter.Get(data, "username").ToString()) {
 		logger.Fatal("Assert")
 	}
 }

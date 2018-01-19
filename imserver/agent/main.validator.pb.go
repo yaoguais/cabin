@@ -8,12 +8,16 @@ It is generated from these files:
 	main.proto
 
 It has these top-level messages:
+	UpdateBrokerRequest
+	ListBrokerRequest
+	Broker
+	ListBrokerResponse
 	PublishRequest
 	RetResponse
+	User
 	AddUserRequest
 	DelUserRequest
 	GetUserRequest
-	GetUserResponse
 	AddMembersRequest
 	DelMembersRequest
 	ListMembersRequest
@@ -33,6 +37,31 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+func (this *UpdateBrokerRequest) Validate() error {
+	if this.External == "" {
+		return go_proto_validators.FieldError("External", fmt.Errorf(`value '%v' must not be an empty string`, this.External))
+	}
+	if this.Internal == "" {
+		return go_proto_validators.FieldError("Internal", fmt.Errorf(`value '%v' must not be an empty string`, this.Internal))
+	}
+	return nil
+}
+func (this *ListBrokerRequest) Validate() error {
+	return nil
+}
+func (this *Broker) Validate() error {
+	return nil
+}
+func (this *ListBrokerResponse) Validate() error {
+	for _, item := range this.Brokers {
+		if item != nil {
+			if err := go_proto_validators.CallValidatorIfExists(item); err != nil {
+				return go_proto_validators.FieldError("Brokers", err)
+			}
+		}
+	}
+	return nil
+}
 func (this *PublishRequest) Validate() error {
 	if this.Topic == "" {
 		return go_proto_validators.FieldError("Topic", fmt.Errorf(`value '%v' must not be an empty string`, this.Topic))
@@ -51,19 +80,19 @@ func (this *PublishRequest) Validate() error {
 func (this *RetResponse) Validate() error {
 	return nil
 }
-func (this *AddUserRequest) Validate() error {
+func (this *User) Validate() error {
 	if this.Id == "" {
 		return go_proto_validators.FieldError("Id", fmt.Errorf(`value '%v' must not be an empty string`, this.Id))
 	}
+	return nil
+}
+func (this *AddUserRequest) Validate() error {
 	return nil
 }
 func (this *DelUserRequest) Validate() error {
 	return nil
 }
 func (this *GetUserRequest) Validate() error {
-	return nil
-}
-func (this *GetUserResponse) Validate() error {
 	return nil
 }
 func (this *AddMembersRequest) Validate() error {
