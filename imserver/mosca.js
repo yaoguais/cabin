@@ -48,7 +48,7 @@ server.on('clientDisconnected', function(client) {
 });
 
 server.on('published', function(packet, client) {
-    logger.info('Published', packet.payload.toString());
+    logger.info('Published', packet.topic, packet.payload.toString());
 });
 
 server.on('ready', setup);
@@ -199,7 +199,7 @@ var authenticate = function(client, username, password, callback) {
 }
 
 var authorizePublish = function(client, topic, payload, callback) {
-    logger.info("Publish", client.id, payload.toString());
+    logger.info("Publish", client.id, topic, payload.toString());
     if (client.username === internalUsername) {
         callback(null, true);
     } else {
@@ -208,7 +208,7 @@ var authorizePublish = function(client, topic, payload, callback) {
 }
 
 var authorizeSubscribe = function(client, topic, callback) {
-    logger.info("Subscribe", client.id);
+    logger.info("Subscribe", client.id, topic);
     const ts = topic.split('/');
     if (ts.length < 2) {
         callback(null, false);

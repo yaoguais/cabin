@@ -36,3 +36,6 @@ stop_mosca:
 serve_worker:
 	make build
 	./worker -c worker.json
+
+test_server:
+	go run server_tester.go common.go main.pb.go
