@@ -1,0 +1,25 @@
+From: https://github.com/anandaroop/spatial-benchmarks
+
+records: 33000
+hardware: macbook Pro / Intel i7, quad-core, 2.3GHz / 16 GB RAM
+
+Postgres:      4210 queries/sec
+Elasticsearch: 671 queries/sec
+MongoDB:       596 queries/sec
+
+From: http://www.innomysql.com/mysql_gis_lbs/
+
+records: unknown
+hardware: 4 core / 8 GB RAM
+MySQL: 100 queries/sec
+
+From: self test
+
+hardware: Intel® Core™ i7-4790 CPU @ 3.60GHz × 8 / 16 GB RAM
+
+insert
+records: 10000000
+rqs:     24074 r/s
+
+query
+rqs:     19446 r/s
