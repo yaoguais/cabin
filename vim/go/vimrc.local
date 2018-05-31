@@ -1,0 +1,36 @@
+set ts=4
+
+" change \ to ,
+" let mapleader = ","
+
+
+""""""""""""" vim-go
+set autowrite
+let g:go_list_type = "quickfix"
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+let g:go_auto_type_info = 1
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+" autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+" autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+" autocmd FileType go nmap <Leader>i <Plug>(go-info)
+autocmd FileType go nmap <Leader>i <Plug>(go-imports)
+
+"""""""""""""" nerdtree
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
+
+"""""""""""""" ctrlp
+map <leader>f :CtrlPMixed<CR>
+map <leader>r :CtrlPMRU<CR>
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
+    \ }
+"""""""""""""" ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column'
+map <Leader>s :Ack<Space>
