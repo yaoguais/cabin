@@ -3,6 +3,46 @@ set ts=4
 " change \ to ,
 " let mapleader = ","
 
+" use "+y to copy to system clipboard
+set clipboard+=unnamed
+noremap <Leader>y "+y
+noremap <Leader>yy "+yy
+" <C-]> go to definition
+" <C-o> back to previous position
+
+" tab
+map <Leader>n :tabnew<Space>
+" move to previouse tab
+map <C-Left> :tabp<CR>
+" move to next tab
+map <C-Right> :tabn<CR>
+" close current tab
+map <Leader>c :tabc<CR>
+" close other tabs
+map <Leader>o :tabo<CR>
+
+" window
+" split window
+map <Leader>ws :split<Space>
+" vsplit window
+map <Leader>wv :vsplit<Space>
+map <Leader>wa :vertical resize -5<CR>
+map <Leader>wd :vertical resize +5<CR>
+map <Leader>ww :resize -5<CR>
+map <Leader>wx :resize +5<CR>
+" :hide  close current window
+" :only  keep only this window open
+
+" quickfix
+" :cc     show error message
+" :cp     move to previous error
+" :cn     move to next error
+" :cl     list all errors
+" :cw     open error window if error exists
+" :copen  open error window
+" :cclose close error window
+" :col    move to previous list
+" :cnew   move to next list
 
 """"""""""""" vim-go
 set autowrite
@@ -10,8 +50,6 @@ let g:go_list_type = "quickfix"
 "let g:go_highlight_types = 1
 "let g:go_highlight_fields = 1
 let g:go_auto_type_info = 1
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 " autocmd FileType go nmap <leader>r  <Plug>(go-run)
@@ -31,6 +69,21 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
     \ }
+
 """""""""""""" ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 map <Leader>s :Ack<Space>
+
+""""""""""""" supertab
+let g:SuperTabCompleteCase = 'ignore'
+
+""""""""""""" phpcomplete.vim
+let g:phpcomplete_relax_static_constraint = 1
+let g:phpcomplete_enhance_jump_to_definition = 1
+let g:phpcomplete_mappings = {
+   \ 'jump_to_def': '<C-]>',
+   \ 'jump_to_def_split': '<C-W><C-]>',
+   \ 'jump_to_def_vsplit': '<C-W><C-\>',
+   \ 'jump_to_def_tabnew': '<C-W><C-[>',
+   \}
+
