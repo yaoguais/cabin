@@ -9,6 +9,7 @@ sudo apt install vim
 
 ```
 sudo apt-get install silversearcher-ag
+sudo apt install vim-gnome
 
 git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/pack/plugins/start/nerdtree
