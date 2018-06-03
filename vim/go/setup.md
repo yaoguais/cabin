@@ -17,4 +17,7 @@ git clone https://github.com/mileszs/ack.vim.git ~/.vim/pack/plugins/start/ack.v
 git clone https://github.com/ervandew/supertab.git ~/.vim/pack/plugins/start/supertab
 git clone https://github.com/shawncplus/phpcomplete.vim.git ~/.vim/pack/plugins/start/phpcomplete.vim
 git clone https://github.com/vim-php/phpctags.git ~/soft/phpctags
+git clone https://github.com/Raimondi/delimitMate.git ~/.vim/pack/plugins/start/delimitMate
+
+:GoInstallBinaries
 ```

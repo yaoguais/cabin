@@ -1,4 +1,7 @@
-set ts=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set number
 
 " change \ to ,
 " let mapleader = ","
@@ -7,10 +10,14 @@ set ts=4
 set clipboard+=unnamed
 noremap <Leader>y "+y
 noremap <Leader>yy "+yy
-" <C-]> go to definition
-" <C-o> back to previous position
 filetype plugin on
 map <Leader>h :!cat /etc/vim/vimrc.local<CR>
+
+" jumps
+" <C-o> back to previous cursor
+" <C-i> go to next cursor
+" <C-]> go to definition
+" <C-t> back to previous tag
 
 " tab
 map <Leader>n :tabnew<Space>
@@ -63,6 +70,7 @@ autocmd FileType go nmap <Leader>i <Plug>(go-imports)
 """""""""""""" nerdtree
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
+map <C-m> :NERDTree %<CR>
 
 """""""""""""" ctrlp
 map <leader>f :CtrlPMixed<CR>
@@ -75,6 +83,8 @@ let g:ctrlp_custom_ignore = {
 """""""""""""" ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 map <Leader>s :Ack<Space>
+" change pwd of current window to current directory and search
+map <Leader>ss :lcd %:h <bar> :Ack<Space>
 
 """"""""""""" supertab
 let g:SuperTabCompleteCase = 'ignore'
@@ -89,4 +99,8 @@ let g:phpcomplete_mappings = {
    \ 'jump_to_def_vsplit': '<C-W><C-\>',
    \ 'jump_to_def_tabnew': '<C-W><C-[>',
    \}
+
+"""""""""""" delimitMate
+let g:delimitMate_matchpairs = "(:),[:],{:}"
+let g:delimitMate_expand_cr = 1
 
