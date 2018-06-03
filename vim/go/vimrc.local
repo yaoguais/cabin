@@ -9,6 +9,8 @@ noremap <Leader>y "+y
 noremap <Leader>yy "+yy
 " <C-]> go to definition
 " <C-o> back to previous position
+filetype plugin on
+map <Leader>h :!cat /etc/vim/vimrc.local<CR>
 
 " tab
 map <Leader>n :tabnew<Space>
@@ -76,6 +78,7 @@ map <Leader>s :Ack<Space>
 
 """"""""""""" supertab
 let g:SuperTabCompleteCase = 'ignore'
+let g:SuperTabDefaultCompletionType = 'context'
 
 """"""""""""" phpcomplete.vim
 let g:phpcomplete_relax_static_constraint = 1
