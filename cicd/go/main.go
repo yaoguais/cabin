@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"fmt"
 	"net/http"
@@ -99,10 +100,10 @@ func start(c *Config) {
 		logrus.WithError(err).Fatal("serve error")
 	case s := <-sg:
 		logrus.WithField("signal", s.String()).Info("receive signal")
-		if err = uploader.Shutdown(); err != nil {
+		if err = uploader.Shutdown(); err != nil && err != context.DeadlineExceeded {
 			logrus.WithError(err).Error("shutdown uploader server")
 		}
-		if err = slackbot.Shutdown(); err != nil {
+		if err = slackbot.Shutdown(); err != nil && err != context.DeadlineExceeded {
 			logrus.WithError(err).Error("shutdown slackbot server")
 		}
 	}
