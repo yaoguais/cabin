@@ -5,6 +5,7 @@ import (
 	"net"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 
 	"github.com/sirupsen/logrus"
 )
@@ -30,10 +31,24 @@ func loggerMiddleware(next http.Handler) http.Handler {
 		next.ServeHTTP(c, r)
 
 		response, _ := ioutil.ReadAll(c.Body)
+
+		ct := c.HeaderMap.Get("Content-Type")
+		respBody := ct
+		if ct != "" {
+			for _, v := range []string{"text", "json", "xml"} {
+				if strings.Contains(ct, v) {
+					respBody = string(response)
+					break
+				}
+			}
+		} else {
+			respBody = string(response)
+		}
+
 		logger.WithFields(logrus.Fields{
-			"response": string(response),
+			"response": respBody,
 			"code":     c.Code,
-		}).Info("http reqeust")
+		}).Info("http request")
 
 		for k, v := range c.HeaderMap {
 			w.Header()[k] = v
