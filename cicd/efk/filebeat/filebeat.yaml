@@ -1,0 +1,17 @@
+filebeat:
+  prospectors:
+    - type: log
+      scan_frequency: "1s"
+      fields_under_root: true
+      fields:
+        app: "blog"
+        role: "api"
+      paths:
+        - /var/log/test
+# https://www.elastic.co/guide/en/beats/filebeat/current/redis-output.html
+output.redis:
+  hosts: ["127.0.0.1:6379"]
+  password: ""
+  key: "filebeat.logs"
+  db: 0
+  timeout: 5
