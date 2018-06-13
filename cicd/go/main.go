@@ -3,6 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
+	"net/http"
+	_ "net/http/pprof"
 	"os"
 	"os/signal"
 	"syscall"
@@ -18,7 +20,12 @@ var (
 
 func main() {
 	configFile := flag.String("config", "config.toml", "config file")
+	pprof := flag.String("pprof", "", "pprof address e,g. 127.0.0.1:6060")
 	flag.Parse()
+
+	if *pprof != "" {
+		go http.ListenAndServe(*pprof, nil)
+	}
 
 	c, err := LoadConfig(*configFile)
 	if err != nil {
@@ -69,7 +76,7 @@ func setupLogger(c *Config) {
 }
 
 func start(c *Config) {
-	serveErr := make(chan error)
+	serveErr := make(chan error, 10)
 	uploader, err := NewUploader(c.Uploader)
 	if err != nil {
 		logrus.WithError(err).Fatal("create uploader")
