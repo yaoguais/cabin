@@ -1,0 +1,42 @@
+[logger]
+# use debug/info/error
+level = "debug"
+# use text/json
+formatter = "json"
+# set output file, default to stdout
+file = ""
+# max file size (MB)
+maxSize = 500
+# keep up days, default unlimited
+maxAge = 0
+# max backup count, default unlimited
+maxBackups = 0
+# whether compress log file
+compress = false
+
+[uploader]
+host = "0.0.0.0"
+port = 10021
+# domain for download url
+domain = "localhost"
+path = "/upload"
+repo = "/tmp"
+# max upload file size, e,g. 1K/1M/1G
+maxSize = "200M"
+# upload secret, should take this in query param, e,g curl -F "file=@test.txt" "http://localhost:10021/upload?secret=123456"
+secret = "123456"
+# send a message to slack when upload success
+slackChannel = "notify"
+
+[slackbot]
+host = "127.0.0.1"
+port = 10022
+path = "/send"
+# token for slack bot robot
+token = "xoxb-377430619221-378872086932-EQ9mG1p4jCudiXsS6v8y7LNe"
+# send message secret
+# send a message, e,g. curl "http://127.0.0.1:10022/send?secret=654321&channel=test&content=hello"
+secret = "654321"
+# whether use real time messaging
+rtm = true
+
