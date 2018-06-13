@@ -28,7 +28,7 @@ type SlackBot struct {
 	rtm    *slack.RTM
 }
 
-// NewUploader create new instance for SlackBot
+// NewSlackBot create new instance for SlackBot
 func NewSlackBot(c SlackBotConfig) (*SlackBot, error) {
 	client := slack.New(c.Token)
 	_, err := client.AuthTest()
@@ -82,6 +82,7 @@ func (s *SlackBot) Shutdown() error {
 	return s.ShutdownRTM()
 }
 
+// Send send message to special channel
 func (s *SlackBot) Send(channel, content string) error {
 	_, _, err := s.client.PostMessage(channel, content, slack.PostMessageParameters{})
 	return err
@@ -93,9 +94,13 @@ func (s *SlackBot) send(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	q := r.URL.Query()
-	channel := q.Get("channel")
-	content := q.Get("content")
+	if err := r.ParseForm(); err != nil {
+		Render(w, r, []byte(fmt.Sprintf("parse form failed, err %v", err)), http.StatusInternalServerError)
+		return
+	}
+
+	channel := r.FormValue("channel")
+	content := r.FormValue("content")
 
 	if channel == "" {
 		Render(w, r, []byte("channel should't be empty"), http.StatusBadRequest)

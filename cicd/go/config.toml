@@ -35,7 +35,7 @@ path = "/send"
 # token for slack bot robot
 token = "xoxb-377430619221-378872086932-EQ9mG1p4jCudiXsS6v8y7LNe"
 # send message secret
-# send a message, e,g. curl "http://127.0.0.1:10022/send?secret=654321&channel=test&content=hello"
+# send a message, e,g. curl -d "channel=test&content=hello" "http://127.0.0.1:10022/send?secret=654321"
 secret = "654321"
 # whether use real time messaging
 rtm = true
