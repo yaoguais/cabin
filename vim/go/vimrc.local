@@ -1,7 +1,7 @@
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set number
+"set number
 
 " change \ to ,
 " let mapleader = ","
@@ -28,9 +28,9 @@ map <C-Left> :tabp<CR>
 " move to next tab
 map <C-Right> :tabn<CR>
 " close current tab
-map <Leader>c :tabc<CR>
+map <Leader>tc :tabc<CR>
 " close other tabs
-map <Leader>o :tabo<CR>
+map <Leader>to :tabo<CR>
 
 " window
 " split window
@@ -70,12 +70,13 @@ autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <Leader>i <Plug>(go-imports)
 
 """""""""""""" php
-autocmd FileType php nmap <Leader>c :!php-cs-fixer fix %<CR>
+autocmd FileType php nmap <Leader>c :!php-cs-fixer fix --rules=@PSR2 %<CR>
 
-"""""""""""""" nerdtree
-let NERDTreeShowHidden=1
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :NERDTree %<CR>
+"""""""""""""" rust
+" export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
+autocmd BufRead *.rs :setlocal tags=./tags;/,$RUST_SRC_PATH/tags
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+autocmd FileType rust nmap <Leader>c :!rustfmt --force %<CR>
 
 """""""""""""" ctrlp
 map <leader>f :CtrlPMixed<CR>
@@ -108,4 +109,9 @@ let g:phpcomplete_mappings = {
 """""""""""" delimitMate
 let g:delimitMate_matchpairs = "(:),[:],{:}"
 let g:delimitMate_expand_cr = 1
+
+"""""""""""""" nerdtree
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
+map <C-m> :NERDTree %<CR>
 
