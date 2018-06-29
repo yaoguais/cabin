@@ -54,6 +54,8 @@ map <Leader>wx :resize +5<CR>
 " :cclose close error window
 " :col    move to previous list
 " :cnew   move to next list
+map <Leader>z :cp<CR>
+map <Leader>x :cn<CR>
 
 """"""""""""" vim-go
 set autowrite
