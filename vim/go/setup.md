@@ -19,6 +19,8 @@ git clone https://github.com/ervandew/supertab.git ~/.vim/pack/plugins/start/sup
 git clone https://github.com/shawncplus/phpcomplete.vim.git ~/.vim/pack/plugins/start/phpcomplete.vim
 git clone https://github.com/vim-php/phpctags.git ~/soft/phpctags
 git clone https://github.com/Raimondi/delimitMate.git ~/.vim/pack/plugins/start/delimitMate
+git clone https://github.com/rust-lang/rust.vim.git ~/.vim/pack/plugins/start/rust.vim
+git clone https://github.com/racer-rust/vim-racer.git ~/.vim/pack/plugins/start/rust.vim-racer
 
 :GoInstallBinaries
 ```

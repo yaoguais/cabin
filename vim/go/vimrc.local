@@ -57,6 +57,9 @@ map <Leader>wx :resize +5<CR>
 map <Leader>z :cp<CR>
 map <Leader>x :cn<CR>
 
+" multi line edit
+" <C-v> -> block select -> <S-i>/<S-a> -> <Esc>
+
 """"""""""""" vim-go
 set autowrite
 let g:go_list_type = "quickfix"
