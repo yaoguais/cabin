@@ -5,6 +5,21 @@ sudo apt update
 sudo apt install vim
 ```
 
+# install ctags
+
+```
+# https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags
+git clone https://github.com/universal-ctags/ctags.git
+cd ctags
+./autogen.sh 
+./configure
+make
+sudo make install
+
+# https://github.com/shawncplus/phpcomplete.vim/wiki/Getting-better-tags
+ctags -R --fields=+aimlS --languages=php 
+```
+
 # install plugins
 
 ```
