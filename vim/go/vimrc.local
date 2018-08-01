@@ -12,6 +12,7 @@ noremap <Leader>y "+y
 noremap <Leader>yy "+yy
 filetype plugin on
 map <Leader>h :!cat /etc/vim/vimrc.local<CR>
+map <Leader>zz :wqall!<CR>
 
 " jumps
 " <C-o> back to previous cursor
