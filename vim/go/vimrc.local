@@ -14,6 +14,19 @@ filetype plugin on
 map <Leader>h :!cat /etc/vim/vimrc.local<CR>
 map <Leader>zz :wqall!<CR>
 
+" open link in brower
+" simply you can use 'gx' to open url(must has schema)
+fun! OpenLinkInBrower(site)
+    let l:site = a:site
+    if l:site !~? '\.[a-z]\{2,4}'
+        let l:site = 'https://www.google.com/search?q=' . l:site
+    elseif l:site !~? '^https\?:\/\/'
+        let l:site = 'https://' . l:site
+    endif
+    call netrw#BrowseX(l:site, netrw#CheckIfRemote())
+endfun
+map <Leader>u :call OpenLinkInBrower(expand('<cfile>'))<CR>
+
 " jumps
 " <C-o> back to previous cursor
 " <C-i> go to next cursor
