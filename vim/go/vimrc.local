@@ -25,7 +25,7 @@ fun! OpenLinkInBrower(site)
     endif
     call netrw#BrowseX(l:site, netrw#CheckIfRemote())
 endfun
-map <Leader>u :call OpenLinkInBrower(expand('<cfile>'))<CR>
+map <Leader>u :call OpenLinkInBrower(expand('<cWORD>'))<CR>
 
 " jumps
 " <C-o> back to previous cursor
