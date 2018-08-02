@@ -13,6 +13,7 @@ noremap <Leader>yy "+yy
 filetype plugin on
 map <Leader>h :!cat /etc/vim/vimrc.local<CR>
 map <Leader>zz :wqall!<CR>
+map <Leader>xx :qall!<CR>
 
 " open link in brower
 " simply you can use 'gx' to open url(must has schema)
@@ -90,6 +91,34 @@ autocmd FileType go nmap <Leader>i <Plug>(go-imports)
 
 """""""""""""" php
 autocmd FileType php nmap <Leader>c :!php-cs-fixer fix --rules=@PSR2 %<CR>
+" phpctags or others tags program are hard to use
+fun! PHPJumpToDefined(word)
+    let l:word = a:word
+    for l:i in ["\\$", "\\-", "\\\""]
+        let l:word = substitute(l:word, l:i , "\\" . l:i, "g")
+    endfor
+    
+    " external command use for jumping
+    " input four arguments: source file, source line, source corsor position, source keyword
+    " error hanppend when returns string start with 'error'
+    " success when returns 'filename line'
+    let l:phpJumpToDefinedCommand = "PHPJumpToDefined"
+    if executable(l:phpJumpToDefinedCommand) != 1
+        echoerr l:phpJumpToDefinedCommand . " not found in this system"
+        return
+    endif
+
+    let l:command = l:phpJumpToDefinedCommand . ' ' . expand('%:p') . ' ' . line(".") . ' ' . col(".") . ' "' .  l:word . '"'
+    let l:result = system(l:command)
+    if l:result =~? '^error'
+        echo l:result
+    else
+        let l:result = substitute(l:result, '\n\+$', '', '')
+        let l:result = split(l:result, " ")
+        execute "normal! :e +" . l:result[1] . " " . l:result[0] . "\<CR>"
+    endif
+endfun
+autocmd FileType php nnoremap <C-]> :call PHPJumpToDefined(expand('<cfile>'))<CR>
 
 """""""""""""" rust
 " export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
