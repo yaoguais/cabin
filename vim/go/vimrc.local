@@ -166,3 +166,9 @@ let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :NERDTree %<CR>
 
+"""""""""""""" vim-instant-markdown
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+" let g:instant_markdown_open_to_the_world = 1
+map <Leader>m :InstantMarkdownPreview<CR>
+
