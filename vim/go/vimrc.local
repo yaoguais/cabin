@@ -74,6 +74,21 @@ map <Leader>wx :resize +5<CR>
 map <Leader>z :cp<CR>
 map <Leader>x :cn<CR>
 
+" fold
+set foldmethod=indent
+" don't fold when open file
+set foldlevelstart=99
+"zi toggle enable and disable
+"zv watch current line
+"zm make fold
+"zM make all fold
+"zr open fold
+"zR open all
+"zc make current line fold
+"zo open cuurent fold
+"zd delete current fold
+"zD delete all fold 
+
 " multi line edit
 " <C-v> -> block select -> <S-i>/<S-a> -> <Esc>
 
@@ -93,6 +108,7 @@ autocmd FileType go nmap <Leader>i <Plug>(go-imports)
 
 """""""""""""" php
 autocmd FileType php nmap <Leader>c :!php-cs-fixer fix --rules=@PSR2 %<CR>
+autocmd FileType php nmap <Leader>l :!php -l %<CR>
 " phpctags or others tags program are hard to use
 fun! PHPJumpToDefinition(word)
     let l:word = a:word
@@ -131,14 +147,17 @@ autocmd FileType rust nmap <Leader>c :!rustfmt --force %<CR>
 
 """""""""""""" ctrlp
 map <leader>f :CtrlPMixed<CR>
-map <leader>r :CtrlPMRU<CR>
+" map <leader>r :CtrlPMRU<CR>
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
     \ }
 
+"""""""""""""" mru.vim
+map <leader>r :MRU<CR>
+
 """""""""""""" ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir vendor'
 map <Leader>s :Ack<Space>
 " change pwd of current window to current directory and search
 map <Leader>ss :lcd %:h <bar> :Ack<Space>
