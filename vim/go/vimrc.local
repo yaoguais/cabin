@@ -14,6 +14,7 @@ filetype plugin on
 map <Leader>h :!cat /etc/vim/vimrc.local<CR>
 map <Leader>zz :wqall!<CR>
 map <Leader>xx :qall!<CR>
+map <Leader>w :w<CR>
 map <Leader>p :set paste<CR>
 map <Leader>pp :set nopaste<CR>
 
@@ -109,35 +110,6 @@ autocmd FileType go nmap <Leader>i <Plug>(go-imports)
 """""""""""""" php
 autocmd FileType php nmap <Leader>c :!php-cs-fixer fix --rules=@PSR2 %<CR>
 autocmd FileType php nmap <Leader>l :!php -l %<CR>
-" phpctags or others tags program are hard to use
-fun! PHPJumpToDefinition(word)
-    let l:word = a:word
-    for l:i in ["\\$", "\\-", "\\\""]
-        let l:word = substitute(l:word, l:i , "\\" . l:i, "g")
-    endfor
-    
-    " external command use for jumping
-    " returns string start with 'error' when error hanppend,
-    " and returns 'file line position' when success.
-    let l:phpJumpToDefinitionCommand = "PHPJumpToDefinition"
-    if executable(l:phpJumpToDefinitionCommand) != 1
-        echoerr l:phpJumpToDefinitionCommand . " not found in this system"
-        return
-    endif
-
-    let l:args = ["--file", expand('%:p'), "--line", line("."), "--position", col("."), "--keyword", '"' . l:word . '"']
-    let l:command = l:phpJumpToDefinitionCommand . ' ' . join(l:args, ' ')
-    let l:result = system(l:command)
-    if l:result =~? '^error'
-        echo l:result
-    else
-        let l:result = substitute(l:result, '\n\+$', '', '')
-        let l:result = split(l:result, " ")
-        let l:ecommand = "normal :edit +call\\ setpos('.',[0," . l:result[1] . "," . l:result[2] . ",0]) " . l:result[0] . " \<CR>"
-        execute l:ecommand
-    endif
-endfun
-autocmd FileType php nnoremap <C-]> :call PHPJumpToDefinition(expand('<cfile>'))<CR>
 
 """""""""""""" rust
 " export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
@@ -157,10 +129,10 @@ let g:ctrlp_custom_ignore = {
 map <leader>r :MRU<CR>
 
 """""""""""""" ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir vendor'
-map <Leader>s :Ack<Space>
+let g:ackprg = 'ag --nogroup --nocolor --column'
+map <Leader>s :Ack --ignore-dir vendor<Space>
 " change pwd of current window to current directory and search
-map <Leader>ss :lcd %:h <bar> :Ack<Space>
+map <Leader>ss :lcd %:h <bar> :Ack --ignore-dir vendor<Space>
 
 """"""""""""" supertab
 let g:SuperTabCompleteCase = 'ignore'
