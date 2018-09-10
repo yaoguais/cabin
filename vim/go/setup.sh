@@ -1,26 +1,36 @@
 #!/bin/bash
 
 TOOLS=`cat << EOF
-# 调试工具
-github.com/derekparker/delve/cmd/dlv
-# 火焰图工具
+# tools
 github.com/uber/go-torch
 github.com/golang/dep/cmd/dep
 golang.org/x/tools/...
 github.com/ramya-rao-a/go-outline
 github.com/acroca/go-symbols
-github.com/nsf/gocode
-github.com/rogpeppe/godef
-github.com/zmb3/gogetdoc
-github.com/golang/lint/golint
-github.com/fatih/gomodifytags
 github.com/uudashr/gopkgs/cmd/gopkgs
 sourcegraph.com/sqs/goreturns
 github.com/cweill/gotests/...
-github.com/josharian/impl
 github.com/haya14busa/goplay/cmd/goplay
-github.com/uudashr/gopkgs/cmd/gopkgs
+# vim-go
+# https://github.com/fatih/vim-go/blob/0e7bd4001b770d0c42ed85e510e6649191ec0fa8/plugin/go.vim#L33
+github.com/klauspost/asmfmt/cmd/asmfmt
+github.com/derekparker/delve/cmd/dlv
+github.com/kisielk/errcheck
 github.com/davidrjenni/reftools/cmd/fillstruct
+github.com/mdempsky/gocode
+github.com/rogpeppe/godef
+github.com/zmb3/gogetdoc
+golang.org/x/tools/cmd/goimports
+github.com/golang/lint/golint
+github.com/alecthomas/gometalinter
+github.com/fatih/gomodifytags
+golang.org/x/tools/cmd/gorename
+github.com/jstemmer/gotags
+golang.org/x/tools/cmd/guru
+github.com/josharian/impl
+honnef.co/go/tools/cmd/keyify
+github.com/fatih/motion
+github.com/koron/iferr
 EOF
 `
 

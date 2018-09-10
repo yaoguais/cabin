@@ -93,30 +93,6 @@ set foldlevelstart=99
 " multi line edit
 " <C-v> -> block select -> <S-i>/<S-a> -> <Esc>
 
-""""""""""""" vim-go
-set autowrite
-let g:go_list_type = "quickfix"
-"let g:go_highlight_types = 1
-"let g:go_highlight_fields = 1
-let g:go_auto_type_info = 1
-nnoremap <leader>a :cclose<CR>
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
-" autocmd FileType go nmap <leader>r  <Plug>(go-run)
-autocmd FileType go nmap <leader>t  <Plug>(go-test)
-" autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
-" autocmd FileType go nmap <Leader>i <Plug>(go-info)
-autocmd FileType go nmap <Leader>i <Plug>(go-imports)
-
-"""""""""""""" php
-autocmd FileType php nmap <Leader>c :!php-cs-fixer fix --rules=@PSR2 %<CR>
-autocmd FileType php nmap <Leader>l :!php -l %<CR>
-
-"""""""""""""" rust
-" export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
-autocmd BufRead *.rs :setlocal tags=./tags;/,$RUST_SRC_PATH/tags
-autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
-autocmd FileType rust nmap <Leader>c :!rustfmt --force %<CR>
-
 """""""""""""" ctrlp
 map <leader>f :CtrlPMixed<CR>
 " map <leader>r :CtrlPMRU<CR>
@@ -138,16 +114,6 @@ map <Leader>ss :lcd %:h <bar> :Ack --ignore-dir vendor<Space>
 let g:SuperTabCompleteCase = 'ignore'
 let g:SuperTabDefaultCompletionType = 'context'
 
-""""""""""""" phpcomplete.vim
-let g:phpcomplete_relax_static_constraint = 1
-let g:phpcomplete_enhance_jump_to_definition = 1
-let g:phpcomplete_mappings = {
-   \ 'jump_to_def': '<C-]>',
-   \ 'jump_to_def_split': '<C-W><C-]>',
-   \ 'jump_to_def_vsplit': '<C-W><C-\>',
-   \ 'jump_to_def_tabnew': '<C-W><C-[>',
-   \}
-
 """""""""""" delimitMate
 let g:delimitMate_matchpairs = "(:),[:],{:}"
 let g:delimitMate_expand_cr = 1
@@ -162,4 +128,41 @@ let g:instant_markdown_slow = 1
 let g:instant_markdown_autostart = 0
 " let g:instant_markdown_open_to_the_world = 1
 map <Leader>m :InstantMarkdownPreview<CR>
+
+""""""""""""" languages
+
+""""""""""""" vim-go
+set autowrite
+let g:go_list_type = "quickfix"
+let g:go_gocode_propose_source = 1
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+let g:go_auto_type_info = 1
+nnoremap <leader>a :cclose<CR>
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+" autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+" autocmd FileType go nmap <Leader>i <Plug>(go-info)
+autocmd FileType go nmap <Leader>i <Plug>(go-imports)
+
+"""""""""""""" php
+autocmd FileType php nmap <Leader>c :!php-cs-fixer fix --rules=@PSR2 %<CR>
+autocmd FileType php nmap <Leader>l :!php -l %<CR>
+
+""""""""""""" phpcomplete.vim
+let g:phpcomplete_relax_static_constraint = 1
+let g:phpcomplete_enhance_jump_to_definition = 1
+let g:phpcomplete_mappings = {
+   \ 'jump_to_def': '<C-]>',
+   \ 'jump_to_def_split': '<C-W><C-]>',
+   \ 'jump_to_def_vsplit': '<C-W><C-\>',
+   \ 'jump_to_def_tabnew': '<C-W><C-[>',
+   \}
+
+"""""""""""""" rust
+" export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
+autocmd BufRead *.rs :setlocal tags=./tags;/,$RUST_SRC_PATH/tags
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+autocmd FileType rust nmap <Leader>c :!rustfmt --force %<CR>
 
