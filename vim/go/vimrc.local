@@ -161,8 +161,7 @@ let g:phpcomplete_mappings = {
    \}
 
 """""""""""""" rust
-" export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
-autocmd BufRead *.rs :setlocal tags=./tags;/,$RUST_SRC_PATH/tags
-autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
-autocmd FileType rust nmap <Leader>c :!rustfmt --force %<CR>
+let g:rustfmt_autosave = 1
+let g:racer_experimental_completer = 1
+autocmd FileType rust nmap <C-]> <Plug>(rust-def)
 
