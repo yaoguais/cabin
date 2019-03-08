@@ -134,10 +134,11 @@ map <Leader>m :InstantMarkdownPreview<CR>
 """"""""""""" vim-go
 set autowrite
 let g:go_list_type = "quickfix"
-let g:go_gocode_propose_source = 1
+"let g:go_gocode_propose_source = 1
 "let g:go_highlight_types = 1
 "let g:go_highlight_fields = 1
-let g:go_auto_type_info = 1
+"let g:go_auto_type_info = 1
+let g:go_def_mode = 'godef'
 nnoremap <leader>a :cclose<CR>
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 " autocmd FileType go nmap <leader>r  <Plug>(go-run)
