@@ -37,6 +37,7 @@ git clone https://github.com/vim-php/phpctags.git ~/soft/phpctags
 git clone https://github.com/Raimondi/delimitMate.git ~/.vim/pack/plugins/start/delimitMate
 git clone https://github.com/rust-lang/rust.vim.git ~/.vim/pack/plugins/start/rust.vim
 git clone https://github.com/racer-rust/vim-racer.git ~/.vim/pack/plugins/start/rust.vim-racer
+git clone https://github.com/sickill/vim-monokai.git ~/.vim/pack/plugins/start/monokai
 
 npm -g install instant-markdown-d
 git clone https://github.com/suan/vim-instant-markdown.git ~/.vim/pack/plugins/start/vim-instant-markdown

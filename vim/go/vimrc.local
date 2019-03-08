@@ -166,3 +166,8 @@ let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
 autocmd FileType rust nmap <C-]> <Plug>(rust-def)
 
+"""""""""""""" color
+set termguicolors
+"colorscheme gruvbox
+colorscheme monokai
+"set background=dark
