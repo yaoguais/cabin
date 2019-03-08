@@ -77,6 +77,10 @@ map <Leader>x :cn<CR>
 
 " fold
 set foldmethod=indent
+" set foldmethod=syntax
+map <Leader>fm :set foldmethod=syntax <bar> :hi Folded guifg=#f8f8f2 <bar> :set foldlevel=0<CR>
+map <Leader>fr :set foldmethod=indent <bar> :hi Folded guifg=#f8f8f2 <bar> :set foldlevel=99<CR>
+set foldnestmax=1
 " don't fold when open file
 set foldlevelstart=99
 "zi toggle enable and disable
@@ -100,6 +104,7 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
     \ }
+let g:ctrlp_match_window = 'results:100000'
 
 """""""""""""" mru.vim
 map <leader>r :MRU<CR>
@@ -139,6 +144,8 @@ let g:go_list_type = "quickfix"
 "let g:go_highlight_fields = 1
 "let g:go_auto_type_info = 1
 let g:go_def_mode = 'godef'
+let g:go_decls_includes = "func,type"
+let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment', 'comment']
 nnoremap <leader>a :cclose<CR>
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 " autocmd FileType go nmap <leader>r  <Plug>(go-run)
@@ -146,6 +153,7 @@ autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 " autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <Leader>i <Plug>(go-imports)
+autocmd FileType go nmap <Leader>d <Plug>(go-decls)
 
 """""""""""""" php
 autocmd FileType php nmap <Leader>c :!php-cs-fixer fix --rules=@PSR2 %<CR>
@@ -171,3 +179,5 @@ set termguicolors
 "colorscheme gruvbox
 colorscheme monokai
 "set background=dark
+" hi Folded ctermfg=242 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
+
