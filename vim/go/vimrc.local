@@ -171,6 +171,7 @@ let g:phpcomplete_mappings = {
 
 """""""""""""" rust
 let g:rustfmt_autosave = 1
+let g:rustfmt_options = "--force"
 let g:racer_experimental_completer = 1
 autocmd FileType rust nmap <C-]> <Plug>(rust-def)
 
